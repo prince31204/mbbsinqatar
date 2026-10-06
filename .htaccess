@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect non-www to https://www.
+RewriteCond %{HTTP_HOST} ^mbbsinkazak\.com [NC]
+RewriteRule ^(.*)$ https://www.mbbsinkazak.com/$1 [L,R=301]
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Add X-Robots-Tag header
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "index, follow"
+</IfModule>

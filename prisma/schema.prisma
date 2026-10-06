@@ -1,0 +1,1404 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id              Int           @id @default(autoincrement())
+  name            String
+  email           String        @unique
+  emailVerifiedAt DateTime?     @map("email_verified_at")
+  password        String
+  role            UserRole      @default(employee)
+  phone           String?
+  photoName       String?       @map("photo_name")
+  photoPath       String?       @map("photo_path")
+  designation     String?
+  description     String?
+  rememberToken   String?       @map("remember_token")
+  status          Boolean       @default(true)
+  otp             String?       @db.VarChar(6)
+  otpExpireAt     DateTime?     @map("otp_expire_at")
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  articles        Article[]
+  blogs           Blog[]
+  referrals       LeadInquiry[]
+  news            News[]
+
+  @@map("users")
+}
+
+model InstituteType {
+  id           Int          @id @default(autoincrement())
+  name         String
+  status       Boolean      @default(true)
+  universities University[]
+
+  @@map("institute_types")
+}
+
+model Province {
+  id           Int          @id @default(autoincrement())
+  name         String
+  status       Boolean      @default(true)
+  cities       City[]
+  universities University[]
+
+  @@map("provinces")
+}
+
+model City {
+  id           Int          @id @default(autoincrement())
+  name         String
+  provinceId   Int          @map("province_id")
+  status       Boolean      @default(true)
+  province     Province     @relation(fields: [provinceId], references: [id])
+  universities University[]
+
+  @@map("cities")
+}
+
+model Level {
+  id                 Int                 @id @default(autoincrement())
+  name               String
+  slug               String              @unique
+  description        String?
+  status             Boolean             @default(true)
+  universityPrograms UniversityProgram[]
+
+  @@map("levels")
+}
+
+model Facility {
+  id                   Int                  @id @default(autoincrement())
+  name                 String
+  iconName             String?              @map("icon_name")
+  iconPath             String?              @map("icon_path")
+  status               Boolean              @default(true)
+  universityFacilities UniversityFacility[]
+
+  @@map("facilities")
+}
+
+model Hospital {
+  id                  Int                  @id @default(autoincrement())
+  name                String
+  slug                String               @unique
+  city                String?
+  state               String?
+  beds                Int?
+  establishedYear     Int?                 @map("established_year")
+  accreditation       String?
+  imageName           String?              @map("image_name")
+  imagePath           String?              @map("image_path")
+  status              Boolean              @default(true)
+  universityHospitals UniversityHospital[]
+
+  @@map("hospitals")
+}
+
+model University {
+  id                       Int                     @id @default(autoincrement())
+  name                     String
+  uniqueId                 String                  @unique @map("unique_id")
+  slug                     String                  @unique
+  thumbnailName            String?                 @map("thumbnail_name")
+  thumbnailPath            String?                 @map("thumbnail_path")
+  bannerName               String?                 @map("banner_name")
+  bannerPath               String?                 @map("banner_path")
+  isFeatured               Boolean                 @default(false) @map("is_featured")
+  city                     String?
+  state                    String?
+  rating                   Decimal?                @db.Decimal(3, 2)
+  establishedYear          Int?                    @map("established_year")
+  scholarshipName          String?                 @map("scholarship_name")
+  scholarshipAmount        String?                 @map("scholarship_amount") @db.VarChar(50)
+  seatsAvailable           Int?                    @map("seats_available")
+  students                 String?
+  tuitionFee               String?                 @map("tuition_fee") @db.VarChar(50)
+  approvedBy               Json?                   @map("approved_by")
+  shortnote                String?
+  fmgePassRate             Decimal?                @map("fmge_pass_rate") @db.Decimal(5, 2)
+  courseDuration           String?                 @map("course_duration")
+  mediumOfInstruction      String?                 @map("medium_of_instruction")
+  eligibility              String?
+  neetRequirement          String?                 @map("neet_requirement")
+  aboutNote                String?                 @map("about_note")
+  internationalRecognition String?                 @map("international_recognition") @db.VarChar(50)
+  englishMedium            String?                 @map("english_medium") @db.VarChar(50)
+  diverseCommunity         String?                 @map("diverse_community") @db.VarChar(50)
+  section2Image            String?                 @map("section2_image")
+  section2Title            String?                 @map("section2_title")
+  section2Text             String?                 @map("section2_text")
+  yearOfExcellence         Int?                    @map("year_of_excellence")
+  countriesRepresented     Int?                    @map("countries_represented")
+  globalRanking            String?                 @map("global_ranking")
+  nationalRanking          String?                 @map("national_ranking")
+  campusArea               String?                 @map("campus_area")
+  labs                     Int?
+  lectureHall              Int?                    @map("lecture_hall")
+  hostelBuilding           Int?                    @map("hostel_building")
+  parentSatisfaction       Decimal?                @map("parent_satisfaction") @db.Decimal(5, 2)
+  totalReviews             Int?                    @map("total_reviews")
+  recommendedRate          Decimal?                @map("recommended_rate") @db.Decimal(5, 2)
+  embassyVerified          Boolean                 @default(false) @map("embassy_verified")
+  whoListed                Boolean                 @default(false) @map("who_listed")
+  nmcApproved              Boolean                 @default(false) @map("nmc_approved")
+  ministryLicensed         Boolean                 @default(false) @map("ministry_licensed")
+  faimerListed             Boolean                 @default(false) @map("faimer_listed")
+  mciRecognition           Boolean                 @default(false) @map("mci_recognition")
+  ecfmgEligible            Boolean                 @default(false) @map("ecfmg_eligible")
+  applyNowUrl              String?                 @map("apply_now_url")
+  status                   Boolean                 @default(true)
+  homeView                 Boolean                 @default(false) @map("home_view")
+  latitude                 Decimal?                @db.Decimal(10, 8)
+  longitude                Decimal?                @db.Decimal(11, 8)
+  instituteTypeId          Int?                    @map("institute_type_id")
+  provinceId               Int?                    @map("province_id")
+  cityId                   Int?                    @map("city_id")
+  createdBy                Int?                    @map("created_by")
+  updatedBy                Int?                    @map("updated_by")
+  metaTitle                String?                 @map("meta_title")
+  metaKeyword              String?                 @map("meta_keyword")
+  metaDescription          String?                 @map("meta_description")
+  ogImagePath              String?                 @map("og_image_path")
+  seoRating                Decimal?                @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber             Int?                    @map("review_number")
+  bestRating               Decimal?                @map("best_rating") @db.Decimal(2, 1)
+  createdAt                DateTime                @default(now()) @map("created_at")
+  updatedAt                DateTime                @updatedAt @map("updated_at")
+  scholarships             Scholarship[]
+  cityRelation             City?                   @relation(fields: [cityId], references: [id])
+  instituteType            InstituteType?          @relation(fields: [instituteTypeId], references: [id])
+  province                 Province?               @relation(fields: [provinceId], references: [id])
+  documents                UniversityDocument[]
+  facilities               UniversityFacility[]
+  faqs                     UniversityFaq[]
+  fmgeRates                UniversityFmgeRate[]
+  hospitals                UniversityHospital[]
+  intakes                  UniversityIntake[]
+  links                    UniversityLink[]
+  photos                   UniversityPhoto[]
+  programs                 UniversityProgram[]
+  rankings                 UniversityRanking[]
+  reviews                  UniversityReview[]
+  studentRecords           UniversityStudent[]
+  testimonials             UniversityTestimonial[]
+
+  @@map("universities")
+}
+
+model UniversityProgram {
+  id                    Int                  @id @default(autoincrement())
+  programName           String               @map("program_name")
+  programSlug           String               @map("program_slug")
+  duration              String?
+  levelId               Int?                 @map("level_id")
+  studyMode             String?              @map("study_mode")
+  totalFee              String?              @map("total_fee") @db.VarChar(50)
+  totalTuitionFee       String?              @map("total_tuition_fee") @db.VarChar(50)
+  annualTuitionFee      String?              @map("annual_tuition_fee") @db.VarChar(50)
+  currency              String               @default("USD") @db.VarChar(10)
+  applicationDeadline   String?              @map("application_deadline")
+  intake                String?
+  isActive              Boolean              @default(true) @map("is_active")
+  sortOrder             Int                  @default(1) @map("sort_order")
+  overview              String?
+  eligibility           String?
+  mediumOfInstruction   String?              @map("medium_of_instruction")
+  recognition           String?
+  whyChooseVietnam      String?              @map("why_choose_vietnam")
+  additionalInformation String?              @map("additional_information")
+  year1Syllabus         String?              @map("year1_syllabus")
+  year2Syllabus         String?              @map("year2_syllabus")
+  year3Syllabus         String?              @map("year3_syllabus")
+  year4Syllabus         String?              @map("year4_syllabus")
+  year5Syllabus         String?              @map("year5_syllabus")
+  year6Syllabus         String?              @map("year6_syllabus")
+  universityId          Int                  @map("university_id")
+  metaTitle             String?              @map("meta_title")
+  metaKeyword           String?              @map("meta_keyword")
+  metaDescription       String?              @map("meta_description")
+  ogImagePath           String?              @map("og_image_path")
+  seoRating             Decimal?             @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber          Int?                 @map("review_number")
+  bestRating            Decimal?             @map("best_rating") @db.Decimal(2, 1)
+  createdAt             DateTime             @default(now()) @map("created_at")
+  updatedAt             DateTime             @updatedAt @map("updated_at")
+  applications          StudentApplication[]
+  level                 Level?               @relation(fields: [levelId], references: [id])
+  university            University           @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_programs")
+}
+
+model UniversityPhoto {
+  id           Int        @id @default(autoincrement())
+  title        String?
+  imageName    String?    @map("image_name")
+  imagePath    String?    @map("image_path")
+  position     Int        @default(1)
+  status       Boolean    @default(true)
+  universityId Int        @map("university_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_photos")
+}
+
+model UniversityRanking {
+  id           Int        @id @default(autoincrement())
+  rankingBody  String     @map("ranking_body")
+  rank         String?
+  year         Int?
+  category     String?
+  score        Decimal?   @db.Decimal(5, 2)
+  position     Int        @default(1)
+  status       Boolean    @default(true)
+  universityId Int        @map("university_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_rankings")
+}
+
+model UniversityStudent {
+  id               Int        @id @default(autoincrement())
+  name             String?
+  email            String?
+  phone            String?
+  country          String?
+  countryIsoCode   String?    @map("country_iso_code") @db.VarChar(5)
+  numberOfStudents Int?       @map("number_of_students")
+  course           String?
+  year             String?
+  imageName        String?    @map("image_name")
+  imagePath        String?    @map("image_path")
+  status           Boolean    @default(true)
+  universityId     Int        @map("university_id")
+  createdAt        DateTime   @default(now()) @map("created_at")
+  updatedAt        DateTime   @updatedAt @map("updated_at")
+  university       University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_students")
+}
+
+model UniversityFmgeRate {
+  id                   Int        @id @default(autoincrement())
+  year                 Int
+  appeared             Int?
+  passed               Int?
+  passPercentage       Decimal?   @map("pass_percentage") @db.Decimal(5, 2)
+  acceptanceRate       Decimal?   @map("acceptance_rate") @db.Decimal(5, 2)
+  yoyChange            String?    @map("yoy_change") @db.VarChar(20)
+  firstAttemptPassRate Decimal?   @map("first_attempt_pass_rate") @db.Decimal(5, 2)
+  rank                 Int?
+  notes                String?
+  source               String?
+  position             Int        @default(1)
+  status               Boolean    @default(true)
+  universityId         Int        @map("university_id")
+  createdAt            DateTime   @default(now()) @map("created_at")
+  updatedAt            DateTime   @updatedAt @map("updated_at")
+  university           University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_fmge_rates")
+}
+
+model UniversityIntake {
+  id                  Int        @id @default(autoincrement())
+  intakeMonth         String     @map("intake_month")
+  intakeYear          Int        @map("intake_year")
+  applicationStart    DateTime?  @map("application_start") @db.Date
+  applicationDeadline DateTime?  @map("application_deadline") @db.Date
+  classesStart        DateTime?  @map("classes_start") @db.Date
+  seats               Int?
+  statusText          String?    @map("status_text")
+  notes               String?
+  position            Int        @default(1)
+  isActive            Boolean    @default(true) @map("is_active")
+  universityId        Int        @map("university_id")
+  createdAt           DateTime   @default(now()) @map("created_at")
+  updatedAt           DateTime   @updatedAt @map("updated_at")
+  university          University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_intakes")
+}
+
+model UniversityTestimonial {
+  id           Int        @id @default(autoincrement())
+  name         String
+  designation  String?
+  country      String?
+  course       String?
+  year         String?
+  description  String?
+  rating       Decimal?   @db.Decimal(2, 1)
+  imageName    String?    @map("image_name")
+  imagePath    String?    @map("image_path")
+  videoUrl     String?    @map("video_url")
+  position     Int        @default(1)
+  status       Boolean    @default(true)
+  universityId Int        @map("university_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_testimonials")
+}
+
+model UniversityReview {
+  id           Int        @id @default(autoincrement())
+  name         String
+  designation  String?
+  country      String?
+  course       String?
+  year         String?
+  description  String?
+  rating       Decimal?   @db.Decimal(2, 1)
+  imageName    String?    @map("image_name")
+  imagePath    String?    @map("image_path")
+  position     Int        @default(1)
+  status       Boolean    @default(true)
+  universityId Int        @map("university_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_reviews")
+}
+
+model UniversityFaq {
+  id           Int        @id @default(autoincrement())
+  question     String
+  answer       String
+  position     Int        @default(1)
+  status       Boolean    @default(true)
+  universityId Int        @map("university_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_faqs")
+}
+
+model UniversityFacility {
+  id           Int        @id @default(autoincrement())
+  universityId Int        @map("university_id")
+  facilityId   Int        @map("facility_id")
+  description  String?
+  imageName    String?    @map("image_name")
+  imagePath    String?    @map("image_path")
+  status       Boolean    @default(true)
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  facility     Facility   @relation(fields: [facilityId], references: [id])
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_facilities")
+}
+
+model UniversityHospital {
+  id           Int        @id @default(autoincrement())
+  universityId Int        @map("university_id")
+  hospitalId   Int        @map("hospital_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  hospital     Hospital   @relation(fields: [hospitalId], references: [id])
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_hospitals")
+}
+
+model UniversityLink {
+  id           Int        @id @default(autoincrement())
+  title        String
+  url          String
+  type         String?
+  position     Int        @default(1)
+  status       Boolean    @default(true)
+  universityId Int        @map("university_id")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_links")
+}
+
+model Scholarship {
+  id                 Int              @id @default(autoincrement())
+  title              String
+  slug               String           @unique
+  scholarshipType    String?          @map("scholarship_type")
+  amountMin          Decimal?         @map("amount_min") @db.Decimal(10, 2)
+  amountMax          Decimal?         @map("amount_max") @db.Decimal(10, 2)
+  discountPercentage Int?             @map("discount_percentage")
+  deadline           DateTime?        @db.Date
+  availableSeats     Int?             @map("available_seats")
+  program            String?
+  applicationMode    String?          @map("application_mode")
+  eligibility        Json?
+  coverage           Json?
+  shortnote          String?
+  isActive           Boolean          @default(true) @map("is_active")
+  universityId       Int?             @map("university_id")
+  metaTitle          String?          @map("meta_title")
+  metaKeyword        String?          @map("meta_keyword")
+  metaDescription    String?          @map("meta_description")
+  ogImagePath        String?          @map("og_image_path")
+  seoRating          Decimal?         @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber       Int?             @map("review_number")
+  bestRating         Decimal?         @map("best_rating") @db.Decimal(2, 1)
+  createdAt          DateTime         @default(now()) @map("created_at")
+  updatedAt          DateTime         @updatedAt @map("updated_at")
+  faqs               ScholarshipFaq[]
+  university         University?      @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("scholarships")
+}
+
+model ScholarshipFaq {
+  id            Int         @id @default(autoincrement())
+  question      String
+  answer        String
+  position      Int         @default(1)
+  status        Boolean     @default(true)
+  scholarshipId Int         @map("scholarship_id")
+  createdAt     DateTime    @default(now()) @map("created_at")
+  updatedAt     DateTime    @updatedAt @map("updated_at")
+  scholarship   Scholarship @relation(fields: [scholarshipId], references: [id], onDelete: Cascade)
+
+  @@map("scholarship_faqs")
+}
+
+model BlogCategory {
+  id              Int      @id @default(autoincrement())
+  name            String
+  slug            String   @unique
+  description     String?
+  imageName       String?  @map("image_name")
+  imagePath       String?  @map("image_path")
+  status          Boolean  @default(true)
+  metaTitle       String?  @map("meta_title")
+  metaKeyword     String?  @map("meta_keyword")
+  metaDescription String?  @map("meta_description")
+  ogImagePath     String?  @map("og_image_path")
+  seoRating       Decimal? @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?     @map("review_number")
+  bestRating      Decimal? @map("best_rating") @db.Decimal(2, 1)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  blogs           Blog[]
+
+  @@map("blog_categories")
+}
+
+model Blog {
+  id              Int           @id @default(autoincrement())
+  categoryId      Int           @map("category_id")
+  authorId        Int           @map("author_id")
+  title           String?
+  slug            String?
+  shortnote       String?
+  description     String?
+  thumbnailName   String?       @map("thumbnail_name") @db.VarChar(200)
+  thumbnailPath   String?       @map("thumbnail_path")
+  imageName       String?       @map("image_name") @db.VarChar(200)
+  imagePath       String?       @map("image_path")
+  status          Boolean       @default(true)
+  homeView        Boolean       @default(false) @map("home_view")
+  trending        Boolean       @default(false)
+  metaTitle       String?       @map("meta_title")
+  metaKeyword     String?       @map("meta_keyword")
+  metaDescription String?       @map("meta_description")
+  ogImagePath     String?       @map("og_image_path")
+  seoRating       Decimal?      @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?          @map("review_number")
+  bestRating      Decimal?      @map("best_rating") @db.Decimal(2, 1)
+  schema          String?
+  readingTime     Int?          @map("reading_time")
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  contents        BlogContent[]
+  faqs            BlogFaq[]
+  author          User          @relation(fields: [authorId], references: [id])
+  category        BlogCategory  @relation(fields: [categoryId], references: [id])
+
+  @@map("blogs")
+}
+
+model BlogContent {
+  id          Int           @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  imageName   String?       @map("image_name")
+  imagePath   String?       @map("image_path")
+  position    Int           @default(1)
+  blogId      Int           @map("blog_id")
+  parentId    Int?          @map("parent_id")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  blog        Blog          @relation(fields: [blogId], references: [id], onDelete: Cascade)
+  parent      BlogContent?  @relation("BlogContentParent", fields: [parentId], references: [id], onDelete: Cascade)
+  children    BlogContent[] @relation("BlogContentParent")
+
+  @@index([blogId])
+  @@map("blog_contents")
+}
+
+model BlogFaq {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  position  Int      @default(1)
+  status    Boolean  @default(true)
+  blogId    Int      @map("blog_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  blog      Blog     @relation(fields: [blogId], references: [id], onDelete: Cascade)
+
+  @@map("blog_faqs")
+}
+
+model NewsCategory {
+  id              Int      @id @default(autoincrement())
+  name            String
+  slug            String   @unique
+  description     String?
+  imageName       String?  @map("image_name")
+  imagePath       String?  @map("image_path")
+  status          Boolean  @default(true)
+  metaTitle       String?  @map("meta_title")
+  metaKeyword     String?  @map("meta_keyword")
+  metaDescription String?  @map("meta_description")
+  ogImagePath     String?  @map("og_image_path")
+  seoRating       Decimal? @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?     @map("review_number")
+  bestRating      Decimal? @map("best_rating") @db.Decimal(2, 1)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  news            News[]
+
+  @@map("news_categories")
+}
+
+model News {
+  id              Int           @id @default(autoincrement())
+  categoryId      Int           @map("category_id")
+  authorId        Int           @map("author_id")
+  title           String?
+  slug            String?
+  shortnote       String?
+  description     String?
+  thumbnailName   String?       @map("thumbnail_name") @db.VarChar(200)
+  thumbnailPath   String?       @map("thumbnail_path")
+  imageName       String?       @map("image_name") @db.VarChar(200)
+  imagePath       String?       @map("image_path")
+  status          Boolean       @default(true)
+  homeView        Boolean       @default(false) @map("home_view")
+  trending        Boolean       @default(false)
+  metaTitle       String?       @map("meta_title")
+  metaKeyword     String?       @map("meta_keyword")
+  metaDescription String?       @map("meta_description")
+  ogImagePath     String?       @map("og_image_path")
+  seoRating       Decimal?      @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?          @map("review_number")
+  bestRating      Decimal?      @map("best_rating") @db.Decimal(2, 1)
+  schema          String?
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  author          User          @relation(fields: [authorId], references: [id])
+  category        NewsCategory  @relation(fields: [categoryId], references: [id])
+  contents        NewsContent[]
+  faqs            NewsFaq[]
+
+  @@map("news")
+}
+
+model NewsContent {
+  id          Int           @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  imageName   String?       @map("image_name")
+  imagePath   String?       @map("image_path")
+  position    Int           @default(1)
+  newsId      Int           @map("news_id")
+  parentId    Int?          @map("parent_id")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  news        News          @relation(fields: [newsId], references: [id], onDelete: Cascade)
+  parent      NewsContent?  @relation("NewsContentParent", fields: [parentId], references: [id], onDelete: Cascade)
+  children    NewsContent[] @relation("NewsContentParent")
+
+  @@map("news_contents")
+}
+
+model NewsFaq {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  position  Int      @default(1)
+  status    Boolean  @default(true)
+  newsId    Int      @map("news_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  news      News     @relation(fields: [newsId], references: [id], onDelete: Cascade)
+
+  @@map("news_faqs")
+}
+
+model ArticleCategory {
+  id              Int       @id @default(autoincrement())
+  name            String
+  slug            String    @unique
+  description     String?
+  imageName       String?   @map("image_name")
+  imagePath       String?   @map("image_path")
+  status          Boolean   @default(true)
+  metaTitle       String?   @map("meta_title")
+  metaKeyword     String?   @map("meta_keyword")
+  metaDescription String?   @map("meta_description")
+  ogImagePath     String?   @map("og_image_path")
+  seoRating       Decimal?  @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?      @map("review_number")
+  bestRating      Decimal?  @map("best_rating") @db.Decimal(2, 1)
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  articles        Article[]
+
+  @@map("article_categories")
+}
+
+model Article {
+  id              Int              @id @default(autoincrement())
+  categoryId      Int              @map("category_id")
+  authorId        Int              @map("author_id")
+  title           String?
+  slug            String?
+  shortnote       String?
+  description     String?
+  thumbnailName   String?          @map("thumbnail_name") @db.VarChar(200)
+  thumbnailPath   String?          @map("thumbnail_path")
+  imageName       String?          @map("image_name") @db.VarChar(200)
+  imagePath       String?          @map("image_path")
+  status          Boolean          @default(true)
+  homeView        Boolean          @default(false) @map("home_view")
+  trending        Boolean          @default(false)
+  metaTitle       String?          @map("meta_title")
+  metaKeyword     String?          @map("meta_keyword")
+  metaDescription String?          @map("meta_description")
+  ogImagePath     String?          @map("og_image_path")
+  seoRating       Decimal?         @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?             @map("review_number")
+  bestRating      Decimal?         @map("best_rating") @db.Decimal(2, 1)
+  schema          String?
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+  contents        ArticleContent[]
+  faqs            ArticleFaq[]
+  author          User             @relation(fields: [authorId], references: [id])
+  category        ArticleCategory  @relation(fields: [categoryId], references: [id])
+
+  @@map("articles")
+}
+
+model ArticleContent {
+  id          Int              @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  imageName   String?          @map("image_name")
+  imagePath   String?          @map("image_path")
+  position    Int              @default(1)
+  articleId   Int              @map("article_id")
+  parentId    Int?             @map("parent_id")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+  article     Article          @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  parent      ArticleContent?  @relation("ArticleContentParent", fields: [parentId], references: [id], onDelete: Cascade)
+  children    ArticleContent[] @relation("ArticleContentParent")
+
+  @@map("article_contents")
+}
+
+model ArticleFaq {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  position  Int      @default(1)
+  status    Boolean  @default(true)
+  articleId Int      @map("article_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@map("article_faqs")
+}
+
+model Lead {
+  id                      Int                  @id @default(autoincrement())
+  name                    String
+  email                   String?              @unique
+  phone                   String?              @unique @db.VarChar(15)
+  city                    String?
+  state                   String?
+  source                  String?
+  sourcePath              String?              @map("source_path")
+  password                String?
+  emailVerifiedAt         DateTime?            @map("email_verified_at")
+  emailVerified           Boolean              @default(false) @map("email_verified")
+  otp                     String?              @db.VarChar(6)
+  otpExpireAt             DateTime?            @map("otp_expire_at")
+  otpExpiry               DateTime?            @map("otp_expiry")
+  rememberToken           String?              @map("remember_token")
+  status                  LeadStatus           @default(active)
+  phoneCode               String?              @map("phone_code")
+  country                 String?
+  interestedUniversity    String?              @map("interested_university")
+  interestedProgram       String?              @map("interested_program")
+  fatherName              String?              @map("father_name") @db.VarChar(100)
+  fatherMobile            String?              @map("father_mobile") @db.VarChar(100)
+  motherName              String?              @map("mother_name") @db.VarChar(100)
+  motherMobile            String?              @map("mother_mobile") @db.VarChar(100)
+  firstLanguage           String?              @map("first_language") @db.VarChar(100)
+  countryOfCitizenship    String?              @map("country_of_citizenship") @db.VarChar(100)
+  gender                  String?              @db.VarChar(100)
+  homeContactNumber       String?              @map("home_contact_number") @db.VarChar(100)
+  countryOfEducation      String?              @map("country_of_education") @db.VarChar(100)
+  highestLevelOfEducation String?              @map("highest_level_of_education") @db.VarChar(100)
+  gradingScheme           String?              @map("grading_scheme") @db.VarChar(100)
+  gradeAverage            String?              @map("grade_average") @db.VarChar(100)
+  englishExamType         String?              @map("english_exam_type") @db.VarChar(100)
+  dateOfExam              String?              @map("date_of_exam") @db.VarChar(100)
+  listeningScore          String?              @map("listening_score") @db.VarChar(100)
+  readingScore            String?              @map("reading_score") @db.VarChar(100)
+  writingScore            String?              @map("writing_score") @db.VarChar(100)
+  speakingScore           String?              @map("speaking_score") @db.VarChar(100)
+  neetQualificationStatus NeetStatus?          @map("neet_qualification_status")
+  neetScore               Int?                 @map("neet_score")
+  dateOfBirth             DateTime?            @map("date_of_birth") @db.Date
+  leadType                String?              @map("lead_type")
+  leadStatus              String?              @map("lead_status")
+  subStatus               String?              @map("sub_status")
+  assignedTo              Int?                 @map("assigned_to")
+  note                    String?
+  ipAddress               String?              @map("ip_address")
+  deletedAt               DateTime?            @map("deleted_at")
+  createdAt               DateTime             @default(now()) @map("created_at")
+  updatedAt               DateTime             @updatedAt @map("updated_at")
+  inquiries               LeadInquiry[]
+  applications            StudentApplication[]
+  documents               StudentDocument[]
+  schools                 StudentSchool[]
+
+  @@map("leads")
+}
+
+model LeadInquiry {
+  id             Int      @id @default(autoincrement())
+  leadId         Int      @map("lead_id")
+  universityId   Int?     @map("university_id")
+  universityName String?  @map("university_name")
+  scholarshipId  Int?     @map("scholarship_id")
+  message        String?
+  source         String?  @default("website")
+  status         String   @default("pending")
+  agentId        Int?     @map("agent_id")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+  agent          User?    @relation(fields: [agentId], references: [id], onUpdate: NoAction)
+  lead           Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  @@map("lead_inquiries")
+}
+
+model StudentSchool {
+  id                 Int       @id @default(autoincrement())
+  leadId             Int       @map("lead_id")
+  levelOfEducation   String?   @map("level_of_education")
+  countryOfEducation String?   @map("country_of_education")
+  institutionName    String?   @map("institution_name")
+  primaryLanguage    String?   @map("primary_language")
+  attendanceStart    DateTime? @map("attendance_start") @db.Date
+  attendanceEnd      DateTime? @map("attendance_end") @db.Date
+  degreeAwarded      Boolean?  @map("degree_awarded")
+  gradingScheme      String?   @map("grading_scheme")
+  gradeAverage       String?   @map("grade_average")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @updatedAt @map("updated_at")
+  lead               Lead      @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  @@map("student_schools")
+}
+
+model StudentDocument {
+  id           Int      @id @default(autoincrement())
+  leadId       Int      @map("lead_id")
+  documentType String   @map("document_type")
+  fileName     String   @map("file_name")
+  filePath     String   @map("file_path")
+  isVerified   Boolean  @default(false) @map("is_verified")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  lead         Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  @@map("student_documents")
+}
+
+model StudentApplication {
+  id                  Int               @id @default(autoincrement())
+  leadId              Int               @map("lead_id")
+  universityProgramId Int               @map("university_program_id")
+  status              ApplicationStatus @default(applied)
+  appliedAt           DateTime          @default(now()) @map("applied_at")
+  notes               String?
+  createdAt           DateTime          @default(now()) @map("created_at")
+  updatedAt           DateTime          @updatedAt @map("updated_at")
+  lead                Lead              @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  program             UniversityProgram @relation(fields: [universityProgramId], references: [id], onDelete: Cascade)
+
+  @@map("student_applications")
+}
+
+model StaticPageSeo {
+  id              Int      @id @default(autoincrement())
+  page            String   @unique
+  metaTitle       String?  @map("meta_title")
+  metaKeyword     String?  @map("meta_keyword")
+  metaDescription String?  @map("meta_description")
+  ogImagePath     String?  @map("og_image_path")
+  seoRating       Decimal? @map("seo_rating") @db.Decimal(2, 1)
+  reviewNumber    Int?     @map("review_number")
+  bestRating      Decimal? @map("best_rating") @db.Decimal(2, 1)
+  status          Boolean  @default(true)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("static_page_seos")
+}
+
+model DynamicPageSeo {
+  id              Int      @id @default(autoincrement())
+  page            String   @unique
+  metaTitle       String?  @map("meta_title")
+  metaKeyword     String?  @map("meta_keyword")
+  metaDescription String?  @map("meta_description")
+  ogImagePath     String?  @map("og_image_path")
+  status          Boolean  @default(true)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("dynamic_page_seos")
+}
+
+model DefaultOgImage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  imageName String   @map("image_name")
+  imagePath String   @map("image_path")
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("default_og_images")
+}
+
+model WebsiteSetting {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String?
+  type      String   @default("text")
+  group     String   @default("general")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("website_settings")
+}
+
+model FaqCategory {
+  id        Int      @id @default(autoincrement())
+  name      String
+  slug      String   @unique
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  faqs      Faq[]
+
+  @@map("faq_categories")
+}
+
+model Faq {
+  id         Int          @id @default(autoincrement())
+  question   String
+  answer     String
+  categoryId Int?         @map("category_id")
+  position   Int          @default(1)
+  status     Boolean      @default(true)
+  createdAt  DateTime     @default(now()) @map("created_at")
+  updatedAt  DateTime     @updatedAt @map("updated_at")
+  category   FaqCategory? @relation(fields: [categoryId], references: [id])
+
+  @@map("faqs")
+}
+
+model Testimonial {
+  id          Int      @id @default(autoincrement())
+  name        String
+  designation String?
+  description String?
+  rating      Decimal? @db.Decimal(2, 1)
+  imageName   String?  @map("image_name")
+  imagePath   String?  @map("image_path")
+  videoUrl    String?  @map("video_url")
+  position    Int      @default(1)
+  status      Boolean  @default(true)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("testimonials")
+}
+
+model Gallery {
+  id        Int      @id @default(autoincrement())
+  title     String?
+  imageName String   @map("image_name")
+  imagePath String   @map("image_path")
+  position  Int      @default(1)
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("galleries")
+}
+
+model Office {
+  id        Int      @id @default(autoincrement())
+  name      String
+  address   String
+  city      String?
+  state     String?
+  country   String?
+  phone     String?
+  email     String?
+  mapEmbed  String?  @map("map_embed")
+  imageName String?  @map("image_name")
+  imagePath String?  @map("image_path")
+  position  Int      @default(1)
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("offices")
+}
+
+model PageContent {
+  id        Int      @id @default(autoincrement())
+  pageSlug  String   @map("page_slug")
+  title     String
+  content   String
+  imageName String?  @map("image_name")
+  imagePath String?  @map("image_path")
+  position  Int      @default(1)
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("page_contents")
+}
+
+model OfficialGovernmentLink {
+  id          Int      @id @default(autoincrement())
+  name        String
+  url         String
+  description String?
+  logoName    String?  @map("logo_name")
+  logoPath    String?  @map("logo_path")
+  category    String?
+  position    Int      @default(1)
+  status      Boolean  @default(true)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("official_government_links")
+}
+
+model EducationSystem {
+  id                                  Int                     @id @default(autoincrement())
+  title                               String?
+  description                         String?
+  introductionTitle                   String?                 @map("introduction_title")
+  introductionDescription             String?                 @map("introduction_description")
+  governmentRegulation                String?                 @map("government_regulation")
+  culturalImportance                  String?                 @map("cultural_importance")
+  continuousDevelopment               String?                 @map("continuous_development")
+  literacyRate                        Decimal?                @map("literacy_rate") @db.Decimal(5, 2)
+  primaryEnrollment                   Decimal?                @map("primary_enrollment") @db.Decimal(5, 2)
+  secondaryCompletion                 Decimal?                @map("secondary_completion") @db.Decimal(5, 2)
+  higherInstitutionsCount             Int?                    @map("higher_institutions_count")
+  schoolEducationStructureDescription String?                 @map("school_education_structure_description")
+  examinationSystemDescription        String?                 @map("examination_system_description")
+  languagesInstructionDescription     String?                 @map("languages_instruction_description")
+  officialStateLanguage               String?                 @map("official_state_language")
+  officialStateLanguagePercentage     Decimal?                @map("official_state_language_percentage") @db.Decimal(5, 2)
+  officialStateLanguageNote           String?                 @map("official_state_language_note")
+  officialLanguage                    String?                 @map("official_language")
+  officialLanguagePercentage          Decimal?                @map("official_language_percentage") @db.Decimal(5, 2)
+  officialLanguageNote                String?                 @map("official_language_note")
+  foreignLanguage                     String?                 @map("foreign_language")
+  foreignLanguagePercentage           Decimal?                @map("foreign_language_percentage") @db.Decimal(5, 2)
+  foreignLanguageNote                 String?                 @map("foreign_language_note")
+  higherEducationDescription          String?                 @map("higher_education_description")
+  universitiesCount                   Int?                    @map("universities_count")
+  universitiesNote                    String?                 @map("universities_note")
+  academiesCount                      Int?                    @map("academies_count")
+  academiesNote                       String?                 @map("academies_note")
+  institutesCount                     Int?                    @map("institutes_count")
+  institutesNote                      String?                 @map("institutes_note")
+  bolognProcessAlignment              String?                 @map("bologna_process_alignment")
+  createdAt                           DateTime                @default(now()) @map("created_at")
+  updatedAt                           DateTime                @updatedAt @map("updated_at")
+  degrees                             EducationDegree[]
+  examinations                        EducationExamination[]
+  popularFields                       EducationPopularField[]
+  schoolLevels                        EducationSchoolLevel[]
+
+  @@map("education_systems")
+}
+
+model EducationExamination {
+  id              Int             @id @default(autoincrement())
+  examName        String          @map("exam_name")
+  gradeLevel      String?         @map("grade_level")
+  type            String?
+  subjects        String?
+  pageId          Int             @map("page_id")
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+  educationSystem EducationSystem @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("education_examinations")
+}
+
+model EducationSchoolLevel {
+  id              Int             @id @default(autoincrement())
+  level           String
+  ageRange        String?         @map("age_range")
+  durationYears   Int?            @map("duration_years")
+  isCompulsory    Boolean         @default(false) @map("is_compulsory")
+  numberOfSchools String?         @map("number_of_schools")
+  title           String?
+  description     String?
+  pageId          Int             @map("page_id")
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+  educationSystem EducationSystem @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("education_school_levels")
+}
+
+model EducationDegree {
+  id              Int             @id @default(autoincrement())
+  degree          String
+  duration        String?
+  ectsCredits     String?         @map("ects_credits")
+  recognition     String?
+  pageId          Int             @map("page_id")
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+  educationSystem EducationSystem @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("education_degrees")
+}
+
+model EducationPopularField {
+  id                   Int             @id @default(autoincrement())
+  field                String
+  description          String?
+  numberOfInstitutions String?         @map("number_of_institutions")
+  durationYears        String?         @map("duration_years")
+  pageId               Int             @map("page_id")
+  createdAt            DateTime        @default(now()) @map("created_at")
+  updatedAt            DateTime        @updatedAt @map("updated_at")
+  educationSystem      EducationSystem @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("education_popular_fields")
+}
+
+model AboutUs {
+  id                      Int      @id @default(autoincrement())
+  heroTitle               String   @map("hero_title")
+  heroDescription         String   @map("hero_description")
+  button1Label            String?  @map("button1_label")
+  button1Link             String?  @map("button1_link")
+  button2Label            String?  @map("button2_label")
+  button2Link             String?  @map("button2_link")
+  partnerUniversities     Int?     @map("partner_universities")
+  studentsPlaced          Int?     @map("students_placed")
+  channelPartners         Int?     @map("channel_partners")
+  yearsExperience         Int?     @map("years_experience")
+  mission                 String?
+  vision                  String?
+  whyChooseUs             String?  @map("why_choose_us")
+  serviceDescription      String?  @map("service_description")
+  universityListings      String?  @map("university_listings")
+  studentCounseling       String?  @map("student_counseling")
+  admissionAssistance     String?  @map("admission_assistance")
+  internationalSupport    String?  @map("international_support")
+  partnerWithUs           String?  @map("partner_with_us")
+  partnerBenefits         String?  @map("partner_benefits")
+  whyStudyMbbsTitle       String?  @map("why_study_mbbs_title")
+  whyStudyMbbsDescription String?  @map("why_study_mbbs_description")
+  contact1                String?
+  contact2                String?
+  email1                  String?
+  email2                  String?
+  address                 String?
+  createdAt               DateTime @default(now()) @map("created_at")
+  updatedAt               DateTime @updatedAt @map("updated_at")
+
+  @@map("about_us")
+}
+
+model AboutCountryPage {
+  id                      Int                        @id @default(autoincrement())
+  name                    String
+  tagline                 String?
+  capital                 String?
+  population              String?
+  languages               String?
+  currency                String?
+  location                String?
+  timezone                String?
+  independenceDay         DateTime?                  @map("independence_day") @db.Date
+  highestPeak             String?                    @map("highest_peak")
+  highestPeakHeight       String?                    @map("highest_peak_height")
+  mountainRanges          Json?                      @map("mountain_ranges")
+  climateZones            Json?                      @map("climate_zones")
+  topAttractions          Json?                      @map("top_attractions")
+  ancientSilkRoad         String?                    @map("ancient_silk_road")
+  nomadicHeritage         String?                    @map("nomadic_heritage")
+  religionDiversity       String?                    @map("religion_diversity")
+  culturalHighlights      String?                    @map("cultural_highlights")
+  whoRecognized           Boolean                    @default(false) @map("who_recognized")
+  mbbsAffordableEducation String?                    @map("mbbs_affordable_education")
+  englishMedium           Boolean                    @default(false) @map("english_medium")
+  academicExcellence      String?                    @map("academic_excellence")
+  studentLife             String?                    @map("student_life")
+  keySectors              String?                    @map("key_sectors")
+  majorExports            String?                    @map("major_exports")
+  investmentOpportunities String?                    @map("investment_opportunities")
+  gdpGrowth               String?                    @map("gdp_growth")
+  mainIndustries          String?                    @map("main_industries")
+  tourismGrowth           String?                    @map("tourism_growth")
+  hydropowerPotential     String?                    @map("hydropower_potential")
+  transportation          Json?
+  visaConnectivity        String?                    @map("visa_connectivity")
+  publicHealthcare        String?                    @map("public_healthcare")
+  privateHealthcare       String?                    @map("private_healthcare")
+  studentHealthcare       String?                    @map("student_healthcare")
+  nationalSport           String?                    @map("national_sport")
+  unescoSites             String?                    @map("unesco_sites")
+  bannerImage             String?                    @map("banner_image")
+  createdAt               DateTime                   @default(now()) @map("created_at")
+  updatedAt               DateTime                   @updatedAt @map("updated_at")
+  cuisines                CountryCuisineLifestyle[]
+  lifestyles              CountryLifestyleCulture[]
+  majorCities             CountryMajorCity[]
+  touristAttractions      CountryTouristAttraction[]
+
+  @@map("about_country_pages")
+}
+
+model CountryCuisineLifestyle {
+  id              Int              @id @default(autoincrement())
+  dishName        String?          @map("dish_name")
+  dishDescription String?          @map("dish_description")
+  dishImage       String?          @map("dish_image")
+  iconClass       String?          @map("icon_class")
+  pageId          Int              @map("page_id")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+  page            AboutCountryPage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("country_cuisine_lifestyles")
+}
+
+model CountryLifestyleCulture {
+  id          Int              @id @default(autoincrement())
+  title       String
+  description String?
+  iconClass   String?          @map("icon_class")
+  image       String?
+  pageId      Int              @map("page_id")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+  page        AboutCountryPage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("country_lifestyle_cultures")
+}
+
+model CountryMajorCity {
+  id          Int              @id @default(autoincrement())
+  cityName    String           @map("city_name")
+  description String?
+  population  String?
+  highlights  String?
+  cityImage   String?          @map("city_image")
+  pageId      Int              @map("page_id")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+  page        AboutCountryPage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("country_major_cities")
+}
+
+model CountryTouristAttraction {
+  id             Int              @id @default(autoincrement())
+  attractionName String           @map("attraction_name")
+  description    String?
+  ordering       Int?
+  isActive       Boolean          @default(true) @map("is_active")
+  image          String?
+  iconClass      String?          @map("icon_class")
+  pageId         Int              @map("page_id")
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime         @updatedAt @map("updated_at")
+  page           AboutCountryPage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@map("country_tourist_attractions")
+}
+
+model StudyMode {
+  id        Int      @id @default(autoincrement())
+  studyMode String   @map("study_mode")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("study_modes")
+}
+
+model ExpertTeam {
+  id          Int      @id @default(autoincrement())
+  name        String
+  designation String?
+  description String?
+  photoName   String?  @map("photo_name")
+  photoPath   String?  @map("photo_path")
+  linkedinUrl String?  @map("linkedin_url")
+  position    Int      @default(1)
+  status      Boolean  @default(true)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("expert_teams")
+}
+
+model EducationSystemPage {
+  id          Int      @id @default(autoincrement())
+  title       String
+  subtitle    String?
+  description String?
+  highlights  Json?
+  iconClass   String?  @map("icon_class")
+  position    Int      @default(1)
+  status      Boolean  @default(true)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("education_system_pages")
+}
+
+model CountryDocument {
+  id        Int            @id @default(autoincrement())
+  country   String         @default("Kazakhstan")
+  type      CountryDocType
+  title     String?
+  fileName  String?        @map("file_name")
+  filePath  String         @map("file_path")
+  isActive  Boolean        @default(true) @map("is_active")
+  createdAt DateTime       @default(now()) @map("created_at")
+  updatedAt DateTime       @updatedAt @map("updated_at")
+
+  @@map("country_documents")
+}
+
+model UniversityDocument {
+  id           Int               @id @default(autoincrement())
+  universityId Int               @map("university_id")
+  type         UniversityDocType
+  title        String?
+  fileName     String?           @map("file_name")
+  filePath     String            @map("file_path")
+  isActive     Boolean           @default(true) @map("is_active")
+  createdAt    DateTime          @default(now()) @map("created_at")
+  updatedAt    DateTime          @updatedAt @map("updated_at")
+  university   University        @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@map("university_documents")
+}
+
+model PartnerInquiry {
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String
+  phone          String?
+  company        String?
+  city           String?
+  partnerType    String?  @map("partner_type")
+  message        String?
+  status         String   @default("pending")
+  studentsPlaced Int?     @map("students_placed")
+  experience     Int?
+  rating         Decimal? @db.Decimal(2, 1)
+  imageName      String?  @map("image_name")
+  imagePath      String?  @map("image_path")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("partner_inquiries")
+}
+
+enum UserRole {
+  admin
+  employee
+  agent
+  student
+}
+
+enum LeadStatus {
+  active
+  inactive
+  blocked
+}
+
+enum NeetStatus {
+  qualified
+  not_qualified
+}
+
+enum ApplicationStatus {
+  applied
+  shortlisted
+  accepted
+  rejected
+}
+
+enum CountryDocType {
+  embassy_letter
+  nmc_guidelines
+}
+
+enum UniversityDocType {
+  brochure
+  university_license
+  aggregation_letter
+}
