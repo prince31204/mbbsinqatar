@@ -157,7 +157,7 @@ export default function UniversityMap({
   const center: [number, number] = isSingle 
     ? [Number(mapUniversities[0].latitude), Number(mapUniversities[0].longitude)] 
     : [25.3548, 51.1839];
-  const zoomLevel = isSingle ? 12 : 9;
+  const zoomLevel = isSingle ? 12 : 4;
 
   const tileLayers: Record<LayerType, { url: string; attribution: string }> = {
     map: {
