@@ -120,26 +120,26 @@ export default async function NewsDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
-      <div className="min-h-screen bg-[#FFFDF9]">
+      <div className="min-h-screen bg-[#FAF8F7]">
         {/* Breadcrumb */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-[#6B7280] flex-wrap">
-            <Link href="/" className="hover:text-[#102A43]">
+            <Link href="/" className="hover:text-[#5B0F26]">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/news" className="hover:text-[#102A43]">
+            <Link href="/news" className="hover:text-[#5B0F26]">
               News
             </Link>
             <ChevronRight className="w-4 h-4" />
             <Link
               href={`/news/${item.category.slug}`}
-              className="hover:text-[#102A43]"
+              className="hover:text-[#5B0F26]"
             >
               {item.category.name}
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-[#17202A] line-clamp-1">{item.title}</span>
+            <span className="text-[#1F2937] line-clamp-1">{item.title}</span>
           </div>
         </div>
 
@@ -166,7 +166,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     <Link
                       href={`/news/${item.category.slug}`}
-                      className="bg-white text-[#102A43] text-xs font-semibold px-3 py-1 rounded-full"
+                      className="bg-white text-[#5B0F26] text-xs font-semibold px-3 py-1 rounded-full"
                     >
                       {item.category.name}
                     </Link>
@@ -186,7 +186,7 @@ export default async function NewsDetailPage({ params }: Props) {
                     )}
                   </div>
 
-                  <h1 className="text-2xl lg:text-3xl font-bold text-[#17202A] mb-4">
+                  <h1 className="text-2xl lg:text-3xl font-bold text-[#1F2937] mb-4">
                     {item.title}
                   </h1>
                   {item.shortnote && (
@@ -207,7 +207,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   {/* Content sections */}
                   {topLevel.map((section) => (
                     <div key={section.id} className="mb-8">
-                      <h2 className="text-xl font-bold text-[#17202A] mb-3">
+                      <h2 className="text-xl font-bold text-[#1F2937] mb-3">
                         {section.title}
                       </h2>
                       <div
@@ -232,7 +232,7 @@ export default async function NewsDetailPage({ params }: Props) {
                           key={child.id}
                           className="ml-4 mt-4 pl-4 border-l-2 border-[#E5E7EB]"
                         >
-                          <h3 className="text-lg font-semibold text-[#17202A] mb-2">
+                          <h3 className="text-lg font-semibold text-[#1F2937] mb-2">
                             {child.title}
                           </h3>
                           <div
@@ -249,7 +249,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   {/* FAQs */}
                   {item.faqs.length > 0 && (
                     <div className="mt-10">
-                      <h2 className="text-xl font-bold text-[#17202A] mb-4">
+                      <h2 className="text-xl font-bold text-[#1F2937] mb-4">
                         Frequently Asked Questions
                       </h2>
                       <div className="space-y-4">
@@ -258,9 +258,9 @@ export default async function NewsDetailPage({ params }: Props) {
                             key={faq.id}
                             className="bg-white rounded-xl p-4 group"
                           >
-                            <summary className="font-semibold text-[#17202A] cursor-pointer list-none flex justify-between items-center">
+                            <summary className="font-semibold text-[#1F2937] cursor-pointer list-none flex justify-between items-center">
                               {faq.question}
-                              <span className="text-[#BC002D] ml-2 shrink-0 transition-transform group-open:rotate-45">
+                              <span className="text-[#8A1538] ml-2 shrink-0 transition-transform group-open:rotate-45">
                                 +
                               </span>
                             </summary>
@@ -278,7 +278,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   <div className="mt-8 pt-6 border-t border-[#E5E7EB] flex items-center justify-between">
                     <Link
                       href={`/news/${item.category.slug}`}
-                      className="flex items-center gap-2 text-[#BC002D] hover:text-[#102A43] font-medium transition-colors"
+                      className="flex items-center gap-2 text-[#8A1538] hover:text-[#5B0F26] font-medium transition-colors"
                     >
                       <ArrowLeft className="w-4 h-4" /> Back to{" "}
                       {item.category.name}
@@ -290,7 +290,7 @@ export default async function NewsDetailPage({ params }: Props) {
               {/* Related news */}
               {relatedNews.length > 0 && (
                 <div className="mt-8">
-                  <h2 className="text-xl font-bold text-[#17202A] mb-4">
+                  <h2 className="text-xl font-bold text-[#1F2937] mb-4">
                     Related News
                   </h2>
                   <div className="grid sm:grid-cols-3 gap-4">
@@ -314,7 +314,7 @@ export default async function NewsDetailPage({ params }: Props) {
                           )}
                         </div>
                         <div className="p-3">
-                          <p className="text-sm font-semibold text-[#17202A] line-clamp-2 group-hover:text-[#102A43] transition-colors">
+                          <p className="text-sm font-semibold text-[#1F2937] line-clamp-2 group-hover:text-[#5B0F26] transition-colors">
                             {r.title}
                           </p>
                         </div>
@@ -328,7 +328,7 @@ export default async function NewsDetailPage({ params }: Props) {
             {/* Sidebar */}
             <aside className="space-y-6">
               <div className="bg-white rounded-2xl border border-[#E5E7EB] p-5">
-                <h3 className="font-bold text-[#17202A] mb-4">
+                <h3 className="font-bold text-[#1F2937] mb-4">
                   News Categories
                 </h3>
                 <ul className="space-y-2">
@@ -336,7 +336,7 @@ export default async function NewsDetailPage({ params }: Props) {
                     <li key={cat.name}>
                       <Link
                         href={`/news/${cat.slug}`}
-                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-[#BC002D] font-semibold" : "text-[#4B5563] hover:text-[#102A43]"}`}
+                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-[#8A1538] font-semibold" : "text-[#4B5563] hover:text-[#5B0F26]"}`}
                       >
                         <ArrowRight className="w-3 h-3 shrink-0" /> {cat.name}
                       </Link>
@@ -344,14 +344,14 @@ export default async function NewsDetailPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-[#BC002D] rounded-2xl p-6 text-[#17202A] text-center">
+              <div className="bg-[#8A1538] rounded-2xl p-6 text-[#1F2937] text-center">
                 <h3 className="font-bold text-lg mb-2">Apply for MBBS</h3>
                 <p className="text-[#4B5563] text-sm mb-4">
                   Get expert guidance for free
                 </p>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-white text-[#102A43] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-white text-[#5B0F26] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>

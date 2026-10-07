@@ -113,7 +113,7 @@ export default function UniversityIntakesPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">Intake Schedule</h2>
+            <h2 className="text-xl font-bold text-[#1F2937]">Intake Schedule</h2>
             <p className="text-sm text-[#6B7280]">
               Admission intake windows for this university
             </p>
@@ -133,7 +133,7 @@ export default function UniversityIntakesPage() {
                 isActive: true,
               });
             }}
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             <Plus size={16} className="mr-2" />
             Add Intake
@@ -142,7 +142,7 @@ export default function UniversityIntakesPage() {
 
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit Intake" : "Add Intake"}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -224,7 +224,7 @@ export default function UniversityIntakesPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -257,7 +257,7 @@ export default function UniversityIntakesPage() {
           <div className="bg-white border border-[#E5E7EB] rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+                <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                   <th className="px-4 py-3 font-medium">Intake</th>
                   <th className="px-4 py-3 font-medium">Application Period</th>
                   <th className="px-4 py-3 font-medium">Classes Start</th>
@@ -270,9 +270,9 @@ export default function UniversityIntakesPage() {
                 {intakes.map((i) => (
                   <tr
                     key={i.id}
-                    className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                    className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                   >
-                    <td className="px-4 py-3 font-semibold text-[#17202A]">
+                    <td className="px-4 py-3 font-semibold text-[#1F2937]">
                       {i.intakeMonth} {i.intakeYear}
                     </td>
                     <td className="px-4 py-3 text-[#6B7280] text-xs">
@@ -332,7 +332,7 @@ export default function UniversityIntakesPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                          className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                           onClick={async () => {
                             if (confirm("Delete?")) {
                               await fetch(

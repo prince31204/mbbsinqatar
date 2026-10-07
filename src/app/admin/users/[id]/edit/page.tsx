@@ -93,7 +93,7 @@ export default function UserEditPage() {
 
   return (
     <div className="max-w-lg mx-auto p-6">
-      <h1 className="text-2xl font-bold text-[#17202A] mb-6">Edit User</h1>
+      <h1 className="text-2xl font-bold text-[#1F2937] mb-6">Edit User</h1>
       <form
         onSubmit={handleSubmit}
         className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5"
@@ -171,7 +171,7 @@ export default function UserEditPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#102A43] hover:bg-[#102A43]"
+            className="flex-1 bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             {loading ? "Saving…" : "Save Changes"}
           </Button>

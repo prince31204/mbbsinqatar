@@ -35,7 +35,7 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
         onClick={() => setOpen((v) => !v)}
       >
         <div className="flex items-center gap-2 text-sm font-medium text-[#4B5563]">
-          <Search size={15} className="text-red-500" />
+          <Search size={15} className="text-[#8A1538]" />
           SEO Settings
           {!open && values.metaTitle && (
             <span className="text-xs text-[#6B7280] font-normal truncate max-w-[200px]">
@@ -58,7 +58,7 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
                 Meta Title
               </Label>
               <span
-                className={`text-xs ${titleLen > 60 ? "text-[#BC002D]" : "text-[#6B7280]"}`}
+                className={`text-xs ${titleLen > 60 ? "text-[#8A1538]" : "text-[#6B7280]"}`}
               >
                 {titleLen}/60
               </span>
@@ -91,7 +91,7 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
                 Meta Description
               </Label>
               <span
-                className={`text-xs ${descLen > 160 ? "text-[#BC002D]" : "text-[#6B7280]"}`}
+                className={`text-xs ${descLen > 160 ? "text-[#8A1538]" : "text-[#6B7280]"}`}
               >
                 {descLen}/160
               </span>

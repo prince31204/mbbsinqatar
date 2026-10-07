@@ -188,7 +188,7 @@ export default function UniversityProgramsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">
+            <h2 className="text-xl font-bold text-[#1F2937]">
               Programs / Courses
             </h2>
             <p className="text-sm text-[#6B7280]">
@@ -201,7 +201,7 @@ export default function UniversityProgramsPage() {
               setEditId(null);
               setForm(blankForm());
             }}
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             <Plus size={16} className="mr-2" />
             Add Program
@@ -211,19 +211,19 @@ export default function UniversityProgramsPage() {
         {/* Form */}
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-5">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit Program" : "Add New Program"}
             </h3>
 
             {loadingEdit ? (
               <div className="flex justify-center py-6">
-                <Loader2 size={24} className="animate-spin text-red-500" />
+                <Loader2 size={24} className="animate-spin text-[#8A1538]" />
               </div>
             ) : (
               <>
                 {/* Basic */}
                 <div>
-                  <p className="text-xs font-semibold text-[#102A43] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#5B0F26] uppercase tracking-wider mb-2">
                     Basic Info
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -315,7 +315,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Fees */}
                 <div>
-                  <p className="text-xs font-semibold text-[#102A43] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#5B0F26] uppercase tracking-wider mb-2">
                     Fees
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -353,7 +353,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Content */}
                 <div>
-                  <p className="text-xs font-semibold text-[#102A43] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#5B0F26] uppercase tracking-wider mb-2">
                     Program Content
                   </p>
                   <div className="grid grid-cols-1 gap-3">
@@ -374,14 +374,14 @@ export default function UniversityProgramsPage() {
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <Label>Why Choose Japan</Label>
+                      <Label>Why Choose Qatar</Label>
                       <Textarea
                         value={form.whyChooseVietnam}
                         onChange={(e) =>
                           set("whyChooseVietnam", e.target.value)
                         }
                         rows={3}
-                        placeholder="Reasons why students should choose Japan for MBBS..."
+                        placeholder="Reasons why students should choose Qatar for MBBS..."
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -400,7 +400,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Syllabus */}
                 <div>
-                  <p className="text-xs font-semibold text-[#102A43] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#5B0F26] uppercase tracking-wider mb-2">
                     Year-wise Syllabus
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -426,7 +426,7 @@ export default function UniversityProgramsPage() {
 
                 {/* SEO */}
                 <div>
-                  <p className="text-xs font-semibold text-[#102A43] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#5B0F26] uppercase tracking-wider mb-2">
                     SEO
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -468,7 +468,7 @@ export default function UniversityProgramsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving || loadingEdit}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -507,7 +507,7 @@ export default function UniversityProgramsPage() {
           ) : (
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+                <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                   <th className="px-4 py-3 font-medium">Program</th>
                   <th className="px-4 py-3 font-medium">Level</th>
                   <th className="px-4 py-3 font-medium">Duration</th>
@@ -520,10 +520,10 @@ export default function UniversityProgramsPage() {
                 {programs.map((p) => (
                   <tr
                     key={p.id}
-                    className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                    className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                   >
                     <td className="px-4 py-3">
-                      <div className="font-medium text-[#17202A]">
+                      <div className="font-medium text-[#1F2937]">
                         {p.programName}
                       </div>
                       <div className="text-xs text-[#6B7280] font-mono">
@@ -541,7 +541,7 @@ export default function UniversityProgramsPage() {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${p.isActive ? "bg-red-100 text-[#8F0023]" : "bg-[#F9FAFB] text-[#6B7280]"}`}
+                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${p.isActive ? "bg-[#F7E9EE] text-[#5B0F26]" : "bg-[#F9FAFB] text-[#6B7280]"}`}
                       >
                         {p.isActive ? "Active" : "Inactive"}
                       </span>
@@ -574,7 +574,7 @@ export default function UniversityProgramsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                          className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                           onClick={() => handleDelete(p.id)}
                         >
                           <Trash2 size={14} />

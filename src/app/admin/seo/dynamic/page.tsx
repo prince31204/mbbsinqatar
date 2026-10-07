@@ -121,20 +121,20 @@ export default function DynamicSeoPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Search size={22} className="text-[#BC002D]" />
+          <Search size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Dynamic Page SEO
             </h1>
             <p className="text-sm text-[#6B7280]">
               Default meta templates for listing & detail pages. Supports{" "}
-              <code className="text-[#BC002D]">{`{{name}}`}</code> placeholders.
+              <code className="text-[#8A1538]">{`{{name}}`}</code> placeholders.
             </p>
           </div>
         </div>
         <Button
           size="sm"
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           onClick={() => setShowAdd(true)}
         >
           <Plus size={14} className="mr-1" /> Add Template
@@ -143,7 +143,7 @@ export default function DynamicSeoPage() {
 
       {showAdd && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-4 space-y-3">
-          <h3 className="font-medium text-[#17202A]">
+          <h3 className="font-medium text-[#1F2937]">
             New Dynamic SEO Template
           </h3>
           <p className="text-xs text-[#6B7280]">
@@ -162,7 +162,7 @@ export default function DynamicSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, page: e.target.value })
                 }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               >
                 <option value="">Select page type...</option>
                 {PAGE_SUGGESTIONS.filter(
@@ -183,7 +183,7 @@ export default function DynamicSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, metaTitle: e.target.value })
                 }
-                placeholder={`{{name}} - MBBS in Japan`}
+                placeholder={`{{name}} - MBBS in Qatar`}
               />
             </div>
             <div className="col-span-2">
@@ -196,8 +196,8 @@ export default function DynamicSeoPage() {
                   setNewEntry({ ...newEntry, metaDescription: e.target.value })
                 }
                 rows={2}
-                placeholder={`Learn about {{name}} - top medical university in Japan...`}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                placeholder={`Learn about {{name}} - top medical university in Qatar...`}
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               />
             </div>
             <div>
@@ -209,7 +209,7 @@ export default function DynamicSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, metaKeyword: e.target.value })
                 }
-                placeholder="mbbs Japan, {{name}}"
+                placeholder="mbbs Qatar, {{name}}"
               />
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function DynamicSeoPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -290,7 +290,7 @@ export default function DynamicSeoPage() {
                             })
                           }
                           rows={2}
-                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
                         />
                       </div>
                       <div>
@@ -312,7 +312,7 @@ export default function DynamicSeoPage() {
                       <Button
                         size="sm"
                         onClick={handleSaveEdit}
-                        className="bg-[#8F0023] hover:bg-red-700"
+                        className="bg-[#5B0F26] hover:bg-[#5B0F26]"
                       >
                         <Check size={14} className="mr-1" /> Save
                       </Button>
@@ -329,17 +329,17 @@ export default function DynamicSeoPage() {
                   <div className="flex items-start gap-4">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-sm font-semibold text-[#BC002D] bg-white px-2 py-0.5 rounded">
+                        <span className="font-mono text-sm font-semibold text-[#8A1538] bg-white px-2 py-0.5 rounded">
                           {entry.page}
                         </span>
                         <span
-                          className={`text-xs px-1.5 py-0.5 rounded-full ${entry.status ? "bg-red-100 text-[#8F0023]" : "bg-[#F9FAFB] text-[#6B7280]"}`}
+                          className={`text-xs px-1.5 py-0.5 rounded-full ${entry.status ? "bg-[#F7E9EE] text-[#5B0F26]" : "bg-[#F9FAFB] text-[#6B7280]"}`}
                         >
                           {entry.status ? "Active" : "Inactive"}
                         </span>
                       </div>
                       {entry.metaTitle && (
-                        <p className="text-sm font-medium text-[#17202A] truncate">
+                        <p className="text-sm font-medium text-[#1F2937] truncate">
                           {entry.metaTitle}
                         </p>
                       )}
@@ -374,7 +374,7 @@ export default function DynamicSeoPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                        className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                         onClick={() => handleDelete(entry.id)}
                       >
                         <Trash2 size={14} />

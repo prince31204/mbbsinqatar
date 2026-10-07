@@ -102,9 +102,9 @@ export default function AdminProfilePage() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div className="flex items-center gap-3">
-        <User size={22} className="text-[#BC002D]" />
+        <User size={22} className="text-[#8A1538]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">My Profile</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">My Profile</h1>
           <p className="text-sm text-[#6B7280]">
             {profile?.email} · {profile?.role}
           </p>
@@ -113,7 +113,7 @@ export default function AdminProfilePage() {
 
       {/* Profile Info */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h2 className="font-semibold text-[#17202A] border-b pb-2">
+        <h2 className="font-semibold text-[#1F2937] border-b pb-2">
           Personal Information
         </h2>
         <div className="grid grid-cols-2 gap-4">
@@ -143,7 +143,7 @@ export default function AdminProfilePage() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               placeholder="Brief bio..."
             />
           </div>
@@ -151,7 +151,7 @@ export default function AdminProfilePage() {
         <Button
           onClick={handleSave}
           disabled={saving}
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           {saving ? (
             <Loader2 size={16} className="animate-spin mr-2" />
@@ -164,7 +164,7 @@ export default function AdminProfilePage() {
 
       {/* Password */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h2 className="font-semibold text-[#17202A] border-b pb-2 flex items-center gap-2">
+        <h2 className="font-semibold text-[#1F2937] border-b pb-2 flex items-center gap-2">
           <KeyRound size={16} /> Change Password
         </h2>
         <div className="space-y-3">

@@ -42,7 +42,7 @@ export function DeleteConfirmDialog({
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-2">
-            <Trash2 size={18} className="text-[#BC002D]" />
+            <Trash2 size={18} className="text-[#8A1538]" />
             Delete {count > 1 ? `${count} records` : "record"}?
           </AlertDialogTitle>
           <AlertDialogDescription>
@@ -58,7 +58,7 @@ export function DeleteConfirmDialog({
           <AlertDialogAction
             onClick={handleConfirm}
             disabled={loading}
-            className="bg-[#102A43] hover:bg-[#102A43] text-white"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26] text-white"
           >
             {loading ? (
               <>

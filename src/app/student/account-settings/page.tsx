@@ -51,7 +51,7 @@ export default function AccountSettingsPage() {
   return (
     <div className="p-6 lg:p-8 max-w-2xl">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-[#17202A]">Account Settings</h1>
+        <h1 className="text-2xl font-bold text-[#1F2937]">Account Settings</h1>
         <p className="text-[#6B7280] mt-1">
           Manage your notification preferences and account.
         </p>
@@ -60,8 +60,8 @@ export default function AccountSettingsPage() {
       {/* Notification Preferences */}
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6 mb-6">
         <div className="flex items-center gap-2 mb-5">
-          <Bell className="w-5 h-5 text-[#BC002D]" />
-          <h2 className="font-semibold text-[#17202A]">
+          <Bell className="w-5 h-5 text-[#8A1538]" />
+          <h2 className="font-semibold text-[#1F2937]">
             Notification Preferences
           </h2>
         </div>
@@ -70,7 +70,7 @@ export default function AccountSettingsPage() {
           {/* Email toggle */}
           <div className="flex items-center justify-between py-3 border-b border-[#E5E7EB]">
             <div>
-              <p className="font-medium text-[#17202A] text-sm">
+              <p className="font-medium text-[#1F2937] text-sm">
                 Email Notifications
               </p>
               <p className="text-xs text-[#6B7280] mt-0.5">
@@ -82,7 +82,7 @@ export default function AccountSettingsPage() {
                 setEmailOn((v) => !v);
                 setSaved(false);
               }}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:ring-offset-2 ${emailOn ? "bg-[#BC002D]" : "bg-gray-300"}`}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:ring-offset-2 ${emailOn ? "bg-[#8A1538]" : "bg-gray-300"}`}
               aria-label="Toggle email notifications"
             >
               <span
@@ -94,7 +94,7 @@ export default function AccountSettingsPage() {
           {/* SMS toggle */}
           <div className="flex items-center justify-between py-3">
             <div>
-              <p className="font-medium text-[#17202A] text-sm">
+              <p className="font-medium text-[#1F2937] text-sm">
                 SMS Notifications
               </p>
               <p className="text-xs text-[#6B7280] mt-0.5">
@@ -107,7 +107,7 @@ export default function AccountSettingsPage() {
                 setSmsOn((v) => !v);
                 setSaved(false);
               }}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:ring-offset-2 ${smsOn ? "bg-[#BC002D]" : "bg-gray-300"}`}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:ring-offset-2 ${smsOn ? "bg-[#8A1538]" : "bg-gray-300"}`}
               aria-label="Toggle SMS notifications"
             >
               <span
@@ -118,7 +118,7 @@ export default function AccountSettingsPage() {
         </div>
 
         {saved && (
-          <div className="flex items-center gap-2 mt-4 text-[#8F0023] bg-red-50 border border-red-200 px-4 py-2.5 rounded-xl text-sm">
+          <div className="flex items-center gap-2 mt-4 text-[#5B0F26] bg-[#F7E9EE] border border-[#F7E9EE] px-4 py-2.5 rounded-xl text-sm">
             <CheckCircle className="w-4 h-4 shrink-0" />
             Notification preferences saved.
           </div>
@@ -127,7 +127,7 @@ export default function AccountSettingsPage() {
         <div className="mt-5">
           <button
             onClick={handleSaveNotifications}
-            className="bg-[#BC002D] hover:bg-[#8F0023] text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+            className="bg-[#8A1538] hover:bg-[#5B0F26] text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-colors"
           >
             Save Preferences
           </button>
@@ -137,8 +137,8 @@ export default function AccountSettingsPage() {
       {/* Delete Account */}
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
         <div className="flex items-center gap-2 mb-4">
-          <Trash2 className="w-5 h-5 text-[#BC002D]" />
-          <h2 className="font-semibold text-[#17202A]">Delete Account</h2>
+          <Trash2 className="w-5 h-5 text-[#8A1538]" />
+          <h2 className="font-semibold text-[#1F2937]">Delete Account</h2>
         </div>
         <p className="text-sm text-[#4B5563] mb-4">
           Permanently delete your account and all associated data. This action
@@ -146,19 +146,19 @@ export default function AccountSettingsPage() {
         </p>
 
         {deleteError && (
-          <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-xl text-sm mb-4">
+          <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-xl text-sm mb-4">
             {deleteError}
           </div>
         )}
 
         {confirmDelete && (
-          <div className="bg-red-400 border border-[#E5E7EB] rounded-xl p-4 mb-4 flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-[#BC002D] shrink-0 mt-0.5" />
+          <div className="bg-[#8A1538] border border-[#E5E7EB] rounded-xl p-4 mb-4 flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-[#8A1538] shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-semibold text-[#BC002D]">
+              <p className="text-sm font-semibold text-[#8A1538]">
                 Are you sure?
               </p>
-              <p className="text-xs text-[#BC002D] mt-0.5">
+              <p className="text-xs text-[#8A1538] mt-0.5">
                 All your inquiries and profile data will be permanently deleted.
                 Click the button again to confirm.
               </p>
@@ -170,7 +170,7 @@ export default function AccountSettingsPage() {
           <button
             onClick={handleDeleteAccount}
             disabled={deleting}
-            className="flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#F9FAFB] text-[#102A43] border border-[#E5E7EB] rounded-xl text-sm font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#F9FAFB] text-[#5B0F26] border border-[#E5E7EB] rounded-xl text-sm font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {deleting ? (
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -182,7 +182,7 @@ export default function AccountSettingsPage() {
           {confirmDelete && (
             <button
               onClick={() => setConfirmDelete(false)}
-              className="px-5 py-2.5 border border-[#E5E7EB] text-[#4B5563] hover:bg-[#FFFDF9] rounded-xl text-sm font-medium transition-colors"
+              className="px-5 py-2.5 border border-[#E5E7EB] text-[#4B5563] hover:bg-[#FAF8F7] rounded-xl text-sm font-medium transition-colors"
             >
               Cancel
             </button>

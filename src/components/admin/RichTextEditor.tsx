@@ -78,7 +78,7 @@ export function RichTextEditor({
 
       {/* Dedicated action bar below the editor to avoid obstructing the rich toolbar */}
       <div
-        className={`flex justify-between items-center p-2 bg-[#FFFDF9] border-t border-[#E5E7EB] ${isFullScreen ? "h-[50px]" : ""}`}
+        className={`flex justify-between items-center p-2 bg-[#FAF8F7] border-t border-[#E5E7EB] ${isFullScreen ? "h-[50px]" : ""}`}
       >
         <div className="flex items-center gap-4 pl-2">
           <div className="flex items-center gap-2">
@@ -86,7 +86,7 @@ export function RichTextEditor({
               Rich Text Editor
             </span>
             {isFullScreen && (
-              <span className="text-[10px] bg-[#F9FAFB] text-[#BC002D] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+              <span className="text-[10px] bg-[#F9FAFB] text-[#8A1538] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
                 Full Screen Mode
               </span>
             )}
@@ -111,7 +111,7 @@ export function RichTextEditor({
               </>
             ) : (
               <>
-                <Maximize2 size={16} className="text-red-500" /> Full Screen
+                <Maximize2 size={16} className="text-[#8A1538]" /> Full Screen
               </>
             )}
           </button>
@@ -122,7 +122,7 @@ export function RichTextEditor({
                 type="button"
                 className="px-3 py-1.5 hover:bg-gray-200 rounded-md text-[#4B5563] transition-colors bg-white border border-gray-300 shadow-sm flex items-center gap-1.5 text-xs font-semibold"
               >
-                <Smile size={16} className="text-red-500" /> Insert Emoji
+                <Smile size={16} className="text-[#8A1538]" /> Insert Emoji
               </button>
             </PopoverTrigger>
             <PopoverContent

@@ -194,9 +194,9 @@ export default function BlogEditPage() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <div className="flex items-center justify-between sticky top-0 bg-[#FFFDF9]/80 z-[60] py-3 border-b mb-6 px-1 gap-4">
+      <div className="flex items-center justify-between sticky top-0 bg-[#FAF8F7]/80 z-[60] py-3 border-b mb-6 px-1 gap-4">
         <div className="min-w-0">
-          <h1 className="text-xl font-bold text-[#17202A] truncate">
+          <h1 className="text-xl font-bold text-[#1F2937] truncate">
             {form.title || "Edit Blog Post"}
           </h1>
           <p className="text-xs text-[#6B7280]">ID: {id}</p>
@@ -207,8 +207,8 @@ export default function BlogEditPage() {
             onClick={() => setActiveTab("Preview")}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
               activeTab === "Preview"
-                ? "bg-[#102A43] text-white border-[#E5E7EB]"
-                : "bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#102A43]"
+                ? "bg-[#5B0F26] text-white border-[#E5E7EB]"
+                : "bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#5B0F26]"
             }`}
           >
             <Eye size={14} /> Preview
@@ -217,7 +217,7 @@ export default function BlogEditPage() {
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#102A43] transition-all"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#5B0F26] transition-all"
           >
             <ExternalLink size={14} /> Live
           </a>
@@ -230,7 +230,7 @@ export default function BlogEditPage() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-[#17202A]" : "text-[#6B7280] hover:text-[#4B5563]"}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-[#1F2937]" : "text-[#6B7280] hover:text-[#4B5563]"}`}
           >
             {tab}
           </button>
@@ -293,7 +293,7 @@ export default function BlogEditPage() {
                     className="h-9"
                   />
                 </div>
-                <div className="flex items-center justify-between bg-[#FFFDF9] p-2 rounded-lg border border-[#E5E7EB] mt-5">
+                <div className="flex items-center justify-between bg-[#FAF8F7] p-2 rounded-lg border border-[#E5E7EB] mt-5">
                   <Label className="text-xs">Published Status</Label>
                   <Switch
                     checked={form.status}
@@ -303,14 +303,14 @@ export default function BlogEditPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center justify-between bg-[#FFFDF9] p-2 rounded-lg border border-[#E5E7EB]">
+                <div className="flex items-center justify-between bg-[#FAF8F7] p-2 rounded-lg border border-[#E5E7EB]">
                   <Label className="text-xs font-semibold">Home Featured</Label>
                   <Switch
                     checked={form.homeView}
                     onCheckedChange={(v) => set("homeView", v)}
                   />
                 </div>
-                <div className="flex items-center justify-between bg-[#FFFDF9] p-2 rounded-lg border border-[#E5E7EB]">
+                <div className="flex items-center justify-between bg-[#FAF8F7] p-2 rounded-lg border border-[#E5E7EB]">
                   <Label className="text-xs font-semibold">Trending Post</Label>
                   <Switch
                     checked={form.trending}
@@ -404,7 +404,7 @@ export default function BlogEditPage() {
               type="submit"
               disabled={loading}
               size="lg"
-              className="flex-1 bg-[#102A43] hover:bg-[#102A43] text-white font-bold h-12 shadow-md"
+              className="flex-1 bg-[#5B0F26] hover:bg-[#5B0F26] text-white font-bold h-12 shadow-md"
             >
               {loading ? (
                 <Loader2 className="animate-spin mr-2" />
@@ -445,27 +445,27 @@ export default function BlogEditPage() {
         <div className="space-y-6">
           {/* Breadcrumb Mockup */}
           <nav className="bg-white border rounded-xl border-[#E5E7EB] p-3 flex flex-wrap items-center gap-1.5 text-xs text-[#6B7280]">
-            <span className="hover:text-[#102A43] cursor-default">Home</span>
+            <span className="hover:text-[#5B0F26] cursor-default">Home</span>
             <ChevronRight className="w-3 h-3 text-[#4B5563]" />
-            <span className="hover:text-[#102A43] cursor-default">Blog</span>
+            <span className="hover:text-[#5B0F26] cursor-default">Blog</span>
             <ChevronRight className="w-3 h-3 text-[#4B5563]" />
-            <span className="hover:text-[#102A43] cursor-default">
+            <span className="hover:text-[#5B0F26] cursor-default">
               {categories.find((c) => String(c.id) === form.categoryId)?.name ||
                 "Category"}
             </span>
             <ChevronRight className="w-3 h-3 text-[#4B5563]" />
-            <span className="text-[#17202A] font-medium truncate max-w-[200px]">
+            <span className="text-[#1F2937] font-medium truncate max-w-[200px]">
               {form.title || "Blog Title"}
             </span>
           </nav>
           <article className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm overflow-hidden p-8">
             {/* Category pill + badges */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="inline-flex items-center bg-[#102A43] text-[#BC002D] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center bg-[#5B0F26] text-[#8A1538] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
                 {currentCategory?.name || "Uncategorized"}
               </span>
               {form.status && (
-                <span className="inline-flex items-center bg-red-50 text-[#8F0023] border border-red-200 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="inline-flex items-center bg-[#F7E9EE] text-[#5B0F26] border border-[#F7E9EE] text-xs font-semibold px-3 py-1 rounded-full">
                   Published
                 </span>
               )}
@@ -475,20 +475,20 @@ export default function BlogEditPage() {
                 </span>
               )}
               {form.homeView && (
-                <span className="inline-flex items-center bg-white text-[#BC002D] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="inline-flex items-center bg-white text-[#8A1538] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
                   Home Featured
                 </span>
               )}
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl lg:text-4xl font-bold text-[#17202A] leading-snug mb-5">
+            <h1 className="text-3xl lg:text-4xl font-bold text-[#1F2937] leading-snug mb-5">
               {form.title || "(Untitled Post)"}
             </h1>
 
             {/* Author + date + reading time */}
             <div className="flex flex-wrap items-center gap-4 text-sm font-medium mb-6 pb-6 border-b border-[#E5E7EB]">
-              <span className="flex items-center gap-1.5 text-[#BC002D]">
+              <span className="flex items-center gap-1.5 text-[#8A1538]">
                 <User className="w-4 h-4" />{" "}
                 {getExpertProfile(parseInt(form.authorId))?.name ||
                   "Expert Author"}
@@ -529,7 +529,7 @@ export default function BlogEditPage() {
 
             {/* Main description */}
             <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#17202A] prose-a:text-[#BC002D] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-[#E5E7EB] text-[#4B5563] mb-10"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#1F2937] prose-a:text-[#8A1538] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-[#E5E7EB] text-[#4B5563] mb-10"
               dangerouslySetInnerHTML={{
                 __html:
                   form.content ||
@@ -548,14 +548,14 @@ export default function BlogEditPage() {
                 {topLevelSections.map((section) => (
                   <div key={section.id}>
                     {section.title && (
-                      <h2 className="text-2xl font-bold text-[#17202A] mb-4 flex items-center gap-2">
-                        <span className="w-1 h-6 bg-[#102A43] rounded-full inline-block shrink-0" />
+                      <h2 className="text-2xl font-bold text-[#1F2937] mb-4 flex items-center gap-2">
+                        <span className="w-1 h-6 bg-[#5B0F26] rounded-full inline-block shrink-0" />
                         {section.title}
                       </h2>
                     )}
                     {section.description && (
                       <div
-                        className="prose prose-lg max-w-none text-[#4B5563] prose-headings:text-[#17202A] prose-a:text-[#BC002D]"
+                        className="prose prose-lg max-w-none text-[#4B5563] prose-headings:text-[#1F2937] prose-a:text-[#8A1538]"
                         dangerouslySetInnerHTML={{
                           __html: section.description,
                         }}
@@ -577,7 +577,7 @@ export default function BlogEditPage() {
                         {getChildrenOf(section.id).map((child) => (
                           <div key={child.id}>
                             {child.title && (
-                              <h3 className="text-lg font-semibold text-[#17202A] mb-2">
+                              <h3 className="text-lg font-semibold text-[#1F2937] mb-2">
                                 {child.title}
                               </h3>
                             )}
@@ -598,8 +598,8 @@ export default function BlogEditPage() {
 
                 {/* FAQ Section */}
                 {previewData.faqs.length > 0 && (
-                  <div className="bg-[#FFFDF9] rounded-2xl p-8 mt-12 border border-[#E5E7EB]">
-                    <h2 className="text-2xl font-bold text-[#17202A] mb-6 fund-primary">
+                  <div className="bg-[#FAF8F7] rounded-2xl p-8 mt-12 border border-[#E5E7EB]">
+                    <h2 className="text-2xl font-bold text-[#1F2937] mb-6 fund-primary">
                       Frequently Asked Questions
                     </h2>
                     <div className="space-y-4">
@@ -608,7 +608,7 @@ export default function BlogEditPage() {
                           key={faq.id}
                           className="group bg-white border border-[#E5E7EB] rounded-xl overflow-hidden"
                         >
-                          <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#17202A] list-none select-none hover:text-[#102A43] transition-colors">
+                          <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#1F2937] list-none select-none hover:text-[#5B0F26] transition-colors">
                             {faq.question}
                             <span className="ml-4 shrink-0 text-[#6B7280] group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
                               +

@@ -49,19 +49,19 @@ export default function ChangePasswordPage() {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <Lock className="w-6 h-6 text-[#BC002D]" />
-        <h1 className="text-2xl font-bold text-[#17202A]">Change Password</h1>
+        <Lock className="w-6 h-6 text-[#8A1538]" />
+        <h1 className="text-2xl font-bold text-[#1F2937]">Change Password</h1>
       </div>
 
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-7 max-w-lg">
         {success && (
-          <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-[#8F0023] px-4 py-3 rounded-xl mb-5 text-sm">
+          <div className="flex items-center gap-2 bg-[#F7E9EE] border border-[#F7E9EE] text-[#5B0F26] px-4 py-3 rounded-xl mb-5 text-sm">
             <CheckCircle className="w-4 h-4 shrink-0" /> Password changed
             successfully.
           </div>
         )}
         {error && (
-          <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-xl mb-5 text-sm">
+          <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-xl mb-5 text-sm">
             {error}
           </div>
         )}
@@ -80,7 +80,7 @@ export default function ChangePasswordPage() {
                   setForm({ ...form, currentPassword: e.target.value })
                 }
                 placeholder="Enter current password"
-                className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 pr-12 text-[#17202A] text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 pr-12 text-[#1F2937] text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               />
               <button
                 type="button"
@@ -109,7 +109,7 @@ export default function ChangePasswordPage() {
                   setForm({ ...form, newPassword: e.target.value })
                 }
                 placeholder="At least 8 characters"
-                className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 pr-12 text-[#17202A] text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 pr-12 text-[#1F2937] text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               />
               <button
                 type="button"
@@ -124,7 +124,7 @@ export default function ChangePasswordPage() {
               </button>
             </div>
             {form.newPassword && form.newPassword.length < 8 && (
-              <p className="text-xs text-[#BC002D] mt-1">
+              <p className="text-xs text-[#8A1538] mt-1">
                 Password must be at least 8 characters
               </p>
             )}
@@ -140,10 +140,10 @@ export default function ChangePasswordPage() {
               value={form.confirm}
               onChange={(e) => setForm({ ...form, confirm: e.target.value })}
               placeholder="Repeat new password"
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 text-[#17202A] text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 text-[#1F2937] text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
             />
             {form.confirm && form.confirm !== form.newPassword && (
-              <p className="text-xs text-[#BC002D] mt-1">
+              <p className="text-xs text-[#8A1538] mt-1">
                 Passwords do not match
               </p>
             )}
@@ -153,7 +153,7 @@ export default function ChangePasswordPage() {
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center gap-2 bg-[#BC002D] hover:bg-[#8F0023] text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
+              className="flex items-center gap-2 bg-[#8A1538] hover:bg-[#5B0F26] text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
             >
               {loading ? (
                 <>

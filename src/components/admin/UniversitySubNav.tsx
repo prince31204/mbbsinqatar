@@ -87,14 +87,14 @@ export function UniversitySubNav({
         <Button variant="ghost" size="sm" asChild>
           <Link
             href="/admin/universities"
-            className="flex items-center gap-1.5 text-[#6B7280] hover:text-[#17202A]"
+            className="flex items-center gap-1.5 text-[#6B7280] hover:text-[#1F2937]"
           >
             <ArrowLeft size={14} />
             All Universities
           </Link>
         </Button>
         <span className="text-[#4B5563]">/</span>
-        <span className="text-sm font-medium text-[#17202A] truncate max-w-xs">
+        <span className="text-sm font-medium text-[#1F2937] truncate max-w-xs">
           {universityName}
         </span>
       </div>
@@ -111,8 +111,8 @@ export function UniversitySubNav({
               className={cn(
                 "flex items-center gap-1.5 px-3 py-2 text-xs font-medium whitespace-nowrap border-b-2 transition-colors -mb-px",
                 active
-                  ? "border-[#E5E7EB] text-[#BC002D]"
-                  : "border-transparent text-[#6B7280] hover:text-[#17202A] hover:border-gray-300",
+                  ? "border-[#E5E7EB] text-[#8A1538]"
+                  : "border-transparent text-[#6B7280] hover:text-[#1F2937] hover:border-gray-300",
               )}
             >
               {tab.icon}

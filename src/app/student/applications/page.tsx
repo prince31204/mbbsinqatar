@@ -17,22 +17,22 @@ const statusConfig = {
   applied: {
     label: "Applied",
     icon: Clock,
-    color: "text-[#BC002D] bg-white border-[#E5E7EB]",
+    color: "text-[#8A1538] bg-white border-[#E5E7EB]",
   },
   shortlisted: {
     label: "Shortlisted",
     icon: AlertCircle,
-    color: "text-[#BC002D] bg-red-400 border-[#E5E7EB]",
+    color: "text-[#8A1538] bg-[#8A1538] border-[#E5E7EB]",
   },
   accepted: {
     label: "Accepted",
     icon: CheckCircle,
-    color: "text-[#8F0023] bg-red-50 border-red-200",
+    color: "text-[#5B0F26] bg-[#F7E9EE] border-[#F7E9EE]",
   },
   rejected: {
     label: "Rejected",
     icon: XCircle,
-    color: "text-[#BC002D] bg-white border-[#E5E7EB]",
+    color: "text-[#8A1538] bg-white border-[#E5E7EB]",
   },
 } as const;
 
@@ -68,8 +68,8 @@ export default function ApplicationsPage() {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <FileText className="w-6 h-6 text-[#BC002D]" />
-        <h1 className="text-2xl font-bold text-[#17202A]">My Applications</h1>
+        <FileText className="w-6 h-6 text-[#8A1538]" />
+        <h1 className="text-2xl font-bold text-[#1F2937]">My Applications</h1>
       </div>
 
       {loading && (
@@ -102,7 +102,7 @@ export default function ApplicationsPage() {
           </p>
           <Link
             href="/universities"
-            className="inline-flex items-center gap-2 bg-[#BC002D] hover:bg-[#8F0023] text-white px-6 py-2.5 rounded-xl font-medium transition-colors"
+            className="inline-flex items-center gap-2 bg-[#8A1538] hover:bg-[#5B0F26] text-white px-6 py-2.5 rounded-xl font-medium transition-colors"
           >
             Browse Universities
           </Link>
@@ -143,7 +143,7 @@ export default function ApplicationsPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-3 flex-wrap">
                       <div>
-                        <h3 className="font-semibold text-[#17202A]">
+                        <h3 className="font-semibold text-[#1F2937]">
                           {app.program.programName}
                         </h3>
                         <p className="text-sm text-[#6B7280] mt-0.5">
@@ -180,7 +180,7 @@ export default function ApplicationsPage() {
                       </span>
                     </div>
                     {app.notes && (
-                      <p className="text-xs text-[#6B7280] mt-2 bg-[#FFFDF9] rounded-lg px-3 py-2">
+                      <p className="text-xs text-[#6B7280] mt-2 bg-[#FAF8F7] rounded-lg px-3 py-2">
                         {app.notes}
                       </p>
                     )}
@@ -189,7 +189,7 @@ export default function ApplicationsPage() {
                   {/* Link */}
                   <Link
                     href={`/universities/${app.program.university.slug}/courses/${app.program.programSlug}`}
-                    className="text-[#6B7280] hover:text-[#102A43] transition-colors shrink-0"
+                    className="text-[#6B7280] hover:text-[#5B0F26] transition-colors shrink-0"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </Link>

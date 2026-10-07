@@ -3,11 +3,11 @@ import { prisma } from "./prisma";
 
 // Always use www canonical — canonical source of truth for production
 const RAW_SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.mbbsinjapan.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.mbbsinqatar.com";
 const SITE_URL = RAW_SITE_URL.includes("localhost")
   ? RAW_SITE_URL
   : RAW_SITE_URL.replace(/^(https?:\/\/)(www\.)?/, "$1www.");
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Japan";
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Qatar";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 export const APP_YEAR =
@@ -148,10 +148,10 @@ export function organizationSchema() {
       availableLanguage: "English",
     },
     sameAs: [
-      "https://facebook.com/mbbsinJapan",
-      "https://twitter.com/mbbsinJapan",
-      "https://instagram.com/mbbsinJapan",
-      "https://youtube.com/@mbbsinJapan",
+      "https://facebook.com/mbbsinQatar",
+      "https://twitter.com/mbbsinQatar",
+      "https://instagram.com/mbbsinQatar",
+      "https://youtube.com/@mbbsinQatar",
     ],
   };
 }
@@ -184,7 +184,7 @@ export function universitySchema(university: {
     sameAs: university.sameAs ? [university.sameAs] : undefined,
     address: {
       "@type": "PostalAddress",
-      addressLocality: university.city || "Japan",
+      addressLocality: university.city || "Qatar",
       addressCountry: "MU",
     },
     ...(university.rating && {

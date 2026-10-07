@@ -8,13 +8,13 @@ import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
   title:
-    "MBBS Japan Blog — Medical Education Tips, University Reviews & More",
+    "MBBS Qatar Blog — Medical Education Tips, University Reviews & More",
   description:
-    "Read our expert blog on MBBS in Japan. University reviews, student experiences, admission tips, and medical education guides.",
+    "Read our expert blog on MBBS in Qatar. University reviews, student experiences, admission tips, and medical education guides.",
   path: "/blog",
   entitySeo: {
     metaKeyword:
-      "MBBS Japan blog, medical education Japan, study abroad blog",
+      "MBBS Qatar blog, medical education Qatar, study abroad blog",
   },
   pageKey: "blog",
 });
@@ -49,19 +49,19 @@ export default async function BlogPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FAF8F7]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Header */}
-      <div className="bg-white text-[#17202A] py-16">
+      <div className="bg-white text-[#1F2937] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
             Blog &amp; News
           </h1>
           <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
-            Expert insights on MBBS in Japan, admission tips, university
+            Expert insights on MBBS in Qatar, admission tips, university
             reviews, and student success stories.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default async function BlogPage() {
               <a
                 key={tab.href}
                 href={tab.href}
-                className="px-6 py-4 text-sm font-semibold text-[#4B5563] hover:text-[#102A43] border-b-2 border-transparent hover:border-[#E5E7EB] transition-colors"
+                className="px-6 py-4 text-sm font-semibold text-[#4B5563] hover:text-[#5B0F26] border-b-2 border-transparent hover:border-[#E5E7EB] transition-colors"
               >
                 {tab.label}
               </a>
@@ -123,14 +123,14 @@ export default async function BlogPage() {
                       <div className="absolute top-3 left-3 z-20">
                         <Link
                           href={`/blog/${blog.category.slug}`}
-                          className="bg-[#BC002D] text-white text-xs font-medium px-3 py-1 rounded-full hover:bg-[#8F0023] relative z-20"
+                          className="bg-[#8A1538] text-white text-xs font-medium px-3 py-1 rounded-full hover:bg-[#5B0F26] relative z-20"
                         >
                           {blog.category.name}
                         </Link>
                       </div>
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <h2 className="font-bold text-[#17202A] text-lg mb-2 line-clamp-2 group-hover:text-[#102A43] transition-colors relative z-0">
+                      <h2 className="font-bold text-[#1F2937] text-lg mb-2 line-clamp-2 group-hover:text-[#5B0F26] transition-colors relative z-0">
                         {blog.title}
                       </h2>
                       {blog.shortnote && (
@@ -161,7 +161,7 @@ export default async function BlogPage() {
                             </span>
                           </span>
                         </div>
-                        <span className="text-[#BC002D] hover:text-[#102A43] font-medium flex items-center space-x-1">
+                        <span className="text-[#8A1538] hover:text-[#5B0F26] font-medium flex items-center space-x-1">
                           <span>Read</span>
                           <ArrowRight className="w-3 h-3" />
                         </span>
@@ -176,16 +176,16 @@ export default async function BlogPage() {
           {/* Sidebar — categories */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
-              <h3 className="font-bold text-[#17202A] mb-4">Categories</h3>
+              <h3 className="font-bold text-[#1F2937] mb-4">Categories</h3>
               <ul className="space-y-2">
                 {categories.map((cat) => (
                   <li key={cat.id}>
                     <Link
                       href={`/blog/${cat.slug}`}
-                      className="flex items-center justify-between text-[#4B5563] hover:text-[#102A43] py-2 border-b border-gray-50 last:border-0 transition-colors"
+                      className="flex items-center justify-between text-[#4B5563] hover:text-[#5B0F26] py-2 border-b border-gray-50 last:border-0 transition-colors"
                     >
                       <span className="text-sm">{cat.name}</span>
-                      <span className="text-xs bg-white text-[#BC002D] px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-white text-[#8A1538] px-2 py-0.5 rounded-full">
                         {cat._count.blogs}
                       </span>
                     </Link>

@@ -49,7 +49,7 @@ async function seedAdminUser() {
       role: UserRole.admin,
       password: hashedPassword,
       designation: "Administrator",
-      description: "Platform administrator for MBBS in Japan.",
+      description: "Platform administrator for MBBS in Qatar.",
       status: true,
     },
     create: {
@@ -58,7 +58,7 @@ async function seedAdminUser() {
       role: UserRole.admin,
       password: hashedPassword,
       designation: "Administrator",
-      description: "Platform administrator for MBBS in Japan.",
+      description: "Platform administrator for MBBS in Qatar.",
       status: true,
     },
   });
@@ -66,8 +66,8 @@ async function seedAdminUser() {
 
 async function seedWebsiteSettings() {
   const settings = [
-    { key: "site_name", value: "MBBS in Japan", type: "text", group: "general" },
-    { key: "support_email", value: "admissions@mbbsinjapan.com", type: "text", group: "contact" },
+    { key: "site_name", value: "MBBS in Qatar", type: "text", group: "general" },
+    { key: "support_email", value: "admissions@mbbsinqatar.com", type: "text", group: "contact" },
     { key: "support_phone", value: "+91-11-2410-2161", type: "text", group: "contact" },
     { key: "stats_total_students", value: "2500+", type: "text", group: "stats" },
     { key: "stats_total_universities", value: "8+", type: "text", group: "stats" },
@@ -170,8 +170,8 @@ async function seedReferenceData() {
     const slug = slugify(item.name);
     await prisma.hospital.upsert({
       where: { slug },
-      update: { ...item, slug, state: "Japan", status: true },
-      create: { ...item, slug, state: "Japan", status: true },
+      update: { ...item, slug, state: "Qatar", status: true },
+      create: { ...item, slug, state: "Qatar", status: true },
     });
   }
 
@@ -184,11 +184,11 @@ async function seedCountryAndEducationPages() {
   const aboutCountry = await prisma.aboutCountryPage.upsert({
     where: { id: 1 },
     update: {
-      name: "Japan",
+      name: "Qatar",
       tagline: "A safe and multicultural destination for medical studies",
       capital: "Yerevan",
       population: "2.8 Million+",
-      languages: "English, French, Japann",
+      languages: "English, French, Qatarn",
       currency: "AMD",
       location: "Indian Ocean, East of Madagascar",
       timezone: "UTC+4",
@@ -208,15 +208,15 @@ async function seedCountryAndEducationPages() {
       privateHealthcare: "Private hospitals complement public care with specialist services.",
       studentHealthcare: "Medical support services are accessible in major study cities.",
       tourismGrowth: "A globally popular island destination with modern infrastructure.",
-      bannerImage: "/uploads/about-country/japan-banner.jpg",
+      bannerImage: "/uploads/about-country/qatar-banner.jpg",
     },
     create: {
       id: 1,
-      name: "Japan",
+      name: "Qatar",
       tagline: "A safe and multicultural destination for medical studies",
       capital: "Yerevan",
       population: "2.8 Million+",
-      languages: "English, French, Japann",
+      languages: "English, French, Qatarn",
       currency: "AMD",
       location: "Indian Ocean, East of Madagascar",
       timezone: "UTC+4",
@@ -236,7 +236,7 @@ async function seedCountryAndEducationPages() {
       privateHealthcare: "Private hospitals complement public care with specialist services.",
       studentHealthcare: "Medical support services are accessible in major study cities.",
       tourismGrowth: "A globally popular island destination with modern infrastructure.",
-      bannerImage: "/uploads/about-country/japan-banner.jpg",
+      bannerImage: "/uploads/about-country/qatar-banner.jpg",
     },
   });
 
@@ -254,7 +254,7 @@ async function seedCountryAndEducationPages() {
   }
 
   const cuisines = [
-    { dishName: "Ghaprsa", dishDescription: "Popular Japann street meal.", dishImage: "/uploads/about-country/ghaprsa.jpg" },
+    { dishName: "Ghaprsa", dishDescription: "Popular Qatarn street meal.", dishImage: "/uploads/about-country/ghaprsa.jpg" },
     { dishName: "Khash", dishDescription: "Fried lentil snack served island-wide.", dishImage: "/uploads/about-country/khash.jpg" },
   ];
   for (const item of cuisines) {
@@ -267,7 +267,7 @@ async function seedCountryAndEducationPages() {
 
   const lifestyles = [
     { title: "Multicultural Community", description: "Students from multiple countries learn together." },
-    { title: "Safe Student Lifestyle", description: "Japan is known for social stability and community support." },
+    { title: "Safe Student Lifestyle", description: "Qatar is known for social stability and community support." },
   ];
   for (const item of lifestyles) {
     await upsertByWhere(
@@ -292,9 +292,9 @@ async function seedCountryAndEducationPages() {
   const educationSystem = await prisma.educationSystem.upsert({
     where: { id: 1 },
     update: {
-      title: "Education System in Japan",
+      title: "Education System in Qatar",
       description:
-        "Japan follows a British-influenced framework with strong quality control and international compatibility.",
+        "Qatar follows a British-influenced framework with strong quality control and international compatibility.",
       introductionTitle: "Structured and Recognized Academic Pathway",
       introductionDescription:
         "Medical education combines theory, simulation, and hospital-based practical learning.",
@@ -302,7 +302,7 @@ async function seedCountryAndEducationPages() {
       officialLanguage: "English",
       officialLanguagePercentage: 100,
       officialLanguageNote: "Primary language of instruction",
-      foreignLanguage: "French and Japann Creole",
+      foreignLanguage: "French and Qatarn Creole",
       foreignLanguagePercentage: 80,
       foreignLanguageNote: "Widely used in daily communication",
       universitiesCount: 8,
@@ -311,9 +311,9 @@ async function seedCountryAndEducationPages() {
     },
     create: {
       id: 1,
-      title: "Education System in Japan",
+      title: "Education System in Qatar",
       description:
-        "Japan follows a British-influenced framework with strong quality control and international compatibility.",
+        "Qatar follows a British-influenced framework with strong quality control and international compatibility.",
       introductionTitle: "Structured and Recognized Academic Pathway",
       introductionDescription:
         "Medical education combines theory, simulation, and hospital-based practical learning.",
@@ -321,7 +321,7 @@ async function seedCountryAndEducationPages() {
       officialLanguage: "English",
       officialLanguagePercentage: 100,
       officialLanguageNote: "Primary language of instruction",
-      foreignLanguage: "Japann",
+      foreignLanguage: "Qatarn",
       foreignLanguagePercentage: 80,
       foreignLanguageNote: "Widely used in daily communication",
       universitiesCount: 8,
@@ -382,7 +382,7 @@ async function seedCountryAndEducationPages() {
   await prisma.aboutUs.upsert({
     where: { id: 1 },
     update: {
-      heroTitle: "Your Trusted MBBS in Japan Advisory Team",
+      heroTitle: "Your Trusted MBBS in Qatar Advisory Team",
       heroDescription:
         "We guide students from profile assessment to admission and pre-departure support.",
       partnerUniversities: 8,
@@ -390,16 +390,16 @@ async function seedCountryAndEducationPages() {
       channelPartners: 35,
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
-      vision: "To be the most trusted Japan medical admission support platform.",
+      vision: "To be the most trusted Qatar medical admission support platform.",
       contact1: "+91-11-2410-2161",
       contact2: "+230-208-9000",
-      email1: "admissions@mbbsinjapan.com",
-      email2: "support@mbbsinjapan.com",
-      address: "New Delhi, India and Ebene Cybercity, Japan",
+      email1: "admissions@mbbsinqatar.com",
+      email2: "support@mbbsinqatar.com",
+      address: "New Delhi, India and Ebene Cybercity, Qatar",
     },
     create: {
       id: 1,
-      heroTitle: "Your Trusted MBBS in Japan Advisory Team",
+      heroTitle: "Your Trusted MBBS in Qatar Advisory Team",
       heroDescription:
         "We guide students from profile assessment to admission and pre-departure support.",
       partnerUniversities: 8,
@@ -407,12 +407,12 @@ async function seedCountryAndEducationPages() {
       channelPartners: 35,
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
-      vision: "To be the most trusted Japan medical admission support platform.",
+      vision: "To be the most trusted Qatar medical admission support platform.",
       contact1: "+91-11-2410-2161",
       contact2: "+230-208-9000",
-      email1: "admissions@mbbsinjapan.com",
-      email2: "support@mbbsinjapan.com",
-      address: "New Delhi, India and Ebene Cybercity, Japan",
+      email1: "admissions@mbbsinqatar.com",
+      email2: "support@mbbsinqatar.com",
+      address: "New Delhi, India and Ebene Cybercity, Qatar",
     },
   });
 
@@ -432,16 +432,16 @@ async function seedCountryAndEducationPages() {
 
 async function seedContentAndMisc(adminId: number) {
   const staticSeoPages = [
-    { page: "home", metaTitle: "Study MBBS in Japan 2026", metaDescription: "Admission guidance, fee insights, and university comparison." },
-    { page: "about-us", metaTitle: "About MBBS in Japan Team", metaDescription: "Meet the counselors and operations team supporting students." },
-    { page: "about-Japan", metaTitle: "About Japan for Students", metaDescription: "Understand lifestyle, safety, and healthcare ecosystem." },
-    { page: "education-system", metaTitle: "Education System in Japan", metaDescription: "Academic structure and MBBS training overview." },
-    { page: "universities", metaTitle: "Medical Universities in Japan", metaDescription: "Compare colleges, tuition, and support facilities." },
-    { page: "blog", metaTitle: "MBBS Japan Blog", metaDescription: "Guides for admission, visa, and student life." },
-    { page: "news", metaTitle: "MBBS Japan News", metaDescription: "Education and policy updates for aspirants." },
-    { page: "articles", metaTitle: "MBBS Japan Articles", metaDescription: "Long-form practical planning guides." },
-    { page: "contact-us", metaTitle: "Contact MBBS Japan Advisors", metaDescription: "Book counseling with India and Japan teams." },
-    { page: "scholarships", metaTitle: "MBBS Scholarships in Japan", metaDescription: "Merit and tuition support opportunities." },
+    { page: "home", metaTitle: "Study MBBS in Qatar 2026", metaDescription: "Admission guidance, fee insights, and university comparison." },
+    { page: "about-us", metaTitle: "About MBBS in Qatar Team", metaDescription: "Meet the counselors and operations team supporting students." },
+    { page: "about-Qatar", metaTitle: "About Qatar for Students", metaDescription: "Understand lifestyle, safety, and healthcare ecosystem." },
+    { page: "education-system", metaTitle: "Education System in Qatar", metaDescription: "Academic structure and MBBS training overview." },
+    { page: "universities", metaTitle: "Medical Universities in Qatar", metaDescription: "Compare colleges, tuition, and support facilities." },
+    { page: "blog", metaTitle: "MBBS Qatar Blog", metaDescription: "Guides for admission, visa, and student life." },
+    { page: "news", metaTitle: "MBBS Qatar News", metaDescription: "Education and policy updates for aspirants." },
+    { page: "articles", metaTitle: "MBBS Qatar Articles", metaDescription: "Long-form practical planning guides." },
+    { page: "contact-us", metaTitle: "Contact MBBS Qatar Advisors", metaDescription: "Book counseling with India and Qatar teams." },
+    { page: "scholarships", metaTitle: "MBBS Scholarships in Qatar", metaDescription: "Merit and tuition support opportunities." },
   ];
   for (const item of staticSeoPages) {
     await prisma.staticPageSeo.upsert({
@@ -462,21 +462,21 @@ async function seedContentAndMisc(adminId: number) {
       where: { page: item },
       update: {
         page: item,
-        metaTitle: "MBBS in Japan",
-        metaDescription: "Dynamic page SEO baseline for Japan-focused content.",
+        metaTitle: "MBBS in Qatar",
+        metaDescription: "Dynamic page SEO baseline for Qatar-focused content.",
         status: true,
       },
       create: {
         page: item,
-        metaTitle: "MBBS in Japan",
-        metaDescription: "Dynamic page SEO baseline for Japan-focused content.",
+        metaTitle: "MBBS in Qatar",
+        metaDescription: "Dynamic page SEO baseline for Qatar-focused content.",
         status: true,
       },
     });
   }
 
-  await upsertByWhere(prisma.defaultOgImage, { name: "Japan Default OG" }, {
-    name: "Japan Default OG",
+  await upsertByWhere(prisma.defaultOgImage, { name: "Qatar Default OG" }, {
+    name: "Qatar Default OG",
     imageName: "og-default.jpg",
     imagePath: "/og-default.jpg",
     status: true,
@@ -487,9 +487,9 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Homepage", slug: "homepage", status: true },
     create: { name: "Homepage", slug: "homepage", status: true },
   });
-  await upsertByWhere(prisma.faq, { question: "Is MBBS in Japan taught in English?" }, {
-    question: "Is MBBS in Japan taught in English?",
-    answer: "Yes, most international MBBS pathways in Japan are delivered in English.",
+  await upsertByWhere(prisma.faq, { question: "Is MBBS in Qatar taught in English?" }, {
+    question: "Is MBBS in Qatar taught in English?",
+    answer: "Yes, most international MBBS pathways in Qatar are delivered in English.",
     categoryId: faqCategory.id,
     position: 1,
     status: true,
@@ -502,24 +502,24 @@ async function seedContentAndMisc(adminId: number) {
     state: "Delhi",
     country: "India",
     phone: "+91-11-2410-2161",
-    email: "india@mbbsinjapan.com",
+    email: "india@mbbsinqatar.com",
     mapEmbed: "https://maps.google.com/?q=Chanakyapuri+New+Delhi",
     imageName: "office-india.jpg",
     imagePath: "/uploads/offices/india-head-office.jpg",
     position: 1,
     status: true,
   });
-  await upsertByWhere(prisma.office, { name: "Japan Support Office" }, {
-    name: "Japan Support Office",
+  await upsertByWhere(prisma.office, { name: "Qatar Support Office" }, {
+    name: "Qatar Support Office",
     address: "Cyber Tower 1, Ebene Cybercity",
     city: "Ebene",
     state: "Plaines Wilhems",
-    country: "Japan",
+    country: "Qatar",
     phone: "+230-208-9000",
-    email: "japan@mbbsinjapan.com",
-    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+Japan",
-    imageName: "office-japan.jpg",
-    imagePath: "/uploads/offices/japan-office.jpg",
+    email: "qatar@mbbsinqatar.com",
+    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+Qatar",
+    imageName: "office-qatar.jpg",
+    imagePath: "/uploads/offices/qatar-office.jpg",
     position: 2,
     status: true,
   });
@@ -548,9 +548,9 @@ async function seedContentAndMisc(adminId: number) {
       position: 2,
     },
     {
-      name: "Ministry of Health and Wellness - Japan",
-      url: "https://www.mhlw.go.jp/english/",
-      category: "japan-government",
+      name: "Ministry of Health and Wellness - Qatar",
+      url: "https://www.moph.gov.qa/english",
+      category: "qatar-government",
       position: 3,
     },
   ];
@@ -562,16 +562,16 @@ async function seedContentAndMisc(adminId: number) {
     });
   }
 
-  await upsertByWhere(prisma.countryDocument, { country: "Japan", type: CountryDocType.embassy_letter }, {
-    country: "Japan",
+  await upsertByWhere(prisma.countryDocument, { country: "Qatar", type: CountryDocType.embassy_letter }, {
+    country: "Qatar",
     type: CountryDocType.embassy_letter,
     title: "Embassy Student Letter Template",
     fileName: "embassy-student-letter.pdf",
     filePath: "/uploads/country-documents/embassy-student-letter.pdf",
     isActive: true,
   });
-  await upsertByWhere(prisma.countryDocument, { country: "Japan", type: CountryDocType.nmc_guidelines }, {
-    country: "Japan",
+  await upsertByWhere(prisma.countryDocument, { country: "Qatar", type: CountryDocType.nmc_guidelines }, {
+    country: "Qatar",
     type: CountryDocType.nmc_guidelines,
     title: "NMC Guidelines Reference",
     fileName: "nmc-guidelines-reference.pdf",
@@ -579,9 +579,9 @@ async function seedContentAndMisc(adminId: number) {
     isActive: true,
   });
 
-  await upsertByWhere(prisma.pageContent, { pageSlug: "about-us", title: "Why Japan" }, {
+  await upsertByWhere(prisma.pageContent, { pageSlug: "about-us", title: "Why Qatar" }, {
     pageSlug: "about-us",
-    title: "Why Japan",
+    title: "Why Qatar",
     content: "Affordable medical education, English-medium instruction, and practical hospital exposure.",
     position: 1,
     status: true,
@@ -592,11 +592,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Admission Guides", slug: "admission-guides", status: true },
     create: { name: "Admission Guides", slug: "admission-guides", status: true },
   });
-  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-japan-admission-roadmap-2026" }, {
+  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-qatar-admission-roadmap-2026" }, {
     categoryId: blogCategory.id,
     authorId: adminId,
-    title: "MBBS in Japan Admission Roadmap 2026",
-    slug: "mbbs-in-japan-admission-roadmap-2026",
+    title: "MBBS in Qatar Admission Roadmap 2026",
+    slug: "mbbs-in-qatar-admission-roadmap-2026",
     shortnote: "A practical timeline from counseling to visa.",
     description: "Stepwise checklist for profile review, documents, application, and travel readiness.",
     status: true,
@@ -623,11 +623,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
     create: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
   });
-  const news = await upsertByWhere(prisma.news, { slug: "japan-intake-advisory-2026" }, {
+  const news = await upsertByWhere(prisma.news, { slug: "qatar-intake-advisory-2026" }, {
     categoryId: newsCategory.id,
     authorId: adminId,
-    title: "Japan Intake Advisory for 2026 Applicants",
-    slug: "japan-intake-advisory-2026",
+    title: "Qatar Intake Advisory for 2026 Applicants",
+    slug: "qatar-intake-advisory-2026",
     description: "Applicants are advised to complete document checks early.",
     status: true,
     homeView: true,
@@ -652,11 +652,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
     create: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
   });
-  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-japan" }, {
+  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-qatar" }, {
     categoryId: articleCategory.id,
     authorId: adminId,
-    title: "Realistic Cost Breakdown for MBBS in Japan",
-    slug: "realistic-cost-breakdown-mbbs-japan",
+    title: "Realistic Cost Breakdown for MBBS in Qatar",
+    slug: "realistic-cost-breakdown-mbbs-qatar",
     description: "Understand tuition, living costs, and annual budget planning.",
     status: true,
     homeView: true,
@@ -677,10 +677,10 @@ async function seedContentAndMisc(adminId: number) {
   });
 
   const scholarship = await prisma.scholarship.upsert({
-    where: { slug: "japan-merit-scholarship-mbbs" },
+    where: { slug: "qatar-merit-scholarship-mbbs" },
     update: {
-      title: "Japan Merit Scholarship for MBBS",
-      slug: "japan-merit-scholarship-mbbs",
+      title: "Qatar Merit Scholarship for MBBS",
+      slug: "qatar-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -692,8 +692,8 @@ async function seedContentAndMisc(adminId: number) {
       isActive: true,
     },
     create: {
-      title: "Japan Merit Scholarship for MBBS",
-      slug: "japan-merit-scholarship-mbbs",
+      title: "Qatar Merit Scholarship for MBBS",
+      slug: "qatar-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -716,7 +716,7 @@ async function seedContentAndMisc(adminId: number) {
   await upsertByWhere(prisma.testimonial, { name: "Arjun Sharma", designation: "MBBS Graduate" }, {
     name: "Arjun Sharma",
     designation: "MBBS Graduate",
-    description: "Smooth admission support and strong post-arrival coordination in Japan.",
+    description: "Smooth admission support and strong post-arrival coordination in Qatar.",
     rating: 4.8,
     position: 1,
     status: true,
@@ -798,11 +798,11 @@ async function seedUniversityDependentData() {
 
   await upsertByWhere(
     prisma.universityStudent,
-    { universityId: university.id, email: "intl.batch@mbbsinjapan.com" },
+    { universityId: university.id, email: "intl.batch@mbbsinqatar.com" },
     {
       universityId: university.id,
       name: "International Student Cohort",
-      email: "intl.batch@mbbsinjapan.com",
+      email: "intl.batch@mbbsinqatar.com",
       phone: "+230-5555-0101",
       country: "India",
       numberOfStudents: 120,
@@ -924,7 +924,7 @@ async function seedOptionalLeadData(adminId: number, universityProgramId: number
     { leadId: lead.id, source: "website", message: "Need counseling for September intake." },
     {
       leadId: lead.id,
-      universityName: "Japan MBBS options",
+      universityName: "Qatar MBBS options",
       message: "Need counseling for September intake.",
       source: "website",
       status: "pending",
@@ -949,7 +949,7 @@ async function seedOptionalLeadData(adminId: number, universityProgramId: number
 }
 
 async function main() {
-  console.log("Starting Japan baseline database seed...");
+  console.log("Starting Qatar baseline database seed...");
   console.log(
     "University bulk-upload tables are intentionally not seeded here (University, UniversityRanking, UniversityLink, UniversityIntake, UniversityProgram, UniversityDocument, UniversityPhoto, UniversityFmgeRate).",
   );
@@ -962,7 +962,7 @@ async function main() {
   const { universityProgramId } = await seedUniversityDependentData();
   await seedOptionalLeadData(admin.id, universityProgramId);
 
-  console.log("Japan baseline seed completed.");
+  console.log("Qatar baseline seed completed.");
 }
 
 main()

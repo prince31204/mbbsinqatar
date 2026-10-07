@@ -25,7 +25,7 @@ interface Props {
 
 const PHONE_CODES = [
   { code: "+91", country: "India" },
-  { code: "+996", country: "Japan" },
+  { code: "+996", country: "Qatar" },
   { code: "+1", country: "USA/Canada" },
   { code: "+44", country: "UK" },
   { code: "+92", country: "Pakistan" },
@@ -136,7 +136,7 @@ export default function DownloadFormPopup({
   };
 
   const inputCls =
-    "w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent transition text-sm outline-none text-[#17202A] placeholder:text-[#6B7280] bg-white";
+    "w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent transition text-sm outline-none text-[#1F2937] placeholder:text-[#6B7280] bg-white";
 
   return (
     <div
@@ -156,10 +156,10 @@ export default function DownloadFormPopup({
 
         {success ? (
           <div className="text-center py-6">
-            <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-5">
-              <CheckCircle size={40} className="text-[#8F0023]" />
+            <div className="w-20 h-20 bg-[#F7E9EE] rounded-full flex items-center justify-center mx-auto mb-5">
+              <CheckCircle size={40} className="text-[#5B0F26]" />
             </div>
-            <h3 className="text-xl font-bold text-[#17202A] mb-2">Thank You!</h3>
+            <h3 className="text-xl font-bold text-[#1F2937] mb-2">Thank You!</h3>
             <p className="text-[#4B5563] mb-6">
               {brochureUrl
                 ? "Your brochure download has started. Our counsellors will get in touch shortly."
@@ -167,7 +167,7 @@ export default function DownloadFormPopup({
             </p>
             <button
               onClick={handleClose}
-              className="bg-[#BC002D] hover:bg-[#8F0023] text-white px-6 py-2.5 rounded-xl text-sm font-medium transition"
+              className="bg-[#8A1538] hover:bg-[#5B0F26] text-white px-6 py-2.5 rounded-xl text-sm font-medium transition"
             >
               Close
             </button>
@@ -176,10 +176,10 @@ export default function DownloadFormPopup({
           <>
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-[#F9FAFB] p-3 rounded-xl">
-                <Download className="w-6 h-6 text-[#BC002D]" />
+                <Download className="w-6 h-6 text-[#8A1538]" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#17202A]">
+                <h3 className="text-lg font-bold text-[#1F2937]">
                   {title || "Download Brochure"}
                 </h3>
                 {description ? (
@@ -210,7 +210,7 @@ export default function DownloadFormPopup({
                   value={form.name}
                   onChange={(e) => set("name", e.target.value)}
                   placeholder="Your Name"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent transition text-sm outline-none text-[#17202A] placeholder:text-[#6B7280] bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent transition text-sm outline-none text-[#1F2937] placeholder:text-[#6B7280] bg-white"
                 />
               </div>
 
@@ -226,7 +226,7 @@ export default function DownloadFormPopup({
                   value={form.email}
                   onChange={(e) => set("email", e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent transition text-sm outline-none text-[#17202A] placeholder:text-[#6B7280] bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent transition text-sm outline-none text-[#1F2937] placeholder:text-[#6B7280] bg-white"
                 />
               </div>
 
@@ -240,7 +240,7 @@ export default function DownloadFormPopup({
                   <select
                     value={form.countryCode}
                     onChange={(e) => set("countryCode", e.target.value)}
-                    className="pl-9 pr-2 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 text-sm outline-none w-28 bg-white text-[#17202A]"
+                    className="pl-9 pr-2 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 text-sm outline-none w-28 bg-white text-[#1F2937]"
                   >
                     {PHONE_CODES.map((c) => (
                       <option key={c.code} value={c.code}>
@@ -270,12 +270,12 @@ export default function DownloadFormPopup({
                   value={form.nationality}
                   onChange={(e) => set("nationality", e.target.value)}
                   placeholder="Your Nationality"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent transition text-sm outline-none text-[#17202A] placeholder:text-[#6B7280] bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent transition text-sm outline-none text-[#1F2937] placeholder:text-[#6B7280] bg-white"
                 />
               </div>
 
               {error && (
-                <div className="rounded-xl bg-white border border-[#E5E7EB] px-4 py-3 text-sm text-[#102A43]">
+                <div className="rounded-xl bg-white border border-[#E5E7EB] px-4 py-3 text-sm text-[#5B0F26]">
                   {error}
                 </div>
               )}
@@ -283,7 +283,7 @@ export default function DownloadFormPopup({
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full flex items-center justify-center gap-2 bg-[#BC002D] hover:bg-[#8F0023] text-white font-semibold py-3.5 rounded-xl shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-2 bg-[#8A1538] hover:bg-[#5B0F26] text-white font-semibold py-3.5 rounded-xl shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {submitting ? (
                   <>

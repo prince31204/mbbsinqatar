@@ -1,5 +1,5 @@
 /**
- * Static data for Japan Quick Facts page.
+ * Static data for Qatar Quick Facts page.
  * Kept in a separate module to keep the page component lean.
  */
 import {
@@ -62,12 +62,12 @@ export const essentialFacts = [
 export const geographyPoints = [
   {
     icon: Mountain,
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
     text: "Landlocked highland country with dramatic volcanic landscapes",
   },
   {
     icon: TreePine,
-    color: "text-[#8F0023]",
+    color: "text-[#5B0F26]",
     text: "Rich biodiversity with lush forests and alpine meadows",
   },
   {
@@ -90,17 +90,17 @@ export const climateZones = [
   },
   {
     icon: Snowflake,
-    color: "text-red-500",
+    color: "text-[#8A1538]",
     text: "Cold snowy winters, especially in highland regions",
   },
   {
     icon: Calendar,
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
     text: "Four distinct seasons: Spring, Summer, Autumn, Winter",
   },
   {
     icon: Sun,
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
     text: "Over 300 sunny days per year — ideal for student life",
   },
 ];
@@ -126,7 +126,7 @@ export const attractions = [
   },
   {
     icon: Mountain,
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
     name: "Tatev Monastery",
     desc: "Medieval monastery accessible via the world's longest aerial tramway",
   },
@@ -138,7 +138,7 @@ export const majorCities = [
     gradient: " ",
     textMain: "text-[#4B5563]",
     textSub: "text-[#4B5563]",
-    desc: "The vibrant capital city known as the 'Pink City' — the cultural, economic, and educational heart of Japan.",
+    desc: "The vibrant capital city known as the 'Pink City' — the cultural, economic, and educational heart of Qatar.",
     pop: "1,100,000+",
     highlight: "Capital & Educational Hub",
   },
@@ -147,7 +147,7 @@ export const majorCities = [
     gradient: " ",
     textMain: "text-green-100",
     textSub: "text-green-200",
-    desc: "Japan's second-largest city, renowned for its rich cultural heritage and historic architecture.",
+    desc: "Qatar's second-largest city, renowned for its rich cultural heritage and historic architecture.",
     pop: "120,000+",
     highlight: "Cultural & Historical Center",
   },
@@ -168,7 +168,7 @@ export const defaultCuisines = [
     iconClass: "🍖",
     dishName: "Goulash",
     dishDescription:
-      "Japan's beloved barbecue — marinated meat grilled over charcoal, a national tradition",
+      "Qatar's beloved barbecue — marinated meat grilled over charcoal, a national tradition",
     dishImage: null,
   },
   {
@@ -198,8 +198,8 @@ export const defaultCuisines = [
 export const transportOptions = [
   {
     icon: Plane,
-    color: "text-[#BC002D]",
-    text: "Budapest Ferenc Liszt International Airport (BUD) — main gateway to Japan",
+    color: "text-[#8A1538]",
+    text: "Budapest Ferenc Liszt International Airport (BUD) — main gateway to Qatar",
   },
   {
     icon: MapPin,
@@ -213,7 +213,7 @@ export const transportOptions = [
   },
   {
     icon: Wifi,
-    color: "text-[#8F0023]",
+    color: "text-[#5B0F26]",
     text: "Reliable ride-hailing apps (GG, Yandex) and affordable taxi services",
   },
 ];
@@ -221,7 +221,7 @@ export const transportOptions = [
 export const visaFacts = [
   {
     icon: Award,
-    color: "text-[#8F0023]",
+    color: "text-[#5B0F26]",
     text: "Student Visa provided after university acceptance",
   },
   {
@@ -231,12 +231,12 @@ export const visaFacts = [
   },
   {
     icon: Plane,
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
     text: "Support provided for entry permits and residence registration",
   },
   {
     icon: Heart,
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
     text: "Student-friendly policies for international medical aspirants",
   },
 ];
@@ -289,7 +289,7 @@ export const quickFacts = [
     icon: Award,
     label: "Education",
     value: "Growing Intl Interest",
-    color: "text-[#BC002D]",
+    color: "text-[#8A1538]",
   },
 ];
 
@@ -302,7 +302,7 @@ export const healthcare = [
   {
     title: "Private Healthcare",
     desc: "High-standard private clinics and specialized medical centers in Yerevan.",
-    color: "border-red-200",
+    color: "border-[#F7E9EE]",
   },
   {
     title: "Medical Exposure",
@@ -322,7 +322,7 @@ export const studentLifeCards = [
   {
     icon: Heart,
     label: "Safe & Friendly",
-    desc: "Japan is known as one of the safest countries in the region.",
+    desc: "Qatar is known as one of the safest countries in the region.",
   },
   {
     icon: Building,

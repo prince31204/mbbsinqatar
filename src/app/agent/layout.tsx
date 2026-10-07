@@ -28,17 +28,17 @@ export default async function AgentLayout({
   ];
 
   return (
-    <div className="flex min-h-screen bg-[#FFFDF9]">
+    <div className="flex min-h-screen bg-[#FAF8F7]">
       {/* Sidebar */}
-      <aside className="w-60 bg-white flex flex-col text-[#17202A] shrink-0">
+      <aside className="w-60 bg-white flex flex-col text-[#1F2937] shrink-0">
         <div className="p-5 border-b border-[#E5E7EB]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-[#BC002D] rounded-lg flex items-center justify-center">
-              <GraduationCap size={20} className="text-[#17202A]" />
+            <div className="w-9 h-9 bg-[#8A1538] rounded-lg flex items-center justify-center">
+              <GraduationCap size={20} className="text-[#1F2937]" />
             </div>
             <div>
               <p className="text-sm font-bold">Agent Portal</p>
-              <p className="text-xs text-[#6B7280]">MBBS Japan</p>
+              <p className="text-xs text-[#6B7280]">MBBS Qatar</p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default async function AgentLayout({
             <Link
               key={href}
               href={href}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4B5563] hover:bg-slate-800 hover:text-[#17202A] transition-colors text-sm font-medium"
+              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#4B5563] hover:bg-slate-800 hover:text-[#1F2937] transition-colors text-sm font-medium"
             >
               <Icon size={16} />
               {label}
@@ -66,7 +66,7 @@ export default async function AgentLayout({
           >
             <button
               type="submit"
-              className="flex items-center gap-2 text-[#6B7280] hover:text-[#17202A] text-sm px-3 py-2 rounded-lg hover:bg-slate-800 w-full transition-colors"
+              className="flex items-center gap-2 text-[#6B7280] hover:text-[#1F2937] text-sm px-3 py-2 rounded-lg hover:bg-slate-800 w-full transition-colors"
             >
               <LogOut size={14} />
               Sign out

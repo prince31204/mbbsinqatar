@@ -43,10 +43,10 @@ export default async function AgentDashboardPage() {
 
   const statusBadge = (status: string) => {
     const map: Record<string, string> = {
-      pending: "bg-red-400 text-[#BC002D]",
-      contacted: "bg-[#F9FAFB] text-[#102A43]",
-      enrolled: "bg-red-100 text-[#8F0023]",
-      rejected: "bg-[#F9FAFB] text-[#102A43]",
+      pending: "bg-[#8A1538] text-[#8A1538]",
+      contacted: "bg-[#F9FAFB] text-[#5B0F26]",
+      enrolled: "bg-[#F7E9EE] text-[#5B0F26]",
+      rejected: "bg-[#F9FAFB] text-[#5B0F26]",
     };
     return map[status] ?? "bg-[#F9FAFB] text-[#4B5563]";
   };
@@ -55,7 +55,7 @@ export default async function AgentDashboardPage() {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-[#17202A]">
+        <h1 className="text-2xl font-bold text-[#1F2937]">
           Welcome, {session?.user?.name} 👋
         </h1>
         <p className="text-[#6B7280] mt-1">
@@ -78,7 +78,7 @@ export default async function AgentDashboardPage() {
                 <Icon size={16} className={`text-${color}-600`} />
               </div>
             </div>
-            <p className="text-3xl font-bold text-[#17202A]">{value}</p>
+            <p className="text-3xl font-bold text-[#1F2937]">{value}</p>
           </div>
         ))}
       </div>
@@ -87,7 +87,7 @@ export default async function AgentDashboardPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Link
           href="/agent/add-lead"
-          className="bg-[#BC002D] hover:bg-[#8F0023] text-white rounded-xl p-5 flex items-center gap-4 transition-colors"
+          className="bg-[#8A1538] hover:bg-[#5B0F26] text-white rounded-xl p-5 flex items-center gap-4 transition-colors"
         >
           <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
             <Users size={20} />
@@ -99,7 +99,7 @@ export default async function AgentDashboardPage() {
         </Link>
         <Link
           href="/agent/leads"
-          className="bg-white hover:bg-[#FFFDF9] border border-[#E5E7EB] text-[#17202A] rounded-xl p-5 flex items-center gap-4 transition-colors"
+          className="bg-white hover:bg-[#FAF8F7] border border-[#E5E7EB] text-[#1F2937] rounded-xl p-5 flex items-center gap-4 transition-colors"
         >
           <div className="w-10 h-10 bg-[#F9FAFB] rounded-xl flex items-center justify-center">
             <FileText size={20} className="text-[#4B5563]" />
@@ -116,14 +116,14 @@ export default async function AgentDashboardPage() {
       {/* Recent Leads */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] overflow-hidden">
         <div className="p-5 border-b border-[#E5E7EB]">
-          <h3 className="font-semibold text-[#17202A]">Recent Referrals</h3>
+          <h3 className="font-semibold text-[#1F2937]">Recent Referrals</h3>
         </div>
         {recentLeads.length === 0 ? (
           <div className="p-12 text-center text-[#6B7280]">
             <Users size={32} className="mx-auto mb-3 opacity-40" />
             <p>
               No leads yet.{" "}
-              <Link href="/agent/add-lead" className="text-[#BC002D] underline">
+              <Link href="/agent/add-lead" className="text-[#8A1538] underline">
                 Add your first lead →
               </Link>
             </p>
@@ -136,7 +136,7 @@ export default async function AgentDashboardPage() {
                 className="px-5 py-3.5 flex items-center justify-between"
               >
                 <div>
-                  <p className="font-medium text-[#17202A] text-sm">
+                  <p className="font-medium text-[#1F2937] text-sm">
                     {inq.lead.name}
                   </p>
                   <p className="text-xs text-[#6B7280]">

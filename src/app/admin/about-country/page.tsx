@@ -8,7 +8,7 @@ const sections = [
     title: "Cuisine & Food",
     href: "/admin/about-country/cuisine",
     icon: "🍜",
-    desc: "Japan traditional dishes and food culture",
+    desc: "Qatar traditional dishes and food culture",
     done: true,
   },
   {
@@ -45,11 +45,11 @@ export default function AboutCountryPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <Globe2 size={22} className="text-[#BC002D]" />
+        <Globe2 size={22} className="text-[#8A1538]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">About Japan</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">About Qatar</h1>
           <p className="text-sm text-[#6B7280]">
-            Manage country information shown on the public About Japan page
+            Manage country information shown on the public About Qatar page
           </p>
         </div>
       </div>
@@ -63,9 +63,9 @@ export default function AboutCountryPage() {
           >
             <div className="text-3xl">{s.icon}</div>
             <div className="flex-1 min-w-0">
-              <h2 className="font-semibold text-[#17202A] mb-1">{s.title}</h2>
+              <h2 className="font-semibold text-[#1F2937] mb-1">{s.title}</h2>
               <p className="text-sm text-[#6B7280] mb-3">{s.desc}</p>
-              <div className="inline-flex items-center gap-1.5 text-xs text-[#8F0023] bg-red-50 border border-red-200 px-3 py-1 rounded-full">
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#5B0F26] bg-[#F7E9EE] border border-[#F7E9EE] px-3 py-1 rounded-full">
                 <ExternalLink size={11} /> Manage Content
               </div>
             </div>
@@ -74,9 +74,9 @@ export default function AboutCountryPage() {
       </div>
 
       <Link
-        href="/about-japan"
+        href="/about-qatar"
         target="_blank"
-        className="inline-flex items-center gap-2 border border-[#E5E7EB] text-[#4B5563] px-4 py-2 rounded-lg text-sm hover:bg-[#FFFDF9] transition-colors"
+        className="inline-flex items-center gap-2 border border-[#E5E7EB] text-[#4B5563] px-4 py-2 rounded-lg text-sm hover:bg-[#FAF8F7] transition-colors"
       >
         <Globe2 size={14} /> View Public Page
       </Link>

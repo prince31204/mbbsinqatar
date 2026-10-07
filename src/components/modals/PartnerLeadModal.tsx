@@ -90,19 +90,19 @@ export default function PartnerLeadModal({
           {/* Header */}
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h2 className="text-2xl font-bold text-[#17202A] leading-tight">
+              <h2 className="text-2xl font-bold text-[#1F2937] leading-tight">
                 Partner Contact Info
               </h2>
               <p className="text-sm text-[#6B7280] mt-1">
                 Reach out to{" "}
-                <span className="font-semibold text-[#BC002D]">
+                <span className="font-semibold text-[#8A1538]">
                   {partnerName}
                 </span>
               </p>
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-xl hover:bg-[#F9FAFB] transition-all text-[#6B7280] hover:text-[#17202A]"
+              className="p-2 rounded-xl hover:bg-[#F9FAFB] transition-all text-[#6B7280] hover:text-[#1F2937]"
             >
               <X className="w-6 h-6" />
             </button>
@@ -124,7 +124,7 @@ export default function PartnerLeadModal({
                   required
                   value={form.name}
                   onChange={(e) => update("name", e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-[#FFFDF9] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#102A43]/500/10 focus:border-[#E5E7EB] outline-none transition-all placeholder:text-[#6B7280]"
+                  className="w-full pl-10 pr-4 py-3 bg-[#FAF8F7] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#5B0F26]/500/10 focus:border-[#E5E7EB] outline-none transition-all placeholder:text-[#6B7280]"
                   placeholder="Full Name"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function PartnerLeadModal({
                     required
                     value={form.email}
                     onChange={(e) => update("email", e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FFFDF9] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#102A43]/500/10 focus:border-[#E5E7EB] outline-none transition-all placeholder:text-[#6B7280]"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF8F7] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#5B0F26]/500/10 focus:border-[#E5E7EB] outline-none transition-all placeholder:text-[#6B7280]"
                     placeholder="Email"
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function PartnerLeadModal({
                     required
                     value={form.phone}
                     onChange={(e) => update("phone", e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FFFDF9] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#102A43]/500/10 focus:border-[#E5E7EB] outline-none transition-all placeholder:text-[#6B7280]"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF8F7] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#5B0F26]/500/10 focus:border-[#E5E7EB] outline-none transition-all placeholder:text-[#6B7280]"
                     placeholder="Phone"
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function PartnerLeadModal({
                       const val = e.target.value;
                       setForm((prev) => ({ ...prev, state: val, city: "" }));
                     }}
-                    className="w-full pl-10 pr-10 py-3 bg-[#FFFDF9] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#102A43]/500/10 focus:border-[#E5E7EB] outline-none transition-all appearance-none cursor-pointer"
+                    className="w-full pl-10 pr-10 py-3 bg-[#FAF8F7] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#5B0F26]/500/10 focus:border-[#E5E7EB] outline-none transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>
                       Select State
@@ -187,7 +187,7 @@ export default function PartnerLeadModal({
                     disabled={!form.state}
                     value={form.city}
                     onChange={(e) => update("city", e.target.value)}
-                    className="w-full pl-10 pr-10 py-3 bg-[#FFFDF9] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#102A43]/500/10 focus:border-[#E5E7EB] outline-none transition-all appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full pl-10 pr-10 py-3 bg-[#FAF8F7] border border-[#E5E7EB] rounded-xl text-sm focus:ring-4 focus:ring-[#5B0F26]/500/10 focus:border-[#E5E7EB] outline-none transition-all appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <option value="" disabled>
                       Select City
@@ -207,7 +207,7 @@ export default function PartnerLeadModal({
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#BC002D] hover:bg-[#8F0023] disabled:bg-blue-300 text-[#17202A] font-bold py-3.5 rounded-xl transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2 group mt-2"
+              className="w-full bg-[#8A1538] hover:bg-[#5B0F26] disabled:bg-blue-300 text-[#1F2937] font-bold py-3.5 rounded-xl transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2 group mt-2"
             >
               {loading ? (
                 "Submitting..."

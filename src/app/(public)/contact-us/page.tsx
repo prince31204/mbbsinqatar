@@ -162,16 +162,16 @@ export default function ContactPage() {
       val: "+91-9818 560 331",
       action: "Call Now",
       href: "tel:+91-9818 560 331",
-      color: "bg-red-500",
+      color: "bg-[#8A1538]",
     },
     {
       icon: Mail,
       title: "Email Us",
       desc: "Official inquiries",
-      val: "info@mbbsinjapan.com",
+      val: "info@mbbsinqatar.com",
       action: "Send Email",
-      href: "mailto:info@mbbsinjapan.com",
-      color: "bg-[#102A43]",
+      href: "mailto:info@mbbsinqatar.com",
+      color: "bg-[#5B0F26]",
     },
     {
       icon: MessageSquare,
@@ -196,7 +196,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-white text-[#17202A] py-16 overflow-hidden">
+      <section className="relative bg-white text-[#1F2937] py-16 overflow-hidden">
         <div className="absolute inset-0 bg-white/40 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20 z-0"></div>
 
@@ -207,11 +207,11 @@ export default function ContactPage() {
               24/7 Consultation Available
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Get In Touch With <span className="text-[#BC002D]">Our Team.</span>
+              Get In Touch With <span className="text-[#8A1538]">Our Team.</span>
             </h1>
             <p className="text-xl text-[#4B5563] mb-10 max-w-3xl mx-auto leading-relaxed">
               Start your journey to international medical education with the
-              help of India's most trusted consultants for MBBS in Japan.
+              help of India's most trusted consultants for MBBS in Qatar.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
@@ -223,9 +223,9 @@ export default function ContactPage() {
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-[#FFFDF9] rounded-2xl p-4 border border-[#E5E7EB]"
+                  className="bg-[#FAF8F7] rounded-2xl p-4 border border-[#E5E7EB]"
                 >
-                  <div className="text-3xl font-bold text-[#BC002D] mb-1">
+                  <div className="text-3xl font-bold text-[#8A1538] mb-1">
                     {stat.val}
                   </div>
                   <div className="text-xs text-[#4B5563] uppercase tracking-wider">
@@ -239,10 +239,10 @@ export default function ContactPage() {
       </section>
 
       {/* Quick Contact Options */}
-      <section className="py-16 bg-[#FFFDF9]">
+      <section className="py-16 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#17202A] mb-4">
+            <h2 className="text-3xl font-bold text-[#1F2937] mb-4">
               Connect Instantly
             </h2>
             <p className="text-[#4B5563]">
@@ -261,11 +261,11 @@ export default function ContactPage() {
                 >
                   <opt.icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-[#17202A] mb-2">
+                <h3 className="text-xl font-bold text-[#1F2937] mb-2">
                   {opt.title}
                 </h3>
                 <p className="text-[#6B7280] text-sm mb-6 flex-1">{opt.desc}</p>
-                <div className="text-sm font-semibold text-[#17202A] mb-6">
+                <div className="text-sm font-semibold text-[#1F2937] mb-6">
                   {opt.val}
                 </div>
                 {opt.href ? (
@@ -297,12 +297,12 @@ export default function ContactPage() {
         <section className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+              <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
                 Meet Our Expert Team
               </h2>
               <p className="text-[#4B5563] max-w-2xl mx-auto">
                 Our dedicated team is here to guide you through admission, visa,
-                and relocation for MBBS in Japan.
+                and relocation for MBBS in Qatar.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
@@ -320,15 +320,15 @@ export default function ContactPage() {
                       alt={member.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-[#BC002D] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                    <div className="absolute top-4 right-4 bg-[#8A1538] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
                       {member.designation || "Advisor"}
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <h3 className="text-xl font-bold text-[#17202A] mb-1">
+                    <h3 className="text-xl font-bold text-[#1F2937] mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-sm text-[#BC002D] font-medium mb-4">
+                    <p className="text-sm text-[#8A1538] font-medium mb-4">
                       {member.designation}
                     </p>
                     <div className="flex-1">
@@ -346,7 +346,7 @@ export default function ContactPage() {
                           subject: `Inquiry for ${member.name}`,
                         }));
                       }}
-                      className="flex items-center justify-center gap-2 text-[#BC002D] font-bold text-sm group/btn"
+                      className="flex items-center justify-center gap-2 text-[#8A1538] font-bold text-sm group/btn"
                     >
                       Consult Now{" "}
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -360,13 +360,13 @@ export default function ContactPage() {
       )}
 
       {/* Contact Form Section */}
-      <section id="contact-form" className="pt-16 pb-10 bg-[#FFFDF9]">
+      <section id="contact-form" className="pt-16 pb-10 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-16 items-start">
             <div className="lg:col-span-2 space-y-10">
               <div>
-                <h2 className="text-4xl font-bold text-[#17202A] mb-6">
-                  Send Us a <span className="text-[#BC002D]">Message</span>
+                <h2 className="text-4xl font-bold text-[#1F2937] mb-6">
+                  Send Us a <span className="text-[#8A1538]">Message</span>
                 </h2>
                 <p className="text-[#4B5563] leading-relaxed">
                   Our expert counsellors are ready to answer your questions. Get
@@ -389,15 +389,15 @@ export default function ContactPage() {
                   {
                     icon: AlertCircle,
                     title: "Pre-departure Info",
-                    desc: "Briefing sessions before you leave for Japan",
+                    desc: "Briefing sessions before you leave for Qatar",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm text-[#BC002D] border border-[#E5E7EB]">
+                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm text-[#8A1538] border border-[#E5E7EB]">
                       <item.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-bold text-[#17202A] mb-1">
+                      <div className="font-bold text-[#1F2937] mb-1">
                         {item.title}
                       </div>
                       <div className="text-sm text-[#6B7280] leading-relaxed">
@@ -413,10 +413,10 @@ export default function ContactPage() {
               <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-[#E5E7EB]">
                 {success ? (
                   <div className="text-center py-12">
-                    <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                      <CheckCircle className="w-12 h-12 text-[#8F0023]" />
+                    <div className="w-24 h-24 bg-[#F7E9EE] rounded-full flex items-center justify-center mx-auto mb-8">
+                      <CheckCircle className="w-12 h-12 text-[#5B0F26]" />
                     </div>
-                    <h3 className="text-3xl font-bold text-[#17202A] mb-4">
+                    <h3 className="text-3xl font-bold text-[#1F2937] mb-4">
                       Message Sent!
                     </h3>
                     <p className="text-[#4B5563] mb-10 text-lg">
@@ -425,7 +425,7 @@ export default function ContactPage() {
                     </p>
                     <button
                       onClick={() => setSuccess(false)}
-                      className="bg-[#BC002D] text-white px-10 py-4 rounded-2xl font-bold hover:bg-[#8F0023] transition-colors shadow-lg "
+                      className="bg-[#8A1538] text-white px-10 py-4 rounded-2xl font-bold hover:bg-[#5B0F26] transition-colors shadow-lg "
                     >
                       Send Another Message
                     </button>
@@ -448,7 +448,7 @@ export default function ContactPage() {
                               handleInputChange("name", e.target.value)
                             }
                             placeholder="e.g. John Doe"
-                            className="w-full pl-12 pr-4 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#102A43]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -467,7 +467,7 @@ export default function ContactPage() {
                               handleInputChange("email", e.target.value)
                             }
                             placeholder="john@example.com"
-                            className="w-full pl-12 pr-4 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#102A43]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -489,7 +489,7 @@ export default function ContactPage() {
                               handleInputChange("phone", e.target.value)
                             }
                             placeholder="+91 98765 43210"
-                            className="w-full pl-12 pr-4 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#102A43]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -504,7 +504,7 @@ export default function ContactPage() {
                           onChange={(e) =>
                             handleInputChange("inquiryType", e.target.value)
                           }
-                          className="w-full px-4 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#102A43]/600/20 focus:border-[#E5E7EB] transition-all font-medium appearance-none"
+                          className="w-full px-4 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/600/20 focus:border-[#E5E7EB] transition-all font-medium appearance-none"
                         >
                           <option value="">Select Option</option>
                           <option value="admission">Admission Guidance</option>
@@ -530,7 +530,7 @@ export default function ContactPage() {
                           handleInputChange("subject", e.target.value)
                         }
                         placeholder="Subject of your inquiry"
-                        className="w-full px-6 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#102A43]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
+                        className="w-full px-6 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/600/20 focus:border-[#E5E7EB] transition-all font-medium"
                       />
                     </div>
 
@@ -547,12 +547,12 @@ export default function ContactPage() {
                           handleInputChange("message", e.target.value)
                         }
                         placeholder="Write your message here..."
-                        className="w-full px-6 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#102A43]/600/20 focus:border-[#E5E7EB] transition-all font-medium resize-none"
+                        className="w-full px-6 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/600/20 focus:border-[#E5E7EB] transition-all font-medium resize-none"
                       />
                     </div>
 
                     {error && (
-                      <div className="bg-white border border-[#E5E7EB] text-[#BC002D] px-4 py-3 rounded-2xl text-sm font-medium">
+                      <div className="bg-white border border-[#E5E7EB] text-[#8A1538] px-4 py-3 rounded-2xl text-sm font-medium">
                         {error}
                       </div>
                     )}
@@ -561,7 +561,7 @@ export default function ContactPage() {
                       suppressHydrationWarning
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-[#BC002D] text-white py-5 rounded-2xl font-bold hover:bg-[#8F0023] disabled:opacity-70 transition-all shadow-lg flex items-center justify-center gap-3"
+                      className="w-full bg-[#8A1538] text-white py-5 rounded-2xl font-bold hover:bg-[#5B0F26] disabled:opacity-70 transition-all shadow-lg flex items-center justify-center gap-3"
                     >
                       {loading ? (
                         <Loader2 className="w-6 h-6 animate-spin" />
@@ -583,7 +583,7 @@ export default function ContactPage() {
         <section className="pt-10 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+              <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
                 Our Offices
               </h2>
               <p className="text-[#4B5563]">
@@ -609,19 +609,19 @@ export default function ContactPage() {
                       </div>
                     )}
                     <div className="absolute top-4 left-4">
-                      <div className="px-4 py-2 rounded-xl bg-white text-xs font-bold text-[#BC002D] uppercase shadow-sm">
+                      <div className="px-4 py-2 rounded-xl bg-white text-xs font-bold text-[#8A1538] uppercase shadow-sm">
                         {office.city || "Regional Office"}
                       </div>
                     </div>
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
-                    <h3 className="text-2xl font-bold text-[#17202A] mb-6 group-hover:text-[#102A43] transition-colors uppercase tracking-tight">
+                    <h3 className="text-2xl font-bold text-[#1F2937] mb-6 group-hover:text-[#5B0F26] transition-colors uppercase tracking-tight">
                       {office.name}
                     </h3>
                     <div className="space-y-5 text-[15px] text-[#6B7280] flex-1">
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-[#FFFDF9] rounded-xl flex items-center justify-center shrink-0 border border-[#E5E7EB]">
-                          <MapPin className="w-5 h-5 text-[#BC002D]" />
+                        <div className="w-10 h-10 bg-[#FAF8F7] rounded-xl flex items-center justify-center shrink-0 border border-[#E5E7EB]">
+                          <MapPin className="w-5 h-5 text-[#8A1538]" />
                         </div>
                         <p className="font-medium leading-relaxed">
                           {office.address}
@@ -630,12 +630,12 @@ export default function ContactPage() {
                       </div>
                       {office.phone && (
                         <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-[#FFFDF9] rounded-xl flex items-center justify-center shrink-0 border border-[#E5E7EB]">
-                            <Phone className="w-5 h-5 text-[#BC002D]" />
+                          <div className="w-10 h-10 bg-[#FAF8F7] rounded-xl flex items-center justify-center shrink-0 border border-[#E5E7EB]">
+                            <Phone className="w-5 h-5 text-[#8A1538]" />
                           </div>
                           <a
                             href={`tel:${office.phone}`}
-                            className="font-medium text-[#6B7280] hover:text-[#102A43] transition-colors"
+                            className="font-medium text-[#6B7280] hover:text-[#5B0F26] transition-colors"
                           >
                             {office.phone}
                           </a>
@@ -643,12 +643,12 @@ export default function ContactPage() {
                       )}
                       {office.email && (
                         <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-[#FFFDF9] rounded-xl flex items-center justify-center shrink-0 border border-[#E5E7EB]">
-                            <Mail className="w-5 h-5 text-[#BC002D]" />
+                          <div className="w-10 h-10 bg-[#FAF8F7] rounded-xl flex items-center justify-center shrink-0 border border-[#E5E7EB]">
+                            <Mail className="w-5 h-5 text-[#8A1538]" />
                           </div>
                           <a
                             href={`mailto:${office.email}`}
-                            className="font-medium text-[#6B7280] hover:text-[#102A43] transition-colors"
+                            className="font-medium text-[#6B7280] hover:text-[#5B0F26] transition-colors"
                           >
                             {office.email}
                           </a>
@@ -660,7 +660,7 @@ export default function ContactPage() {
                         href={office.mapEmbed}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-8 pt-8 border-t border-gray-50 flex items-center justify-center gap-2 text-sm font-bold text-[#BC002D] hover:gap-3 transition-all"
+                        className="mt-8 pt-8 border-t border-gray-50 flex items-center justify-center gap-2 text-sm font-bold text-[#8A1538] hover:gap-3 transition-all"
                       >
                         View Complete Map <ArrowRight className="w-4 h-4" />
                       </a>
@@ -683,10 +683,10 @@ export default function ContactPage() {
           <div className="relative z-10 w-full max-w-2xl bg-white rounded-[3rem] shadow-2xl overflow-hidden max-h-[95vh] overflow-y-auto">
             {scheduleSuccess ? (
               <div className="p-16 text-center">
-                <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                  <CheckCircle className="w-12 h-12 text-[#8F0023]" />
+                <div className="w-24 h-24 bg-[#F7E9EE] rounded-full flex items-center justify-center mx-auto mb-8">
+                  <CheckCircle className="w-12 h-12 text-[#5B0F26]" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#17202A] mb-4">
+                <h2 className="text-3xl font-bold text-[#1F2937] mb-4">
                   Request Received!
                 </h2>
                 <p className="text-[#4B5563] mb-8">
@@ -695,7 +695,7 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => setShowSchedulePopup(false)}
-                  className="bg-[#BC002D] text-white px-10 py-4 rounded-2xl font-bold"
+                  className="bg-[#8A1538] text-white px-10 py-4 rounded-2xl font-bold"
                 >
                   Close Window
                 </button>
@@ -704,10 +704,10 @@ export default function ContactPage() {
               <div className="p-10 md:p-12">
                 <div className="flex items-center justify-between mb-10">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#BC002D]">
+                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#8A1538]">
                       <Video className="w-7 h-7" />
                     </div>
-                    <h2 className="text-3xl font-bold text-[#17202A]">
+                    <h2 className="text-3xl font-bold text-[#1F2937]">
                       Schedule Video Call
                     </h2>
                   </div>
@@ -732,7 +732,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("name", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none"
                         placeholder="Enter name"
                       />
                     </div>
@@ -747,7 +747,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("email", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none"
                         placeholder="Enter email"
                       />
                     </div>
@@ -765,7 +765,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("phone", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none"
                         placeholder="+91..."
                       />
                     </div>
@@ -784,7 +784,7 @@ export default function ContactPage() {
                               e.target.value,
                             )
                           }
-                          className="w-full px-4 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none text-sm"
+                          className="w-full px-4 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none text-sm"
                         />
                         <input
                           required
@@ -796,7 +796,7 @@ export default function ContactPage() {
                               e.target.value,
                             )
                           }
-                          className="w-full px-4 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none text-sm"
+                          className="w-full px-4 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none text-sm"
                         />
                       </div>
                     </div>
@@ -812,7 +812,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         handleScheduleChange("consultationType", e.target.value)
                       }
-                      className="w-full px-5 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none font-medium appearance-none"
+                      className="w-full px-5 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none font-medium appearance-none"
                     >
                       <option value="">Choose Priority</option>
                       <option value="admission">
@@ -838,7 +838,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         handleScheduleChange("message", e.target.value)
                       }
-                      className="w-full px-5 py-4 bg-[#FFFDF9] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#102A43]/600 focus:outline-none resize-none"
+                      className="w-full px-5 py-4 bg-[#FAF8F7] border border-[#E5E7EB] rounded-2xl focus:ring-2 focus:ring-[#5B0F26]/600 focus:outline-none resize-none"
                       placeholder="What would you like to discuss?"
                     ></textarea>
                   </div>
@@ -847,7 +847,7 @@ export default function ContactPage() {
                     suppressHydrationWarning
                     type="submit"
                     disabled={isScheduling}
-                    className="w-full bg-[#BC002D] text-white py-5 rounded-2xl font-bold hover:bg-[#8F0023] transition-all shadow-xl flex items-center justify-center gap-3"
+                    className="w-full bg-[#8A1538] text-white py-5 rounded-2xl font-bold hover:bg-[#5B0F26] transition-all shadow-xl flex items-center justify-center gap-3"
                   >
                     {isScheduling ? (
                       <Loader2 className="w-6 h-6 animate-spin" />

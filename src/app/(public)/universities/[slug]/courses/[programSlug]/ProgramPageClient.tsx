@@ -17,7 +17,7 @@ export default function ProgramPageClient({
   return (
     <button
       onClick={() => openModal(universityName, brochureUrl)}
-      className="border-2 border-white text-white hover:bg-[#102A43] hover:border-[#102A43] px-6 py-3 rounded-xl font-semibold text-sm transition-colors flex items-center gap-2"
+      className="border-2 border-white text-white hover:bg-[#5B0F26] hover:border-[#5B0F26] px-6 py-3 rounded-xl font-semibold text-sm transition-colors flex items-center gap-2"
     >
       <Download className="w-4 h-4" />
       Download Brochure

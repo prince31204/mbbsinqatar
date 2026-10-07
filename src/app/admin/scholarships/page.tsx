@@ -26,7 +26,7 @@ const columns: Column<Scholarship>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-[#17202A] text-sm">{row.title}</p>
+        <p className="font-medium text-[#1F2937] text-sm">{row.title}</p>
         <p className="text-xs text-[#6B7280]">
           {row.university?.name ?? "General"}
         </p>
@@ -158,7 +158,7 @@ export default function AdminScholarshipsPage() {
             id="scholarship-visibility"
             checked={isSectionVisible}
             onCheckedChange={handleVisibilityToggle}
-            className="scale-75 data-[state=checked]:bg-[#8F0023]"
+            className="scale-75 data-[state=checked]:bg-[#5B0F26]"
           />
         </div>
       }

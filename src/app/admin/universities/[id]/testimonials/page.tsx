@@ -111,7 +111,7 @@ export default function UniversityTestimonialsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">
+            <h2 className="text-xl font-bold text-[#1F2937]">
               Student Testimonials
             </h2>
             <p className="text-sm text-[#6B7280]">
@@ -134,7 +134,7 @@ export default function UniversityTestimonialsPage() {
                 status: true,
               });
             }}
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             <Plus size={16} className="mr-2" />
             Add Testimonial
@@ -143,7 +143,7 @@ export default function UniversityTestimonialsPage() {
 
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit Testimonial" : "Add Testimonial"}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -222,7 +222,7 @@ export default function UniversityTestimonialsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -277,7 +277,7 @@ export default function UniversityTestimonialsPage() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <p className="font-semibold text-[#17202A] text-sm">
+                      <p className="font-semibold text-[#1F2937] text-sm">
                         {t.name}
                       </p>
                       <div className="flex gap-1">
@@ -306,7 +306,7 @@ export default function UniversityTestimonialsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-[#BC002D]"
+                          className="h-7 w-7 p-0 text-[#8A1538]"
                           onClick={() => handleDelete(t.id)}
                         >
                           <Trash2 size={13} />
@@ -325,7 +325,7 @@ export default function UniversityTestimonialsPage() {
                           size={11}
                           className={
                             i < (t.rating || 5)
-                              ? "text-[#BC002D] fill-yellow-400"
+                              ? "text-[#8A1538] fill-yellow-400"
                               : "text-[#4B5563]"
                           }
                         />

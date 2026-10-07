@@ -122,7 +122,7 @@ export default function ScholarshipEditPage() {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-[#17202A]">Edit Scholarship</h1>
+        <h1 className="text-2xl font-bold text-[#1F2937]">Edit Scholarship</h1>
         <Button variant="outline" size="sm" asChild>
           <Link href={`/admin/scholarships/${id}/faqs`}>
             <HelpCircle size={14} className="mr-1" /> Manage FAQs
@@ -256,7 +256,7 @@ export default function ScholarshipEditPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#102A43] hover:bg-[#102A43]"
+            className="flex-1 bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             {loading ? "Saving…" : "Save Changes"}
           </Button>

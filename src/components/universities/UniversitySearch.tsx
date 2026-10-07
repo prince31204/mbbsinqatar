@@ -62,13 +62,13 @@ function formatStudents(s: string | null): string {
 function getTypeColor(type: string | null): string {
   switch ((type || "").toLowerCase()) {
     case "medical":
-      return "bg-red-100 text-green-800";
+      return "bg-[#F7E9EE] text-green-800";
     case "private":
       return "bg-purple-100 text-purple-800";
     case "public":
-      return "bg-[#F9FAFB] text-[#102A43]";
+      return "bg-[#F9FAFB] text-[#5B0F26]";
     default:
-      return "bg-[#F9FAFB] text-[#17202A]";
+      return "bg-[#F9FAFB] text-[#1F2937]";
   }
 }
 
@@ -144,7 +144,7 @@ export default function UniversitySearch({ universities }: Props) {
               suppressHydrationWarning
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search universities by name or city..."
-              className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+              className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
             />
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -153,7 +153,7 @@ export default function UniversitySearch({ universities }: Props) {
               value={typeFilter}
               suppressHydrationWarning
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 bg-white"
+              className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 bg-white"
             >
               <option value="all">All Types</option>
               {types.map((t) => (
@@ -233,8 +233,8 @@ export default function UniversitySearch({ universities }: Props) {
                     {/* Rating */}
                     {u.rating != null && (
                       <div className="absolute top-4 right-4 bg-white/95 rounded-lg px-2.5 py-1 flex items-center gap-1 shadow">
-                        <Star className="w-3.5 h-3.5 text-[#BC002D] fill-current" />
-                        <span className="text-sm font-bold text-[#17202A]">
+                        <Star className="w-3.5 h-3.5 text-[#8A1538] fill-current" />
+                        <span className="text-sm font-bold text-[#1F2937]">
                           {Number(u.rating).toFixed(1)}
                         </span>
                       </div>
@@ -242,7 +242,7 @@ export default function UniversitySearch({ universities }: Props) {
 
                     {/* Global Ranking badge */}
                     {u.globalRanking && (
-                      <div className="absolute bottom-3 left-4 bg-[#BC002D] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                      <div className="absolute bottom-3 left-4 bg-[#8A1538] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
                         Rank #{u.globalRanking}
                       </div>
                     )}
@@ -252,12 +252,12 @@ export default function UniversitySearch({ universities }: Props) {
                   <div className="p-5 flex flex-col flex-grow">
                     {/* Title + Location */}
                     <div className="mb-3">
-                      <h3 className="text-lg font-bold text-[#17202A] mb-1.5 group-hover:text-[#102A43] transition-colors leading-tight">
+                      <h3 className="text-lg font-bold text-[#1F2937] mb-1.5 group-hover:text-[#5B0F26] transition-colors leading-tight">
                         {u.name}
                       </h3>
                       <div className="flex items-center text-[#6B7280] text-sm gap-1">
-                        <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-red-500" />
-                        <span>{location || "Japan"}</span>
+                        <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-[#8A1538]" />
+                        <span>{location || "Qatar"}</span>
                         {u.establishedYear && (
                           <>
                             <span className="mx-1">•</span>
@@ -270,8 +270,8 @@ export default function UniversitySearch({ universities }: Props) {
                     {/* 4-stat grid */}
                     <div className="grid grid-cols-2 gap-2.5 mb-4">
                       <div className="text-center p-3 bg-white rounded-xl">
-                        <DollarSign className="w-4 h-4 text-[#BC002D] mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-[#17202A] leading-tight">
+                        <DollarSign className="w-4 h-4 text-[#8A1538] mx-auto mb-1" />
+                        <div className="text-sm font-semibold text-[#1F2937] leading-tight">
                           {u.tuitionFee
                             ? /[a-zA-Z]/.test(String(u.tuitionFee))
                               ? String(u.tuitionFee)
@@ -283,17 +283,17 @@ export default function UniversitySearch({ universities }: Props) {
                         </div>
                       </div>
                       <div className="text-center p-3 bg-white rounded-xl">
-                        <Users className="w-4 h-4 text-[#BC002D] mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-[#17202A]">
+                        <Users className="w-4 h-4 text-[#8A1538] mx-auto mb-1" />
+                        <div className="text-sm font-semibold text-[#1F2937]">
                           {formatStudents(u.students)}
                         </div>
                         <div className="text-xs text-[#6B7280] mt-0.5">
                           Students
                         </div>
                       </div>
-                      <div className="text-center p-3 bg-red-50 rounded-xl">
-                        <Clock className="w-4 h-4 text-[#8F0023] mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-[#17202A]">
+                      <div className="text-center p-3 bg-[#F7E9EE] rounded-xl">
+                        <Clock className="w-4 h-4 text-[#5B0F26] mx-auto mb-1" />
+                        <div className="text-sm font-semibold text-[#1F2937]">
                           {u.courseDuration || "6 Years"}
                         </div>
                         <div className="text-xs text-[#6B7280] mt-0.5">
@@ -302,7 +302,7 @@ export default function UniversitySearch({ universities }: Props) {
                       </div>
                       <div className="text-center p-3 bg-purple-50 rounded-xl">
                         <TrendingUp className="w-4 h-4 text-purple-600 mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-[#17202A]">
+                        <div className="text-sm font-semibold text-[#1F2937]">
                           {fmgeRate != null ? `${fmgeRate}%` : "N/A"}
                         </div>
                         <div className="text-xs text-[#6B7280] mt-0.5">
@@ -314,7 +314,7 @@ export default function UniversitySearch({ universities }: Props) {
                     {/* Medium + NEET */}
                     <div className="flex flex-wrap gap-2 mb-3">
                       {u.mediumOfInstruction && (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-red-400 text-[#BC002D] text-xs rounded-lg font-medium">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#8A1538] text-[#8A1538] text-xs rounded-lg font-medium">
                           <BookOpen className="w-3 h-3" />
                           {u.mediumOfInstruction}
                         </span>
@@ -326,7 +326,7 @@ export default function UniversitySearch({ universities }: Props) {
                         </span>
                       )}
                       {u.scholarships.length > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-white text-[#BC002D] text-xs rounded-lg font-medium">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-white text-[#8A1538] text-xs rounded-lg font-medium">
                           🎓 Scholarship Available
                         </span>
                       )}
@@ -345,7 +345,7 @@ export default function UniversitySearch({ universities }: Props) {
                           {recognitionBadges.slice(0, 5).map((badge) => (
                             <span
                               key={badge}
-                              className="inline-flex items-center gap-1 px-2 py-0.5 bg-red-100 text-green-800 text-xs rounded-full font-medium"
+                              className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#F7E9EE] text-green-800 text-xs rounded-full font-medium"
                             >
                               <CheckCircle className="w-3 h-3" />
                               {badge}
@@ -357,7 +357,7 @@ export default function UniversitySearch({ universities }: Props) {
 
                     {/* CTA */}
                     <div className="mt-auto pt-2">
-                      <div className="w-full bg-[#BC002D] text-white py-3 rounded-xl font-semibold hover:bg-[#8F0023] transition-colors flex items-center justify-center gap-2 text-sm group/btn">
+                      <div className="w-full bg-[#8A1538] text-white py-3 rounded-xl font-semibold hover:bg-[#5B0F26] transition-colors flex items-center justify-center gap-2 text-sm group/btn">
                         <span>View Details</span>
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </div>

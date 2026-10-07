@@ -54,7 +54,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A] flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-[#1F2937] flex items-center gap-2">
             <Users size={22} className="text-indigo-600" /> Registered Users
           </h1>
           <p className="text-sm text-[#6B7280] mt-1">
@@ -82,7 +82,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
         </div>
         <button
           type="submit"
-          className="px-4 py-2.5 bg-indigo-600 text-[#17202A] rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
+          className="px-4 py-2.5 bg-indigo-600 text-[#1F2937] rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
         >
           Search
         </button>
@@ -99,7 +99,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
       {/* Table */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-[#FFFDF9] border-b border-[#E5E7EB]">
+          <thead className="bg-[#FAF8F7] border-b border-[#E5E7EB]">
             <tr>
               <th className="text-left text-xs font-semibold text-[#6B7280] px-4 py-3">
                 User
@@ -130,7 +130,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
               </tr>
             ) : (
               users.map((u) => (
-                <tr key={u.id} className="hover:bg-[#FFFDF9] transition-colors">
+                <tr key={u.id} className="hover:bg-[#FAF8F7] transition-colors">
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center shrink-0">
@@ -139,7 +139,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                         </span>
                       </div>
                       <div>
-                        <div className="font-medium text-[#17202A]">
+                        <div className="font-medium text-[#1F2937]">
                           {u.name}
                         </div>
                         <div className="text-xs text-[#6B7280]">{u.email}</div>
@@ -151,8 +151,8 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                     <span
                       className={`text-xs font-medium px-2.5 py-1 rounded-full ${
                         u.status === "active"
-                          ? "bg-red-100 text-[#8F0023]"
-                          : "bg-[#102A43] text-[#BC002D]"
+                          ? "bg-[#F7E9EE] text-[#5B0F26]"
+                          : "bg-[#5B0F26] text-[#8A1538]"
                       }`}
                     >
                       {u.status}
@@ -185,7 +185,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-between px-4 py-3 border-t border-[#E5E7EB] bg-[#FFFDF9]">
+          <div className="flex items-center justify-between px-4 py-3 border-t border-[#E5E7EB] bg-[#FAF8F7]">
             <p className="text-xs text-[#6B7280]">
               Showing {skip + 1}–{Math.min(skip + pageSize, total)} of {total}
             </p>
@@ -196,7 +196,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                   href={`/admin/registered-users?search=${search}&page=${p}`}
                   className={`w-8 h-8 flex items-center justify-center rounded-lg text-xs font-medium transition-colors ${
                     p === pageNum
-                      ? "bg-indigo-600 text-[#17202A]"
+                      ? "bg-indigo-600 text-[#1F2937]"
                       : "text-[#4B5563] hover:bg-gray-200"
                   }`}
                 >

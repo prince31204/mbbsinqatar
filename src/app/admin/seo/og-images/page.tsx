@@ -92,9 +92,9 @@ export default function OgImagesPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <ImageIcon size={22} className="text-[#BC002D]" />
+          <ImageIcon size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Default OG Images
             </h1>
             <p className="text-sm text-[#6B7280]">
@@ -104,7 +104,7 @@ export default function OgImagesPage() {
         </div>
         <Button
           size="sm"
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           onClick={() => setShowAdd(true)}
         >
           <Plus size={14} className="mr-1" /> Add OG Image
@@ -113,7 +113,7 @@ export default function OgImagesPage() {
 
       {showAdd && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-4 space-y-4">
-          <h3 className="font-medium text-[#17202A]">New Default OG Image</h3>
+          <h3 className="font-medium text-[#1F2937]">New Default OG Image</h3>
           <div className="space-y-1.5">
             <label className="text-xs text-[#6B7280] block">Name / Label</label>
             <Input
@@ -133,7 +133,7 @@ export default function OgImagesPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -194,7 +194,7 @@ export default function OgImagesPage() {
                 />
               </div>
               <div className="p-3">
-                <p className="text-sm font-medium text-[#17202A] truncate">
+                <p className="text-sm font-medium text-[#1F2937] truncate">
                   {img.name}
                 </p>
                 <div className="flex items-center justify-between mt-2">
@@ -206,7 +206,7 @@ export default function OgImagesPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-7 w-7 p-0 text-red-500 hover:bg-white"
+                      className="h-7 w-7 p-0 text-[#8A1538] hover:bg-white"
                       title="Copy relative path"
                       onClick={() => {
                         navigator.clipboard.writeText(img.imagePath);
@@ -238,7 +238,7 @@ export default function OgImagesPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-7 w-7 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                      className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                       onClick={() => handleDelete(img.id)}
                     >
                       <Trash2 size={13} />

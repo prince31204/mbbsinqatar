@@ -31,7 +31,7 @@ const createMarkerIcon = () =>
     html: `
  <div style="
  width: 32px; height: 32px;
- background: #102A43;
+ background: #5B0F26;
  border: 3px solid white;
  border-radius: 50% 50% 50% 0;
  transform: rotate(-45deg);
@@ -156,8 +156,8 @@ export default function UniversityMap({
   const isSingle = mapUniversities.length === 1;
   const center: [number, number] = isSingle 
     ? [Number(mapUniversities[0].latitude), Number(mapUniversities[0].longitude)] 
-    : [36.2048, 138.2529];
-  const zoomLevel = isSingle ? 12 : 5;
+    : [25.3548, 51.1839];
+  const zoomLevel = isSingle ? 12 : 9;
 
   const tileLayers: Record<LayerType, { url: string; attribution: string }> = {
     map: {
@@ -205,7 +205,7 @@ export default function UniversityMap({
                     style={{
                       fontWeight: 700,
                       fontSize: "13px",
-                      color: "#17202A",
+                      color: "#1F2937",
                       marginBottom: "4px",
                       lineHeight: "1.3",
                     }}
@@ -219,13 +219,13 @@ export default function UniversityMap({
                       marginBottom: "10px",
                     }}
                   >
-                    📍 {uni.city}, Japan
+                    📍 {uni.city}, Qatar
                   </div>
                   <Link
                     href={`/universities/${uni.slug}`}
                     style={{
                       display: "inline-block",
-                      background: "#102A43",
+                      background: "#5B0F26",
                       color: "white",
                       fontSize: "12px",
                       fontWeight: 600,
@@ -267,8 +267,8 @@ export default function UniversityMap({
               fontWeight: 600,
               border: "none",
               cursor: "pointer",
-              background: activeLayer === layer ? "#102A43" : "white",
-              color: activeLayer === layer ? "white" : "#17202A",
+              background: activeLayer === layer ? "#5B0F26" : "white",
+              color: activeLayer === layer ? "white" : "#1F2937",
               transition: "all 0.2s",
             }}
           >
@@ -290,7 +290,7 @@ export default function UniversityMap({
           boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
           fontSize: "13px",
           fontWeight: 700,
-          color: "#102A43",
+          color: "#5B0F26",
           display: "flex",
           alignItems: "center",
           gap: "6px",
@@ -298,7 +298,7 @@ export default function UniversityMap({
       >
         <span
           style={{
-            background: "#102A43",
+            background: "#5B0F26",
             color: "white",
             borderRadius: "50%",
             width: "22px",

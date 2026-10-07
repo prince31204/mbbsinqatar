@@ -28,7 +28,7 @@ type Program = { id: number; programName: string };
 
 const PHONE_CODES = [
   { code: "+91", country: "India" },
-  { code: "+996", country: "Japan" },
+  { code: "+996", country: "Qatar" },
   { code: "+1", country: "USA/Canada" },
   { code: "+44", country: "UK" },
   { code: "+92", country: "Pakistan" },
@@ -52,7 +52,7 @@ const COUNTRIES = [
   "Nigeria",
   "Kenya",
   "Ghana",
-  "Japan",
+  "Qatar",
   "China",
   "USA",
   "Canada",
@@ -123,7 +123,7 @@ const Card = ({
   <div className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-6">
     <div className="flex items-center gap-3 mb-5">
       <div className={`${color} p-2 rounded-lg`}>{icon}</div>
-      <h2 className="text-lg font-bold text-[#17202A]">{title}</h2>
+      <h2 className="text-lg font-bold text-[#1F2937]">{title}</h2>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{children}</div>
   </div>
@@ -223,15 +223,15 @@ export default function ApplyForm() {
   };
 
   const inp =
-    "w-full px-4 py-3 border border-[#E5E7EB] rounded-xl focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent transition text-sm outline-none bg-white text-[#17202A] placeholder:text-[#6B7280]";
+    "w-full px-4 py-3 border border-[#E5E7EB] rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent transition text-sm outline-none bg-white text-[#1F2937] placeholder:text-[#6B7280]";
   const lbl = "block text-sm font-semibold text-[#4B5563] mb-1.5";
-  const req = <span className="text-red-500">*</span>;
+  const req = <span className="text-[#8A1538]">*</span>;
 
   return (
     <>
       <form onSubmit={handleSubmit} className="space-y-6">
         <Card
-          icon={<User size={18} className="text-[#BC002D]" />}
+          icon={<User size={18} className="text-[#8A1538]" />}
           color="bg-[#F9FAFB]"
           title="Personal Information"
         >
@@ -280,7 +280,7 @@ export default function ApplyForm() {
               <select
                 value={form.countryCode}
                 onChange={(e) => set("countryCode", e.target.value)}
-                className="px-2 py-3 border border-[#E5E7EB] rounded-xl text-sm outline-none bg-white text-[#17202A] focus:ring-2 focus:ring-[#102A43]/500 w-28 shrink-0"
+                className="px-2 py-3 border border-[#E5E7EB] rounded-xl text-sm outline-none bg-white text-[#1F2937] focus:ring-2 focus:ring-[#5B0F26]/500 w-28 shrink-0"
               >
                 {PHONE_CODES.map((c) => (
                   <option key={c.code} value={c.code}>
@@ -360,8 +360,8 @@ export default function ApplyForm() {
         </Card>
 
         <Card
-          icon={<MapPin size={18} className="text-[#8F0023]" />}
-          color="bg-red-100"
+          icon={<MapPin size={18} className="text-[#5B0F26]" />}
+          color="bg-[#F7E9EE]"
           title="Address Information"
         >
           <Full>
@@ -431,7 +431,7 @@ export default function ApplyForm() {
         </Card>
 
         <Card
-          icon={<Award size={18} className="text-[#BC002D]" />}
+          icon={<Award size={18} className="text-[#8A1538]" />}
           color="bg-[#F9FAFB]"
           title="Academic Information"
         >
@@ -527,7 +527,7 @@ export default function ApplyForm() {
                 value={form.universityId}
                 onChange={(e) => set("universityId", e.target.value)}
                 disabled={loadingUnis}
-                className={`${inp} pl-10 appearance-none disabled:bg-[#FFFDF9]`}
+                className={`${inp} pl-10 appearance-none disabled:bg-[#FAF8F7]`}
               >
                 <option value="">
                   {loadingUnis ? "Loading…" : "Any university"}
@@ -557,7 +557,7 @@ export default function ApplyForm() {
                 value={form.programId}
                 onChange={(e) => set("programId", e.target.value)}
                 disabled={!form.universityId || loadingProgs}
-                className={`${inp} pl-10 appearance-none disabled:bg-[#FFFDF9]`}
+                className={`${inp} pl-10 appearance-none disabled:bg-[#FAF8F7]`}
               >
                 <option value="">
                   {!form.universityId
@@ -586,7 +586,7 @@ export default function ApplyForm() {
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="bg-white border border-amber-200 p-2 rounded-lg shadow-sm">
-              <ClipboardList size={18} className="text-[#BC002D]" />
+              <ClipboardList size={18} className="text-[#8A1538]" />
             </div>
             <h2 className="text-lg font-bold text-black">
               Required Documents
@@ -598,7 +598,7 @@ export default function ApplyForm() {
                 key={doc}
                 className="flex items-center gap-2 text-sm text-black font-medium"
               >
-                <CheckCircle size={14} className="text-[#102A43] shrink-0" />{" "}
+                <CheckCircle size={14} className="text-[#5B0F26] shrink-0" />{" "}
                 {doc}
               </div>
             ))}
@@ -615,13 +615,13 @@ export default function ApplyForm() {
             type="checkbox"
             checked={form.agreed}
             onChange={(e) => set("agreed", e.target.checked)}
-            className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#BC002D] focus:ring-[#102A43]/500"
+            className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#8A1538] focus:ring-[#5B0F26]/500"
           />
           <span className="text-sm text-[#4B5563]">
             I agree to the{" "}
             <Link
               href="/privacy-policy"
-              className="text-[#BC002D] hover:underline"
+              className="text-[#8A1538] hover:underline"
             >
               terms and conditions
             </Link>{" "}
@@ -630,7 +630,7 @@ export default function ApplyForm() {
         </label>
 
         {error && (
-          <div className="rounded-xl bg-white border border-[#E5E7EB] px-4 py-3 text-sm text-[#102A43]">
+          <div className="rounded-xl bg-white border border-[#E5E7EB] px-4 py-3 text-sm text-[#5B0F26]">
             {error}
           </div>
         )}
@@ -638,7 +638,7 @@ export default function ApplyForm() {
         <button
           type="submit"
           disabled={submitting || !form.agreed}
-          className="w-full flex items-center justify-center gap-2 bg-[#BC002D] hover:bg-[#8F0023] text-white font-bold py-4 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base"
+          className="w-full flex items-center justify-center gap-2 bg-[#8A1538] hover:bg-[#5B0F26] text-white font-bold py-4 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base"
         >
           {submitting ? (
             <>
@@ -664,21 +664,21 @@ export default function ApplyForm() {
             >
               <X size={20} />
             </button>
-            <div className="w-20 h-20 bg-[#BC002D] rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg ">
+            <div className="w-20 h-20 bg-[#8A1538] rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg ">
               <CheckCircle size={40} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-[#17202A] mb-2">
+            <h3 className="text-xl font-bold text-[#1F2937] mb-2">
               Application Submitted!
             </h3>
             <div className="bg-white border border-[#E5E7EB] rounded-xl p-4 mb-5">
-              <p className="text-[#102A43] text-sm font-medium">
+              <p className="text-[#5B0F26] text-sm font-medium">
                 Thank you! Our counsellors will contact you within 24 hours to
                 guide you through the next steps.
               </p>
             </div>
             <Link
               href="/universities"
-              className="inline-block bg-[#BC002D] hover:bg-[#8F0023] text-white px-6 py-2.5 rounded-xl text-sm font-medium transition"
+              className="inline-block bg-[#8A1538] hover:bg-[#5B0F26] text-white px-6 py-2.5 rounded-xl text-sm font-medium transition"
             >
               Explore Universities
             </Link>

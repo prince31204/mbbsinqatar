@@ -5,12 +5,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "admin.mbbsinkazak.com",
+        hostname: "admin.mbbsinqatar.com",
         pathname: "/storage/**",
       },
       {
         protocol: "https",
-        hostname: "cdn.mbbsinkazak.com",
+        hostname: "cdn.mbbsinqatar.com",
         pathname: "/**",
       },
       // Placeholder / fallback images
@@ -51,7 +51,7 @@ const nextConfig: NextConfig = {
             value: 'mbbsinvietnam.com',
           },
         ],
-        destination: 'https://www.mbbsinkazak.com/:path*',
+        destination: 'https://www.mbbsinqatar.com/:path*',
         permanent: true,
       },
       {

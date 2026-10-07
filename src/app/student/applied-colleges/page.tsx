@@ -34,22 +34,22 @@ export default async function AppliedCollegesPage() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "contacted":
-        return <CheckCircle className="w-4 h-4 text-[#8F0023]" />;
+        return <CheckCircle className="w-4 h-4 text-[#5B0F26]" />;
       case "rejected":
-        return <XCircle className="w-4 h-4 text-[#BC002D]" />;
+        return <XCircle className="w-4 h-4 text-[#8A1538]" />;
       default:
-        return <Clock className="w-4 h-4 text-[#BC002D]" />;
+        return <Clock className="w-4 h-4 text-[#8A1538]" />;
     }
   };
 
   const getStatusStyle = (status: string) => {
     switch (status) {
       case "contacted":
-        return "bg-red-100 text-[#8F0023]";
+        return "bg-[#F7E9EE] text-[#5B0F26]";
       case "rejected":
-        return "bg-[#F9FAFB] text-[#102A43]";
+        return "bg-[#F9FAFB] text-[#5B0F26]";
       default:
-        return "bg-red-400 text-[#BC002D]";
+        return "bg-[#8A1538] text-[#8A1538]";
     }
   };
 
@@ -57,7 +57,7 @@ export default async function AppliedCollegesPage() {
     <div className="p-6 lg:p-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-[#17202A]">Applied Colleges</h1>
+        <h1 className="text-2xl font-bold text-[#1F2937]">Applied Colleges</h1>
         <p className="text-[#6B7280] mt-1">
           Track all your university inquiries and application statuses.
         </p>
@@ -67,17 +67,17 @@ export default async function AppliedCollegesPage() {
         /* Empty State */
         <div className="flex flex-col items-center justify-center py-16">
           <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center mb-6">
-            <BookOpen className="w-14 h-14 text-[#BC002D]" />
+            <BookOpen className="w-14 h-14 text-[#8A1538]" />
           </div>
-          <h2 className="text-xl font-semibold text-[#17202A] mb-2">
+          <h2 className="text-xl font-semibold text-[#1F2937] mb-2">
             No Applications Yet
           </h2>
           <p className="text-[#6B7280] text-center max-w-sm mb-8">
-            {`You haven't applied to any colleges yet. Browse our universities and find your ideal MBBS program in Japan.`}
+            {`You haven't applied to any colleges yet. Browse our universities and find your ideal MBBS program in Qatar.`}
           </p>
           <Link
             href="/universities"
-            className="flex items-center gap-2 px-6 py-3 bg-[#BC002D] hover:bg-[#8F0023] text-white rounded-xl font-semibold transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-[#8A1538] hover:bg-[#5B0F26] text-white rounded-xl font-semibold transition-colors"
           >
             Browse Universities
             <ArrowRight className="w-4 h-4" />
@@ -91,20 +91,20 @@ export default async function AppliedCollegesPage() {
               {
                 label: "Total",
                 value: inquiries.length,
-                color: "text-[#17202A]",
-                bg: "bg-[#FFFDF9]",
+                color: "text-[#1F2937]",
+                bg: "bg-[#FAF8F7]",
               },
               {
                 label: "Contacted",
                 value: inquiries.filter((i) => i.status === "contacted").length,
-                color: "text-[#8F0023]",
-                bg: "bg-red-50",
+                color: "text-[#5B0F26]",
+                bg: "bg-[#F7E9EE]",
               },
               {
                 label: "Pending",
                 value: inquiries.filter((i) => i.status === "pending").length,
-                color: "text-[#BC002D]",
-                bg: "bg-red-400",
+                color: "text-[#8A1538]",
+                bg: "bg-[#8A1538]",
               },
             ].map((s) => (
               <div
@@ -126,10 +126,10 @@ export default async function AppliedCollegesPage() {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shrink-0">
-                    <Building2 className="w-5 h-5 text-[#BC002D]" />
+                    <Building2 className="w-5 h-5 text-[#8A1538]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#17202A]">
+                    <h3 className="font-semibold text-[#1F2937]">
                       {inq.universityName || "General Inquiry"}
                     </h3>
                     {inq.message && (
@@ -169,16 +169,16 @@ export default async function AppliedCollegesPage() {
           {/* Browse more CTA */}
           <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 flex items-center justify-between">
             <div>
-              <h3 className="font-semibold text-[#17202A] mb-1">
+              <h3 className="font-semibold text-[#1F2937] mb-1">
                 Looking for more options?
               </h3>
               <p className="text-sm text-[#4B5563]">
-                Explore all universities and programs available in Japan.
+                Explore all universities and programs available in Qatar.
               </p>
             </div>
             <Link
               href="/universities"
-              className="flex items-center gap-2 px-5 py-2.5 bg-[#BC002D] hover:bg-[#8F0023] text-white rounded-xl text-sm font-semibold transition-colors shrink-0 ml-4"
+              className="flex items-center gap-2 px-5 py-2.5 bg-[#8A1538] hover:bg-[#5B0F26] text-white rounded-xl text-sm font-semibold transition-colors shrink-0 ml-4"
             >
               Browse <ArrowRight className="w-4 h-4" />
             </Link>

@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "Article Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Japan Articles`,
+    title: cat.metaTitle || `${cat.name} — MBBS Qatar Articles`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Articles about ${cat.name} — MBBS in Japan.`,
+      `Articles about ${cat.name} — MBBS in Qatar.`,
     path: `/articles/${categorySlug}`,
   });
 }
@@ -104,22 +104,22 @@ export default async function ArticleCategoryPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-[#FFFDF9]">
+      <div className="min-h-screen bg-[#FAF8F7]">
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-[#6B7280]">
-            <Link href="/" className="hover:text-[#8F0023]">
+            <Link href="/" className="hover:text-[#5B0F26]">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/articles" className="hover:text-[#8F0023]">
+            <Link href="/articles" className="hover:text-[#5B0F26]">
               Articles
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-[#17202A] font-medium">{category.name}</span>
+            <span className="text-[#1F2937] font-medium">{category.name}</span>
           </div>
         </div>
 
-        <div className="bg-white text-[#17202A] py-12">
+        <div className="bg-white text-[#1F2937] py-12">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
               {category.name}
@@ -152,7 +152,7 @@ export default async function ArticleCategoryPage({ params }: Props) {
                       href={`/articles/${category.slug}/${item.slug ?? ""}`}
                       className="group bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                     >
-                      <div className="relative h-48 bg-red-50">
+                      <div className="relative h-48 bg-[#F7E9EE]">
                         {item.thumbnailPath ? (
                           <Image
                             src={cdn(item.thumbnailPath)}
@@ -162,7 +162,7 @@ export default async function ArticleCategoryPage({ params }: Props) {
                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                         ) : (
-                          <div className="flex items-center justify-center h-full bg-red-50">
+                          <div className="flex items-center justify-center h-full bg-[#F7E9EE]">
                             <span className="text-green-300 text-4xl font-bold">
                               {(item.title ?? "A")[0]}
                             </span>
@@ -170,7 +170,7 @@ export default async function ArticleCategoryPage({ params }: Props) {
                         )}
                       </div>
                       <div className="p-5">
-                        <h2 className="font-bold text-[#17202A] mb-2 line-clamp-2 group-hover:text-[#8F0023] transition-colors">
+                        <h2 className="font-bold text-[#1F2937] mb-2 line-clamp-2 group-hover:text-[#5B0F26] transition-colors">
                           {item.title}
                         </h2>
                         {item.shortnote && (
@@ -206,16 +206,16 @@ export default async function ArticleCategoryPage({ params }: Props) {
             </div>
             <div className="space-y-6">
               <div className="bg-white rounded-2xl border border-[#E5E7EB] p-5">
-                <h3 className="font-bold text-[#17202A] mb-4">All Categories</h3>
+                <h3 className="font-bold text-[#1F2937] mb-4">All Categories</h3>
                 <ul className="space-y-2">
                   {categories.map((cat) => (
                     <li key={cat.slug}>
                       <Link
                         href={`/articles/${cat.slug}`}
-                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-[#8F0023] font-semibold" : "text-[#4B5563] hover:text-[#8F0023]"}`}
+                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-[#5B0F26] font-semibold" : "text-[#4B5563] hover:text-[#5B0F26]"}`}
                       >
                         <span>{cat.name}</span>
-                        <span className="bg-red-50 text-[#8F0023] text-xs px-2 py-0.5 rounded-full">
+                        <span className="bg-[#F7E9EE] text-[#5B0F26] text-xs px-2 py-0.5 rounded-full">
                           {cat._count.articles}
                         </span>
                       </Link>
@@ -223,14 +223,14 @@ export default async function ArticleCategoryPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-[#8F0023] rounded-2xl p-6 text-[#17202A] text-center">
+              <div className="bg-[#5B0F26] rounded-2xl p-6 text-[#1F2937] text-center">
                 <h3 className="font-bold text-lg mb-2">Get Free Counseling</h3>
                 <p className="text-green-100 text-sm mb-4">
                   Talk to our MBBS experts today
                 </p>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-white text-[#8F0023] font-semibold px-4 py-2 rounded-xl hover:bg-red-50 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-white text-[#5B0F26] font-semibold px-4 py-2 rounded-xl hover:bg-red-50 transition-colors text-sm"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>

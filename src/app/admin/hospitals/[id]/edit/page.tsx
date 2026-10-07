@@ -84,20 +84,20 @@ export default function EditHospitalPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Edit Hospital</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Edit Hospital</h1>
           <p className="text-sm text-[#6B7280]">{form.name}</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Hospital Details
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="md:col-span-2 space-y-1.5">
               <Label>
-                Hospital Name <span className="text-[#BC002D]">*</span>
+                Hospital Name <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.name}
@@ -106,7 +106,7 @@ export default function EditHospitalPage() {
             </div>
             <div className="space-y-1.5">
               <Label>
-                Slug <span className="text-[#BC002D]">*</span>
+                Slug <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.slug}
@@ -170,7 +170,7 @@ export default function EditHospitalPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             disabled={loading}
           >
             {loading ? (

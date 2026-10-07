@@ -25,7 +25,7 @@ const columns: Column<PartnerInquiry>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-[#17202A] text-sm">{row.name}</p>
+        <p className="font-medium text-[#1F2937] text-sm">{row.name}</p>
         <p className="text-xs text-[#6B7280]">{row.email}</p>
       </div>
     ),
@@ -65,11 +65,11 @@ const columns: Column<PartnerInquiry>[] = [
       <Badge
         className={
           row.status === "pending"
-            ? "bg-red-400 text-[#BC002D]"
+            ? "bg-[#8A1538] text-[#8A1538]"
             : row.status === "contacted"
-              ? "bg-[#F9FAFB] text-[#102A43]"
+              ? "bg-[#F9FAFB] text-[#5B0F26]"
               : row.status === "converted"
-                ? "bg-red-100 text-[#8F0023]"
+                ? "bg-[#F7E9EE] text-[#5B0F26]"
                 : "bg-[#F9FAFB] text-[#4B5563]"
         }
       >

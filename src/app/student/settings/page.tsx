@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Settings, Save, Loader2 } from "lucide-react";
 
 const INPUT =
-  "w-full border border-[#E5E7EB] rounded-xl px-4 py-2.5 text-sm text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500";
+  "w-full border border-[#E5E7EB] rounded-xl px-4 py-2.5 text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500";
 const LABEL = "block text-sm font-medium text-[#4B5563] mb-1";
 
 interface Profile {
@@ -78,24 +78,24 @@ export default function SettingsPage() {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <Settings className="w-6 h-6 text-[#BC002D]" />
-        <h1 className="text-2xl font-bold text-[#17202A]">Profile Settings</h1>
+        <Settings className="w-6 h-6 text-[#8A1538]" />
+        <h1 className="text-2xl font-bold text-[#1F2937]">Profile Settings</h1>
       </div>
 
       {error && (
-        <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-xl mb-4 text-sm">
+        <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-xl mb-4 text-sm">
           {error}
         </div>
       )}
       {success && (
-        <div className="bg-red-50 border border-red-200 text-[#8F0023] px-4 py-3 rounded-xl mb-4 text-sm">
+        <div className="bg-[#F7E9EE] border border-[#F7E9EE] text-[#5B0F26] px-4 py-3 rounded-xl mb-4 text-sm">
           ✓ Profile saved successfully.
         </div>
       )}
 
       <form onSubmit={handleSave} className="space-y-6">
         <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
-          <h2 className="font-semibold text-[#17202A] mb-4">
+          <h2 className="font-semibold text-[#1F2937] mb-4">
             Personal Information
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -161,7 +161,7 @@ export default function SettingsPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
-          <h2 className="font-semibold text-[#17202A] mb-4">Family Details</h2>
+          <h2 className="font-semibold text-[#1F2937] mb-4">Family Details</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className={LABEL}>Father&apos;s Name</label>
@@ -185,7 +185,7 @@ export default function SettingsPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
-          <h2 className="font-semibold text-[#17202A] mb-4">
+          <h2 className="font-semibold text-[#1F2937] mb-4">
             Academic Preferences
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -214,7 +214,7 @@ export default function SettingsPage() {
                 className={INPUT}
                 value={profile.interestedUniversity || ""}
                 onChange={(e) => set("interestedUniversity", e.target.value)}
-                placeholder="e.g. Japan State Medical Academy"
+                placeholder="e.g. Qatar State Medical Academy"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function SettingsPage() {
           <button
             type="submit"
             disabled={saving}
-            className="flex items-center gap-2 bg-[#BC002D] hover:bg-[#8F0023] text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
+            className="flex items-center gap-2 bg-[#8A1538] hover:bg-[#5B0F26] text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
           >
             {saving ? (
               <>

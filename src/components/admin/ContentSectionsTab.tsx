@@ -129,7 +129,7 @@ export function ContentSectionsTab({
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-[#17202A]">
+        <h3 className="font-semibold text-[#1F2937]">
           Content Sections ({items.length})
         </h3>
         <Button size="sm" onClick={() => setAdding(!adding)}>
@@ -139,7 +139,7 @@ export function ContentSectionsTab({
 
       {adding && (
         <div className="border border-[#E5E7EB] rounded-xl p-4 bg-white space-y-3">
-          <h4 className="font-medium text-[#102A43]">New Section</h4>
+          <h4 className="font-medium text-[#5B0F26]">New Section</h4>
           <div className="grid sm:grid-cols-2 gap-3">
             <div>
               <Label>Title *</Label>
@@ -226,7 +226,7 @@ export function ContentSectionsTab({
               className="border border-[#E5E7EB] rounded-xl overflow-hidden"
             >
               {editingId === section.id ? (
-                <div className="p-4 bg-[#FFFDF9] space-y-3">
+                <div className="p-4 bg-[#FAF8F7] space-y-3">
                   <div className="grid sm:grid-cols-2 gap-3">
                     <div>
                       <Label>Title</Label>
@@ -289,7 +289,7 @@ export function ContentSectionsTab({
               ) : (
                 <div className="p-4 flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-[#17202A]">{section.title}</p>
+                    <p className="font-medium text-[#1F2937]">{section.title}</p>
                     {section.description && (
                       <p
                         className="text-sm text-[#6B7280] line-clamp-1 mt-0.5"
@@ -299,7 +299,7 @@ export function ContentSectionsTab({
                       />
                     )}
                     {section.imagePath && (
-                      <p className="text-xs text-red-500 mt-1 truncate">
+                      <p className="text-xs text-[#8A1538] mt-1 truncate">
                         {section.imagePath}
                       </p>
                     )}
@@ -326,7 +326,7 @@ export function ContentSectionsTab({
                       size="sm"
                       variant="ghost"
                       onClick={() => handleDelete(section.id)}
-                      className="text-[#BC002D] hover:text-[#102A43]"
+                      className="text-[#8A1538] hover:text-[#5B0F26]"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>
@@ -338,7 +338,7 @@ export function ContentSectionsTab({
               {childrenOf(section.id).map((child) => (
                 <div
                   key={child.id}
-                  className="border-t border-[#E5E7EB] bg-[#FFFDF9]"
+                  className="border-t border-[#E5E7EB] bg-[#FAF8F7]"
                 >
                   {editingId === child.id ? (
                     <div className="p-4 space-y-3">
@@ -420,7 +420,7 @@ export function ContentSectionsTab({
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 px-2 text-[#BC002D] hover:text-[#102A43]"
+                          className="h-7 px-2 text-[#8A1538] hover:text-[#5B0F26]"
                           onClick={() => handleDelete(child.id)}
                         >
                           <Trash2 className="w-3 h-3" />

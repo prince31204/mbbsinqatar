@@ -88,42 +88,42 @@ export default async function AdminDashboardPage() {
       label: "Universities",
       value: stats.universities,
       icon: GraduationCap,
-      color: "bg-[#BC002D]",
+      color: "bg-[#8A1538]",
       href: "/admin/universities",
     },
     {
       label: "Scholarships",
       value: stats.scholarships,
       icon: Award,
-      color: "bg-[#8F0023]",
+      color: "bg-[#5B0F26]",
       href: "/admin/scholarships",
     },
     {
       label: "Leads (CRM)",
       value: stats.leads,
       icon: MessageSquare,
-      color: "bg-[#102A43]",
+      color: "bg-[#5B0F26]",
       href: "/admin/leads",
     },
     {
       label: "Registered Users",
       value: stats.verifiedLeads,
       icon: TrendingUp,
-      color: "bg-[#071A2B]",
+      color: "bg-[#2F8F83]",
       href: "/admin/registered-users",
     },
     {
       label: "Blog Posts",
       value: stats.blogs,
       icon: FileText,
-      color: "bg-[#F3A6B8]",
+      color: "bg-[#C9A227]",
       href: "/admin/blogs",
     },
     {
       label: "Admin Users",
       value: stats.users,
       icon: Users,
-      color: "bg-[#607080]",
+      color: "bg-[#6B7280]",
       href: "/admin/users",
     },
   ];
@@ -131,7 +131,7 @@ export default async function AdminDashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-[#17202A]">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-[#1F2937]">Dashboard</h1>
         <p className="text-sm text-[#6B7280] mt-1">
           Welcome back, {session?.user?.name}. Here&apos;s what&apos;s
           happening.
@@ -151,7 +151,7 @@ export default async function AdminDashboardPage() {
             >
               <card.icon size={20} className="text-white" />
             </div>
-            <p className="text-2xl font-bold text-[#17202A]">
+            <p className="text-2xl font-bold text-[#1F2937]">
               {card.value.toLocaleString()}
             </p>
             <p className="text-sm text-[#6B7280] mt-0.5 group-hover:text-[#4B5563]">
@@ -164,7 +164,7 @@ export default async function AdminDashboardPage() {
       {/* Registered Users Table */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-5">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold text-[#17202A] flex items-center gap-2">
+          <h2 className="font-semibold text-[#1F2937] flex items-center gap-2">
             <TrendingUp size={16} className="text-indigo-500" /> Registered
             Users
             <span className="ml-1 text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-medium">
@@ -173,7 +173,7 @@ export default async function AdminDashboardPage() {
           </h2>
           <Link
             href="/admin/registered-users"
-            className="text-xs text-[#BC002D] hover:underline"
+            className="text-xs text-[#8A1538] hover:underline"
           >
             View all →
           </Link>
@@ -203,8 +203,8 @@ export default async function AdminDashboardPage() {
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {stats.recentVerifiedLeads.map((u) => (
-                  <tr key={u.id} className="hover:bg-[#FFFDF9] transition-colors">
-                    <td className="py-2.5 pr-4 font-medium text-[#17202A]">
+                  <tr key={u.id} className="hover:bg-[#FAF8F7] transition-colors">
+                    <td className="py-2.5 pr-4 font-medium text-[#1F2937]">
                       {u.name}
                     </td>
                     <td className="py-2.5 pr-4 text-[#6B7280]">{u.email}</td>
@@ -231,13 +231,13 @@ export default async function AdminDashboardPage() {
         {/* Recent Leads */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-[#17202A] flex items-center gap-2">
-              <MessageSquare size={16} className="text-[#BC002D]" /> Recent
+            <h2 className="font-semibold text-[#1F2937] flex items-center gap-2">
+              <MessageSquare size={16} className="text-[#8A1538]" /> Recent
               Leads
             </h2>
             <Link
               href="/admin/leads"
-              className="text-xs text-[#BC002D] hover:underline"
+              className="text-xs text-[#8A1538] hover:underline"
             >
               View all →
             </Link>
@@ -254,7 +254,7 @@ export default async function AdminDashboardPage() {
                   className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0"
                 >
                   <div>
-                    <p className="text-sm font-medium text-[#17202A]">
+                    <p className="text-sm font-medium text-[#1F2937]">
                       {lead.name}
                     </p>
                     <p className="text-xs text-[#6B7280]">{lead.email}</p>
@@ -271,13 +271,13 @@ export default async function AdminDashboardPage() {
         {/* Recent Blogs */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-[#17202A] flex items-center gap-2">
+            <h2 className="font-semibold text-[#1F2937] flex items-center gap-2">
               <FileText size={16} className="text-purple-500" /> Recent Blog
               Posts
             </h2>
             <Link
               href="/admin/blogs"
-              className="text-xs text-[#BC002D] hover:underline"
+              className="text-xs text-[#8A1538] hover:underline"
             >
               View all →
             </Link>
@@ -294,7 +294,7 @@ export default async function AdminDashboardPage() {
                   className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0"
                 >
                   <div className="min-w-0 flex-1 pr-3">
-                    <p className="text-sm font-medium text-[#17202A] truncate">
+                    <p className="text-sm font-medium text-[#1F2937] truncate">
                       {blog.title}
                     </p>
                     <p className="text-xs text-[#6B7280]">/{blog.slug}</p>
@@ -311,7 +311,7 @@ export default async function AdminDashboardPage() {
 
       {/* Quick Actions */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-5">
-        <h2 className="font-semibold text-[#17202A] mb-4">Quick Actions</h2>
+        <h2 className="font-semibold text-[#1F2937] mb-4">Quick Actions</h2>
         <div className="flex flex-wrap gap-3">
           {[
             { label: "Add University", href: "/admin/universities/create" },
@@ -324,7 +324,7 @@ export default async function AdminDashboardPage() {
             <Link
               key={action.href}
               href={action.href}
-              className="px-4 py-2 bg-[#F9FAFB] hover:bg-[#102A43] hover:text-white rounded-lg text-sm text-[#4B5563] transition-colors"
+              className="px-4 py-2 bg-[#F9FAFB] hover:bg-[#5B0F26] hover:text-white rounded-lg text-sm text-[#4B5563] transition-colors"
             >
               {action.label}
             </Link>

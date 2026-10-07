@@ -24,8 +24,8 @@ export async function generateMetadata({
   const city = citySlug.charAt(0).toUpperCase() + citySlug.slice(1);
 
   return buildMetadata({
-    title: `MBBS in Japan Counselling in ${city} | Admission Help ${APP_YEAR}`,
-    description: `Looking for MBBS in Japan admission from ${city}? Get expert counselling, university selection, and visa assistance for Indian students in ${city}.`,
+    title: `MBBS in Qatar Counselling in ${city} | Admission Help ${APP_YEAR}`,
+    description: `Looking for MBBS in Qatar admission from ${city}? Get expert counselling, university selection, and visa assistance for Indian students in ${city}.`,
     path: `/counselling/${citySlug}`,
   });
 }
@@ -37,7 +37,7 @@ export default async function CityCounsellingPage({ params }: PageProps) {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-white text-[#17202A] overflow-hidden">
+      <section className="relative py-20 bg-white text-[#1F2937] overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
@@ -45,23 +45,23 @@ export default async function CityCounsellingPage({ params }: PageProps) {
               <MapPin className="w-4 h-4" /> Leading MBBS Consultants in {city}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              MBBS in Japan Admission Support for Students in {city}
+              MBBS in Qatar Admission Support for Students in {city}
             </h1>
             <p className="text-xl text-[#4B5563] mb-10 leading-relaxed">
               Join 200+ students from {city} who have successfully secured
-              admission in top NMC-approved medical universities in Japan. Get
+              admission in top NMC-approved medical universities in Qatar. Get
               end-to-end support from documentation to arrival.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact-us"
-                className="bg-white text-[#17202A] px-8 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-xl"
+                className="bg-white text-[#1F2937] px-8 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-xl"
               >
                 Book Free Appointment in {city}
               </Link>
               <Link
                 href="/universities"
-                className="bg-[#BC002D]/30 border border-[#E5E7EB] px-8 py-4 rounded-xl font-bold hover:bg-[#F9FAFB] transition-all"
+                className="bg-[#8A1538]/30 border border-[#E5E7EB] px-8 py-4 rounded-xl font-bold hover:bg-[#F9FAFB] transition-all"
               >
                 View Universities
               </Link>
@@ -75,14 +75,14 @@ export default async function CityCounsellingPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[#17202A] mb-8">
+              <h2 className="text-3xl font-bold text-[#1F2937] mb-8">
                 Why Choose Our {city} Counselling Center?
               </h2>
               <div className="space-y-6">
                 {[
                   {
                     title: "Direct University Tie-ups",
-                    desc: "We represent Japan's top government medical colleges directly.",
+                    desc: "We represent Qatar's top government medical colleges directly.",
                   },
                   {
                     title: "Personalized Roadmap",
@@ -99,10 +99,10 @@ export default async function CityCounsellingPage({ params }: PageProps) {
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0">
-                      <CheckCircle className="text-[#BC002D] w-6 h-6" />
+                      <CheckCircle className="text-[#8A1538] w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#17202A] mb-1">
+                      <h3 className="font-bold text-[#1F2937] mb-1">
                         {item.title}
                       </h3>
                       <p className="text-[#4B5563] text-sm leading-relaxed">
@@ -114,22 +114,22 @@ export default async function CityCounsellingPage({ params }: PageProps) {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-[#FFFDF9] p-8 rounded-3xl border border-[#E5E7EB]">
-                <div className="text-4xl font-bold text-[#BC002D] mb-2">10+</div>
+              <div className="bg-[#FAF8F7] p-8 rounded-3xl border border-[#E5E7EB]">
+                <div className="text-4xl font-bold text-[#8A1538] mb-2">10+</div>
                 <div className="text-[#4B5563] font-medium">Years in {city}</div>
               </div>
-              <div className="bg-[#FFFDF9] p-8 rounded-3xl border border-[#E5E7EB]">
-                <div className="text-4xl font-bold text-[#BC002D] mb-2">
+              <div className="bg-[#FAF8F7] p-8 rounded-3xl border border-[#E5E7EB]">
+                <div className="text-4xl font-bold text-[#8A1538] mb-2">
                   500+
                 </div>
                 <div className="text-[#4B5563] font-medium">{city} Students</div>
               </div>
               <div className="col-span-2 bg-white p-8 rounded-3xl border border-[#E5E7EB]">
-                <h3 className="font-bold text-[#17202A] mb-2 italic">
+                <h3 className="font-bold text-[#1F2937] mb-2 italic">
                   "The process from {city} was seamless. They handled everything
                   from my NEET check to my visa."
                 </h3>
-                <p className="text-[#102A43] text-sm">
+                <p className="text-[#5B0F26] text-sm">
                   — Current 3rd Year Student from {city}
                 </p>
               </div>
@@ -139,14 +139,14 @@ export default async function CityCounsellingPage({ params }: PageProps) {
       </section>
 
       {/* Quick Steps */}
-      <section className="py-20 bg-[#FFFDF9]">
+      <section className="py-20 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-16">
             3 Simple Steps to Start from {city}
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
             <div className="relative">
-              <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-[#BC002D] border border-[#E5E7EB] italic">
+              <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-[#8A1538] border border-[#E5E7EB] italic">
                 1
               </div>
               <h3 className="font-bold text-lg mb-2">Initial Consultation</h3>
@@ -155,7 +155,7 @@ export default async function CityCounsellingPage({ params }: PageProps) {
               </p>
             </div>
             <div className="relative">
-              <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-[#BC002D] border border-[#E5E7EB] italic">
+              <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-[#8A1538] border border-[#E5E7EB] italic">
                 2
               </div>
               <h3 className="font-bold text-lg mb-2">Document Submission</h3>
@@ -164,10 +164,10 @@ export default async function CityCounsellingPage({ params }: PageProps) {
               </p>
             </div>
             <div className="relative">
-              <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-[#BC002D] border border-[#E5E7EB] italic">
+              <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-[#8A1538] border border-[#E5E7EB] italic">
                 3
               </div>
-              <h3 className="font-bold text-lg mb-2">Fly to Japan</h3>
+              <h3 className="font-bold text-lg mb-2">Fly to Qatar</h3>
               <p className="text-[#4B5563] text-sm">
                 Group departures from airports near {city} with our
                 representatives.
@@ -180,8 +180,8 @@ export default async function CityCounsellingPage({ params }: PageProps) {
       {/* Final CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-white rounded-[3rem] p-12 text-[#17202A] shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#BC002D]/20 rounded-full hidden -mr-32 -mt-32" />
+          <div className="bg-white rounded-[3rem] p-12 text-[#1F2937] shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#8A1538]/20 rounded-full hidden -mr-32 -mt-32" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6 relative z-10">
               Start Your Admission from {city} Today
             </h2>
@@ -192,13 +192,13 @@ export default async function CityCounsellingPage({ params }: PageProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
               <Link
                 href="/contact-us"
-                className="bg-[#BC002D] text-white px-10 py-5 rounded-2xl font-bold hover:bg-[#8F0023] transition-all shadow-lg"
+                className="bg-[#8A1538] text-white px-10 py-5 rounded-2xl font-bold hover:bg-[#5B0F26] transition-all shadow-lg"
               >
                 Get Call Back
               </Link>
               <Link
                 href="tel:+919876543210"
-                className="border-2 border-[#E5E7EB] text-[#17202A] px-10 py-5 rounded-2xl font-bold hover:bg-[#F9FAFB] transition-all flex items-center justify-center gap-2"
+                className="border-2 border-[#E5E7EB] text-[#1F2937] px-10 py-5 rounded-2xl font-bold hover:bg-[#F9FAFB] transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" /> Speak to Counselor
               </Link>

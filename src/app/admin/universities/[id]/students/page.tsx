@@ -119,9 +119,9 @@ export default function UniversityStudentsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Users size={22} className="text-[#BC002D]" />
+          <Users size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Student Records
             </h1>
             <p className="text-sm text-[#6B7280]">{students.length} students</p>
@@ -135,7 +135,7 @@ export default function UniversityStudentsPage() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             onClick={() => setShowAdd(true)}
           >
             <Plus size={14} className="mr-1" /> Add Student
@@ -146,7 +146,7 @@ export default function UniversityStudentsPage() {
       {/* Add form */}
       {showAdd && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-4 space-y-3">
-          <h3 className="font-medium text-[#17202A]">Add New Student</h3>
+          <h3 className="font-medium text-[#1F2937]">Add New Student</h3>
           <div className="grid grid-cols-3 gap-3">
             <Input
               placeholder="Name"
@@ -196,7 +196,7 @@ export default function UniversityStudentsPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -225,7 +225,7 @@ export default function UniversityStudentsPage() {
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+              <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">Course / Year</th>
                 <th className="px-4 py-3 font-medium">Country</th>
@@ -238,7 +238,7 @@ export default function UniversityStudentsPage() {
               {students.map((s) => (
                 <tr
                   key={s.id}
-                  className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                  className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                 >
                   {editId === s.id ? (
                     <>
@@ -301,7 +301,7 @@ export default function UniversityStudentsPage() {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="h-7 w-7 p-0 text-[#8F0023]"
+                            className="h-7 w-7 p-0 text-[#5B0F26]"
                             onClick={() => handleSaveEdit(s.id)}
                           >
                             <Check size={14} />
@@ -319,7 +319,7 @@ export default function UniversityStudentsPage() {
                     </>
                   ) : (
                     <>
-                      <td className="px-4 py-3 font-medium text-[#17202A]">
+                      <td className="px-4 py-3 font-medium text-[#1F2937]">
                         {s.name || "—"}
                       </td>
                       <td className="px-4 py-3 text-[#4B5563]">
@@ -359,7 +359,7 @@ export default function UniversityStudentsPage() {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                            className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                             onClick={() => handleDelete(s.id)}
                           >
                             <Trash2 size={14} />

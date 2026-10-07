@@ -148,15 +148,15 @@ export function AdminSidebar() {
     children?.some((c) => pathname.startsWith(c.href)) ?? false;
 
   return (
-    <aside className="w-64 min-h-screen bg-[#071A2B] text-white flex flex-col border-r border-[#102A43]">
+    <aside className="w-64 min-h-screen bg-[#5B0F26] text-white flex flex-col border-r border-[#8A1538]">
       {/* Logo */}
-      <div className="h-16 flex items-center px-5 border-b border-[#102A43]">
+      <div className="h-16 flex items-center px-5 border-b border-[#8A1538]">
         <Link href="/admin" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#BC002D] flex items-center justify-center text-white font-bold text-sm">
+          <div className="w-8 h-8 rounded-lg bg-[#8A1538] flex items-center justify-center text-white font-bold text-sm">
             <GraduationCap className="w-5 h-5" />
           </div>
           <span className="font-semibold text-sm text-white">
-            MBBS Japan
+            MBBS Qatar
           </span>
         </Link>
       </div>
@@ -172,8 +172,8 @@ export function AdminSidebar() {
                 className={cn(
                   "flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium mb-0.5 transition-colors",
                   isActive(item.href)
-                    ? "bg-[#BC002D] text-white"
-                    : "text-[#94A3B8] hover:text-white hover:bg-[#102A43]",
+                    ? "bg-[#8A1538] text-white"
+                    : "text-white hover:text-white hover:bg-[#8A1538]",
                 )}
               >
                 {item.icon}
@@ -193,8 +193,8 @@ export function AdminSidebar() {
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium transition-colors",
                   groupActive
-                    ? "text-white bg-[#102A43]"
-                    : "text-[#94A3B8] hover:text-white hover:bg-[#102A43]",
+                    ? "text-white bg-[#8A1538]"
+                    : "text-white hover:text-white hover:bg-[#8A1538]",
                 )}
               >
                 {item.icon}
@@ -211,8 +211,8 @@ export function AdminSidebar() {
                         "block px-3 py-2 rounded-md text-sm font-medium transition-colors",
                         isActive(child.href) ||
                           pathname.startsWith(child.href + "/")
-                          ? "bg-[#BC002D] text-white"
-                          : "text-[#94A3B8] hover:text-white hover:bg-[#102A43]",
+                          ? "bg-[#8A1538] text-white"
+                          : "text-white hover:text-white hover:bg-[#8A1538]",
                       )}
                     >
                       {child.label}
@@ -226,11 +226,11 @@ export function AdminSidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="p-3 border-t border-[#102A43]">
+      <div className="p-3 border-t border-[#8A1538]">
         <Link
           href="/"
           target="_blank"
-          className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-[#94A3B8] hover:text-white hover:bg-[#102A43] transition-colors"
+          className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-white hover:text-white hover:bg-[#8A1538] transition-colors"
         >
           <Globe size={14} />
           View Public Site

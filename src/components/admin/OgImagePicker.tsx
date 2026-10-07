@@ -106,7 +106,7 @@ export function OgImagePicker({
           <label className="text-[10px] text-[#6B7280] font-medium">
             Preview
           </label>
-          <div className="aspect-video bg-[#FFFDF9] border border-dashed border-[#E5E7EB] rounded-lg overflow-hidden flex items-center justify-center relative group">
+          <div className="aspect-video bg-[#FAF8F7] border border-dashed border-[#E5E7EB] rounded-lg overflow-hidden flex items-center justify-center relative group">
             {value ? (
               <img
                 src={cdn(value) || value}
@@ -125,7 +125,7 @@ export function OgImagePicker({
             )}
             {value && (
               <div className="absolute inset-x-0 bottom-0 bg-white/50 p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-[10px] text-[#17202A] truncate text-center">
+                <p className="text-[10px] text-[#1F2937] truncate text-center">
                   {value}
                 </p>
               </div>

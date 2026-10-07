@@ -79,7 +79,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
         {/* header */}
         <div className="sticky top-0 bg-white rounded-t-2xl border-b border-[#E5E7EB] px-6 py-4 flex items-center justify-between z-10">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">
+            <h2 className="text-xl font-bold text-[#1F2937]">
               Become a Partner
             </h2>
             <p className="text-sm text-[#6B7280] mt-0.5">
@@ -100,27 +100,27 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-[#4B5563] mb-1">
-                Full Name <span className="text-red-500">*</span>
+                Full Name <span className="text-[#8A1538]">*</span>
               </label>
               <input
                 type="text"
                 required
                 value={form.name}
                 onChange={(e) => update("name", e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all"
                 placeholder="John Doe"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-[#4B5563] mb-1">
-                Email <span className="text-red-500">*</span>
+                Email <span className="text-[#8A1538]">*</span>
               </label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={(e) => update("email", e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all"
                 placeholder="john@example.com"
               />
             </div>
@@ -136,7 +136,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 type="tel"
                 value={form.phone}
                 onChange={(e) => update("phone", e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all"
                 placeholder="+91 9876543210"
               />
             </div>
@@ -148,7 +148,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 type="text"
                 value={form.company}
                 onChange={(e) => update("company", e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all"
                 placeholder="Acme Education Pvt Ltd"
               />
             </div>
@@ -164,7 +164,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 type="text"
                 value={form.city}
                 onChange={(e) => update("city", e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all"
                 placeholder="New Delhi"
               />
             </div>
@@ -175,7 +175,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
               <select
                 value={form.partnerType}
                 onChange={(e) => update("partnerType", e.target.value)}
-                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all bg-white"
+                className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all bg-white"
               >
                 <option value="">Select type…</option>
                 {partnerTypes.map((t) => (
@@ -196,7 +196,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
               rows={3}
               value={form.message}
               onChange={(e) => update("message", e.target.value)}
-              className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 focus:border-[#E5E7EB] outline-none transition-all resize-none"
+              className="w-full px-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-[#E5E7EB] outline-none transition-all resize-none"
               placeholder="Tell us about your interest in partnering…"
             />
           </div>
@@ -205,7 +205,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#BC002D] hover:bg-[#8F0023] disabled:bg-red-400 text-[#17202A] font-bold py-3 rounded-xl transition-colors text-sm"
+            className="w-full bg-[#8A1538] hover:bg-[#5B0F26] disabled:bg-red-400 text-[#1F2937] font-bold py-3 rounded-xl transition-colors text-sm"
           >
             {loading ? "Submitting…" : "Submit Inquiry"}
           </button>

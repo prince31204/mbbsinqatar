@@ -12,9 +12,9 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "dotenv -e .env -- npx ts-node --project tsconfig.json -e 'require(\"./prisma/seed.ts\")'",
-    "seed:japan": "npx dotenv-cli -e .env -- npx tsx scripts/seed-japan.ts",
-    "seed:japan:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-japan-comprehensive.ts",
-    "seed:japan:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-japan-universities.ts",
+    "seed:Qatar": "npx dotenv-cli -e .env -- npx tsx scripts/seed-Qatar.ts",
+    "seed:Qatar:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-Qatar-comprehensive.ts",
+    "seed:Qatar:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-Qatar-universities.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -49,37 +49,37 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #FFFDF9;
-  --foreground: #17202A;
+  --background: #FAF8F7;
+  --foreground: #1F2937;
   --card: #FFFFFF;
-  --card-foreground: #17202A;
+  --card-foreground: #1F2937;
   --popover: #FFFFFF;
-  --popover-foreground: #17202A;
-  --primary: #BC002D;
+  --popover-foreground: #1F2937;
+  --primary: #8A1538;
   --primary-foreground: #FFFFFF;
-  --secondary: #102A43;
+  --secondary: #5B0F26;
   --secondary-foreground: #FFFFFF;
-  --muted: #F7F3EE;
-  --muted-foreground: #607080;
-  --accent: #FCE8ED;
-  --accent-foreground: #BC002D;
-  --destructive: #BC002D;
+  --muted: #F7E9EE;
+  --muted-foreground: #6B7280;
+  --accent: #F7E9EE;
+  --accent-foreground: #8A1538;
+  --destructive: #8A1538;
   --border: #E6E8EB;
   --input: #E6E8EB;
-  --ring: #F3A6B8;
-  --chart-1: #BC002D;
-  --chart-2: #102A43;
-  --chart-3: #F3A6B8;
-  --chart-4: #8F0023;
-  --chart-5: #071A2B;
-  --sidebar: #FFFDF9;
-  --sidebar-foreground: #17202A;
-  --sidebar-primary: #102A43;
+  --ring: #C9A227;
+  --chart-1: #8A1538;
+  --chart-2: #5B0F26;
+  --chart-3: #C9A227;
+  --chart-4: #5B0F26;
+  --chart-5: #2F8F83;
+  --sidebar: #FAF8F7;
+  --sidebar-foreground: #1F2937;
+  --sidebar-primary: #5B0F26;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #FCE8ED;
-  --sidebar-accent-foreground: #102A43;
+  --sidebar-accent: #F7E9EE;
+  --sidebar-accent-foreground: #5B0F26;
   --sidebar-border: #E6E8EB;
-  --sidebar-ring: #BC002D;
+  --sidebar-ring: #8A1538;
 }
 
 
@@ -103,7 +103,7 @@
 
 /* ── Base prose container ── */
 .prose {
-  color: #607080;
+  color: #6B7280;
   line-height: 1.75;
   font-size: 14px; /* Set base text size to 14px */
 }
@@ -121,7 +121,7 @@
   line-height: 1.15;
   margin-top: 0;
   margin-bottom: 0.9em;
-  color: #102A43;
+  color: #5B0F26;
 }
 
 .prose h2 {
@@ -130,7 +130,7 @@
   line-height: 1.35;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
-  color: #102A43;
+  color: #5B0F26;
 }
 
 .prose h3 {
@@ -139,7 +139,7 @@
   line-height: 1.4;
   margin-top: 1.6em;
   margin-bottom: 0.6em;
-  color: #102A43;
+  color: #5B0F26;
 }
 
 .prose h4 {
@@ -177,20 +177,20 @@
 
 /* ── Links ── */
 .prose a {
-  color: #BC002D;
+  color: #8A1538;
   text-decoration: underline;
   font-weight: 500;
   text-underline-offset: 2px;
 }
 
 .prose a:hover {
-  color: #8F0023;
+  color: #5B0F26;
 }
 
 /* ── Strong / Bold ── */
 .prose strong {
   font-weight: 600;
-  color: #17202A;
+  color: #1F2937;
 }
 
 /* ── Emphasis / Italic ── */
@@ -390,18 +390,18 @@
 /* ── Code (inline) ── */
 .prose code {
   font-size: 0.875em;
-  background-color: #F7F3EE;
+  background-color: #F7E9EE;
   padding: 0.2em 0.4em;
   border-radius: 0.25rem;
-  color: #BC002D;
+  color: #8A1538;
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   font-weight: 500;
 }
 
 /* ── Code blocks ── */
 .prose pre {
-  background-color: #071A2B;
-  color: #FFFDF9;
+  background-color: #2F8F83;
+  color: #FAF8F7;
   padding: 1.2em 1.5em;
   border-radius: 0.5rem;
   overflow-x: auto;
@@ -524,7 +524,7 @@
 .prose-lg { font-size: 1.125rem; line-height: 1.8; }
 
 /* ── Color modifier: prose-gray ── */
-.prose-gray { color: #607080; }
+.prose-gray { color: #6B7280; }
 
 /* ── prose-p:my-0 pattern used on listing pages ── */
 .prose-p\:my-0 p { margin-top: 0 !important; margin-bottom: 0 !important; }
@@ -538,12 +538,12 @@
 
 .prose-headings\:text-gray-900 h1, .prose-headings\:text-gray-900 h2,
 .prose-headings\:text-gray-900 h3, .prose-headings\:text-gray-900 h4 {
-  color: #102A43;
+  color: #5B0F26;
 }
 
 /* ── prose-a modifiers ── */
-.prose-a\:text-red-600 a { color: #BC002D; }
-.prose-a\:text-red-600 a:hover { color: #8F0023; }
+.prose-a\:text-red-600 a { color: #8A1538; }
+.prose-a\:text-red-600 a:hover { color: #5B0F26; }
 .prose-a\:no-underline a { text-decoration: none; }
 .hover\:prose-a\:underline:hover a { text-decoration: underline; }
 
@@ -551,7 +551,7 @@
 .prose-img\:rounded-xl img { border-radius: 0.75rem; }
 
 /* ── prose-blockquote modifier ── */
-.prose-blockquote\:border-red-400 blockquote { border-left-color: #BC002D; }
+.prose-blockquote\:border-red-400 blockquote { border-left-color: #8A1538; }
 
 /* ── prose-p:my-1 pattern ── */
 .prose-p\:my-1 p { margin-top: 0.25em !important; margin-bottom: 0.25em !important; }

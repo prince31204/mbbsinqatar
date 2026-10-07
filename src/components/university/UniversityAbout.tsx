@@ -33,13 +33,13 @@ interface Props {
 export default function UniversityAbout({ university }: Props) {
   const whyCards = [
     {
-      icon: <CreditCard className="h-5 w-5 text-[#102A43]" />,
+      icon: <CreditCard className="h-5 w-5 text-[#5B0F26]" />,
       title: "Affordable Education",
       desc: "Low tuition fees with transparent structure — no hidden costs or donations required.",
       show: true,
     },
     {
-      icon: <Award className="h-5 w-5 text-[#102A43]" />,
+      icon: <Award className="h-5 w-5 text-[#5B0F26]" />,
       title: "International Recognition",
       desc:
         university.internationalRecognition ||
@@ -47,25 +47,25 @@ export default function UniversityAbout({ university }: Props) {
       show: !!university.internationalRecognition,
     },
     {
-      icon: <BookOpen className="h-5 w-5 text-[#102A43]" />,
+      icon: <BookOpen className="h-5 w-5 text-[#5B0F26]" />,
       title: "Quality Education",
       desc: "World-class curriculum with modern teaching methods and experienced faculty.",
       show: true,
     },
     {
-      icon: <Shield className="h-5 w-5 text-[#102A43]" />,
+      icon: <Shield className="h-5 w-5 text-[#5B0F26]" />,
       title: "Safe Environment",
       desc: "Peaceful country with excellent support for international students at every step.",
       show: true,
     },
     {
-      icon: <CheckCircle className="h-5 w-5 text-[#102A43]" />,
+      icon: <CheckCircle className="h-5 w-5 text-[#5B0F26]" />,
       title: "No Donation / Capitation",
       desc: "Fully transparent admission. No hidden fees, no donations, no capitation required.",
       show: true,
     },
     {
-      icon: <Globe className="h-5 w-5 text-[#102A43]" />,
+      icon: <Globe className="h-5 w-5 text-[#5B0F26]" />,
       title: "English Medium",
       desc:
         university.englishMedium ||
@@ -101,10 +101,10 @@ export default function UniversityAbout({ university }: Props) {
     <section id="about" className="py-20 bg-gradient-to-b from-white ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block bg-[#F9FAFB] text-[#102A43] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+          <span className="inline-block bg-[#F9FAFB] text-[#5B0F26] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
             About The University
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#17202A] mb-5 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#1F2937] mb-5 leading-tight">
             {university.name}
           </h2>
           {(university.aboutNote || university.shortnote) && (
@@ -121,10 +121,10 @@ export default function UniversityAbout({ university }: Props) {
           {/* Why Choose */}
           <div>
             <div className="mb-6">
-              <span className="inline-block bg-[#F9FAFB] text-[#102A43] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2">
+              <span className="inline-block bg-[#F9FAFB] text-[#5B0F26] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2">
                 Why Choose Us
               </span>
-              <h3 className="text-3xl font-bold text-[#17202A] mb-1">
+              <h3 className="text-3xl font-bold text-[#1F2937] mb-1">
                 Why International Students Choose Us?
               </h3>
               <p className="text-[#6B7280] text-sm">
@@ -135,16 +135,16 @@ export default function UniversityAbout({ university }: Props) {
               {whyCards.map((item, i) => (
                 <div
                   key={item.title}
-                  className="relative group bg-white border border-[#E5E7EB] border-l-4 border-l-[#102A43] rounded-2xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                  className="relative group bg-white border border-[#E5E7EB] border-l-4 border-l-[#5B0F26] rounded-2xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                   style={{ animationDelay: `${i * 80}ms` }}
                 >
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#102A43] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#5B0F26] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                   <div className="flex items-start gap-3">
                     <div className="bg-[#F9FAFB] p-2.5 rounded-xl shrink-0 shadow-sm border border-[#E5E7EB]">
                       {item.icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-bold text-[#17202A] text-sm leading-tight mb-0.5">
+                      <h4 className="font-bold text-[#1F2937] text-sm leading-tight mb-0.5">
                         {item.title}
                       </h4>
                       <p className="text-[#6B7280] text-xs leading-relaxed">
@@ -179,7 +179,7 @@ export default function UniversityAbout({ university }: Props) {
                 </div>
               </div>
             )}
-            <div className="bg-[#102A43] p-6 relative overflow-hidden">
+            <div className="bg-[#5B0F26] p-6 relative overflow-hidden">
               <h4 className="text-xl font-bold text-white mb-2 relative z-10">
                 {university.section2Title || `Why Choose ${university.name}?`}
               </h4>

@@ -136,7 +136,7 @@ export default function LeadWebhookSettingsPage() {
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
         <Webhook size={24} className="text-[#6B7280]" />
-        <h1 className="text-2xl font-bold text-[#17202A]">
+        <h1 className="text-2xl font-bold text-[#1F2937]">
           Lead Export / Webhook
         </h1>
       </div>
@@ -148,7 +148,7 @@ export default function LeadWebhookSettingsPage() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Connection
           </h2>
 
@@ -180,7 +180,7 @@ export default function LeadWebhookSettingsPage() {
               <button
                 type="button"
                 onClick={handleClearSecret}
-                className="text-xs text-[#BC002D] hover:underline"
+                className="text-xs text-[#8A1538] hover:underline"
               >
                 Remove saved key
               </button>
@@ -190,12 +190,12 @@ export default function LeadWebhookSettingsPage() {
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
           <div className="flex items-center justify-between border-b pb-3">
-            <h2 className="font-semibold text-[#17202A]">Fields to Send</h2>
+            <h2 className="font-semibold text-[#1F2937]">Fields to Send</h2>
             <div className="flex gap-3 text-xs">
               <button
                 type="button"
                 onClick={() => setAllFields(true)}
-                className="text-[#BC002D] hover:underline"
+                className="text-[#8A1538] hover:underline"
               >
                 Select all
               </button>
@@ -231,7 +231,7 @@ export default function LeadWebhookSettingsPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Selected Fields — Outgoing Names
           </h2>
           <p className="text-xs text-[#6B7280]">
@@ -271,7 +271,7 @@ export default function LeadWebhookSettingsPage() {
         <div className="flex justify-end pb-8">
           <Button
             type="submit"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             disabled={saving}
           >
             {saving ? (

@@ -29,13 +29,13 @@ const DOC_CONFIGS: {
     type: "embassy_letter",
     label: "Embassy Letter",
     icon: "🏛️",
-    desc: "Issued by the Japan embassy — applies to all universities in the country",
+    desc: "Issued by the Qatar embassy — applies to all universities in the country",
   },
   {
     type: "nmc_guidelines",
     label: "NMC Guidelines",
     icon: "📋",
-    desc: "National Medical Commission guidelines for studying MBBS in Japan",
+    desc: "National Medical Commission guidelines for studying MBBS in Qatar",
   },
 ];
 
@@ -113,11 +113,11 @@ export default function CountryDocumentsPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">
+          <h1 className="text-2xl font-bold text-[#1F2937]">
             📄 Country Documents
           </h1>
           <p className="text-sm text-[#6B7280]">
-            Japan-wide documents shared across all universities
+            Qatar-wide documents shared across all universities
           </p>
         </div>
       </div>
@@ -138,13 +138,13 @@ export default function CountryDocumentsPage() {
                 {/* Title */}
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <h2 className="font-semibold text-[#17202A] text-lg">
+                    <h2 className="font-semibold text-[#1F2937] text-lg">
                       {icon} {label}
                     </h2>
                     <p className="text-sm text-[#6B7280] mt-0.5">{desc}</p>
                   </div>
                   {existing && (
-                    <span className="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 bg-red-50 text-[#8F0023] text-xs font-medium rounded-full border border-red-200">
+                    <span className="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 bg-[#F7E9EE] text-[#5B0F26] text-xs font-medium rounded-full border border-[#F7E9EE]">
                       ✓ Uploaded
                     </span>
                   )}
@@ -152,8 +152,8 @@ export default function CountryDocumentsPage() {
 
                 {/* Current file if exists */}
                 {existing && !hasPending && (
-                  <div className="flex items-center gap-3 p-3 bg-[#FFFDF9] rounded-xl border border-[#E5E7EB]">
-                    <FileText size={18} className="text-[#BC002D] shrink-0" />
+                  <div className="flex items-center gap-3 p-3 bg-[#FAF8F7] rounded-xl border border-[#E5E7EB]">
+                    <FileText size={18} className="text-[#8A1538] shrink-0" />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-[#4B5563] truncate">
                         {existing.fileName ||
@@ -163,7 +163,7 @@ export default function CountryDocumentsPage() {
                         href={cdn(existing.filePath)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-[#BC002D] hover:underline"
+                        className="text-xs text-[#8A1538] hover:underline"
                       >
                         View / Download
                       </a>
@@ -185,7 +185,7 @@ export default function CountryDocumentsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="text-[#BC002D] hover:text-[#102A43]"
+                        className="text-[#8A1538] hover:text-[#5B0F26]"
                         onClick={() => handleDelete(type as DocType)}
                       >
                         <Trash2 size={14} />
@@ -218,7 +218,7 @@ export default function CountryDocumentsPage() {
                         <Button
                           onClick={() => handleSave(type as DocType)}
                           disabled={saving === type}
-                          className="bg-[#102A43] hover:bg-[#102A43]"
+                          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
                         >
                           {saving === type ? "Saving..." : "Save Document"}
                         </Button>

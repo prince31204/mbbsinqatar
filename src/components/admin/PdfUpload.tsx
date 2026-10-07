@@ -63,12 +63,12 @@ export function PdfUpload({
     <div className="space-y-2">
       <Label className="text-sm font-medium text-[#4B5563]">{label}</Label>
       {value ? (
-        <div className="flex items-center gap-3 p-4 bg-[#102A43] border border-[#E5E7EB] rounded-xl">
-          <div className="bg-[#102A43] p-2 rounded-lg shrink-0">
-            <FileText size={20} className="text-[#BC002D]" />
+        <div className="flex items-center gap-3 p-4 bg-[#5B0F26] border border-[#E5E7EB] rounded-xl">
+          <div className="bg-[#5B0F26] p-2 rounded-lg shrink-0">
+            <FileText size={20} className="text-[#8A1538]" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-[#17202A] truncate">
+            <p className="text-sm font-medium text-[#1F2937] truncate">
               {filename}
             </p>
             {isLocalFile ? (
@@ -76,7 +76,7 @@ export function PdfUpload({
                 href={value}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-[#BC002D] hover:underline"
+                className="text-xs text-[#8A1538] hover:underline"
               >
                 Preview PDF ↗
               </a>

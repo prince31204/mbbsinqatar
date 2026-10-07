@@ -24,12 +24,12 @@ import { getEducationSystemContent } from "@/lib/public-page-content";
 
 export const metadata: Promise<Metadata> = buildMetadata({
   title:
-    "Education System in Japan - MBBS Degree Structure | mbbsinjapan.com",
+    "Education System in Qatar - MBBS Degree Structure | mbbsinqatar.com",
   description:
-    "Learn about Japan's medical education system, MBBS degree structure, recognition pathways, language support, and academic progression.",
+    "Learn about Qatar's medical education system, MBBS degree structure, recognition pathways, language support, and academic progression.",
   entitySeo: {
     metaKeyword:
-      "Japan education system, mbbs Japan curriculum, Japan medical degree, NMC approved Japan, FMGE Japan",
+      "Qatar education system, mbbs Qatar curriculum, Qatar medical degree, NMC approved Qatar, FMGE Qatar",
   },
   path: "/education-system",
   pageKey: "education-system",
@@ -38,44 +38,44 @@ export const metadata: Promise<Metadata> = buildMetadata({
 const themeStyles = {
   red: {
     softPanel: "border-[#E5E7EB] bg-white/80",
-    iconWrap: "bg-[#F9FAFB] text-[#BC002D]",
-    iconHover: "group-hover:bg-[#BC002D] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    iconWrap: "bg-[#F9FAFB] text-[#8A1538]",
+    iconHover: "group-hover:bg-[#8A1538] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-[#F9FAFB] text-[#102A43]",
+    pill: "bg-[#F9FAFB] text-[#5B0F26]",
   },
   blue: {
     softPanel: "border-[#E5E7EB] bg-white/80",
-    iconWrap: "bg-[#F9FAFB] text-[#BC002D]",
-    iconHover: "group-hover:bg-[#BC002D] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    iconWrap: "bg-[#F9FAFB] text-[#8A1538]",
+    iconHover: "group-hover:bg-[#8A1538] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-[#F9FAFB] text-[#102A43]",
+    pill: "bg-[#F9FAFB] text-[#5B0F26]",
   },
   green: {
     softPanel: "border-green-100 bg-red-50/80",
-    iconWrap: "bg-red-100 text-[#8F0023]",
-    iconHover: "group-hover:bg-[#8F0023] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#8F0023]",
+    iconWrap: "bg-[#F7E9EE] text-[#5B0F26]",
+    iconHover: "group-hover:bg-[#5B0F26] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-red-200",
-    pill: "bg-red-100 text-[#8F0023]",
+    pill: "bg-[#F7E9EE] text-[#5B0F26]",
   },
   amber: {
     softPanel: "border-[#E5E7EB] bg-[#F9FAFB]/10",
-    iconWrap: "bg-red-400 text-[#BC002D]",
-    iconHover: "group-hover:bg-red-400 group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    iconWrap: "bg-[#8A1538] text-[#8A1538]",
+    iconHover: "group-hover:bg-red-400 group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-red-400 text-[#BC002D]",
+    pill: "bg-[#8A1538] text-[#8A1538]",
   },
   purple: {
     softPanel: "border-purple-100 bg-purple-50/80",
     iconWrap: "bg-purple-100 text-purple-600",
-    iconHover: "group-hover:bg-purple-600 group-hover:text-[#17202A]",
+    iconHover: "group-hover:bg-purple-600 group-hover:text-[#1F2937]",
     titleHover: "group-hover:text-purple-700",
     wash: " via-white/0 ",
     ringHover: "hover:border-purple-200",
@@ -103,8 +103,8 @@ export default async function EducationSystemPage() {
   const content = await getEducationSystemContent();
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#102A43] to-[#102A43] py-16 text-white lg:py-20">
+    <div className="min-h-screen bg-[#FAF8F7]">
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#5B0F26] to-[#5B0F26] py-16 text-white lg:py-20">
         <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-white/5 hidden" />
         <div className="absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-black/20 hidden" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.1),transparent_32%)]" />
@@ -116,9 +116,9 @@ export default async function EducationSystemPage() {
             </span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl text-4xl font-bold leading-tight lg:text-6xl">
-            Education System in Japan
+            Education System in Qatar
           </h1>
-          <p className="mx-auto max-w-3xl text-base leading-8 text-[#FCE8ED] lg:text-xl">
+          <p className="mx-auto max-w-3xl text-base leading-8 text-[#F7E9EE] lg:text-xl">
             {content.description}
           </p>
         </div>
@@ -136,14 +136,14 @@ export default async function EducationSystemPage() {
                   className="group rounded-2xl border border-slate-100 bg-white p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-lg"
                 >
                   <div className="mb-3 flex justify-center">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#BC002D] transition-colors duration-300 group-hover:bg-[#BC002D] group-hover:text-[#17202A]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#8A1538] transition-colors duration-300 group-hover:bg-[#8A1538] group-hover:text-[#1F2937]">
                       <Icon className="h-5 w-5" />
                     </div>
                   </div>
-                  <div className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#BC002D]">
+                  <div className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#8A1538]">
                     {stat.label}
                   </div>
-                  <div className="text-xl font-bold text-[#17202A] lg:text-2xl">
+                  <div className="text-xl font-bold text-[#1F2937] lg:text-2xl">
                     {stat.value}
                   </div>
                   {stat.detail ? (
@@ -162,23 +162,23 @@ export default async function EducationSystemPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="space-y-7">
             <div className="mx-auto max-w-4xl text-center">
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
                 Introduction
               </span>
-              <h2 className="mt-3 text-3xl font-bold text-[#17202A] lg:text-4xl">
-                Introduction to Japan Education System
+              <h2 className="mt-3 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+                Introduction to Qatar Education System
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#4B5563]">
-                Japan has one of the most advanced and structured education
+                Qatar has one of the most advanced and structured education
                 systems in Africa
               </p>
             </div>
 
             <div className="rounded-[2rem] border border-[#E5E7EB] bg-white via-white p-7 shadow-sm">
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
                 Supporting Context
               </span>
-              <h2 className="mt-3 text-3xl font-bold text-[#17202A]">
+              <h2 className="mt-3 text-3xl font-bold text-[#1F2937]">
                 What shapes the system today
               </h2>
               <p className="mt-3 text-sm leading-7 text-[#4B5563]">
@@ -191,7 +191,7 @@ export default async function EducationSystemPage() {
                     key={item}
                     className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100"
                   >
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-red-500" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#8A1538]" />
                     <p className="text-sm leading-7 text-[#4B5563]">{item}</p>
                   </div>
                 ))}
@@ -204,11 +204,11 @@ export default async function EducationSystemPage() {
       <section className="bg-white py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
               Accreditation
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
-              Main Education Authorities & Accreditations in Japan
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+              Main Education Authorities & Accreditations in Qatar
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-[#4B5563] text-sm leading-7">
               Explore the regulatory bodies, ministries, and quality assurance
@@ -250,15 +250,11 @@ export default async function EducationSystemPage() {
                 theme: "green",
               },
               {
-                title: "Japan Qualifications Authority (MQA)",
+                title: "Qatar Qualifications Authority (MQA)",
                 description:
                   "Accredits TVET courses and maintains the National Qualifications Framework from Level 1 to PhD (Level 10).",
                 role: "Technical accreditation, NQF levels, Foreign qualification recognition",
-                portal: "https://www.nicjp.niad.ac.jp/en/",
-                subLink: {
-                  label: "MQA Register",
-                  url: "https://www.nicjp.niad.ac.jp/en/",
-                },
+                portal: "https://www.edu.gov.qa/en",
                 icon: Award,
                 theme: "amber",
               },
@@ -271,27 +267,27 @@ export default async function EducationSystemPage() {
                 theme: "purple",
               },
               {
-                title: "Japan Institute of Training & Development",
+                title: "Qatar Institute of Training & Development",
                 description:
                   "Lead institution for technical and vocational training and professional skills development programs.",
                 role: "TVET training, Skills development, Vocational excellence",
-                portal: "https://www.jil.go.jp/english/",
+                portal: "https://qatarskills.com.qa/",
                 icon: Briefcase,
                 theme: "blue",
               },
               {
-                title: "Medical Council of Japan (For MBBS)",
+                title: "Medical Council of Qatar (For MBBS)",
                 description:
                   "Critical for MBBS students. Registers doctors, recognizes medical degrees, and approves medical colleges.",
                 role: "Doctor registration, Degree recognition, Institution approvals",
-                portal: "https://www.mhlw.go.jp/stf/newpage_56664.html",
+                portal: "https://dhp.moph.gov.qa/",
                 icon: Stethoscope,
                 theme: "red",
               },
               {
                 title: "International Recognition",
                 description:
-                  "Japan medical degrees are globally accepted, allowing graduates to pursue careers in India, UK, USA, and beyond.",
+                  "Qatar medical degrees are globally accepted, allowing graduates to pursue careers in India, UK, USA, and beyond.",
                 role: "WHO (WDOMS), NMC (India), ECFMG (USA), GMC (UK), QAA",
                 icon: Globe2,
                 theme: "green",
@@ -317,7 +313,7 @@ export default async function EducationSystemPage() {
                         <Icon className="h-5 w-5" />
                       </div>
                       <h3
-                        className={`text-base font-bold text-[#17202A] leading-snug transition-colors duration-300 ${styles.titleHover}`}
+                        className={`text-base font-bold text-[#1F2937] leading-snug transition-colors duration-300 ${styles.titleHover}`}
                       >
                         {item.title}
                       </h3>
@@ -346,7 +342,7 @@ export default async function EducationSystemPage() {
                             href={item.portal}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/link flex items-center gap-2 text-sm font-medium text-[#BC002D] hover:text-[#102A43] transition-colors"
+                            className="group/link flex items-center gap-2 text-sm font-medium text-[#8A1538] hover:text-[#5B0F26] transition-colors"
                           >
                             <span className="truncate group-hover/link:underline">
                               {item.portal.replace(/^https?:\/\//, "")}
@@ -365,7 +361,7 @@ export default async function EducationSystemPage() {
                             href={(item as any).subLink.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/link flex items-center gap-2 text-xs font-medium text-[#6B7280] hover:text-[#102A43] transition-colors"
+                            className="group/link flex items-center gap-2 text-xs font-medium text-[#6B7280] hover:text-[#5B0F26] transition-colors"
                           >
                             <span className="truncate group-hover/link:underline">
                               {(item as any).subLink.url.replace(
@@ -389,11 +385,11 @@ export default async function EducationSystemPage() {
       <section className="py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-8 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
               Academic Progression
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
-              How the MBBS journey progresses in Japan
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+              How the MBBS journey progresses in Qatar
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#4B5563]">
               Follow each stage from foundational learning to advanced clinical
@@ -436,7 +432,7 @@ export default async function EducationSystemPage() {
                       </div>
 
                       <h3
-                        className={`mt-3 text-xl font-bold text-[#17202A] transition-colors duration-300 ${styles.titleHover}`}
+                        className={`mt-3 text-xl font-bold text-[#1F2937] transition-colors duration-300 ${styles.titleHover}`}
                       >
                         {item.title}
                       </h3>
@@ -459,7 +455,7 @@ export default async function EducationSystemPage() {
                     </div>
 
                     {item.meta ? (
-                      <div className="min-w-40 rounded-2xl bg-[#FFFDF9] p-3.5 text-sm leading-6 text-[#4B5563] ring-1 ring-slate-100">
+                      <div className="min-w-40 rounded-2xl bg-[#FAF8F7] p-3.5 text-sm leading-6 text-[#4B5563] ring-1 ring-slate-100">
                         {item.meta}
                       </div>
                     ) : null}
@@ -474,11 +470,11 @@ export default async function EducationSystemPage() {
       <section className="bg-white py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-8 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
               Degree Pathways
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
-              Programs aligned with Japan medical pathways
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+              Programs aligned with Qatar medical pathways
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#4B5563]">
               Compare available degree options, course duration, and recognition
@@ -514,7 +510,7 @@ export default async function EducationSystemPage() {
                       </div>
                       <div>
                         <h4
-                          className={`text-lg font-bold text-[#17202A] transition-colors duration-300 ${styles.titleHover}`}
+                          className={`text-lg font-bold text-[#1F2937] transition-colors duration-300 ${styles.titleHover}`}
                         >
                           {card.title}
                         </h4>
@@ -534,10 +530,10 @@ export default async function EducationSystemPage() {
       <section className="py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-8 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
               Instruction
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
               Languages of instruction
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#4B5563]">
@@ -573,10 +569,10 @@ export default async function EducationSystemPage() {
                     >
                       <Icon className="h-7 w-7" />
                     </div>
-                    <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+                    <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
                       {card.label}
                     </div>
-                    <h3 className="mt-3 text-2xl font-bold leading-tight text-[#17202A]">
+                    <h3 className="mt-3 text-2xl font-bold leading-tight text-[#1F2937]">
                       {card.value}
                     </h3>
                     {card.detail ? (
@@ -595,15 +591,15 @@ export default async function EducationSystemPage() {
       <section className="bg-white py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-8 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
               Network
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
               Institution mix
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#4B5563]">
               Snapshot of the university and institution ecosystem that supports
-              MBBS education in Japan.
+              MBBS education in Qatar.
             </p>
           </div>
           <div className="space-y-3.5">
@@ -614,7 +610,7 @@ export default async function EducationSystemPage() {
               >
                 <div className="pointer-events-none absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative flex h-full flex-col">
-                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-[#102A43] group-hover:text-emerald-700">
+                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-[#5B0F26] group-hover:text-emerald-700">
                     {card.label}
                   </div>
                   <div className="mt-2 text-xl font-bold leading-snug text-black sm:text-2xl">
@@ -635,10 +631,10 @@ export default async function EducationSystemPage() {
       <section className="py-12 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-8 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8A1538]">
               Assessments
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
               Examinations and key academic checkpoints
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#4B5563]">
@@ -656,10 +652,10 @@ export default async function EducationSystemPage() {
                 <div className="pointer-events-none absolute inset-0 bg-[#F9FAFB]/10 via-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative">
                   <div className="flex flex-wrap items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#BC002D] transition-all duration-300 group-hover:bg-[#BC002D] group-hover:text-[#17202A]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#8A1538] transition-all duration-300 group-hover:bg-[#8A1538] group-hover:text-[#1F2937]">
                       <Clock className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#17202A] transition-colors duration-300 group-hover:text-[#102A43]">
+                    <h3 className="text-xl font-bold text-[#1F2937] transition-colors duration-300 group-hover:text-[#5B0F26]">
                       {exam.title}
                     </h3>
                     {exam.gradeLevel ? (
@@ -668,7 +664,7 @@ export default async function EducationSystemPage() {
                       </span>
                     ) : null}
                     {exam.type ? (
-                      <span className="rounded-full bg-[#F9FAFB] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#102A43]">
+                      <span className="rounded-full bg-[#F9FAFB] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#5B0F26]">
                         {exam.type}
                       </span>
                     ) : null}
@@ -697,19 +693,19 @@ export default async function EducationSystemPage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-[#102A43] to-[#102A43] py-12 text-white">
+      <section className="bg-gradient-to-r from-[#5B0F26] to-[#5B0F26] py-12 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <h2 className="text-3xl font-bold lg:text-4xl text-white">
             Ready to compare universities against this education structure?
           </h2>
-          <p className="mt-4 text-lg leading-8 text-[#FCE8ED]">
+          <p className="mt-4 text-lg leading-8 text-[#F7E9EE]">
             Move from general education-system research into live university
             options, fees, and counselling support.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link
               href="/universities"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-[#102A43] transition-colors hover:bg-gray-100"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-[#5B0F26] transition-colors hover:bg-gray-100"
             >
               Browse Universities
               <ArrowRight className="h-4 w-4" />

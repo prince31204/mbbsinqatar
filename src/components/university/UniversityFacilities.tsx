@@ -35,10 +35,10 @@ const FALLBACK =
 
 export default function UniversityFacilities({ facilities }: Props) {
   return (
-    <section id="facilities" className="py-10 bg-[#FFFDF9]">
+    <section id="facilities" className="py-10 bg-[#FAF8F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-2">
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-2">
             World-Class Facilities
           </h2>
           <p className="text-base text-[#6B7280] max-w-3xl mx-auto">
@@ -59,9 +59,9 @@ export default function UniversityFacilities({ facilities }: Props) {
                   <div className="p-3">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="bg-[#F9FAFB] p-1.5 rounded-lg shrink-0">
-                        <IconComponent className="h-4 w-4 text-[#BC002D]" />
+                        <IconComponent className="h-4 w-4 text-[#8A1538]" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#17202A] leading-tight">
+                      <h3 className="text-sm font-bold text-[#1F2937] leading-tight">
                         {uf.facility?.name || "Facility"}
                       </h3>
                     </div>

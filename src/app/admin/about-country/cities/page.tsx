@@ -90,12 +90,12 @@ export default function CitiesAdminPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">🏙️ Major Cities</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">🏙️ Major Cities</h1>
           <p className="text-sm text-[#6B7280]">{items.length} cities</p>
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#102A43] hover:bg-[#102A43]"
+          className="ml-auto bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           <Plus size={14} className="mr-1" /> Add City
         </Button>
@@ -253,7 +253,7 @@ export default function CitiesAdminPage() {
               ) : (
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="font-semibold text-[#17202A]">
+                    <p className="font-semibold text-[#1F2937]">
                       {item.cityName}
                       {item.population && (
                         <span className="ml-2 text-sm font-normal text-[#6B7280]">
@@ -288,7 +288,7 @@ export default function CitiesAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-[#BC002D]"
+                      className="text-[#8A1538]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

@@ -32,8 +32,8 @@ export async function GET(req: NextRequest) {
     ];
 
     const sampleRow = [
-      "Japan National Medical University",
-      "Japan-national-medical-university",
+      "Qatar National Medical University",
+      "Qatar-national-medical-university",
       "2025",
       "120",
       "90",

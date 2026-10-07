@@ -18,15 +18,15 @@ export default function HomepageFAQ({ dynamicFaqs }: HomepageFAQProps) {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-10">
           <div className="flex justify-center mb-4">
-            <div className="bg-red-50 p-3 rounded-full">
-              <HelpCircle className="w-8 h-8 text-[#8F0023]" />
+            <div className="bg-[#F7E9EE] p-3 rounded-full">
+              <HelpCircle className="w-8 h-8 text-[#5B0F26]" />
             </div>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#17202A] mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#1F2937] mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-[#4B5563]">
-            Everything you need to know about studying MBBS in Japan as an
+            Everything you need to know about studying MBBS in Qatar as an
             Indian student.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function HomepageFAQ({ dynamicFaqs }: HomepageFAQProps) {
             return (
               <div
                 key={index}
-                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? "border-green-400 shadow-md bg-white" : "border-[#E5E7EB] bg-[#FFFDF9]"}`}
+                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? "border-green-400 shadow-md bg-white" : "border-[#E5E7EB] bg-[#FAF8F7]"}`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -45,12 +45,12 @@ export default function HomepageFAQ({ dynamicFaqs }: HomepageFAQProps) {
                   aria-expanded={isOpen}
                 >
                   <span
-                    className={`font-semibold text-lg ${isOpen ? "text-[#8F0023]" : "text-[#17202A]"}`}
+                    className={`font-semibold text-lg ${isOpen ? "text-[#5B0F26]" : "text-[#1F2937]"}`}
                   >
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#8F0023]" : "text-[#6B7280]"}`}
+                    className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#5B0F26]" : "text-[#6B7280]"}`}
                   />
                 </button>
 

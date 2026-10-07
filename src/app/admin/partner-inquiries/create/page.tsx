@@ -63,11 +63,11 @@ export default function PartnerInquiryCreatePage() {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-[#102A43] flex items-center justify-center text-[#BC002D]">
+        <div className="w-10 h-10 rounded-lg bg-[#5B0F26] flex items-center justify-center text-[#8A1538]">
           <Building2 size={20} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Add New Partner</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Add New Partner</h1>
           <p className="text-sm text-[#6B7280]">
             Manually add a partner to the system
           </p>
@@ -79,7 +79,7 @@ export default function PartnerInquiryCreatePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="space-y-1.5">
               <Label>
-                Contact Name <span className="text-[#BC002D]">*</span>
+                Contact Name <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.name}
@@ -90,7 +90,7 @@ export default function PartnerInquiryCreatePage() {
             </div>
             <div className="space-y-1.5">
               <Label>
-                Email Address <span className="text-[#BC002D]">*</span>
+                Email Address <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 type="email"
@@ -204,7 +204,7 @@ export default function PartnerInquiryCreatePage() {
             </div>
 
             <div className="space-y-1.5 pt-4 border-t md:col-span-2">
-              <Label className="font-semibold text-[#17202A]">
+              <Label className="font-semibold text-[#1F2937]">
                 Initial Status
               </Label>
               <Select
@@ -236,7 +236,7 @@ export default function PartnerInquiryCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-40 bg-[#102A43] hover:bg-[#102A43]"
+            className="w-40 bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             {loading ? "Saving…" : "Create Partner"}
           </Button>

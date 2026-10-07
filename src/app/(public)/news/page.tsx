@@ -7,12 +7,12 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "News — MBBS Japan Medical Education Updates",
+  title: "News — MBBS Qatar Medical Education Updates",
   description:
-    "Stay updated with the latest news about MBBS in Japan, medical education policies, university announcements, and student success stories.",
+    "Stay updated with the latest news about MBBS in Qatar, medical education policies, university announcements, and student success stories.",
   entitySeo: {
     metaKeyword:
-      "MBBS Japan news, medical education news, Japan university news",
+      "MBBS Qatar news, medical education news, Qatar university news",
   },
   path: "/news",
   pageKey: "news",
@@ -43,16 +43,16 @@ export default async function NewsPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FAF8F7]">
       {/* Header */}
-      <div className="bg-white text-[#17202A] py-16">
+      <div className="bg-white text-[#1F2937] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Newspaper className="w-10 h-10 text-[#4B5563]" />
             <h1 className="text-4xl lg:text-5xl font-bold">Latest News</h1>
           </div>
           <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
-            Stay informed with the latest updates on MBBS in Japan, medical
+            Stay informed with the latest updates on MBBS in Qatar, medical
             education, and university announcements.
           </p>
         </div>
@@ -90,13 +90,13 @@ export default async function NewsPage() {
                         </div>
                       )}
                       {item.category && (
-                        <span className="absolute top-3 left-3 bg-[#BC002D] text-white text-xs px-2 py-1 rounded-full font-medium">
+                        <span className="absolute top-3 left-3 bg-[#8A1538] text-white text-xs px-2 py-1 rounded-full font-medium">
                           {item.category.name}
                         </span>
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-[#17202A] mb-2 line-clamp-2 group-hover:text-[#102A43] transition-colors">
+                      <h2 className="font-bold text-[#1F2937] mb-2 line-clamp-2 group-hover:text-[#5B0F26] transition-colors">
                         {item.title}
                       </h2>
                       {item.shortnote && (
@@ -134,16 +134,16 @@ export default async function NewsPage() {
           {/* Sidebar */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl border border-[#E5E7EB] p-5">
-              <h3 className="font-bold text-[#17202A] mb-4">News Categories</h3>
+              <h3 className="font-bold text-[#1F2937] mb-4">News Categories</h3>
               <ul className="space-y-2">
                 {categories.map((cat) => (
                   <li key={cat.id}>
                     <Link
                       href={`/news/${cat.slug}`}
-                      className="flex items-center justify-between text-sm text-[#4B5563] hover:text-[#102A43] transition-colors py-1 border-b border-gray-50 last:border-0"
+                      className="flex items-center justify-between text-sm text-[#4B5563] hover:text-[#5B0F26] transition-colors py-1 border-b border-gray-50 last:border-0"
                     >
                       <span>{cat.name}</span>
-                      <span className="bg-white text-[#BC002D] text-xs px-2 py-0.5 rounded-full">
+                      <span className="bg-white text-[#8A1538] text-xs px-2 py-0.5 rounded-full">
                         {cat._count.news}
                       </span>
                     </Link>
@@ -151,14 +151,14 @@ export default async function NewsPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-[#BC002D] rounded-2xl p-6 text-[#17202A] text-center">
+            <div className="bg-[#8A1538] rounded-2xl p-6 text-[#1F2937] text-center">
               <h3 className="font-bold text-lg mb-2">Want to Study MBBS?</h3>
               <p className="text-[#4B5563] text-sm mb-4">
                 Get free counseling from our experts
               </p>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 bg-white text-[#102A43] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-white text-[#5B0F26] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
               >
                 Contact Us <ArrowRight className="w-4 h-4" />
               </Link>

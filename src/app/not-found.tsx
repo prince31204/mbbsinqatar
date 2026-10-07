@@ -7,16 +7,16 @@ export default function NotFound() {
       <div className="max-w-lg w-full text-center">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 bg-[#BC002D] rounded-full flex items-center justify-center shadow-lg">
+          <div className="w-16 h-16 bg-[#8A1538] rounded-full flex items-center justify-center shadow-lg">
             <GraduationCap className="w-10 h-10 text-white" />
           </div>
         </div>
 
         {/* 404 */}
-        <h1 className="text-8xl font-black text-[#BC002D] mb-2 leading-none">
+        <h1 className="text-8xl font-black text-[#8A1538] mb-2 leading-none">
           404
         </h1>
-        <h2 className="text-2xl font-bold text-[#17202A] mb-3">
+        <h2 className="text-2xl font-bold text-[#1F2937] mb-3">
           Page Not Found
         </h2>
         <p className="text-[#6B7280] mb-8 leading-relaxed">
@@ -28,14 +28,14 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
           <Link
             href="/"
-            className="inline-flex items-center justify-center gap-2 bg-[#BC002D] hover:bg-[#8F0023] text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-[#8A1538] hover:bg-[#5B0F26] text-white px-6 py-3 rounded-xl font-semibold transition-colors"
           >
             <Home className="w-4 h-4" />
             Go Home
           </Link>
           <Link
             href="/universities"
-            className="inline-flex items-center justify-center gap-2 border-2 border-[#E5E7EB] text-[#BC002D] hover:bg-white px-6 py-3 rounded-xl font-semibold transition-colors"
+            className="inline-flex items-center justify-center gap-2 border-2 border-[#E5E7EB] text-[#8A1538] hover:bg-white px-6 py-3 rounded-xl font-semibold transition-colors"
           >
             <Search className="w-4 h-4" />
             Browse Universities
@@ -52,14 +52,14 @@ export default function NotFound() {
               { label: "Universities", href: "/universities" },
               { label: "Scholarships", href: "/scholarships" },
               { label: "Compare Universities", href: "/compare" },
-              { label: "About Japan", href: "/about-japan" },
+              { label: "About Qatar", href: "/about-qatar" },
               { label: "FMGE Pass Rates", href: "/fmge-rates" },
               { label: "Contact Us", href: "/contact-us" },
             ].map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="flex items-center gap-1.5 text-sm text-[#4B5563] hover:text-[#102A43] transition-colors py-1"
+                className="flex items-center gap-1.5 text-sm text-[#4B5563] hover:text-[#5B0F26] transition-colors py-1"
               >
                 <ArrowLeft className="w-3 h-3 rotate-180" />
                 {l.label}

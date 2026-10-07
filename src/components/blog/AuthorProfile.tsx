@@ -10,7 +10,7 @@ interface AuthorProfileProps {
 const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
   return (
     <section className="mt-16 border-t border-[#E5E7EB] pt-12 pb-8">
-      <div className="bg-[#FFFDF9] to-white rounded-3xl p-8 border border-[#E5E7EB] shadow-sm relative overflow-hidden">
+      <div className="bg-[#FAF8F7] to-white rounded-3xl p-8 border border-[#E5E7EB] shadow-sm relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#F9FAFB]/5 rounded-full hidden -mr-16 -mt-16" />
 
@@ -29,7 +29,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-2 -right-2 bg-[#BC002D] text-white p-1.5 rounded-lg shadow-sm border border-[#E5E7EB]">
+            <div className="absolute -bottom-2 -right-2 bg-[#8A1538] text-white p-1.5 rounded-lg shadow-sm border border-[#E5E7EB]">
               <Award className="w-4 h-4" />
             </div>
           </div>
@@ -38,10 +38,10 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
           <div className="flex-1">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-3">
               <div>
-                <h4 className="text-xl font-bold text-[#17202A]">
+                <h4 className="text-xl font-bold text-[#1F2937]">
                   {profile.name}
                 </h4>
-                <p className="text-[#BC002D] font-semibold text-sm uppercase tracking-wider">
+                <p className="text-[#8A1538] font-semibold text-sm uppercase tracking-wider">
                   {profile.designation}
                 </p>
               </div>
@@ -53,7 +53,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
                     href={profile.linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white border border-[#E5E7EB] rounded-xl text-[#BC002D] hover:bg-white transition-colors shadow-sm"
+                    className="p-2 bg-white border border-[#E5E7EB] rounded-xl text-[#8A1538] hover:bg-white transition-colors shadow-sm"
                     title="View LinkedIn Profile"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -94,8 +94,8 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
         <div className="mt-8 pt-6 border-t border-[#E5E7EB] bg-white/50 -mx-8 -mb-8 px-8 flex items-center justify-between text-xs text-[#6B7280]">
           <span>Verified Expert Contributor</span>
           <span className="flex items-center gap-1">
-            MBBS in Japan Authority Certification{" "}
-            <Award className="w-3 h-3 text-red-500" />
+            MBBS in Qatar Authority Certification{" "}
+            <Award className="w-3 h-3 text-[#8A1538]" />
           </span>
         </div>
       </div>

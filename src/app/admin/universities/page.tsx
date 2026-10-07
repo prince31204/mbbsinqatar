@@ -36,7 +36,7 @@ const columns: Column<University>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-[#17202A] text-sm">{row.name}</p>
+        <p className="font-medium text-[#1F2937] text-sm">{row.name}</p>
         <p className="text-xs text-[#6B7280]">{row.city}</p>
       </div>
     ),
@@ -74,7 +74,7 @@ const columns: Column<University>[] = [
     render: (row) => (
       <Badge
         variant={row.nmcApproved ? "default" : "secondary"}
-        className={row.nmcApproved ? "bg-red-100 text-[#8F0023]" : ""}
+        className={row.nmcApproved ? "bg-[#F7E9EE] text-[#5B0F26]" : ""}
       >
         {row.nmcApproved ? "Yes" : "No"}
       </Badge>
@@ -86,7 +86,7 @@ const columns: Column<University>[] = [
     render: (row) => (
       <Badge
         variant={row.isFeatured ? "default" : "outline"}
-        className={row.isFeatured ? "bg-red-400 text-[#BC002D]" : ""}
+        className={row.isFeatured ? "bg-[#8A1538] text-[#8A1538]" : ""}
       >
         {row.isFeatured ? "Yes" : "No"}
       </Badge>
@@ -208,7 +208,7 @@ export default function AdminUniversitiesPage() {
       extraHeaderActions={
         <div className="flex items-center bg-white h-10 p-1 px-2 rounded-lg border border-[#E5E7EB] shadow-sm gap-3">
           <div className="flex items-center gap-2 px-2 border-r border-[#E5E7EB]">
-            <div className="w-2 h-2 rounded-full bg-[#102A43] animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-[#5B0F26] animate-pulse" />
             <span className="text-xs font-bold text-[#4B5563] uppercase tracking-tight">
               Bulk Actions
             </span>
@@ -217,11 +217,11 @@ export default function AdminUniversitiesPage() {
             <Button
               variant="outline"
               size="sm"
-              className="h-8 border-[#E5E7EB] text-[#4B5563] hover:text-[#102A43] hover:border-[#E5E7EB] hover:bg-[#102A43] text-xs font-bold shadow-xs bg-white"
+              className="h-8 border-[#E5E7EB] text-[#4B5563] hover:text-[#5B0F26] hover:border-[#E5E7EB] hover:bg-[#5B0F26] text-xs font-bold shadow-xs bg-white"
               asChild
             >
               <a href="/api/admin/universities/bulk-template" download>
-                <FileDown size={14} className="mr-1.5 text-[#BC002D]" />
+                <FileDown size={14} className="mr-1.5 text-[#8A1538]" />
                 Template
               </a>
             </Button>
@@ -230,7 +230,7 @@ export default function AdminUniversitiesPage() {
               size="sm"
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="h-8 border-[#E5E7EB] text-[#BC002D] hover:bg-[#102A43] hover:text-[#17202A] transition-all text-xs font-bold"
+              className="h-8 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-[#1F2937] transition-all text-xs font-bold"
             >
               {isUploading ? (
                 <Loader2 size={14} className="mr-1.5 animate-spin" />

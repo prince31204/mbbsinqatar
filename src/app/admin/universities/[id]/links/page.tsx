@@ -141,7 +141,7 @@ export default function UniversityLinksPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">
+            <h2 className="text-xl font-bold text-[#1F2937]">
               University Links
             </h2>
             <p className="text-sm text-[#6B7280]">
@@ -149,7 +149,7 @@ export default function UniversityLinksPage() {
               websites, forms, videos
             </p>
           </div>
-          <Button onClick={openAdd} className="bg-[#102A43] hover:bg-[#102A43]">
+          <Button onClick={openAdd} className="bg-[#5B0F26] hover:bg-[#5B0F26]">
             <Plus size={16} className="mr-2" />
             Add Link
           </Button>
@@ -157,7 +157,7 @@ export default function UniversityLinksPage() {
 
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-4">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit Link" : "Add New Link"}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -216,7 +216,7 @@ export default function UniversityLinksPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -256,11 +256,11 @@ export default function UniversityLinksPage() {
                 className="bg-white border border-[#E5E7EB] rounded-xl p-4 flex items-center gap-4"
               >
                 <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center shrink-0">
-                  <Link2 size={16} className="text-[#BC002D]" />
+                  <Link2 size={16} className="text-[#8A1538]" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <p className="font-semibold text-[#17202A] text-sm">
+                    <p className="font-semibold text-[#1F2937] text-sm">
                       {item.title}
                     </p>
                     {item.type && (
@@ -269,7 +269,7 @@ export default function UniversityLinksPage() {
                       </span>
                     )}
                     {!item.status && (
-                      <span className="text-xs bg-[#102A43] text-[#BC002D] px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[#5B0F26] text-[#8A1538] px-2 py-0.5 rounded-full">
                         Inactive
                       </span>
                     )}
@@ -278,7 +278,7 @@ export default function UniversityLinksPage() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-red-500 hover:underline truncate flex items-center gap-1 mt-0.5"
+                    className="text-xs text-[#8A1538] hover:underline truncate flex items-center gap-1 mt-0.5"
                   >
                     {item.url.length > 60
                       ? item.url.slice(0, 60) + "…"
@@ -298,7 +298,7 @@ export default function UniversityLinksPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-[#BC002D] hover:text-[#102A43]"
+                    className="h-8 w-8 p-0 text-[#8A1538] hover:text-[#5B0F26]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

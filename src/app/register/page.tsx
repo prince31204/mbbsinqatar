@@ -73,17 +73,17 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-[#BC002D] rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#8A1538] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Create Account</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Create Account</h1>
           <p className="text-[#6B7280] text-sm mt-1">
-            Start your MBBS journey in Japan
+            Start your MBBS journey in Qatar
           </p>
         </div>
 
         {error && (
-          <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-lg mb-6 text-sm">
+          <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
@@ -132,18 +132,18 @@ export default function RegisterPage() {
                 value={form[field.name as keyof RegistrationForm]}
                 onChange={handleChange}
                 placeholder={field.placeholder}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
               />
             </div>
           ))}
 
           <p className="text-xs text-[#6B7280]">
             By registering, you agree to our{" "}
-            <Link href="#" className="text-[#BC002D] underline">
+            <Link href="#" className="text-[#8A1538] underline">
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="#" className="text-[#BC002D] underline">
+            <Link href="#" className="text-[#8A1538] underline">
               Privacy Policy
             </Link>
             .
@@ -152,7 +152,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#BC002D] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8F0023] disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-[#8A1538] text-white py-3.5 rounded-xl font-semibold hover:bg-[#5B0F26] disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
           >
             {loading ? (
               <>
@@ -169,7 +169,7 @@ export default function RegisterPage() {
           Already have an account?{" "}
           <Link
             href="/login"
-            className="text-[#BC002D] hover:text-[#102A43] font-semibold"
+            className="text-[#8A1538] hover:text-[#5B0F26] font-semibold"
           >
             Sign in here
           </Link>

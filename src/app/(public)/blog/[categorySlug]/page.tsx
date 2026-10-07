@@ -38,11 +38,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "Blog Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Japan Blog`,
+    title: cat.metaTitle || `${cat.name} — MBBS Qatar Blog`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Read articles about ${cat.name} — MBBS in Japan. Tips, guides, and student experiences.`,
+      `Read articles about ${cat.name} — MBBS in Qatar. Tips, guides, and student experiences.`,
     path: `/blog/${categorySlug}`,
   });
 }
@@ -100,22 +100,22 @@ export default async function BlogCategoryPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav className="bg-[#FFFDF9] border-b">
+      <nav className="bg-[#FAF8F7] border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-[#4B5563]">
-          <Link href="/" className="hover:text-[#102A43]">
+          <Link href="/" className="hover:text-[#5B0F26]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/blog" className="hover:text-[#102A43]">
+          <Link href="/blog" className="hover:text-[#5B0F26]">
             Blog
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-[#17202A] font-medium">{category.name}</span>
+          <span className="text-[#1F2937] font-medium">{category.name}</span>
         </div>
       </nav>
 
       {/* Header */}
-      <div className="bg-white text-[#17202A] py-14">
+      <div className="bg-white text-[#1F2937] py-14">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-[#F9FAFB] px-4 py-1.5 rounded-full text-sm mb-4">
             <Tag className="w-4 h-4" />
@@ -145,7 +145,7 @@ export default async function BlogCategoryPage({ params }: Props) {
                 </p>
                 <Link
                   href="/blog"
-                  className="mt-4 inline-block text-[#BC002D] hover:underline"
+                  className="mt-4 inline-block text-[#8A1538] hover:underline"
                 >
                   ← All Articles
                 </Link>
@@ -169,14 +169,14 @@ export default async function BlogCategoryPage({ params }: Props) {
                         />
                       ) : (
                         <div className="flex items-center justify-center h-full bg-white">
-                          <span className="text-[#BC002D] text-4xl font-bold">
+                          <span className="text-[#8A1538] text-4xl font-bold">
                             {(blog.title ?? "B")[0]}
                           </span>
                         </div>
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-[#17202A] mb-2 line-clamp-2 group-hover:text-[#102A43] transition-colors">
+                      <h2 className="font-bold text-[#1F2937] mb-2 line-clamp-2 group-hover:text-[#5B0F26] transition-colors">
                         {blog.title}
                       </h2>
                       {blog.shortnote && (
@@ -194,7 +194,7 @@ export default async function BlogCategoryPage({ params }: Props) {
                           )}
                         </span>
                         {blog.author?.name && (
-                          <span className="flex items-center gap-1 text-[#BC002D]">
+                          <span className="flex items-center gap-1 text-[#8A1538]">
                             <User className="w-3 h-3" />
                             {blog.author.name}
                           </span>
@@ -210,13 +210,13 @@ export default async function BlogCategoryPage({ params }: Props) {
           {/* Sidebar */}
           <aside className="space-y-6">
             <div className="bg-white rounded-2xl border border-[#E5E7EB] p-5">
-              <h3 className="font-bold text-[#17202A] mb-4">All Categories</h3>
+              <h3 className="font-bold text-[#1F2937] mb-4">All Categories</h3>
               <div className="space-y-2">
                 {categories.map((cat) => (
                   <Link
                     key={cat.slug}
                     href={`/blog/${cat.slug}`}
-                    className={`flex items-center justify-between p-2.5 rounded-lg text-sm transition-colors ${cat.slug === categorySlug ? "bg-white text-[#BC002D] font-medium" : "hover:bg-[#FFFDF9] text-[#4B5563]"}`}
+                    className={`flex items-center justify-between p-2.5 rounded-lg text-sm transition-colors ${cat.slug === categorySlug ? "bg-white text-[#8A1538] font-medium" : "hover:bg-[#FAF8F7] text-[#4B5563]"}`}
                   >
                     <span>{cat.name}</span>
                     <span className="text-xs bg-[#F9FAFB] px-2 py-0.5 rounded-full">
@@ -228,13 +228,13 @@ export default async function BlogCategoryPage({ params }: Props) {
             </div>
 
             <div className="bg-white border border-[#E5E7EB] rounded-2xl p-5 text-center">
-              <h3 className="font-bold text-[#17202A] mb-2">Ready to Apply?</h3>
+              <h3 className="font-bold text-[#1F2937] mb-2">Ready to Apply?</h3>
               <p className="text-sm text-[#4B5563] mb-4">
                 Talk to our counsellors for free guidance.
               </p>
               <Link
                 href="/contact-us"
-                className="block bg-[#BC002D] hover:bg-[#8F0023] text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                className="block bg-[#8A1538] hover:bg-[#5B0F26] text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
               >
                 Contact Us <ArrowRight className="w-4 h-4 inline ml-1" />
               </Link>

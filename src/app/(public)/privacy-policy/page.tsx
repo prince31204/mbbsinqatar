@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Privacy Policy — MBBS in Japan",
+    title: "Privacy Policy — MBBS in Qatar",
     description:
       "Our privacy policy outlines how we collect, use, and protect your information.",
     path: "/privacy-policy",
@@ -21,27 +21,27 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-[#FFFDF9] font-outfit">
+    <div className="min-h-screen bg-[#FAF8F7] font-outfit">
       {/* Premium Hero Section */}
       <div className="relative bg-white pt-32 pb-48 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(220,38,38,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-          <nav className="flex items-center justify-center space-x-2 text-[#BC002D]/80 text-sm mb-8 animate-in fade-in slide-in- duration-700">
-            <Link href="/" className="hover:text-[#102A43] transition-colors">
+          <nav className="flex items-center justify-center space-x-2 text-[#8A1538]/80 text-sm mb-8 animate-in fade-in slide-in- duration-700">
+            <Link href="/" className="hover:text-[#5B0F26] transition-colors">
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#17202A] font-medium">Privacy Policy</span>
+            <span className="text-[#1F2937] font-medium">Privacy Policy</span>
           </nav>
 
-          <div className="inline-flex items-center justify-center p-3 bg-[#BC002D]/10 rounded-2xl border border-[#E5E7EB] mb-6 animate-in zoom-in duration-1000">
-            <Shield className="w-8 h-8 text-red-500" />
+          <div className="inline-flex items-center justify-center p-3 bg-[#8A1538]/10 rounded-2xl border border-[#E5E7EB] mb-6 animate-in zoom-in duration-1000">
+            <Shield className="w-8 h-8 text-[#8A1538]" />
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-black text-[#17202A] mb-6 tracking-tight">
-            Privacy <span className="text-red-500">Policy</span>
+          <h1 className="text-4xl md:text-6xl font-black text-[#1F2937] mb-6 tracking-tight">
+            Privacy <span className="text-[#8A1538]">Policy</span>
           </h1>
 
           <p className="text-[#6B7280] max-w-2xl mx-auto text-lg leading-relaxed">
@@ -68,15 +68,15 @@ export default function PrivacyPolicyPage() {
           <div className="space-y-16">
             <section className="group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl group-hover:bg-[#BC002D] group-hover:text-[#17202A] transition-all duration-300">
-                  <FileText className="w-6 h-6 text-[#BC002D] group-hover:text-[#17202A]" />
+                <div className="p-3 bg-white rounded-xl group-hover:bg-[#8A1538] group-hover:text-[#1F2937] transition-all duration-300">
+                  <FileText className="w-6 h-6 text-[#8A1538] group-hover:text-[#1F2937]" />
                 </div>
-                <h2 className="text-3xl font-black text-[#17202A] tracking-tight">
+                <h2 className="text-3xl font-black text-[#1F2937] tracking-tight">
                   1. Introduction
                 </h2>
               </div>
               <p className="text-[#4B5563] leading-relaxed text-lg pl-2 border-l-2 border-transparent group-hover:border-[#E5E7EB] transition-colors duration-300">
-                At MBBS in Japan, we respect your privacy and are committed to
+                At MBBS in Qatar, we respect your privacy and are committed to
                 protecting your personal data. This privacy policy will inform
                 you as to how we look after your personal data when you visit
                 our website and tell you about your privacy rights and how the
@@ -86,10 +86,10 @@ export default function PrivacyPolicyPage() {
 
             <section className="group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl group-hover:bg-[#BC002D] group-hover:text-[#17202A] transition-all duration-300">
-                  <Eye className="w-6 h-6 text-[#BC002D] group-hover:text-[#17202A]" />
+                <div className="p-3 bg-white rounded-xl group-hover:bg-[#8A1538] group-hover:text-[#1F2937] transition-all duration-300">
+                  <Eye className="w-6 h-6 text-[#8A1538] group-hover:text-[#1F2937]" />
                 </div>
-                <h2 className="text-3xl font-black text-[#17202A] tracking-tight">
+                <h2 className="text-3xl font-black text-[#1F2937] tracking-tight">
                   2. Data Collection
                 </h2>
               </div>
@@ -114,9 +114,9 @@ export default function PrivacyPolicyPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="p-6 bg-[#FFFDF9] rounded-2xl hover:bg-white hover:shadow-xl hover: transition-all border border-transparent hover:border-[#E5E7EB]"
+                    className="p-6 bg-[#FAF8F7] rounded-2xl hover:bg-white hover:shadow-xl hover: transition-all border border-transparent hover:border-[#E5E7EB]"
                   >
-                    <h3 className="font-bold text-[#17202A] mb-2">
+                    <h3 className="font-bold text-[#1F2937] mb-2">
                       {item.title}
                     </h3>
                     <p className="text-sm text-[#6B7280] leading-relaxed">
@@ -129,10 +129,10 @@ export default function PrivacyPolicyPage() {
 
             <section className="group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl group-hover:bg-[#BC002D] group-hover:text-[#17202A] transition-all duration-300">
-                  <Lock className="w-6 h-6 text-[#BC002D] group-hover:text-[#17202A]" />
+                <div className="p-3 bg-white rounded-xl group-hover:bg-[#8A1538] group-hover:text-[#1F2937] transition-all duration-300">
+                  <Lock className="w-6 h-6 text-[#8A1538] group-hover:text-[#1F2937]" />
                 </div>
-                <h2 className="text-3xl font-black text-[#17202A] tracking-tight">
+                <h2 className="text-3xl font-black text-[#1F2937] tracking-tight">
                   3. Security Measures
                 </h2>
               </div>
@@ -146,10 +146,10 @@ export default function PrivacyPolicyPage() {
 
             <section className="group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white rounded-xl group-hover:bg-[#BC002D] group-hover:text-[#17202A] transition-all duration-300">
-                  <UserCheck className="w-6 h-6 text-[#BC002D] group-hover:text-[#17202A]" />
+                <div className="p-3 bg-white rounded-xl group-hover:bg-[#8A1538] group-hover:text-[#1F2937] transition-all duration-300">
+                  <UserCheck className="w-6 h-6 text-[#8A1538] group-hover:text-[#1F2937]" />
                 </div>
-                <h2 className="text-3xl font-black text-[#17202A] tracking-tight">
+                <h2 className="text-3xl font-black text-[#1F2937] tracking-tight">
                   4. Your Rights
                 </h2>
               </div>
@@ -162,16 +162,16 @@ export default function PrivacyPolicyPage() {
 
             <div className="p-8 bg-white rounded-[2rem] border border-[#E5E7EB] flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
-                <h4 className="font-bold text-[#17202A] mb-1 leading-tight text-xl">
+                <h4 className="font-bold text-[#1F2937] mb-1 leading-tight text-xl">
                   Have questions about your data?
                 </h4>
-                <p className="text-[#102A43] text-sm opacity-80">
+                <p className="text-[#5B0F26] text-sm opacity-80">
                   Our privacy team is here to help you understand your rights.
                 </p>
               </div>
               <Link
                 href="/contact-us"
-                className="whitespace-nowrap px-8 py-3 bg-[#BC002D] text-white rounded-xl font-bold hover:bg-[#8F0023] transition-all shadow-lg active:scale-95"
+                className="whitespace-nowrap px-8 py-3 bg-[#8A1538] text-white rounded-xl font-bold hover:bg-[#5B0F26] transition-all shadow-lg active:scale-95"
               >
                 Contact Privacy Team
               </Link>

@@ -207,9 +207,9 @@ export default function AdminFmgeRatesPage() {
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <BarChart3 size={22} className="text-[#BC002D]" />
+          <BarChart3 size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               FMGE Pass Rates
             </h1>
             <p className="text-sm text-[#6B7280]">
@@ -223,11 +223,11 @@ export default function AdminFmgeRatesPage() {
             <Button
               variant="outline"
               size="sm"
-              className="h-8 border-[#E5E7EB] text-[#4B5563] hover:text-[#102A43] hover:border-[#E5E7EB] hover:bg-[#102A43] text-xs font-bold shadow-xs bg-white"
+              className="h-8 border-[#E5E7EB] text-[#4B5563] hover:text-[#5B0F26] hover:border-[#E5E7EB] hover:bg-[#5B0F26] text-xs font-bold shadow-xs bg-white"
               asChild
             >
               <a href="/api/admin/fmge-rates/bulk-template" download>
-                <FileDown size={14} className="mr-1.5 text-[#BC002D]" />
+                <FileDown size={14} className="mr-1.5 text-[#8A1538]" />
                 Template
               </a>
             </Button>
@@ -236,7 +236,7 @@ export default function AdminFmgeRatesPage() {
               size="sm"
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="h-8 border-[#E5E7EB] text-[#BC002D] hover:bg-[#102A43] hover:text-[#17202A] transition-all text-xs font-bold"
+              className="h-8 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-[#1F2937] transition-all text-xs font-bold"
             >
               {isUploading ? (
                 <Loader2 size={14} className="mr-1.5 animate-spin" />
@@ -259,7 +259,7 @@ export default function AdminFmgeRatesPage() {
               setEditId(null);
               setForm(blank);
             }}
-            className="bg-[#102A43] hover:bg-[#102A43] h-10"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26] h-10"
           >
             <Plus size={16} className="mr-2" />
             Add Rate
@@ -290,7 +290,7 @@ export default function AdminFmgeRatesPage() {
       {/* Form */}
       {showForm && (
         <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-4">
-          <h3 className="font-semibold text-[#17202A]">
+          <h3 className="font-semibold text-[#1F2937]">
             {editId ? "Edit FMGE Rate" : "Add FMGE Rate"}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -386,7 +386,7 @@ export default function AdminFmgeRatesPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving && <Loader2 size={14} className="mr-2 animate-spin" />}
               {editId ? "Save Changes" : "Add Rate"}
@@ -418,7 +418,7 @@ export default function AdminFmgeRatesPage() {
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+              <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                 <th className="px-4 py-3 font-medium">University</th>
                 <th className="px-4 py-3 font-medium">Year</th>
                 <th className="px-4 py-3 font-medium text-center">Appeared</th>
@@ -438,9 +438,9 @@ export default function AdminFmgeRatesPage() {
                 return (
                   <tr
                     key={r.id}
-                    className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                    className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                   >
-                    <td className="px-4 py-3 font-medium text-[#17202A]">
+                    <td className="px-4 py-3 font-medium text-[#1F2937]">
                       {r.university?.name || "—"}
                     </td>
                     <td className="px-4 py-3 text-[#4B5563]">{r.year}</td>
@@ -452,7 +452,7 @@ export default function AdminFmgeRatesPage() {
                     </td>
                     <td className="px-4 py-3 text-center">
                       {pct ? (
-                        <span className="font-semibold text-[#8F0023]">
+                        <span className="font-semibold text-[#5B0F26]">
                           {pct}%
                         </span>
                       ) : (
@@ -475,7 +475,7 @@ export default function AdminFmgeRatesPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                          className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                           onClick={() => handleDelete(r.id)}
                         >
                           <Trash2 size={14} />

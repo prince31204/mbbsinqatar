@@ -64,9 +64,9 @@ export default function StudyModesPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <BookOpen size={22} className="text-[#BC002D]" />
+        <BookOpen size={22} className="text-[#8A1538]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Study Modes</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Study Modes</h1>
           <p className="text-sm text-[#6B7280]">
             {items.length} mode{items.length !== 1 ? "s" : ""} available
           </p>
@@ -74,7 +74,7 @@ export default function StudyModesPage() {
       </div>
 
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-5">
-        <h2 className="font-semibold text-[#17202A] mb-4">Add New Study Mode</h2>
+        <h2 className="font-semibold text-[#1F2937] mb-4">Add New Study Mode</h2>
         <div className="flex gap-3">
           <Input
             value={newMode}
@@ -90,7 +90,7 @@ export default function StudyModesPage() {
           />
           <Button
             onClick={handleAdd}
-            className="bg-[#102A43] hover:bg-[#102A43] shrink-0"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26] shrink-0"
           >
             <Plus size={14} className="mr-1" /> Add
           </Button>
@@ -131,7 +131,7 @@ export default function StudyModesPage() {
                 </>
               ) : (
                 <>
-                  <span className="flex-1 text-[#17202A]">{item.studyMode}</span>
+                  <span className="flex-1 text-[#1F2937]">{item.studyMode}</span>
                   <Button
                     size="sm"
                     variant="ghost"
@@ -145,7 +145,7 @@ export default function StudyModesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="text-[#BC002D] hover:text-[#102A43]"
+                    className="text-[#8A1538] hover:text-[#5B0F26]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

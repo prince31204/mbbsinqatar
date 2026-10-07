@@ -101,7 +101,7 @@ export default function UniversityHospitalsPage() {
       <UniversitySubNav universityId={id} universityName={universityName} />
       <div className="space-y-5">
         <div>
-          <h2 className="text-xl font-bold text-[#17202A]">
+          <h2 className="text-xl font-bold text-[#1F2937]">
             Affiliated Hospitals
           </h2>
           <p className="text-sm text-[#6B7280]">
@@ -141,7 +141,7 @@ export default function UniversityHospitalsPage() {
           <Button
             onClick={handleLink}
             disabled={adding || !selectedHospital}
-            className="bg-[#102A43] hover:bg-[#102A43] shrink-0"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="mr-2 animate-spin" />
@@ -165,7 +165,7 @@ export default function UniversityHospitalsPage() {
           <div className="bg-white border border-[#E5E7EB] rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+                <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                   <th className="px-4 py-3 font-medium">Hospital</th>
                   <th className="px-4 py-3 font-medium">City</th>
                   <th className="px-4 py-3 font-medium">Beds</th>
@@ -176,9 +176,9 @@ export default function UniversityHospitalsPage() {
                 {linked.map((l) => (
                   <tr
                     key={l.id}
-                    className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                    className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                   >
-                    <td className="px-4 py-3 font-medium text-[#17202A]">
+                    <td className="px-4 py-3 font-medium text-[#1F2937]">
                       {l.hospital.name}
                     </td>
                     <td className="px-4 py-3 text-[#6B7280]">
@@ -191,7 +191,7 @@ export default function UniversityHospitalsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 text-[#BC002D] hover:bg-[#102A43] text-xs"
+                        className="h-7 text-[#8A1538] hover:bg-[#5B0F26] text-xs"
                         onClick={() => handleUnlink(l.hospitalId)}
                       >
                         <Trash2 size={12} className="mr-1" /> Unlink

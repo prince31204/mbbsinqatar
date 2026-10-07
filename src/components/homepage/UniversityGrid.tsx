@@ -7,15 +7,15 @@ import { cdn } from "@/lib/cdn";
 function getTypeColor(type: string) {
   switch (type.toLowerCase()) {
     case "medical":
-      return "bg-red-100 text-green-800";
+      return "bg-[#F7E9EE] text-green-800";
     case "technical":
-      return "bg-[#F9FAFB] text-[#102A43]";
+      return "bg-[#F9FAFB] text-[#5B0F26]";
     case "private":
       return "bg-purple-100 text-purple-800";
     case "public":
-      return "bg-[#F9FAFB] text-[#102A43]";
+      return "bg-[#F9FAFB] text-[#5B0F26]";
     default:
-      return "bg-[#F9FAFB] text-[#17202A]";
+      return "bg-[#F9FAFB] text-[#1F2937]";
   }
 }
 
@@ -79,16 +79,16 @@ export default async function UniversityGrid() {
   }
 
   return (
-    <section className="py-8 bg-[#FFFDF9]">
+    <section className="py-8 bg-[#FAF8F7]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-4">
-            Top Medical Universities in Japan
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
+            Top Medical Universities in Qatar
           </h2>
           <p className="text-lg text-[#4B5563] max-w-5xl mx-auto">
-            Practicing medicine in Japan is a structured and transparent
-            process regulated by the Medical Council of Japan (MCM).
-            International students who complete their MBBS in Japan or from a
+            Practicing medicine in Qatar is a structured and transparent
+            process regulated by the Medical Council of Qatar (MCM).
+            International students who complete their MBBS in Qatar or from a
             recognized university abroad can apply for registration and begin
             their medical career in the country.
           </p>
@@ -127,7 +127,7 @@ export default async function UniversityGrid() {
                 <Link
                   key={university.id}
                   href={`/universities/${university.slug}`}
-                  className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#102A43] hover:shadow-2xl ${universities.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
+                  className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#5B0F26] hover:shadow-2xl ${universities.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
                 >
                   <div className="pointer-events-none absolute inset-0 bg-[#F9FAFB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   {/* Image */}
@@ -139,7 +139,7 @@ export default async function UniversityGrid() {
                             cdn(university.thumbnailPath) ||
                             "https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=600"
                           }
-                          alt={`MBBS students campus at ${university.name}, Japan`}
+                          alt={`MBBS students campus at ${university.name}, Qatar`}
                           fill
                           priority={index < 3}
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -159,7 +159,7 @@ export default async function UniversityGrid() {
                     )}
                     {university.rating && (
                       <div className="absolute top-4 right-4 flex items-center space-x-1 rounded-lg bg-white px-2 py-1 transition-transform duration-300 group-hover:scale-105">
-                        <Star className="w-4 h-4 text-[#BC002D] fill-current" />
+                        <Star className="w-4 h-4 text-[#8A1538] fill-current" />
                         <span className="text-sm font-medium">
                           {Number(university.rating).toFixed(1)}
                         </span>
@@ -170,7 +170,7 @@ export default async function UniversityGrid() {
                   {/* Content */}
                   <div className="relative flex flex-grow flex-col p-6">
                     <div className="mb-4">
-                      <h3 className="mb-2 text-xl font-bold text-[#17202A] transition-colors duration-300 group-hover:text-[#102A43]">
+                      <h3 className="mb-2 text-xl font-bold text-[#1F2937] transition-colors duration-300 group-hover:text-[#5B0F26]">
                         {university.name}
                       </h3>
                       <div className="mb-2 flex items-center text-sm text-[#4B5563] transition-colors duration-300 group-hover:text-[#4B5563]">
@@ -178,7 +178,7 @@ export default async function UniversityGrid() {
                         <span>
                           {university.cityRelation?.name ||
                             university.city ||
-                            "Japan"}
+                            "Qatar"}
                           {university.province?.name
                             ? `, ${university.province.name}`
                             : ""}
@@ -194,16 +194,16 @@ export default async function UniversityGrid() {
 
                     {/* Stats */}
                     <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="rounded-lg bg-[#FFFDF9] p-3 text-center transition-all duration-300 group-hover:bg-white">
-                        <Users className="mx-auto mb-1 h-5 w-5 text-[#BC002D] transition-transform duration-300 group-hover:scale-110" />
-                        <div className="text-sm font-medium text-[#17202A]">
+                      <div className="rounded-lg bg-[#FAF8F7] p-3 text-center transition-all duration-300 group-hover:bg-white">
+                        <Users className="mx-auto mb-1 h-5 w-5 text-[#8A1538] transition-transform duration-300 group-hover:scale-110" />
+                        <div className="text-sm font-medium text-[#1F2937]">
                           {formatStudents(university.students)}
                         </div>
                         <div className="text-xs text-[#4B5563]">Students</div>
                       </div>
-                      <div className="rounded-lg bg-[#FFFDF9] p-3 text-center transition-all duration-300 group-hover:bg-white">
-                        <Award className="mx-auto mb-1 h-5 w-5 text-[#BC002D] transition-transform duration-300 group-hover:scale-110" />
-                        <div className="text-sm font-medium text-[#17202A]">
+                      <div className="rounded-lg bg-[#FAF8F7] p-3 text-center transition-all duration-300 group-hover:bg-white">
+                        <Award className="mx-auto mb-1 h-5 w-5 text-[#8A1538] transition-transform duration-300 group-hover:scale-110" />
+                        <div className="text-sm font-medium text-[#1F2937]">
                           {university.tuitionFee
                             ? /[a-zA-Z]/.test(String(university.tuitionFee))
                               ? String(university.tuitionFee)
@@ -217,12 +217,12 @@ export default async function UniversityGrid() {
                     {/* Badges */}
                     <div className="mb-4 flex flex-wrap gap-2">
                       {university.scholarshipName && (
-                        <span className="rounded-md bg-[#F8E9EB] border border-[#BC002D]/20 px-2 py-1 text-xs text-[#BC002D] font-medium transition-colors duration-300">
+                        <span className="rounded-md bg-[#F8E9EB] border border-[#8A1538]/20 px-2 py-1 text-xs text-[#8A1538] font-medium transition-colors duration-300">
                           🎓 {university.scholarshipName}
                         </span>
                       )}
                       {university.instituteType && (
-                        <span className="rounded-md bg-[#FCE8ED] border border-[#102A43]/20 px-2 py-1 text-xs text-[#102A43] font-medium transition-colors duration-300">
+                        <span className="rounded-md bg-[#F7E9EE] border border-[#5B0F26]/20 px-2 py-1 text-xs text-[#5B0F26] font-medium transition-colors duration-300">
                           {university.instituteType.name}
                         </span>
                       )}
@@ -240,7 +240,7 @@ export default async function UniversityGrid() {
 
                     {/* CTA */}
                     <div className="mt-auto">
-                      <div className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#BC002D] py-3 font-medium text-white shadow-sm transition-all duration-300 group-hover:shadow-md">
+                      <div className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#8A1538] py-3 font-medium text-white shadow-sm transition-all duration-300 group-hover:shadow-md">
                         <span>View Details</span>
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </div>
@@ -255,7 +255,7 @@ export default async function UniversityGrid() {
         <div className="text-center mt-12">
           <Link
             href="/universities"
-            className="bg-white text-[#BC002D] border-2 border-[#BC002D] px-8 py-4 rounded-lg font-semibold hover:bg-[#BC002D] hover:text-white transition-colors"
+            className="bg-white text-[#8A1538] border-2 border-[#8A1538] px-8 py-4 rounded-lg font-semibold hover:bg-[#8A1538] hover:text-white transition-colors"
           >
             View All Universities
           </Link>

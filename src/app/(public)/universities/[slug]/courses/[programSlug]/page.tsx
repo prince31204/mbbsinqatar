@@ -72,15 +72,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title:
       program.metaTitle ||
-      `${program.programName} at ${program.university.name} — Japan ${APP_YEAR}`,
+      `${program.programName} at ${program.university.name} — Qatar ${APP_YEAR}`,
     description:
       program.metaDescription ||
-      `Study ${program.programName} at ${program.university.name}, Japan. NMC recognized, English medium, affordable fees. Apply for ${ADMISSION_YEAR}.`,
+      `Study ${program.programName} at ${program.university.name}, Qatar. NMC recognized, English medium, affordable fees. Apply for ${ADMISSION_YEAR}.`,
     path: `/universities/${slug}/courses/${programSlug}`,
     entitySeo: {
       metaKeyword:
         program.metaKeyword ||
-        `${program.programName} Japan, MBBS Japan, ${program.university.name}`,
+        `${program.programName} Qatar, MBBS Qatar, ${program.university.name}`,
     },
   });
 }
@@ -168,7 +168,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       description:
         "Clear NEET with minimum qualifying percentile as required by NMC guidelines.",
       timeline: "May–June",
-      color: "bg-[#F9FAFB] text-[#BC002D]",
+      color: "bg-[#F9FAFB] text-[#8A1538]",
     },
     {
       step: 2,
@@ -177,7 +177,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       description:
         "Choose your university and submit application with required documents.",
       timeline: "June–July",
-      color: "bg-red-100 text-[#8F0023]",
+      color: "bg-[#F7E9EE] text-[#5B0F26]",
     },
     {
       step: 3,
@@ -202,7 +202,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       icon: Plane,
       title: "Visa Processing",
       description:
-        "Apply for Japan student visa with your admission documents.",
+        "Apply for Qatar student visa with your admission documents.",
       timeline: "Aug–Sep",
       color: "bg-pink-100 text-pink-600",
     },
@@ -211,9 +211,9 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       icon: GraduationCap,
       title: "Travel & Enrollment",
       description:
-        "Travel to Japan and complete university enrollment and orientation.",
+        "Travel to Qatar and complete university enrollment and orientation.",
       timeline: "September",
-      color: "bg-[#F9FAFB] text-[#BC002D]",
+      color: "bg-[#F9FAFB] text-[#8A1538]",
     },
   ];
 
@@ -248,37 +248,37 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav className="bg-[#FFFDF9] border-b">
+      <nav className="bg-[#FAF8F7] border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center flex-wrap gap-x-2 gap-y-1 text-sm text-[#4B5563]">
-          <Link href="/" className="hover:text-[#102A43]">
+          <Link href="/" className="hover:text-[#5B0F26]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/universities" className="hover:text-[#102A43]">
+          <Link href="/universities" className="hover:text-[#5B0F26]">
             Universities
           </Link>
           <ChevronRight className="w-3 h-3" />
           <Link
             href={`/universities/${u.slug}`}
-            className="hover:text-[#102A43]"
+            className="hover:text-[#5B0F26]"
           >
             {u.name}
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-[#17202A] font-medium">
+          <span className="text-[#1F2937] font-medium">
             {program.programName}
           </span>
         </div>
       </nav>
 
       {/* Hero */}
-      <div className="bg-red-700 text-white">
+      <div className="bg-[#5B0F26] text-white">
         <div className="max-w-7xl mx-auto px-4 py-14">
           <div className="grid lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-4 flex-wrap">
                 {program.level && (
-                  <span className="bg-white/20 text-[#17202A] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                  <span className="bg-white/20 text-[#1F2937] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                     {program.level.name}
                   </span>
                 )}
@@ -303,7 +303,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               </h1>
               <p className="text-[#4B5563] text-lg mb-2">{u.name}</p>
               {u.city && (
-                <p className="text-[#4B5563] text-sm">📍 {u.city}, Japan</p>
+                <p className="text-[#4B5563] text-sm">📍 {u.city}, Qatar</p>
               )}
               {program.overview && (
                 <p className="text-[#4B5563] mt-5 leading-relaxed max-w-2xl line-clamp-4">
@@ -353,8 +353,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             </div>
 
             {/* Quick Info Card */}
-            <div className="bg-white text-[#17202A] rounded-2xl p-6 shadow-2xl">
-              <h3 className="font-bold text-lg mb-4 text-[#17202A]">
+            <div className="bg-white text-[#1F2937] rounded-2xl p-6 shadow-2xl">
+              <h3 className="font-bold text-lg mb-4 text-[#1F2937]">
                 Program Details
               </h3>
               <div className="space-y-3">
@@ -375,7 +375,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                       <DollarSign className="w-4 h-4" />
                       Annual Fee
                     </span>
-                    <span className="font-semibold text-base text-[#8F0023]">
+                    <span className="font-semibold text-base text-[#5B0F26]">
                       {String(program.annualTuitionFee)}
                     </span>
                   </div>
@@ -386,7 +386,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                       <DollarSign className="w-4 h-4" />
                       Total Fee
                     </span>
-                    <span className="font-semibold text-base text-[#8F0023]">
+                    <span className="font-semibold text-base text-[#5B0F26]">
                       {String(program.totalFee)}
                     </span>
                   </div>
@@ -438,13 +438,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 <div className="pt-3 space-y-2">
                   <Link
                     href="/apply"
-                    className="block w-full bg-[#BC002D] hover:bg-[#8F0023] text-white text-center py-3 rounded-xl font-semibold transition-colors text-sm"
+                    className="block w-full bg-[#8A1538] hover:bg-[#5B0F26] text-white text-center py-3 rounded-xl font-semibold transition-colors text-sm"
                   >
                     Apply Now <ArrowRight className="w-4 h-4 inline ml-1" />
                   </Link>
                   <Link
                     href={`/universities/${u.slug}`}
-                    className="block w-full border border-[#E5E7EB] text-[#4B5563] hover:bg-[#FFFDF9] text-center py-2.5 rounded-xl text-base font-medium transition-colors"
+                    className="block w-full border border-[#E5E7EB] text-[#4B5563] hover:bg-[#FAF8F7] text-center py-2.5 rounded-xl text-base font-medium transition-colors"
                   >
                     View University →
                   </Link>
@@ -460,36 +460,36 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
         <div className="space-y-10">
           {/* Course Overview */}
           <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-[#17202A] mb-6 flex items-center gap-2">
-              <BookOpen className="w-7 h-7 text-[#BC002D]" /> Course Overview
+            <h2 className="text-2xl font-bold text-[#1F2937] mb-6 flex items-center gap-2">
+              <BookOpen className="w-7 h-7 text-[#8A1538]" /> Course Overview
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-[#17202A] mb-4">
+                <h3 className="text-lg font-semibold text-[#1F2937] mb-4">
                   Program Structure
                 </h3>
                 <div className="space-y-3">
                   {program.duration && (
                     <div className="flex items-center p-4 bg-white rounded-xl border border-[#E5E7EB]">
-                      <Calendar className="w-5 h-5 text-[#BC002D] mr-3 shrink-0" />
+                      <Calendar className="w-5 h-5 text-[#8A1538] mr-3 shrink-0" />
                       <div>
-                        <p className="font-semibold text-[#17202A] text-base">
+                        <p className="font-semibold text-[#1F2937] text-base">
                           Duration
                         </p>
-                        <p className="text-[#102A43] text-base">
+                        <p className="text-[#5B0F26] text-base">
                           {program.duration}
                         </p>
                       </div>
                     </div>
                   )}
                   {program.mediumOfInstruction && (
-                    <div className="flex items-center p-4 bg-red-50 rounded-xl border border-green-100">
-                      <Globe className="w-5 h-5 text-[#8F0023] mr-3 shrink-0" />
+                    <div className="flex items-center p-4 bg-[#F7E9EE] rounded-xl border border-green-100">
+                      <Globe className="w-5 h-5 text-[#5B0F26] mr-3 shrink-0" />
                       <div>
                         <p className="font-semibold text-green-900 text-base">
                           Medium of Instruction
                         </p>
-                        <p className="text-[#8F0023] text-base">
+                        <p className="text-[#5B0F26] text-base">
                           {program.mediumOfInstruction}
                         </p>
                       </div>
@@ -509,13 +509,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     </div>
                   )}
                   {program.annualTuitionFee && (
-                    <div className="flex items-center p-4 bg-red-400 rounded-xl border border-[#E5E7EB]">
-                      <DollarSign className="w-5 h-5 text-[#BC002D] mr-3 shrink-0" />
+                    <div className="flex items-center p-4 bg-[#8A1538] rounded-xl border border-[#E5E7EB]">
+                      <DollarSign className="w-5 h-5 text-[#8A1538] mr-3 shrink-0" />
                       <div>
-                        <p className="font-semibold text-[#BC002D] text-base">
+                        <p className="font-semibold text-[#8A1538] text-base">
                           Annual Tuition Fee
                         </p>
-                        <p className="text-[#BC002D] text-base">
+                        <p className="text-[#8A1538] text-base">
                           {String(program.annualTuitionFee)}
                         </p>
                       </div>
@@ -538,7 +538,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-[#17202A] mb-4">
+                <h3 className="text-lg font-semibold text-[#1F2937] mb-4">
                   Why Choose This Program?
                 </h3>
                 {program.whyChooseVietnam ? (
@@ -561,7 +561,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                       "Easy visa process for Indian students",
                     ].map((point, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-[#8F0023] mr-3 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-[#5B0F26] mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-[#4B5563] text-base">{point}</span>
                       </li>
                     ))}
@@ -574,19 +574,19 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           {/* Eligibility Criteria */}
           {program.eligibility && (
             <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-[#17202A] mb-6 flex items-center gap-2">
-                <CheckCircle className="w-7 h-7 text-[#8F0023]" /> Eligibility
+              <h2 className="text-2xl font-bold text-[#1F2937] mb-6 flex items-center gap-2">
+                <CheckCircle className="w-7 h-7 text-[#5B0F26]" /> Eligibility
                 Criteria
               </h2>
               <div
                 className="prose prose-sm max-w-none text-[#4B5563] leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: program.eligibility }}
               />
-              <div className="mt-6 p-5 bg-red-400 rounded-xl border border-[#E5E7EB]">
-                <h3 className="text-base font-semibold text-[#BC002D] mb-1">
+              <div className="mt-6 p-5 bg-[#8A1538] rounded-xl border border-[#E5E7EB]">
+                <h3 className="text-base font-semibold text-[#8A1538] mb-1">
                   Important Note for Indian Students
                 </h3>
-                <p className="text-[#BC002D] text-base">
+                <p className="text-[#8A1538] text-base">
                   NEET qualification is mandatory for Indian students as per NMC
                   guidelines. Students must also clear the Foreign Medical
                   Graduate Examination (FMGE/NExT) to practice in India after
@@ -599,12 +599,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           {/* Additional Information */}
           {additionalInfoText && (
             <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-[#17202A] mb-2">
+              <h2 className="text-2xl font-bold text-[#1F2937] mb-2">
                 Additional Information
               </h2>
               <p className="text-[#6B7280] text-base mb-5">
                 Learn more about the education system and opportunities in
-                Japan
+                Qatar
               </p>
               <ExpandableText text={additionalInfoText} wordLimit={80} />
             </section>
@@ -613,9 +613,9 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           {/* Year-wise Syllabus */}
           {syllabusYears.length > 0 && (
             <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-[#17202A] mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-[#1F2937] mb-6 flex items-center gap-2">
                 <span className="bg-[#F9FAFB] p-2 rounded-xl shadow-sm">
-                  <Layers className="w-5 h-5 text-[#17202A]" />
+                  <Layers className="w-5 h-5 text-[#1F2937]" />
                 </span>
                 Year-wise Syllabus
               </h2>
@@ -624,26 +624,26 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   <details
                     key={year}
                     open
-                    className="group border border-[#E5E7EB] border-l-4 border-l-[#102A43] rounded-2xl shadow-sm overflow-hidden"
+                    className="group border border-[#E5E7EB] border-l-4 border-l-[#5B0F26] rounded-2xl shadow-sm overflow-hidden"
                   >
-                    <summary className="flex justify-between items-center px-5 py-4 cursor-pointer hover:bg-[#FFFDF9] transition-colors">
+                    <summary className="flex justify-between items-center px-5 py-4 cursor-pointer hover:bg-[#FAF8F7] transition-colors">
                       <div className="flex items-center gap-3">
                         <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-[#F9FAFB] text-white font-bold text-sm shadow-sm shrink-0">
                           {idx + 1}
                         </span>
                         <div>
-                          <span className="font-bold text-[#17202A] text-base">
+                          <span className="font-bold text-[#1F2937] text-base">
                             {year}
                           </span>
-                          <span className="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#F9FAFB] text-[#102A43]">
+                          <span className="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#F9FAFB] text-[#5B0F26]">
                             {label}
                           </span>
                         </div>
                       </div>
-                      <ChevronRight className="w-4 h-4 text-red-500 group-open:rotate-90 transition-transform shrink-0" />
+                      <ChevronRight className="w-4 h-4 text-[#8A1538] group-open:rotate-90 transition-transform shrink-0" />
                     </summary>
                     <div
-                      className="px-5 pb-5 pt-3 text-[#4B5563] text-base leading-relaxed prose prose-base max-w-none bg-[#FFFDF9] border-t border-[#E5E7EB]"
+                      className="px-5 pb-5 pt-3 text-[#4B5563] text-base leading-relaxed prose prose-base max-w-none bg-[#FAF8F7] border-t border-[#E5E7EB]"
                       dangerouslySetInnerHTML={{ __html: content! }}
                     />
                   </details>
@@ -655,7 +655,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           {/* University Facilities */}
           {u.facilities.length > 0 && (
             <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-[#17202A] mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-[#1F2937] mb-6 flex items-center gap-2">
                 <Building2 className="w-7 h-7 text-orange-600" /> University
                 Facilities
               </h2>
@@ -663,10 +663,10 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 {u.facilities.map((uf) => {
                   const facilityType = facilityIconMap[uf.facilityId] || "lab";
                   const iconColors: Record<string, string> = {
-                    lab: "text-[#BC002D]",
+                    lab: "text-[#8A1538]",
                     library: "text-purple-600",
                     hostel: "text-orange-600",
-                    cafeteria: "text-[#8F0023]",
+                    cafeteria: "text-[#5B0F26]",
                     wifi: "text-teal-600",
                     transport: "text-[#4B5563]",
                   };
@@ -674,14 +674,14 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     lab: "bg-white",
                     library: "bg-purple-50",
                     hostel: "bg-orange-50",
-                    cafeteria: "bg-red-50",
+                    cafeteria: "bg-[#F7E9EE]",
                     wifi: "bg-teal-50",
-                    transport: "bg-[#FFFDF9]",
+                    transport: "bg-[#FAF8F7]",
                   };
                   return (
                     <div
                       key={uf.id}
-                      className={`flex items-start gap-4 p-5 rounded-xl border ${bgColors[facilityType] || "bg-[#FFFDF9]"} border-[#E5E7EB]`}
+                      className={`flex items-start gap-4 p-5 rounded-xl border ${bgColors[facilityType] || "bg-[#FAF8F7]"} border-[#E5E7EB]`}
                     >
                       <div
                         className={`p-3 rounded-xl bg-white shadow-sm shrink-0`}
@@ -691,7 +691,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#17202A]">
+                        <h3 className="font-semibold text-[#1F2937]">
                           {uf.facility?.name || "Facility"}
                         </h3>
                         {uf.description && (
@@ -710,13 +710,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           {/* Hospital Affiliations */}
           {u.hospitals.length > 0 && (
             <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-[#17202A] mb-3 flex items-center gap-2">
-                <Stethoscope className="w-7 h-7 text-[#BC002D]" /> Hospital
+              <h2 className="text-2xl font-bold text-[#1F2937] mb-3 flex items-center gap-2">
+                <Stethoscope className="w-7 h-7 text-[#8A1538]" /> Hospital
                 Affiliations & Clinical Training
               </h2>
               <p className="text-[#4B5563] mb-6 text-sm">
                 Students gain hands-on clinical experience at top-tier hospitals
-                across Japan, ensuring comprehensive practical training.
+                across Qatar, ensuring comprehensive practical training.
               </p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 {u.hospitals.map((uh) => (
@@ -727,28 +727,28 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex items-center gap-3">
                         <div className="bg-[#F9FAFB] p-2.5 rounded-xl shrink-0">
-                          <Stethoscope className="w-5 h-5 text-red-500" />
+                          <Stethoscope className="w-5 h-5 text-[#8A1538]" />
                         </div>
                         <div>
-                          <h3 className="font-bold text-[#17202A] text-sm">
+                          <h3 className="font-bold text-[#1F2937] text-sm">
                             {uh.hospital.name}
                           </h3>
                           {uh.hospital.accreditation && (
-                            <p className="text-[#BC002D] text-xs font-medium">
+                            <p className="text-[#8A1538] text-xs font-medium">
                               {uh.hospital.accreditation}
                             </p>
                           )}
                         </div>
                       </div>
                       {uh.hospital.beds && (
-                        <span className="bg-white text-[#102A43] px-3 py-1 rounded-full text-xs font-medium shrink-0">
+                        <span className="bg-white text-[#5B0F26] px-3 py-1 rounded-full text-xs font-medium shrink-0">
                           {uh.hospital.beds} Beds
                         </span>
                       )}
                     </div>
                     <div className="flex flex-wrap gap-2 text-xs text-[#6B7280]">
                       {(uh.hospital.city || uh.hospital.state) && (
-                        <span className="flex items-center gap-1 bg-[#FFFDF9] rounded-md px-2 py-1">
+                        <span className="flex items-center gap-1 bg-[#FAF8F7] rounded-md px-2 py-1">
                           <MapPin className="w-3 h-3" />
                           {[uh.hospital.city, uh.hospital.state]
                             .filter(Boolean)
@@ -756,7 +756,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         </span>
                       )}
                       {uh.hospital.establishedYear && (
-                        <span className="bg-[#FFFDF9] rounded-md px-2 py-1">
+                        <span className="bg-[#FAF8F7] rounded-md px-2 py-1">
                           Est. {uh.hospital.establishedYear}
                         </span>
                       )}
@@ -769,14 +769,14 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
           {/* Admission Process */}
           <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-[#17202A] mb-6 flex items-center gap-2">
-              <FileText className="w-7 h-7 text-[#BC002D]" /> Admission Process
+            <h2 className="text-2xl font-bold text-[#1F2937] mb-6 flex items-center gap-2">
+              <FileText className="w-7 h-7 text-[#8A1538]" /> Admission Process
             </h2>
             <div className="space-y-5">
               {admissionProcess.map((step, index) => (
                 <div key={step.step} className="flex items-start gap-5">
                   <div className="flex flex-col items-center shrink-0">
-                    <div className="w-11 h-11 bg-[#BC002D] text-white rounded-full flex items-center justify-center text-base font-bold shadow-sm">
+                    <div className="w-11 h-11 bg-[#8A1538] text-white rounded-full flex items-center justify-center text-base font-bold shadow-sm">
                       {step.step}
                     </div>
                     {index < admissionProcess.length - 1 && (
@@ -785,7 +785,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                   <div className="flex-1 pt-1">
                     <div className="flex items-center justify-between mb-1 flex-wrap gap-2">
-                      <h3 className="font-semibold text-[#17202A]">
+                      <h3 className="font-semibold text-[#1F2937]">
                         {step.title}
                       </h3>
                       <span
@@ -803,12 +803,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Why Japan */}
+          {/* Why Qatar */}
           {program.whyChooseVietnam && !program.additionalInformation && (
             <section className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-[#17202A] mb-6 flex items-center gap-2">
-                <GraduationCap className="w-7 h-7 text-[#BC002D]" /> Why Study in
-                Japan?
+              <h2 className="text-2xl font-bold text-[#1F2937] mb-6 flex items-center gap-2">
+                <GraduationCap className="w-7 h-7 text-[#8A1538]" /> Why Study in
+                Qatar?
               </h2>
               <div className="prose prose-sm max-w-none text-[#4B5563] leading-relaxed">
                 <div
@@ -822,7 +822,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               {/* CTA Section */}
-              <div className="bg-[#102A43] rounded-2xl p-8 text-[#17202A] text-center">
+              <div className="bg-[#5B0F26] rounded-2xl p-8 text-[#1F2937] text-center">
                 <h2 className="text-2xl font-bold mb-3">
                   Ready to Start Your Medical Journey?
                 </h2>
@@ -834,7 +834,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 <div className="flex flex-wrap justify-center gap-3">
                   <Link
                     href="/apply"
-                    className="bg-white text-[#BC002D] hover:bg-white px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
+                    className="bg-white text-[#8A1538] hover:bg-white px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
                   >
                     Apply Now
                   </Link>
@@ -844,7 +844,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   />
                   <Link
                     href="/contact-us"
-                    className="border-2 border-white text-white hover:bg-[#102A43] hover:border-[#102A43] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
+                    className="border-2 border-white text-white hover:bg-[#5B0F26] hover:border-[#5B0F26] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
                   >
                     Talk to Counsellor
                   </Link>
@@ -866,12 +866,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-bold text-[#17202A] text-sm">
+                    <h3 className="font-bold text-[#1F2937] text-sm">
                       {u.name}
                     </h3>
                     {u.city && (
                       <p className="text-xs text-[#6B7280] mt-0.5">
-                        📍 {u.city}, Japan
+                        📍 {u.city}, Qatar
                       </p>
                     )}
                   </div>
@@ -881,7 +881,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               {/* Other Programs */}
               {u.programs.length > 1 && (
                 <div className="bg-white rounded-2xl border border-[#E5E7EB] p-5 shadow-sm">
-                  <h3 className="font-bold text-[#17202A] mb-3 text-sm">
+                  <h3 className="font-bold text-[#1F2937] mb-3 text-sm">
                     Other Programs
                   </h3>
                   <div className="space-y-2">
@@ -891,13 +891,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         <Link
                           key={p.id}
                           href={`/universities/${u.slug}/courses/${p.programSlug}`}
-                          className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FFFDF9] border border-[#E5E7EB] text-sm transition-colors"
+                          className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FAF8F7] border border-[#E5E7EB] text-sm transition-colors"
                         >
-                          <span className="font-medium text-[#17202A] line-clamp-1">
+                          <span className="font-medium text-[#1F2937] line-clamp-1">
                             {p.programName}
                           </span>
                           {p.annualTuitionFee && (
-                            <span className="text-[#8F0023] font-semibold shrink-0 ml-2 text-xs">
+                            <span className="text-[#5B0F26] font-semibold shrink-0 ml-2 text-xs">
                               {String(p.annualTuitionFee)}
                             </span>
                           )}
@@ -909,7 +909,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
               {/* Counsellor Card */}
               <div className="bg-white border border-[#E5E7EB] rounded-2xl p-5 text-center shadow-sm">
-                <h3 className="font-bold text-[#17202A] mb-1.5 text-sm">
+                <h3 className="font-bold text-[#1F2937] mb-1.5 text-sm">
                   Need Guidance?
                 </h3>
                 <p className="text-xs text-[#4B5563] mb-4">
@@ -917,7 +917,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 </p>
                 <Link
                   href="/contact-us"
-                  className="block bg-[#BC002D] hover:bg-[#8F0023] text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                  className="block bg-[#8A1538] hover:bg-[#5B0F26] text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
                 >
                   Talk to Counsellor
                 </Link>

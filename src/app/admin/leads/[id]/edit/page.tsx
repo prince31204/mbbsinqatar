@@ -145,12 +145,12 @@ export default function LeadEditPage() {
         <Skeleton className="h-80 w-full" />
       </div>
     );
-  if (!lead) return <div className="p-6 text-[#BC002D]">Lead not found</div>;
+  if (!lead) return <div className="p-6 text-[#8A1538]">Lead not found</div>;
 
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-[#17202A]">
+        <h1 className="text-2xl font-bold text-[#1F2937]">
           Lead Details — {lead.name}
         </h1>
         <Badge
@@ -204,7 +204,7 @@ export default function LeadEditPage() {
                   </p>
                   <Badge
                     variant="outline"
-                    className="text-xs font-medium bg-[#102A43] text-[#BC002D] border-[#E5E7EB] whitespace-normal text-left h-auto py-1 px-3"
+                    className="text-xs font-medium bg-[#5B0F26] text-[#8A1538] border-[#E5E7EB] whitespace-normal text-left h-auto py-1 px-3"
                   >
                     {formatSource(lead.source)}
                   </Badge>
@@ -346,7 +346,7 @@ export default function LeadEditPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-[#102A43] hover:bg-[#102A43]"
+                className="flex-1 bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {loading ? "Saving…" : "Update Lead"}
               </Button>
@@ -375,10 +375,10 @@ export default function LeadEditPage() {
                 {lead.applications.map((app: any) => (
                   <div
                     key={app.id}
-                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-[#FFFDF9] p-3 rounded-lg border border-[#E5E7EB]"
+                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-[#FAF8F7] p-3 rounded-lg border border-[#E5E7EB]"
                   >
                     <div>
-                      <div className="font-semibold text-[#17202A] text-sm">
+                      <div className="font-semibold text-[#1F2937] text-sm">
                         {app.program?.programName || "Unknown Program"}
                       </div>
                       <div className="text-xs text-[#6B7280]">
@@ -421,10 +421,10 @@ export default function LeadEditPage() {
                 {lead.inquiries.map((inq: any) => (
                   <div
                     key={inq.id}
-                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-[#FFFDF9] p-3 rounded-lg border border-[#E5E7EB]"
+                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-[#FAF8F7] p-3 rounded-lg border border-[#E5E7EB]"
                   >
                     <div>
-                      <div className="font-semibold text-[#17202A] text-sm">
+                      <div className="font-semibold text-[#1F2937] text-sm">
                         {inq.universityName || "General Inquiry"}
                       </div>
                       {inq.message && (

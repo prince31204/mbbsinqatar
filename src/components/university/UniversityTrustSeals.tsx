@@ -21,7 +21,7 @@ export default function UniversityTrustSeals({ university }: Props) {
       desc: "Verified by diplomatic missions and recognized for international student admissions.",
       badge: "VERIFIED",
       grad: " ",
-      badgeCls: "bg-red-100 text-green-800",
+      badgeCls: "bg-[#F7E9EE] text-green-800",
       active: university.embassyVerified,
     },
     {
@@ -32,7 +32,7 @@ export default function UniversityTrustSeals({ university }: Props) {
       desc: "Listed in the WHO World Directory of Medical Schools.",
       badge: "LISTED",
       grad: " ",
-      badgeCls: "bg-[#F9FAFB] text-[#102A43]",
+      badgeCls: "bg-[#F9FAFB] text-[#5B0F26]",
       active: university.whoListed,
     },
     {
@@ -48,8 +48,8 @@ export default function UniversityTrustSeals({ university }: Props) {
     {
       icon: CheckCircle,
       title: "Ministry Licensed",
-      subtitle: "Government of Japan",
-      desc: "Licensed by the Ministry of Education & Science, Japan.",
+      subtitle: "Government of Qatar",
+      desc: "Licensed by the Ministry of Education & Science, Qatar.",
       badge: "LICENSED",
       grad: " ",
       badgeCls: "bg-orange-100 text-orange-800",
@@ -89,10 +89,10 @@ export default function UniversityTrustSeals({ university }: Props) {
   if (activeSeals.length === 0 && activeAdditional.length === 0) return null;
 
   return (
-    <section className="py-16 bg-[#FFFDF9]">
+    <section className="py-16 bg-[#FAF8F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
             Trust &amp; Recognition
           </h2>
           <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
@@ -113,20 +113,20 @@ export default function UniversityTrustSeals({ university }: Props) {
                   <div
                     className={`w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-br ${seal.grad} flex items-center justify-center shadow-lg`}
                   >
-                    <seal.icon className="h-10 w-10 text-[#17202A]" />
+                    <seal.icon className="h-10 w-10 text-[#1F2937]" />
                   </div>
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${seal.badgeCls}`}
                   >
                     {seal.badge}
                   </span>
-                  <h3 className="text-lg font-bold text-[#17202A] mb-1">
+                  <h3 className="text-lg font-bold text-[#1F2937] mb-1">
                     {seal.titleHref ? (
                       <a
                         href={seal.titleHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#102A43] hover:underline transition-colors"
+                        className="hover:text-[#5B0F26] hover:underline transition-colors"
                       >
                         {seal.title}
                       </a>
@@ -146,10 +146,10 @@ export default function UniversityTrustSeals({ university }: Props) {
         {additional.some((r) => r.active) && (
           <div className="mt-10">
             <div className="text-center mb-8">
-              <span className="inline-block bg-[#F9FAFB] text-[#102A43] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+              <span className="inline-block bg-[#F9FAFB] text-[#5B0F26] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
                 Global Standards
               </span>
-              <h3 className="text-2xl font-bold text-[#17202A]">
+              <h3 className="text-2xl font-bold text-[#1F2937]">
                 Additional Recognitions
               </h3>
               <p className="text-[#6B7280] text-sm mt-1">
@@ -168,16 +168,16 @@ export default function UniversityTrustSeals({ university }: Props) {
                       <div
                         className={`bg-gradient-to-br ${r.grad} w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shrink-0`}
                       >
-                        <span className="text-[#17202A] font-black text-xs tracking-tight text-center leading-tight px-1">
+                        <span className="text-[#1F2937] font-black text-xs tracking-tight text-center leading-tight px-1">
                           {r.abbr}
                         </span>
                       </div>
-                      <span className="text-xs font-bold px-3 py-1 rounded-full bg-red-100 text-[#8F0023]">
+                      <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#F7E9EE] text-[#5B0F26]">
                         ✓ Recognized
                       </span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#17202A] text-base">
+                      <h4 className="font-bold text-[#1F2937] text-base">
                         {r.label}
                       </h4>
                       <p className="text-[#6B7280] text-sm mt-1 leading-relaxed">

@@ -117,9 +117,9 @@ export default function ScholarshipFaqsPage() {
     <div className="space-y-6 max-w-3xl">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <HelpCircle size={22} className="text-[#BC002D]" />
+          <HelpCircle size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Scholarship FAQs
             </h1>
             <p className="text-sm text-[#6B7280]">{faqs.length} questions</p>
@@ -133,7 +133,7 @@ export default function ScholarshipFaqsPage() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             onClick={() => setShowAdd(true)}
           >
             <Plus size={14} className="mr-1" /> Add FAQ
@@ -143,7 +143,7 @@ export default function ScholarshipFaqsPage() {
 
       {showAdd && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-4 space-y-3">
-          <h3 className="font-medium text-[#17202A]">New FAQ</h3>
+          <h3 className="font-medium text-[#1F2937]">New FAQ</h3>
           <div className="space-y-2">
             <Input
               placeholder="Question"
@@ -155,7 +155,7 @@ export default function ScholarshipFaqsPage() {
               value={newA}
               onChange={(e) => setNewA(e.target.value)}
               rows={4}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
             />
           </div>
           <div className="flex gap-2">
@@ -163,7 +163,7 @@ export default function ScholarshipFaqsPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -206,13 +206,13 @@ export default function ScholarshipFaqsPage() {
                     value={editA}
                     onChange={(e) => setEditA(e.target.value)}
                     rows={4}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
                   />
                   <div className="flex gap-2">
                     <Button
                       size="sm"
                       onClick={handleSaveEdit}
-                      className="bg-[#8F0023] hover:bg-red-700"
+                      className="bg-[#5B0F26] hover:bg-[#5B0F26]"
                     >
                       <Check size={14} className="mr-1" /> Save
                     </Button>
@@ -228,7 +228,7 @@ export default function ScholarshipFaqsPage() {
               ) : (
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <p className="font-medium text-[#17202A] mb-1">
+                    <p className="font-medium text-[#1F2937] mb-1">
                       {f.question}
                     </p>
                     <p className="text-sm text-[#4B5563] whitespace-pre-wrap">
@@ -255,7 +255,7 @@ export default function ScholarshipFaqsPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                      className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                       onClick={() => handleDelete(f.id)}
                     >
                       <Trash2 size={14} />

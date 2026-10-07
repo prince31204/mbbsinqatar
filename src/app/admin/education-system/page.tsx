@@ -176,14 +176,14 @@ function SubmoduleCRUD<T extends { id: number }>({
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           {icon}
-          <h2 className="text-lg font-semibold text-[#17202A]">{title}</h2>
+          <h2 className="text-lg font-semibold text-[#1F2937]">{title}</h2>
           <span className="ml-2 text-xs bg-[#F9FAFB] text-[#6B7280] px-2 py-0.5 rounded-full">
             {items.length}
           </span>
         </div>
         <Button
           size="sm"
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           onClick={() => {
             setShowForm(true);
             setEditId(null);
@@ -197,7 +197,7 @@ function SubmoduleCRUD<T extends { id: number }>({
       {/* Add / Edit Form */}
       {showForm && (
         <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-4">
-          <h3 className="font-semibold text-[#17202A]">
+          <h3 className="font-semibold text-[#1F2937]">
             {editId ? `Edit ${title}` : `Add ${title}`}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -207,7 +207,7 @@ function SubmoduleCRUD<T extends { id: number }>({
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving && <Loader2 size={14} className="mr-2 animate-spin" />}
               {editId ? "Save Changes" : `Add ${title}`}
@@ -238,7 +238,7 @@ function SubmoduleCRUD<T extends { id: number }>({
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+              <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                 {columns.map((c) => (
                   <th key={c} className="px-4 py-3 font-medium">
                     {c}
@@ -251,7 +251,7 @@ function SubmoduleCRUD<T extends { id: number }>({
               {items.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                  className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                 >
                   {renderRow(item).map((cell, i) => (
                     <td key={i} className="px-4 py-3 text-[#4B5563]">
@@ -271,7 +271,7 @@ function SubmoduleCRUD<T extends { id: number }>({
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                        className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />
@@ -353,7 +353,7 @@ function GeneralInfoTab() {
     <div className="space-y-6">
       {/* Page Header */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h3 className="font-semibold text-[#17202A] border-b pb-3">
+        <h3 className="font-semibold text-[#1F2937] border-b pb-3">
           Page Header
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -364,7 +364,7 @@ function GeneralInfoTab() {
 
       {/* Introduction */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h3 className="font-semibold text-[#17202A] border-b pb-3">
+        <h3 className="font-semibold text-[#1F2937] border-b pb-3">
           Introduction Section
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -378,7 +378,7 @@ function GeneralInfoTab() {
 
       {/* Statistics */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h3 className="font-semibold text-[#17202A] border-b pb-3">
+        <h3 className="font-semibold text-[#1F2937] border-b pb-3">
           Key Statistics
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -398,7 +398,7 @@ function GeneralInfoTab() {
 
       {/* School Education */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h3 className="font-semibold text-[#17202A] border-b pb-3">
+        <h3 className="font-semibold text-[#1F2937] border-b pb-3">
           School Education Structure
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -417,7 +417,7 @@ function GeneralInfoTab() {
 
       {/* Languages */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h3 className="font-semibold text-[#17202A] border-b pb-3">
+        <h3 className="font-semibold text-[#1F2937] border-b pb-3">
           Languages of Instruction
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -444,7 +444,7 @@ function GeneralInfoTab() {
 
       {/* Higher Education */}
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-        <h3 className="font-semibold text-[#17202A] border-b pb-3">
+        <h3 className="font-semibold text-[#1F2937] border-b pb-3">
           Higher Education
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -465,7 +465,7 @@ function GeneralInfoTab() {
         <Button
           onClick={handleSave}
           disabled={saving}
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           {saving ? (
             <>
@@ -492,20 +492,20 @@ export default function EducationSystemAdminPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <GraduationCap size={24} className="text-[#BC002D]" />
+          <GraduationCap size={24} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Education System
             </h1>
             <p className="text-sm text-[#6B7280]">
-              Manage Japan education system content and sub-sections
+              Manage Qatar education system content and sub-sections
             </p>
           </div>
         </div>
         <Link
           href="/education-system"
           target="_blank"
-          className="inline-flex items-center gap-2 border border-[#E5E7EB] text-[#4B5563] px-3 py-1.5 rounded-lg text-xs hover:bg-[#FFFDF9] transition-colors"
+          className="inline-flex items-center gap-2 border border-[#E5E7EB] text-[#4B5563] px-3 py-1.5 rounded-lg text-xs hover:bg-[#FAF8F7] transition-colors"
         >
           <Globe size={13} /> View Public Page
         </Link>
@@ -560,7 +560,7 @@ export default function EducationSystemAdminPage() {
         <TabsContent value="examinations" className="mt-6">
           <SubmoduleCRUD<Examination>
             title="Examinations"
-            icon={<Layers size={18} className="text-[#BC002D]" />}
+            icon={<Layers size={18} className="text-[#8A1538]" />}
             endpoint="/api/admin/education-system/examinations"
             columns={["Exam Name", "Grade Level", "Type", "Subjects"]}
             blankFn={blankExam}
@@ -620,7 +620,7 @@ export default function EducationSystemAdminPage() {
         <TabsContent value="school-levels" className="mt-6">
           <SubmoduleCRUD<SchoolLevel>
             title="School Levels"
-            icon={<GraduationCap size={18} className="text-[#BC002D]" />}
+            icon={<GraduationCap size={18} className="text-[#8A1538]" />}
             endpoint="/api/admin/education-system/school-levels"
             columns={[
               "Level",
@@ -703,7 +703,7 @@ export default function EducationSystemAdminPage() {
               item.ageRange || "—",
               item.durationYears ? `${item.durationYears} yrs` : "—",
               item.isCompulsory ? (
-                <span className="px-2 py-0.5 bg-red-100 text-[#8F0023] text-xs rounded-full">
+                <span className="px-2 py-0.5 bg-[#F7E9EE] text-[#5B0F26] text-xs rounded-full">
                   Yes
                 </span>
               ) : (
@@ -720,7 +720,7 @@ export default function EducationSystemAdminPage() {
         <TabsContent value="degrees" className="mt-6">
           <SubmoduleCRUD<Degree>
             title="Degrees"
-            icon={<Award size={18} className="text-[#BC002D]" />}
+            icon={<Award size={18} className="text-[#8A1538]" />}
             endpoint="/api/admin/education-system/degrees"
             columns={["Degree", "Duration", "ECTS Credits", "Recognition"]}
             blankFn={blankDegree}
@@ -782,7 +782,7 @@ export default function EducationSystemAdminPage() {
         <TabsContent value="popular-fields" className="mt-6">
           <SubmoduleCRUD<PopularField>
             title="Popular Fields"
-            icon={<Lightbulb size={18} className="text-[#BC002D]" />}
+            icon={<Lightbulb size={18} className="text-[#8A1538]" />}
             endpoint="/api/admin/education-system/popular-fields"
             columns={["Field", "Institutions", "Duration", "Description"]}
             blankFn={blankField}

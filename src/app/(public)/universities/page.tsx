@@ -9,12 +9,12 @@ import {
 import UniversitySearch from "@/components/universities/UniversitySearch";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: `MBBS Universities in Japan — All NMC & WHO Recognized Medical Colleges ${APP_YEAR}`,
-  description: `Browse all NMC & WHO recognized MBBS universities in Japan. Compare fees, intake, seats, and apply online for ${ADMISSION_YEAR} admission.`,
+  title: `MBBS Universities in Qatar — All NMC & WHO Recognized Medical Colleges ${APP_YEAR}`,
+  description: `Browse all NMC & WHO recognized MBBS universities in Qatar. Compare fees, intake, seats, and apply online for ${ADMISSION_YEAR} admission.`,
   path: "/universities",
   pageKey: "universities",
   entitySeo: {
-    metaKeyword: `MBBS universities Japan, NMC recognized colleges Japan, medical university list Japan, study MBBS ${APP_YEAR}`,
+    metaKeyword: `MBBS universities Qatar, NMC recognized colleges Qatar, medical university list Qatar, study MBBS ${APP_YEAR}`,
   },
 });
 
@@ -64,19 +64,19 @@ export default async function UniversitiesPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FAF8F7]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Page Header */}
-      <div className="bg-white text-[#17202A] py-16">
+      <div className="bg-white text-[#1F2937] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-            MBBS Universities in Japan
+            MBBS Universities in Qatar
           </h1>
           <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
-            Explore all NMC and WHO recognized medical universities in Japan.
+            Explore all NMC and WHO recognized medical universities in Qatar.
             Compare programs, fees, and apply online.
           </p>
           <p className="mt-4 text-[#4B5563] text-sm">

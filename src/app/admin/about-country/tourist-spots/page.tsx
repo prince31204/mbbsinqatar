@@ -95,14 +95,14 @@ export default function TouristSpotsAdminPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">
+          <h1 className="text-2xl font-bold text-[#1F2937]">
             🗺️ Tourist Attractions
           </h1>
           <p className="text-sm text-[#6B7280]">{items.length} places</p>
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#102A43] hover:bg-[#102A43]"
+          className="ml-auto bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           <Plus size={14} className="mr-1" /> Add Place
         </Button>
@@ -283,11 +283,11 @@ export default function TouristSpotsAdminPage() {
                       {item.iconClass && (
                         <span className="text-lg">{item.iconClass}</span>
                       )}
-                      <p className="font-semibold text-[#17202A]">
+                      <p className="font-semibold text-[#1F2937]">
                         {item.attractionName}
                       </p>
                       {!item.isActive && (
-                        <span className="text-xs bg-[#102A43] text-[#BC002D] px-2 py-0.5 rounded-full">
+                        <span className="text-xs bg-[#5B0F26] text-[#8A1538] px-2 py-0.5 rounded-full">
                           Hidden
                         </span>
                       )}
@@ -320,7 +320,7 @@ export default function TouristSpotsAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-[#BC002D]"
+                      className="text-[#8A1538]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

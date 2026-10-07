@@ -43,7 +43,7 @@ export default async function FmgeSection() {
     }));
 
   return (
-    <section className="bg-[linear-gradient(180deg,#F9FAFB_0%,#ffffff_42%,#FFFDF9_100%)] pt-16 pb-8">
+    <section className="bg-[linear-gradient(180deg,#F9FAFB_0%,#ffffff_42%,#FAF8F7_100%)] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FmgeRatesTable data={data} />
 
@@ -58,7 +58,7 @@ export default async function FmgeSection() {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/65 via-white/10 opacity-100" />
                 <div className="pointer-events-none absolute inset-0 bg-[#F9FAFB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative">
-                  <h3 className="mb-4 text-lg font-semibold text-[#17202A] transition-colors duration-300 group-hover:text-[#102A43]">
+                  <h3 className="mb-4 text-lg font-semibold text-[#1F2937] transition-colors duration-300 group-hover:text-[#5B0F26]">
                     {year} Overview
                   </h3>
                   <div className="space-y-3">
@@ -66,7 +66,7 @@ export default async function FmgeSection() {
                       <span className="text-sm text-[#4B5563] transition-colors duration-300 group-hover:text-[#4B5563]">
                         Applications:
                       </span>
-                      <span className="font-semibold text-[#17202A] transition-transform duration-300 group-hover:translate-x-0.5">
+                      <span className="font-semibold text-[#1F2937] transition-transform duration-300 group-hover:translate-x-0.5">
                         {total.toLocaleString()}
                       </span>
                     </div>
@@ -74,7 +74,7 @@ export default async function FmgeSection() {
                       <span className="text-sm text-[#4B5563] transition-colors duration-300 group-hover:text-[#4B5563]">
                         Accepted:
                       </span>
-                      <span className="font-semibold text-[#17202A] transition-transform duration-300 group-hover:translate-x-0.5">
+                      <span className="font-semibold text-[#1F2937] transition-transform duration-300 group-hover:translate-x-0.5">
                         {accepted.toLocaleString()}
                       </span>
                     </div>
@@ -82,7 +82,7 @@ export default async function FmgeSection() {
                       <span className="text-sm text-[#4B5563] transition-colors duration-300 group-hover:text-[#4B5563]">
                         Rate:
                       </span>
-                      <span className="font-semibold text-[#BC002D] transition-colors duration-300 group-hover:text-[#102A43]">
+                      <span className="font-semibold text-[#8A1538] transition-colors duration-300 group-hover:text-[#5B0F26]">
                         {rate.toFixed(2)}%
                       </span>
                     </div>
@@ -96,7 +96,7 @@ export default async function FmgeSection() {
         <div className="text-center mt-6">
           <Link
             href="/fmge-rates"
-            className="inline-block bg-white text-[#BC002D] border-2 border-[#BC002D] px-8 py-3 rounded-lg font-semibold hover:bg-[#BC002D] hover:text-white transition-colors"
+            className="inline-block bg-white text-[#8A1538] border-2 border-[#8A1538] px-8 py-3 rounded-lg font-semibold hover:bg-[#8A1538] hover:text-white transition-colors"
           >
             View Full FMGE Data →
           </Link>

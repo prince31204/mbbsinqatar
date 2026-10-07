@@ -282,7 +282,7 @@ export const getAboutCountryContent = cache(
         return null;
       });
 
-    const countryName = page?.name || "Japan";
+    const countryName = page?.name || "Qatar";
     const heroTitle = page?.tagline || `Life and study in ${countryName}`;
     const heroDescription =
       page?.studentLife ||
@@ -548,7 +548,7 @@ export const getAboutCountryContent = cache(
 
     const location =
       page?.location || "Indian Ocean, Off the South East coast of Africa";
-    const timezone = page?.timezone || "UTC+4 (Japan Time)";
+    const timezone = page?.timezone || "UTC+4 (Qatar Time)";
     const independenceDay = page?.independenceDay
       ? new Date(page.independenceDay).toLocaleDateString("en-GB", {
           day: "numeric",
@@ -628,10 +628,10 @@ export const getEducationSystemContent = cache(
         return null;
       });
 
-    const title = system?.title || "Education System in Japan";
+    const title = system?.title || "Education System in Qatar";
     const description =
       system?.description ||
-      "Understand the academic structure, teaching approach, and progression pathways that shape medical education in Japan.";
+      "Understand the academic structure, teaching approach, and progression pathways that shape medical education in Qatar.";
 
     const primaryDegree = system?.degrees[0];
     const summaryStats = [
@@ -911,10 +911,10 @@ export const getEducationSystemContent = cache(
       title,
       description,
       introductionTitle:
-        system?.introductionTitle || "Academic Framework in Japan",
+        system?.introductionTitle || "Academic Framework in Qatar",
       introductionDescription:
         system?.introductionDescription ||
-        "Japan's education system is modeled on the British system, offering a high standard of academic excellence and globally recognized qualifications through Cambridge-aligned assessments.",
+        "Qatar's education system is modeled on the British system, offering a high standard of academic excellence and globally recognized qualifications through Cambridge-aligned assessments.",
       supportingNarrative: finalNarrative,
       summaryStats,
       focusAreas,

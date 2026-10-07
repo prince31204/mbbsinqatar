@@ -46,10 +46,10 @@ export default function LoginPage() {
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-[#BC002D] rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#8A1538] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Welcome Back</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Welcome Back</h1>
           <p className="text-[#6B7280] text-sm mt-1">
             Sign in to your student account
           </p>
@@ -57,14 +57,14 @@ export default function LoginPage() {
 
         {/* Verified success banner */}
         {verified && (
-          <div className="bg-red-50 border border-red-200 text-[#8F0023] px-4 py-3 rounded-lg mb-6 text-sm font-medium">
+          <div className="bg-[#F7E9EE] border border-[#F7E9EE] text-[#5B0F26] px-4 py-3 rounded-lg mb-6 text-sm font-medium">
             ✅ Email verified successfully! Please sign in below.
           </div>
         )}
 
         {/* Error */}
         {error && (
-          <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-lg mb-6 text-sm">
+          <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
@@ -81,7 +81,7 @@ export default function LoginPage() {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="your@email.com"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
             />
           </div>
 
@@ -96,7 +96,7 @@ export default function LoginPage() {
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 placeholder="••••••••"
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
               />
               <button
                 type="button"
@@ -116,13 +116,13 @@ export default function LoginPage() {
             <label className="flex items-center space-x-2 cursor-pointer">
               <input
                 type="checkbox"
-                className="rounded border-gray-300 text-[#BC002D]"
+                className="rounded border-gray-300 text-[#8A1538]"
               />
               <span className="text-[#4B5563]">Remember me</span>
             </label>
             <Link
               href="/forgot-password"
-              className="text-[#BC002D] hover:text-[#102A43] font-medium"
+              className="text-[#8A1538] hover:text-[#5B0F26] font-medium"
             >
               Forgot password?
             </Link>
@@ -131,7 +131,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#BC002D] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8F0023] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-[#8A1538] text-white py-3.5 rounded-xl font-semibold hover:bg-[#5B0F26] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
           >
             {loading ? (
               <>
@@ -148,7 +148,7 @@ export default function LoginPage() {
           Don&apos;t have an account?{" "}
           <Link
             href="/register"
-            className="text-[#BC002D] hover:text-[#102A43] font-semibold"
+            className="text-[#8A1538] hover:text-[#5B0F26] font-semibold"
           >
             Register here
           </Link>

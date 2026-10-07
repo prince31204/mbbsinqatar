@@ -56,16 +56,16 @@ export default function AdminSettingsPage() {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
         <Settings2 size={24} className="text-[#6B7280]" />
-        <h1 className="text-2xl font-bold text-[#17202A]">Website Settings</h1>
+        <h1 className="text-2xl font-bold text-[#1F2937]">Website Settings</h1>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">General</h2>
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">General</h2>
           {[
             {
               key: "siteName",
               label: "Site Name",
-              placeholder: "MBBS in Japan",
+              placeholder: "MBBS in Qatar",
             },
             {
               key: "tagline",
@@ -90,7 +90,7 @@ export default function AdminSettingsPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Social Media
           </h2>
           {[
@@ -112,7 +112,7 @@ export default function AdminSettingsPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             SEO & Scripts
           </h2>
           <div className="space-y-1.5">
@@ -159,7 +159,7 @@ export default function AdminSettingsPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Logo & Favicon
           </h2>
           <ImageUpload
@@ -173,7 +173,7 @@ export default function AdminSettingsPage() {
         <div className="flex justify-end pb-8">
           <Button
             type="submit"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             disabled={saving}
           >
             {saving ? (

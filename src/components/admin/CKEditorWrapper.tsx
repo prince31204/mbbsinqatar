@@ -83,7 +83,7 @@ export default function CKEditorWrapper({
       <style jsx global>{`
         /* Document/Word Layout Styles */
         .ckeditor-container .ck-editor {
-          background-color: #FFFDF9; /* Subtle soft grey background */
+          background-color: #FAF8F7; /* Subtle soft grey background */
           border-radius: 8px;
           display: flex;
           flex-direction: column;
@@ -171,7 +171,7 @@ export default function CKEditorWrapper({
         .ckeditor-fullscreen .ck-editor__main {
           flex-grow: 1;
           overflow-y: auto;
-          background-color: #FFFDF9;
+          background-color: #FAF8F7;
         }
 
         .ckeditor-fullscreen .ck-editor__editable_inline {
@@ -227,28 +227,28 @@ export default function CKEditorWrapper({
           font-size: 2.5em !important;
           font-weight: 800 !important;
           margin-bottom: 0.9em;
-          color: #17202A;
+          color: #1F2937;
         }
         .ck-content h2 {
           font-size: 1.8em !important;
           font-weight: 700 !important;
           margin-top: 1.8em;
           margin-bottom: 0.8em;
-          color: #17202A;
+          color: #1F2937;
         }
         .ck-content h3 {
           font-size: 1.5em !important;
           font-weight: 700 !important;
           margin-top: 1.6em;
           margin-bottom: 0.6em;
-          color: #17202A;
+          color: #1F2937;
         }
         .ck-content h4 {
           font-size: 1.25em !important;
           font-weight: 600 !important;
           margin-top: 1.5em;
           margin-bottom: 0.5em;
-          color: #17202A;
+          color: #1F2937;
         }
         .ck-content h5 {
           font-size: 1.1em !important;
@@ -273,7 +273,7 @@ export default function CKEditorWrapper({
         /* Link styles for the editor content area */
         .ck-content a,
         .ck-editor__editable_inline a {
-          color: #102A43 !important;
+          color: #5B0F26 !important;
           text-decoration: underline !important;
           text-underline-offset: 2px;
           font-weight: 500;
@@ -281,7 +281,7 @@ export default function CKEditorWrapper({
 
         .ck-content a:hover,
         .ck-editor__editable_inline a:hover {
-          color: #102A43 !important;
+          color: #5B0F26 !important;
         }
       `}</style>
 

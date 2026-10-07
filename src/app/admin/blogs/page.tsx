@@ -23,7 +23,7 @@ const columns: Column<Blog>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-[#17202A] text-sm line-clamp-1">
+        <p className="font-medium text-[#1F2937] text-sm line-clamp-1">
           {row.title}
         </p>
         <p className="text-xs text-[#6B7280]">
@@ -44,7 +44,7 @@ const columns: Column<Blog>[] = [
     label: "Featured",
     render: (row) =>
       row.isFeatured ? (
-        <Badge className="bg-red-400 text-[#BC002D]">Featured</Badge>
+        <Badge className="bg-[#8A1538] text-[#8A1538]">Featured</Badge>
       ) : null,
   },
   {

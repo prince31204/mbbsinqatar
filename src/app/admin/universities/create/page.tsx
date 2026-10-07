@@ -272,7 +272,7 @@ export default function CreateUniversityPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Add University</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Add University</h1>
           <p className="text-sm text-[#6B7280]">
             Create a new university profile
           </p>
@@ -282,13 +282,13 @@ export default function CreateUniversityPage() {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Section 1: Basic Info */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Basic Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="md:col-span-2 space-y-1.5">
               <Label>
-                University Name <span className="text-[#BC002D]">*</span>
+                University Name <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.name}
@@ -296,22 +296,22 @@ export default function CreateUniversityPage() {
                   set("name", e.target.value);
                   set("slug", slugify(e.target.value));
                 }}
-                placeholder="e.g. Japan State Medical Academy"
+                placeholder="e.g. Qatar State Medical Academy"
               />
             </div>
             <div className="space-y-1.5">
               <Label>
-                Slug <span className="text-[#BC002D]">*</span>
+                Slug <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.slug}
                 onChange={(e) => set("slug", e.target.value)}
-                placeholder="Japan-state-medical-academy"
+                placeholder="Qatar-state-medical-academy"
               />
             </div>
             <div className="space-y-1.5">
               <Label>
-                City <span className="text-[#BC002D]">*</span>
+                City <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.city}
@@ -322,7 +322,7 @@ export default function CreateUniversityPage() {
             <div className="space-y-1.5">
               <Label>
                 Unique ID (for internal/bulk sync){" "}
-                <span className="text-[#BC002D]">*</span>
+                <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={form.uniqueId}
@@ -430,7 +430,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 2: Academic & Financial */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-5">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Academic &amp; Financial Info
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -499,7 +499,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 3: Approvals */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Approvals &amp; Recognitions
           </h2>
           <div className="flex flex-wrap gap-6">
@@ -541,7 +541,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 4: About & Why Choose Us */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             About &amp; Why Choose Us
           </h2>
           <div className="space-y-1.5">
@@ -623,7 +623,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 5: Stats & Rankings */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Stats &amp; Rankings
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -659,7 +659,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 6: Campus Details */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Campus Details
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -715,7 +715,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 7: Ratings Metadata */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Ratings Metadata
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -773,7 +773,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 8: Media */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">Media</h2>
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">Media</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ImageUpload
               label="Thumbnail Image"
@@ -816,7 +816,7 @@ export default function CreateUniversityPage() {
 
         {/* Section 9: SEO */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3 mb-4">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3 mb-4">
             SEO
           </h2>
           <SeoFields
@@ -838,7 +838,7 @@ export default function CreateUniversityPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             disabled={loading}
           >
             {loading ? (

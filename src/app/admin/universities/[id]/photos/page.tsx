@@ -91,7 +91,7 @@ export default function UniversityPhotosPage() {
 
       <div className="space-y-5">
         <div>
-          <h2 className="text-xl font-bold text-[#17202A]">Campus Photos</h2>
+          <h2 className="text-xl font-bold text-[#1F2937]">Campus Photos</h2>
           <p className="text-sm text-[#6B7280]">
             {photos.length} photo{photos.length !== 1 ? "s" : ""} uploaded
           </p>
@@ -99,7 +99,7 @@ export default function UniversityPhotosPage() {
 
         {/* Add Photo */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-5 space-y-4">
-          <h3 className="font-semibold text-[#17202A]">Add New Photo</h3>
+          <h3 className="font-semibold text-[#1F2937]">Add New Photo</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ImageUpload
               label="Campus Photo"
@@ -119,7 +119,7 @@ export default function UniversityPhotosPage() {
               <Button
                 onClick={handleAdd}
                 disabled={adding || !imagePath}
-                className="bg-[#102A43] hover:bg-[#102A43] w-full"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26] w-full"
               >
                 {adding ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -173,7 +173,7 @@ export default function UniversityPhotosPage() {
                 )}
                 <button
                   onClick={() => handleDelete(p.id)}
-                  className="absolute top-2 right-2 w-7 h-7 bg-[#102A43] text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-2 right-2 w-7 h-7 bg-[#5B0F26] text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Trash2 size={12} />
                 </button>

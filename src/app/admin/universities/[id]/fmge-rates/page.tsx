@@ -86,7 +86,7 @@ export default function UniversityFmgeRatesPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">FMGE Pass Rates</h2>
+            <h2 className="text-xl font-bold text-[#1F2937]">FMGE Pass Rates</h2>
             <p className="text-sm text-[#6B7280]">
               Foreign Medical Graduate Examination history
             </p>
@@ -104,7 +104,7 @@ export default function UniversityFmgeRatesPage() {
                 rank: "",
               });
             }}
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             <Plus size={16} className="mr-2" />
             Add Year
@@ -113,7 +113,7 @@ export default function UniversityFmgeRatesPage() {
 
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit FMGE Rate" : "Add FMGE Rate"}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -160,7 +160,7 @@ export default function UniversityFmgeRatesPage() {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label>Rank in Japan</Label>
+                <Label>Rank in Qatar</Label>
                 <Input
                   type="number"
                   value={form.rank}
@@ -173,7 +173,7 @@ export default function UniversityFmgeRatesPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -206,7 +206,7 @@ export default function UniversityFmgeRatesPage() {
           <div className="bg-white border border-[#E5E7EB] rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+                <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                   <th className="px-4 py-3 font-medium">Year</th>
                   <th className="px-4 py-3 font-medium">Appeared</th>
                   <th className="px-4 py-3 font-medium">Passed</th>
@@ -220,9 +220,9 @@ export default function UniversityFmgeRatesPage() {
                 {rates.map((r) => (
                   <tr
                     key={r.id}
-                    className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                    className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                   >
-                    <td className="px-4 py-3 font-bold text-[#17202A]">
+                    <td className="px-4 py-3 font-bold text-[#1F2937]">
                       {r.year}
                     </td>
                     <td className="px-4 py-3 text-[#6B7280]">
@@ -232,7 +232,7 @@ export default function UniversityFmgeRatesPage() {
                       {r.passed ?? "—"}
                     </td>
                     <td className="px-4 py-3">
-                      <span className="font-semibold text-[#8F0023]">
+                      <span className="font-semibold text-[#5B0F26]">
                         {r.passPercentage ? `${r.passPercentage}%` : "—"}
                       </span>
                     </td>
@@ -270,7 +270,7 @@ export default function UniversityFmgeRatesPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                          className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                           onClick={async () => {
                             if (confirm("Delete?")) {
                               await fetch(

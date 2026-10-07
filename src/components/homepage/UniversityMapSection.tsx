@@ -37,14 +37,14 @@ export default async function UniversityMapSection() {
       {/* Heading above the map */}
       <div className="max-w-7xl mx-auto px-4 pt-14 pb-8">
         <div className="text-center">
-          <span className="inline-block bg-[#F9FAFB] text-[#102A43] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+          <span className="inline-block bg-[#F9FAFB] text-[#5B0F26] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
             Interactive Map
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#17202A] mb-3">
-            Universities Across Japan
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1F2937] mb-3">
+            Universities Across Qatar
           </h2>
           <p className="text-[#6B7280] max-w-xl mx-auto text-base">
-            Discover top MBBS universities across Japan with our interactive
+            Discover top MBBS universities across Qatar with our interactive
             map—compare locations, explore campuses, and choose the right
             medical college for your global career.
           </p>

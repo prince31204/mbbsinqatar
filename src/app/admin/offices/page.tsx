@@ -38,7 +38,7 @@ const blank: Omit<Office, "id"> = {
   address: "",
   city: "",
   state: "",
-  country: "Japan",
+  country: "Qatar",
   phone: "",
   email: "",
   mapEmbed: "",
@@ -122,9 +122,9 @@ export default function OfficesPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Building2 size={22} className="text-[#BC002D]" />
+          <Building2 size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">Offices</h1>
+            <h1 className="text-2xl font-bold text-[#1F2937]">Offices</h1>
             <p className="text-sm text-[#6B7280]">Manage office locations</p>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function OfficesPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           {showForm ? (
             <>
@@ -152,7 +152,7 @@ export default function OfficesPage() {
 
       {showForm && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A]">
+          <h2 className="font-semibold text-[#1F2937]">
             {editId ? "Edit Office" : "New Office"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -244,7 +244,7 @@ export default function OfficesPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <>
@@ -277,11 +277,11 @@ export default function OfficesPage() {
             {items.map((item) => (
               <div
                 key={item.id}
-                className="flex items-start gap-4 p-4 hover:bg-[#FFFDF9]"
+                className="flex items-start gap-4 p-4 hover:bg-[#FAF8F7]"
               >
                 <Building2 size={20} className="text-[#6B7280] mt-1 shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <div className="font-medium text-[#17202A]">{item.name}</div>
+                  <div className="font-medium text-[#1F2937]">{item.name}</div>
                   <div className="text-sm text-[#6B7280]">
                     {item.address}
                     {item.city ? `, ${item.city}` : ""}
@@ -315,7 +315,7 @@ export default function OfficesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                    className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

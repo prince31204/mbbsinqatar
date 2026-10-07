@@ -108,7 +108,7 @@ export default function UniversityFaqsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">FAQs</h2>
+            <h2 className="text-xl font-bold text-[#1F2937]">FAQs</h2>
             <p className="text-sm text-[#6B7280]">
               {faqs.length} question{faqs.length !== 1 ? "s" : ""}
             </p>
@@ -120,7 +120,7 @@ export default function UniversityFaqsPage() {
               setQuestion("");
               setAnswer("");
             }}
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
           >
             <Plus size={16} className="mr-2" />
             Add FAQ
@@ -129,7 +129,7 @@ export default function UniversityFaqsPage() {
 
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit FAQ" : "New FAQ"}
             </h3>
             <div className="space-y-1.5">
@@ -137,7 +137,7 @@ export default function UniversityFaqsPage() {
               <Input
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                placeholder="e.g. Is NEET mandatory for MBBS in Japan?"
+                placeholder="e.g. Is NEET mandatory for MBBS in Qatar?"
               />
             </div>
             <div className="space-y-1.5">
@@ -153,7 +153,7 @@ export default function UniversityFaqsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -210,7 +210,7 @@ export default function UniversityFaqsPage() {
                           className="text-[#6B7280] shrink-0"
                         />
                       )}
-                      <span className="font-medium text-[#17202A] text-sm">
+                      <span className="font-medium text-[#1F2937] text-sm">
                         {faq.question}
                       </span>
                     </div>
@@ -227,7 +227,7 @@ export default function UniversityFaqsPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-7 w-7 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                      className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                       onClick={() => handleDelete(faq.id)}
                     >
                       <Trash2 size={13} />

@@ -85,9 +85,9 @@ export default function FacilitiesPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <Wrench size={22} className="text-[#BC002D]" />
+        <Wrench size={22} className="text-[#8A1538]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Facilities</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Facilities</h1>
           <p className="text-sm text-[#6B7280]">
             Manage facility types that can be linked to universities (e.g.
             Hostel, Library, Lab)
@@ -96,7 +96,7 @@ export default function FacilitiesPage() {
       </div>
 
       <div className="bg-white rounded-xl border border-[#E5E7EB] overflow-hidden">
-        <div className="p-4 border-b border-[#E5E7EB] bg-[#FFFDF9] flex gap-3">
+        <div className="p-4 border-b border-[#E5E7EB] bg-[#FAF8F7] flex gap-3">
           <Input
             placeholder="New facility name..."
             value={newName}
@@ -107,7 +107,7 @@ export default function FacilitiesPage() {
           <Button
             onClick={handleAdd}
             disabled={adding || !newName.trim()}
-            className="bg-[#102A43] hover:bg-[#102A43] shrink-0"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="animate-spin mr-1" />
@@ -140,7 +140,7 @@ export default function FacilitiesPage() {
               {items.map((item, i) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                  className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                 >
                   <td className="px-4 py-3 text-[#6B7280]">{i + 1}</td>
                   <td className="px-4 py-3">
@@ -153,7 +153,7 @@ export default function FacilitiesPage() {
                       />
                     ) : (
                       <span
-                        className="cursor-pointer hover:text-[#102A43]"
+                        className="cursor-pointer hover:text-[#5B0F26]"
                         onClick={() => {
                           setEditId(item.id);
                           setEditName(item.name);
@@ -184,7 +184,7 @@ export default function FacilitiesPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 w-7 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                        className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />

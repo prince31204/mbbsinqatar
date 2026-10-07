@@ -22,7 +22,7 @@ const columns: Column<Testimonial>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-[#17202A] text-sm">{row.name}</p>
+        <p className="font-medium text-[#1F2937] text-sm">{row.name}</p>
         <p className="text-xs text-[#6B7280]">{row.designation ?? "—"}</p>
       </div>
     ),

@@ -5,12 +5,12 @@ import OurPartnersContent from "@/components/partners/OurPartnersContent";
 import { prisma } from "@/lib/prisma";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "Our Partners - Universities and Organizations | mbbsinjapan.com",
+  title: "Our Partners - Universities and Organizations | mbbsinqatar.com",
   description:
-    "Meet our official partner medical universities and international organizations that support transparent MBBS admissions in Japan.",
+    "Meet our official partner medical universities and international organizations that support transparent MBBS admissions in Qatar.",
   entitySeo: {
     metaKeyword:
-      "mbbs Japan partners, partner universities Japan, official mbbs partners",
+      "mbbs Qatar partners, partner universities Qatar, official mbbs partners",
   },
   path: "/our-partners",
 });

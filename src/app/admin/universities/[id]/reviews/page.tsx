@@ -146,13 +146,13 @@ export default function UniversityReviewsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[#17202A]">Student Reviews</h2>
+            <h2 className="text-xl font-bold text-[#1F2937]">Student Reviews</h2>
             <p className="text-sm text-[#6B7280]">
               {items.length} review{items.length !== 1 ? "s" : ""} — ratings and
               written feedback
             </p>
           </div>
-          <Button onClick={openAdd} className="bg-[#102A43] hover:bg-[#102A43]">
+          <Button onClick={openAdd} className="bg-[#5B0F26] hover:bg-[#5B0F26]">
             <Plus size={16} className="mr-2" />
             Add Review
           </Button>
@@ -160,7 +160,7 @@ export default function UniversityReviewsPage() {
 
         {showForm && (
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-5 space-y-4">
-            <h3 className="font-semibold text-[#17202A]">
+            <h3 className="font-semibold text-[#1F2937]">
               {editId ? "Edit Review" : "Add New Review"}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -255,7 +255,7 @@ export default function UniversityReviewsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#102A43] hover:bg-[#102A43]"
+                className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -313,7 +313,7 @@ export default function UniversityReviewsPage() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-semibold text-[#17202A] text-sm">
+                        <p className="font-semibold text-[#1F2937] text-sm">
                           {r.name}
                         </p>
                         <p className="text-xs text-[#6B7280]">
@@ -334,7 +334,7 @@ export default function UniversityReviewsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-[#BC002D]"
+                          className="h-7 w-7 p-0 text-[#8A1538]"
                           onClick={() => handleDelete(r.id)}
                         >
                           <Trash2 size={13} />
@@ -348,7 +348,7 @@ export default function UniversityReviewsPage() {
                           size={12}
                           className={
                             i < (r.rating || 5)
-                              ? "text-[#BC002D] fill-yellow-400"
+                              ? "text-[#8A1538] fill-yellow-400"
                               : "text-[#4B5563]"
                           }
                         />
@@ -367,7 +367,7 @@ export default function UniversityReviewsPage() {
                   </p>
                 )}
                 {!r.status && (
-                  <span className="text-xs bg-[#102A43] text-[#BC002D] px-2 py-0.5 rounded-full">
+                  <span className="text-xs bg-[#5B0F26] text-[#8A1538] px-2 py-0.5 rounded-full">
                     Inactive
                   </span>
                 )}

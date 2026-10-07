@@ -2,7 +2,7 @@ import { prisma } from '../src/lib/prisma';
 import * as bcrypt from 'bcryptjs';
 
 async function main() {
-  console.log('🌱 Starting Comprehensive Japan Seeding...');
+  console.log('🌱 Starting Comprehensive Qatar Seeding...');
 
   // 1. Initialize Admin User
   const adminEmail = process.env.ADMIN_EMAIL;
@@ -40,7 +40,7 @@ async function main() {
   }
   console.log('✅ Institute types seeded.');
 
-  // 3. Seed Provinces (Districts of Japan)
+  // 3. Seed Provinces (Districts of Qatar)
   const districts = [
     'Tokyo',
     'Kanagawa',
@@ -88,14 +88,14 @@ async function main() {
   console.log('✅ Cities seeded.');
 
   // 5. Seed About Country Page
-  const aboutJapan = await prisma.aboutCountryPage.upsert({
+  const aboutQatar = await prisma.aboutCountryPage.upsert({
     where: { id: 1 },
     update: {
-      name: 'Japan',
+      name: 'Qatar',
       tagline: 'Heart of Europe',
       capital: 'Tokyo',
       population: '125 Million+',
-      languages: 'Japanese, English',
+      languages: 'Qatarese, English',
       currency: 'JPY',
       location: 'East Asia',
       timezone: 'UTC+1',
@@ -105,7 +105,7 @@ async function main() {
       whoRecognized: true,
       mbbsAffordableEducation: 'High-quality medical education with manageable tuition fees and international recognition.',
       englishMedium: true,
-      academicExcellence: 'Japan follows a high-standard educational framework modeled on the British system.',
+      academicExcellence: 'Qatar follows a high-standard educational framework modeled on the British system.',
       studentLife: 'A safe, multicultural environment with modern infrastructure and stunning natural beauty.',
       visaConnectivity: 'Straightforward student visa process with excellent air connectivity to major global hubs.',
       publicHealthcare: 'Reliable public healthcare system alongside high-standard private clinics.',
@@ -113,7 +113,7 @@ async function main() {
     },
     create: {
       id: 1,
-      name: 'Japan',
+      name: 'Qatar',
       tagline: 'Life and study in the Paradise Island',
       capital: 'Tokyo',
       population: '1.3 Million+',
@@ -127,7 +127,7 @@ async function main() {
       whoRecognized: true,
       mbbsAffordableEducation: 'High-quality medical education with manageable tuition fees and international recognition.',
       englishMedium: true,
-      academicExcellence: 'Japan follows a high-standard educational framework modeled on the British system.',
+      academicExcellence: 'Qatar follows a high-standard educational framework modeled on the British system.',
       studentLife: 'A safe, multicultural environment with modern infrastructure and stunning natural beauty.',
       visaConnectivity: 'Straightforward student visa process with excellent air connectivity to major global hubs.',
       publicHealthcare: 'Reliable public healthcare system alongside high-standard private clinics.',
@@ -145,8 +145,8 @@ async function main() {
   for (const city of majorCitiesAbout) {
     await prisma.countryMajorCity.upsert({
       where: { id: majorCitiesAbout.indexOf(city) + 1 },
-      update: { ...city, pageId: aboutJapan.id },
-      create: { ...city, pageId: aboutJapan.id },
+      update: { ...city, pageId: aboutQatar.id },
+      create: { ...city, pageId: aboutQatar.id },
     });
   }
 
@@ -160,8 +160,8 @@ async function main() {
   for (const cuisine of cuisines) {
     await prisma.countryCuisineLifestyle.upsert({
       where: { id: cuisines.indexOf(cuisine) + 1 },
-      update: { ...cuisine, pageId: aboutJapan.id },
-      create: { ...cuisine, pageId: aboutJapan.id },
+      update: { ...cuisine, pageId: aboutQatar.id },
+      create: { ...cuisine, pageId: aboutQatar.id },
     });
   }
 
@@ -175,8 +175,8 @@ async function main() {
   for (const attraction of attractions) {
     await prisma.countryTouristAttraction.upsert({
       where: { id: attractions.indexOf(attraction) + 1 },
-      update: { ...attraction, pageId: aboutJapan.id },
-      create: { ...attraction, pageId: aboutJapan.id },
+      update: { ...attraction, pageId: aboutQatar.id },
+      create: { ...attraction, pageId: aboutQatar.id },
     });
   }
 
@@ -190,20 +190,20 @@ async function main() {
   for (const lifestyle of lifestyles) {
     await prisma.countryLifestyleCulture.upsert({
       where: { id: lifestyles.indexOf(lifestyle) + 1 },
-      update: { ...lifestyle, pageId: aboutJapan.id },
-      create: { ...lifestyle, pageId: aboutJapan.id },
+      update: { ...lifestyle, pageId: aboutQatar.id },
+      create: { ...lifestyle, pageId: aboutQatar.id },
     });
   }
-  console.log('✅ About Japan content seeded.');
+  console.log('✅ About Qatar content seeded.');
 
   // 6. Seed Education System
   const eduSystem = await prisma.educationSystem.upsert({
     where: { id: 1 },
     update: {
-      title: 'Education System in Japan',
-      description: 'The Japann education system is modeled on the British system and has seen significant development since independence.',
+      title: 'Education System in Qatar',
+      description: 'The Qatarn education system is modeled on the British system and has seen significant development since independence.',
       introductionTitle: 'A Legacy of Excellence',
-      introductionDescription: 'Japan offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
+      introductionDescription: 'Qatar offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
       literacyRate: 91.3,
       higherEducationDescription: 'The higher education sector includes public and private universities offering globally recognized degrees.',
       universitiesCount: 15,
@@ -215,10 +215,10 @@ async function main() {
     },
     create: {
       id: 1,
-      title: 'Education System in Japan',
-      description: 'The Japan education system is modeled on the British system and has seen significant development since independence.',
+      title: 'Education System in Qatar',
+      description: 'The Qatar education system is modeled on the British system and has seen significant development since independence.',
       introductionTitle: 'A Legacy of Excellence',
-      introductionDescription: 'Japan offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
+      introductionDescription: 'Qatar offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
       literacyRate: 91.3,
       higherEducationDescription: 'The higher education sector includes public and private universities offering globally recognized degrees.',
       universitiesCount: 15,
@@ -262,10 +262,10 @@ async function main() {
 
   // 7. Seed Static Page SEO
   const seos = [
-    { page: 'home', metaTitle: 'Study MBBS in Japan | Direct Admission, Low Fees 2026', metaDescription: 'Apply for MBBS in Japan with direct admission to top-ranked medical universities. MCAT/NEET qualified students can join English-medium programs.' },
-    { page: 'about-japan', metaTitle: 'About Japan | Student Lifestyle, Geography & Climate', metaDescription: 'Discover life in Japan for international students. A safe, beautiful, and multicultural island nation with high-standard education.' },
-    { page: 'universities', metaTitle: 'Medical Universities in Japan | Top MBBS Colleges 2026', metaDescription: 'Compare the best medical universities in Japan. Fee structures, admission requirements, and global rankings for international students.' },
-    { page: 'contact', metaTitle: 'Contact Us | Professional MBBS Counselling for Japan', metaDescription: 'Get expert guidance for your medical education in Japan. Speak to our counsellors for admission assistance today.' },
+    { page: 'home', metaTitle: 'Study MBBS in Qatar | Direct Admission, Low Fees 2026', metaDescription: 'Apply for MBBS in Qatar with direct admission to top-ranked medical universities. MCAT/NEET qualified students can join English-medium programs.' },
+    { page: 'about-qatar', metaTitle: 'About Qatar | Student Lifestyle, Geography & Climate', metaDescription: 'Discover life in Qatar for international students. A safe, beautiful, and multicultural island nation with high-standard education.' },
+    { page: 'universities', metaTitle: 'Medical Universities in Qatar | Top MBBS Colleges 2026', metaDescription: 'Compare the best medical universities in Qatar. Fee structures, admission requirements, and global rankings for international students.' },
+    { page: 'contact', metaTitle: 'Contact Us | Professional MBBS Counselling for Qatar', metaDescription: 'Get expert guidance for your medical education in Qatar. Speak to our counsellors for admission assistance today.' },
   ];
 
   for (const seo of seos) {

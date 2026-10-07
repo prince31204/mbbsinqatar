@@ -20,7 +20,7 @@ const columns: Column<City>[] = [
     label: "City Name",
     sortable: true,
     render: (row) => (
-      <span className="font-medium text-[#17202A]">{row.name}</span>
+      <span className="font-medium text-[#1F2937]">{row.name}</span>
     ),
   },
   {

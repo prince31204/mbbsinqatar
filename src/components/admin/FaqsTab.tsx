@@ -97,7 +97,7 @@ export function FaqsTab({ apiBase }: Props) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-[#17202A]">FAQs ({items.length})</h3>
+        <h3 className="font-semibold text-[#1F2937]">FAQs ({items.length})</h3>
         <Button size="sm" onClick={() => setAdding(!adding)}>
           <Plus className="w-4 h-4 mr-1" /> Add FAQ
         </Button>
@@ -105,7 +105,7 @@ export function FaqsTab({ apiBase }: Props) {
 
       {adding && (
         <div className="border border-[#E5E7EB] rounded-xl p-4 bg-white space-y-3">
-          <h4 className="font-medium text-[#102A43]">New FAQ</h4>
+          <h4 className="font-medium text-[#5B0F26]">New FAQ</h4>
           <div>
             <Label>Question *</Label>
             <Input
@@ -150,7 +150,7 @@ export function FaqsTab({ apiBase }: Props) {
               className="border border-[#E5E7EB] rounded-xl overflow-hidden"
             >
               {editingId === faq.id ? (
-                <div className="p-4 bg-red-400 space-y-3">
+                <div className="p-4 bg-[#8A1538] space-y-3">
                   <div>
                     <Label>Question</Label>
                     <Input
@@ -186,7 +186,7 @@ export function FaqsTab({ apiBase }: Props) {
               ) : (
                 <div className="p-4 flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-[#17202A] text-sm">
+                    <p className="font-medium text-[#1F2937] text-sm">
                       Q{idx + 1}: {faq.question}
                     </p>
                     {faq.answer && (
@@ -213,7 +213,7 @@ export function FaqsTab({ apiBase }: Props) {
                       size="sm"
                       variant="ghost"
                       onClick={() => handleDelete(faq.id)}
-                      className="text-[#BC002D] hover:text-[#102A43]"
+                      className="text-[#8A1538] hover:text-[#5B0F26]"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>

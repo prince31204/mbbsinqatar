@@ -168,7 +168,7 @@ export function DataTable<T extends { id: string | number }>({
     <div className="space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-[#17202A]">{title}</h1>
+        <h1 className="text-2xl font-bold text-[#1F2937]">{title}</h1>
         <div className="flex items-center gap-2">
           {extraHeaderActions}
           {importHref && (
@@ -188,7 +188,7 @@ export function DataTable<T extends { id: string | number }>({
             </Button>
           )}
           {createHref && (
-            <Button size="sm" className="bg-[#102A43] hover:bg-[#102A43]" asChild>
+            <Button size="sm" className="bg-[#5B0F26] hover:bg-[#5B0F26]" asChild>
               <Link href={createHref}>
                 <Plus size={14} className="mr-1.5" />
                 {createLabel}
@@ -239,7 +239,7 @@ export function DataTable<T extends { id: string | number }>({
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow className="bg-[#FFFDF9]/60">
+              <TableRow className="bg-[#FAF8F7]/60">
                 {onDelete && (
                   <TableHead className="w-10">
                     <Checkbox
@@ -261,7 +261,7 @@ export function DataTable<T extends { id: string | number }>({
                   >
                     {col.sortable ? (
                       <button
-                        className="flex items-center gap-1 hover:text-[#17202A]"
+                        className="flex items-center gap-1 hover:text-[#1F2937]"
                         suppressHydrationWarning
                         onClick={() => handleSort(String(col.key))}
                       >
@@ -309,7 +309,7 @@ export function DataTable<T extends { id: string | number }>({
                 </TableRow>
               ) : (
                 data.map((row) => (
-                  <TableRow key={row.id} className="hover:bg-[#FFFDF9]/50">
+                  <TableRow key={row.id} className="hover:bg-[#FAF8F7]/50">
                     {onDelete && (
                       <TableCell>
                         <Checkbox
@@ -373,7 +373,7 @@ export function DataTable<T extends { id: string | number }>({
                                     }}
                                     className={
                                       action.variant === "destructive"
-                                        ? "text-[#BC002D]"
+                                        ? "text-[#8A1538]"
                                         : ""
                                     }
                                   >

@@ -37,13 +37,13 @@ export default function CookieConsent() {
 
         <div className="relative z-10">
           <div className="flex items-start gap-4 mb-4">
-            <div className="bg-[#BC002D] p-3 rounded-2xl shadow-lg shrink-0">
-              <Cookie className="w-6 h-6 text-[#17202A]" />
+            <div className="bg-[#8A1538] p-3 rounded-2xl shadow-lg shrink-0">
+              <Cookie className="w-6 h-6 text-[#1F2937]" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#17202A] flex items-center gap-2">
+              <h3 className="text-lg font-bold text-[#1F2937] flex items-center gap-2">
                 Cookie Policy
-                <ShieldCheck className="w-4 h-4 text-[#BC002D]" />
+                <ShieldCheck className="w-4 h-4 text-[#8A1538]" />
               </h3>
               <p className="text-sm text-[#6B7280] leading-relaxed mt-1">
                 We use cookies to enhance your journey and analyze our traffic.
@@ -61,7 +61,7 @@ export default function CookieConsent() {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={handleAccept}
-              className="flex-1 bg-white text-[#17202A] px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white transition-all active:scale-95 flex items-center justify-center gap-2 group/btn"
+              className="flex-1 bg-white text-[#1F2937] px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white transition-all active:scale-95 flex items-center justify-center gap-2 group/btn"
             >
               Accept All
               <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -77,21 +77,21 @@ export default function CookieConsent() {
           <div className="mt-4 pt-4 border-t border-[#E5E7EB] flex flex-wrap justify-between items-center gap-2 text-[10px] uppercase tracking-wider font-bold">
             <Link
               href="/privacy-policy"
-              className="text-[#6B7280] hover:text-[#102A43] transition-colors"
+              className="text-[#6B7280] hover:text-[#5B0F26] transition-colors"
             >
               Privacy
             </Link>
             <span className="text-[#4B5563]">•</span>
             <Link
               href="/terms-of-service"
-              className="text-[#6B7280] hover:text-[#102A43] transition-colors"
+              className="text-[#6B7280] hover:text-[#5B0F26] transition-colors"
             >
               Terms
             </Link>
             <span className="text-[#4B5563]">•</span>
             <Link
               href="/cookie-policy"
-              className="text-[#6B7280] hover:text-[#102A43] transition-colors"
+              className="text-[#6B7280] hover:text-[#5B0F26] transition-colors"
             >
               Cookies
             </Link>

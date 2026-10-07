@@ -1,8 +1,8 @@
 RewriteEngine On
 
 # Redirect non-www to https://www.
-RewriteCond %{HTTP_HOST} ^mbbsinkazak\.com [NC]
-RewriteRule ^(.*)$ https://www.mbbsinkazak.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^mbbsinqatar\.com [NC]
+RewriteRule ^(.*)$ https://www.mbbsinqatar.com/$1 [L,R=301]
 
 # Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off

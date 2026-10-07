@@ -4,13 +4,13 @@ import { buildMetadata } from "@/lib/seo";
 import ApplyFormClient from "@/components/apply/ApplyFormClient";
 
 export const metadata = buildMetadata({
-  title: "Apply for MBBS in Japan — Free Counselling",
+  title: "Apply for MBBS in Qatar — Free Counselling",
   description:
-    "Apply directly to top Japan medical universities. No agency fees, expert guidance, response within 24 hours. Fill in the form to start your MBBS journey.",
+    "Apply directly to top Qatar medical universities. No agency fees, expert guidance, response within 24 hours. Fill in the form to start your MBBS journey.",
   path: "/apply",
   entitySeo: {
     metaKeyword:
-      "apply MBBS Japan, Japan medical university application, MBBS admission Japan",
+      "apply MBBS Qatar, Qatar medical university application, MBBS admission Qatar",
   },
 });
 
@@ -24,22 +24,22 @@ const NEXT_STEPS = [
 
 export default function ApplyPage() {
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FAF8F7]">
       {/* Hero — pure Server Component HTML, no JS */}
-      <div className="bg-[#102A43] text-white py-16 px-4">
+      <div className="bg-[#5B0F26] text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-white/15 rounded-full px-4 py-1.5 text-sm font-medium mb-5 text-[#FCE8ED]">
+          <div className="inline-flex items-center gap-2 bg-white/15 rounded-full px-4 py-1.5 text-sm font-medium mb-5 text-[#F7E9EE]">
             <GraduationCap size={16} /> Free Counselling · No Agency Fees
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight text-white">
             Apply Directly to
             <br className="hidden sm:block" /> the University
           </h1>
-          <p className="text-[#FCE8ED] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#F7E9EE] text-lg max-w-2xl mx-auto leading-relaxed">
             Complete your application below. No agency fees, direct admission
             process.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-[#FCE8ED]">
+          <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-[#F7E9EE]">
             <span className="flex items-center gap-1.5">
               <CheckCircle size={15} className="text-white" /> Free expert guidance
             </span>
@@ -82,7 +82,7 @@ export default function ApplyPage() {
             </div>
 
             <div className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-5">
-              <h3 className="font-bold text-[#17202A] mb-4">
+              <h3 className="font-bold text-[#1F2937] mb-4">
                 What Happens Next?
               </h3>
               <ol className="space-y-3">
@@ -91,7 +91,7 @@ export default function ApplyPage() {
                     key={i}
                     className="flex items-start gap-3 text-sm text-[#4B5563]"
                   >
-                    <span className="bg-[#BC002D] text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="bg-[#8A1538] text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
                     {s}

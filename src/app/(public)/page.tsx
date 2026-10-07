@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 import HeroSection from "@/components/homepage/HeroSection";
 import UniversityGrid from "@/components/homepage/UniversityGrid";
 import UniversityMapSection from "@/components/homepage/UniversityMapSection";
-import AboutJapan from "@/components/homepage/AboutJapan";
+import AboutQatar from "@/components/homepage/AboutQatar";
 import ScholarshipsSection from "@/components/homepage/ScholarshipsSection";
 import EducationSystem from "@/components/homepage/EducationSystem";
 import MinistryLinks from "@/components/homepage/MinistryLinks";
@@ -22,17 +22,17 @@ import {
 import { getHomepageStats, getHomepageFaqs } from "@/lib/public-page-content";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: `MBBS in Japan ${APP_YEAR} | NMC Recognised Universities | Fees & Admission for Indian Students`,
-  description: `Explore top NMC-recognised medical universities in Japan. Compare fees, FMGE rates, and apply for MBBS ${APP_YEAR} admission. Free counselling for Indian students.`,
+  title: `MBBS in Qatar ${APP_YEAR} | NMC Recognised Universities | Fees & Admission for Indian Students`,
+  description: `Explore top NMC-recognised medical universities in Qatar. Compare fees, FMGE rates, and apply for MBBS ${APP_YEAR} admission. Free counselling for Indian students.`,
   path: "/",
   pageKey: "home",
   entitySeo: {
-    metaKeyword: `MBBS in Japan, study MBBS Japan, medical university Japan, NMC recognized Japan, MBBS admission ${APP_YEAR}, low fee MBBS abroad`,
+    metaKeyword: `MBBS in Qatar, study MBBS Qatar, medical university Qatar, NMC recognized Qatar, MBBS admission ${APP_YEAR}, low fee MBBS abroad`,
   },
 });
 
 const UniversityGridFallback = () => (
-  <section className="py-8 bg-[#FFFDF9]">
+  <section className="py-8 bg-[#FAF8F7]">
     <div className="max-w-7xl mx-auto px-4">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[...Array(6)].map((_, i) => (
@@ -88,9 +88,9 @@ export default async function HomePage() {
         <UniversityMapSection />
       </Suspense>
 
-      <AboutJapan />
+      <AboutQatar />
 
-      <Suspense fallback={<div className="py-16 bg-[#FFFDF9]" />}>
+      <Suspense fallback={<div className="py-16 bg-[#FAF8F7]" />}>
         <CompareUniversities />
       </Suspense>
 

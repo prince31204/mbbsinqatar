@@ -92,24 +92,24 @@ export default function OtpVerificationPage() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 text-center">
-        <div className="w-16 h-16 bg-[#BC002D] rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-[#8A1538] rounded-full flex items-center justify-center mx-auto mb-4">
           <GraduationCap className="w-9 h-9 text-white" />
         </div>
-        <h1 className="text-2xl font-bold text-[#17202A] mb-2">
+        <h1 className="text-2xl font-bold text-[#1F2937] mb-2">
           Verify Your Email
         </h1>
         <p className="text-[#6B7280] text-sm mb-2">
           We&apos;ve sent a 6-digit verification code to
         </p>
-        <p className="font-semibold text-[#17202A] mb-8">{email}</p>
+        <p className="font-semibold text-[#1F2937] mb-8">{email}</p>
 
         {error && (
-          <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-lg mb-6 text-sm text-left">
+          <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-lg mb-6 text-sm text-left">
             {error}
           </div>
         )}
         {success && (
-          <div className="bg-red-50 border border-red-200 text-[#8F0023] px-4 py-3 rounded-lg mb-6 text-sm text-left">
+          <div className="bg-[#F7E9EE] border border-[#F7E9EE] text-[#5B0F26] px-4 py-3 rounded-lg mb-6 text-sm text-left">
             {success}
           </div>
         )}
@@ -129,7 +129,7 @@ export default function OtpVerificationPage() {
                 value={digit}
                 onChange={(e) => handleOtpChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="w-12 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-xl focus:border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#102A43]/200 transition-colors"
+                className="w-12 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-xl focus:border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/200 transition-colors"
               />
             ))}
           </div>
@@ -137,7 +137,7 @@ export default function OtpVerificationPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#BC002D] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8F0023] disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-[#8A1538] text-white py-3.5 rounded-xl font-semibold hover:bg-[#5B0F26] disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
           >
             {loading ? (
               <>
@@ -157,7 +157,7 @@ export default function OtpVerificationPage() {
             <button
               onClick={handleResend}
               disabled={resending}
-              className="flex items-center justify-center space-x-1.5 text-[#BC002D] hover:text-[#102A43] font-medium text-sm mx-auto disabled:opacity-60"
+              className="flex items-center justify-center space-x-1.5 text-[#8A1538] hover:text-[#5B0F26] font-medium text-sm mx-auto disabled:opacity-60"
             >
               <RefreshCw
                 className={`w-4 h-4 ${resending ? "animate-spin" : ""}`}

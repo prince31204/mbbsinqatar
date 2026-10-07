@@ -9,9 +9,9 @@ import CompareForm from "@/components/compare/CompareForm";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Compare MBBS Universities in Japan | MBBS Japan",
+  title: "Compare MBBS Universities in Qatar | MBBS Qatar",
   description:
-    "Compare top MBBS universities in Japan side by side — fees, duration, facilities, rankings, and more.",
+    "Compare top MBBS universities in Qatar side by side — fees, duration, facilities, rankings, and more.",
   path: "/compare",
 });
 
@@ -203,13 +203,13 @@ export default async function ComparePage({
   ]);
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FAF8F7]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Header */}
-      <div className="bg-white text-[#17202A] py-14">
+      <div className="bg-white text-[#1F2937] py-14">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-3">
             Compare Universities
@@ -241,7 +241,7 @@ export default async function ComparePage({
         )}
 
         {rawIds.length > 0 && selected.length < 2 && (
-          <div className="bg-red-400 border border-[#E5E7EB] rounded-2xl p-6 text-center text-[#BC002D] text-sm">
+          <div className="bg-[#8A1538] border border-[#E5E7EB] rounded-2xl p-6 text-center text-[#8A1538] text-sm">
             Please select at least 2 universities to compare.
           </div>
         )}
@@ -251,7 +251,7 @@ export default async function ComparePage({
           <div className="bg-white rounded-2xl shadow border border-[#E5E7EB] overflow-hidden">
             {/* University header row */}
             <div
-              className="grid border-b bg-[#BC002D] text-white"
+              className="grid border-b bg-[#8A1538] text-white"
               style={{
                 gridTemplateColumns: `220px repeat(${selected.length}, 1fr)`,
               }}
@@ -277,7 +277,7 @@ export default async function ComparePage({
                     </div>
                   )}
                   {!u.thumbnailPath && (
-                    <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-white/20 flex items-center justify-center text-[#17202A] text-xl font-bold border-2 border-[#E5E7EB]">
+                    <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-white/20 flex items-center justify-center text-[#1F2937] text-xl font-bold border-2 border-[#E5E7EB]">
                       {u.name[0]}
                     </div>
                   )}
@@ -292,7 +292,7 @@ export default async function ComparePage({
                   )}
                   <Link
                     href={`/universities/${u.slug}`}
-                    className="inline-block mt-2 text-xs bg-white/20 hover:bg-white/30 text-[#17202A] px-3 py-1 rounded-full transition-colors"
+                    className="inline-block mt-2 text-xs bg-white/20 hover:bg-white/30 text-[#1F2937] px-3 py-1 rounded-full transition-colors"
                   >
                     View Details →
                   </Link>
@@ -304,7 +304,7 @@ export default async function ComparePage({
             {rows.map((row, idx) => (
               <div
                 key={row.label}
-                className={`grid border-b border-[#E5E7EB] ${idx % 2 === 0 ? "bg-white" : "bg-[#FFFDF9]"}`}
+                className={`grid border-b border-[#E5E7EB] ${idx % 2 === 0 ? "bg-white" : "bg-[#FAF8F7]"}`}
                 style={{
                   gridTemplateColumns: `220px repeat(${selected.length}, 1fr)`,
                 }}
@@ -322,7 +322,7 @@ export default async function ComparePage({
                     >
                       {isBool ? (
                         val === "yes" ? (
-                          <CheckCircle className="w-5 h-5 text-[#BC002D] mx-auto" />
+                          <CheckCircle className="w-5 h-5 text-[#8A1538] mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#4B5563] mx-auto" />
                         )
@@ -337,7 +337,7 @@ export default async function ComparePage({
 
             {/* Facilities Row */}
             <div
-              className="grid border-b bg-[#FFFDF9]"
+              className="grid border-b bg-[#FAF8F7]"
               style={{
                 gridTemplateColumns: `220px repeat(${selected.length}, 1fr)`,
               }}
@@ -351,7 +351,7 @@ export default async function ComparePage({
                     {u.facilities.slice(0, 5).map((f) => (
                       <span
                         key={f.id}
-                        className="text-xs bg-red-50 text-[#8F0023] px-2.5 py-1 rounded-full border border-red-200"
+                        className="text-xs bg-[#F7E9EE] text-[#5B0F26] px-2.5 py-1 rounded-full border border-[#F7E9EE]"
                       >
                         {f.facility.name}
                       </span>
@@ -366,7 +366,7 @@ export default async function ComparePage({
 
             {/* Apply CTA Row */}
             <div
-              className="grid bg-[#FFFDF9]"
+              className="grid bg-[#FAF8F7]"
               style={{
                 gridTemplateColumns: `220px repeat(${selected.length}, 1fr)`,
               }}
@@ -381,7 +381,7 @@ export default async function ComparePage({
                 >
                   <Link
                     href={`/universities/${u.slug}`}
-                    className="inline-block bg-[#BC002D] hover:bg-[#8F0023] text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                    className="inline-block bg-[#8A1538] hover:bg-[#5B0F26] text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors"
                   >
                     View Details →
                   </Link>

@@ -43,11 +43,11 @@ export default function AdminLoginPage() {
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           {/* Logo */}
           <div className="text-center mb-8">
-            <div className="w-14 h-14 rounded-2xl bg-[#102A43] flex items-center justify-center text-[#17202A] font-bold text-2xl mx-auto mb-4">
+            <div className="w-14 h-14 rounded-2xl bg-[#5B0F26] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
               M
             </div>
-            <h1 className="text-2xl font-bold text-[#17202A]">Admin Login</h1>
-            <p className="text-sm text-[#6B7280] mt-1">MBBS Japan CMS</p>
+            <h1 className="text-2xl font-bold text-[#1F2937]">Admin Login</h1>
+            <p className="text-sm text-[#6B7280] mt-1">MBBS Qatar CMS</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -102,7 +102,7 @@ export default function AdminLoginPage() {
 
             <Button
               type="submit"
-              className="w-full bg-[#102A43] hover:bg-[#102A43] text-white h-11"
+              className="w-full bg-[#5B0F26] hover:bg-[#5B0F26] text-white h-11"
               disabled={loading}
             >
               {loading ? (

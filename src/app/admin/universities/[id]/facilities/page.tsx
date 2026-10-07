@@ -119,7 +119,7 @@ export default function UniversityFacilitiesPage() {
       <UniversitySubNav universityId={id} universityName={universityName} />
       <div className="space-y-5">
         <div>
-          <h2 className="text-xl font-bold text-[#17202A]">Facilities</h2>
+          <h2 className="text-xl font-bold text-[#1F2937]">Facilities</h2>
           <p className="text-sm text-[#6B7280]">
             {linked.length} facilit{linked.length !== 1 ? "ies" : "y"} linked
           </p>
@@ -156,7 +156,7 @@ export default function UniversityFacilitiesPage() {
             <Button
               onClick={handleLink}
               disabled={adding || !selectedFacility}
-              className="bg-[#102A43] hover:bg-[#102A43] shrink-0"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26] shrink-0"
             >
               {adding ? (
                 <Loader2 size={14} className="mr-2 animate-spin" />
@@ -197,12 +197,12 @@ export default function UniversityFacilitiesPage() {
                 className="bg-white border border-[#E5E7EB] rounded-xl p-4 space-y-3 shadow-sm hover:shadow-md transition-shadow group relative"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-[#17202A]">
+                  <span className="font-bold text-[#1F2937]">
                     {l.facility.name}
                   </span>
                   <button
                     onClick={() => handleUnlink(l.facilityId)}
-                    className="text-[#6B7280] hover:text-[#102A43] transition-colors"
+                    className="text-[#6B7280] hover:text-[#5B0F26] transition-colors"
                     title="Unlink"
                   >
                     <Trash2 size={14} />
@@ -243,7 +243,7 @@ export default function UniversityFacilitiesPage() {
                   </div>
                 ) : (
                   <div
-                    className="cursor-pointer hover:bg-[#FFFDF9] p-2 rounded -m-2 transition-colors"
+                    className="cursor-pointer hover:bg-[#FAF8F7] p-2 rounded -m-2 transition-colors"
                     onClick={() => {
                       setEditingId(l.id);
                       setEditValue(l.description || "");

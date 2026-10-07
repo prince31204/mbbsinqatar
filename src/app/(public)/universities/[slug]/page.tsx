@@ -85,16 +85,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title:
       u.metaTitle ||
-      `${u.name} | MBBS Fees ${APP_YEAR}, NMC Status & Admission for Indians | mbbsinjapan.com`,
+      `${u.name} | MBBS Fees ${APP_YEAR}, NMC Status & Admission for Indians | mbbsinqatar.com`,
     description:
       u.metaDescription ||
       u.shortnote ||
-      `Study MBBS at ${u.name}, Japan. NMC & WHO recognized, English medium, affordable fees. Apply ${ADMISSION_YEAR}.`,
+      `Study MBBS at ${u.name}, Qatar. NMC & WHO recognized, English medium, affordable fees. Apply ${ADMISSION_YEAR}.`,
     path: `/universities/${slug}`,
     entitySeo: {
       metaKeyword:
         u.metaKeyword ||
-        `${u.name}, MBBS ${u.name}, ${u.city || "Japan"} medical university, MBBS Japan`,
+        `${u.name}, MBBS ${u.name}, ${u.city || "Qatar"} medical university, MBBS Qatar`,
     },
     ogImage: u.bannerPath
       ? (cdn(u.bannerPath) ?? undefined)
@@ -152,7 +152,7 @@ export default async function UniversityDetailPage({ params }: Props) {
   if (!university) notFound();
 
   const countryDocs = await prisma.countryDocument
-    .findMany({ where: { isActive: true, country: "Japan" } })
+    .findMany({ where: { isActive: true, country: "Qatar" } })
     .catch(() => []);
 
   const universityMapped = {
@@ -226,7 +226,7 @@ export default async function UniversityDetailPage({ params }: Props) {
       icon: Plane,
       title: "Visa Processing",
       description:
-        "We assist with your Japan student visa application and provide invitation letter.",
+        "We assist with your Qatar student visa application and provide invitation letter.",
       timeframe: "15–20 days",
       color: "orange",
     },
@@ -234,14 +234,14 @@ export default async function UniversityDetailPage({ params }: Props) {
       icon: Calendar,
       title: "Arrival & Enrollment",
       description:
-        "Arrive in Japan and complete your university enrollment and orientation.",
+        "Arrive in Qatar and complete your university enrollment and orientation.",
       timeframe: "2–3 days",
       color: "pink",
     },
   ];
   const stepColors: Record<string, string> = {
-    blue: "bg-[#F9FAFB] text-[#BC002D]",
-    green: "bg-red-100 text-[#8F0023]",
+    blue: "bg-[#F9FAFB] text-[#8A1538]",
+    green: "bg-[#F7E9EE] text-[#5B0F26]",
     purple: "bg-purple-100 text-purple-600",
     orange: "bg-orange-100 text-orange-600",
     pink: "bg-pink-100 text-pink-600",
@@ -257,15 +257,15 @@ export default async function UniversityDetailPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-white border-b text-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-[#6B7280]">
-          <Link href="/" className="hover:text-[#102A43]">
+          <Link href="/" className="hover:text-[#5B0F26]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/universities" className="hover:text-[#102A43]">
+          <Link href="/universities" className="hover:text-[#5B0F26]">
             Universities
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-[#17202A] font-medium truncate">
+          <span className="text-[#1F2937] font-medium truncate">
             {universityMapped.name}
           </span>
         </div>
@@ -274,12 +274,12 @@ export default async function UniversityDetailPage({ params }: Props) {
       <UniversityHero university={universityMapped} />
 
       {/* University Comparison Shortcuts — Internal Linking Hub */}
-      <section className="bg-[#FFFDF9] border-y border-[#E5E7EB] py-6">
+      <section className="bg-[#FAF8F7] border-y border-[#E5E7EB] py-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center gap-4 text-sm text-[#4B5563]">
-          <span className="font-semibold text-[#17202A]">
+          <span className="font-semibold text-[#1F2937]">
             Compare Universities:
           </span>
-          <Link href="/compare" className="text-[#BC002D] hover:underline">
+          <Link href="/compare" className="text-[#8A1538] hover:underline">
             Full Comparison Tool
           </Link>
         </div>
@@ -292,7 +292,7 @@ export default async function UniversityDetailPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[#17202A] mb-6">
+              <h2 className="text-3xl font-bold text-[#1F2937] mb-6">
                 World-Class Infrastructure & Laboratory Facilities
               </h2>
               <div className="prose prose-blue text-[#4B5563] max-w-none space-y-4">
@@ -305,27 +305,27 @@ export default async function UniversityDetailPage({ params }: Props) {
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 list-none p-0">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#BC002D]" /> Digital
+                    <CheckCircle className="w-5 h-5 text-[#8A1538]" /> Digital
                     Anatomy Tables
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#BC002D]" /> 24/7
+                    <CheckCircle className="w-5 h-5 text-[#8A1538]" /> 24/7
                     Library Access
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#BC002D]" /> Modern
+                    <CheckCircle className="w-5 h-5 text-[#8A1538]" /> Modern
                     Research Labs
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#BC002D]" /> On-campus
+                    <CheckCircle className="w-5 h-5 text-[#8A1538]" /> On-campus
                     Hostels
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#BC002D]" /> Indian
+                    <CheckCircle className="w-5 h-5 text-[#8A1538]" /> Indian
                     Mess Facilities
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#BC002D]" /> Sports &
+                    <CheckCircle className="w-5 h-5 text-[#8A1538]" /> Sports &
                     Recreational Area
                   </li>
                 </ul>
@@ -338,7 +338,7 @@ export default async function UniversityDetailPage({ params }: Props) {
               </div>
             </div>
             <div className="relative group">
-              <div className="absolute -inset-4 bg-[#BC002D] rounded-[2.5rem] opacity-10 hidden group-hover:opacity-20 transition-opacity" />
+              <div className="absolute -inset-4 bg-[#8A1538] rounded-[2.5rem] opacity-10 hidden group-hover:opacity-20 transition-opacity" />
               <div className="relative bg-white rounded-3xl border border-[#E5E7EB] shadow-2xl overflow-hidden aspect-[4/3]">
                 <Image
                   src={
@@ -356,12 +356,12 @@ export default async function UniversityDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Added Content Section: Location & Living in Japan */}
-      <section className="py-16 bg-[#FFFDF9]">
+      {/* Added Content Section: Location & Living in Qatar */}
+      <section className="py-16 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#17202A] mb-4">
-              Location & Student Life in {universityMapped.city || "Japan"}
+            <h2 className="text-3xl font-bold text-[#1F2937] mb-4">
+              Location & Student Life in {universityMapped.city || "Qatar"}
             </h2>
             <p className="text-[#4B5563] max-w-2xl mx-auto">
               Discover the environment where you will live and study for the
@@ -371,12 +371,12 @@ export default async function UniversityDetailPage({ params }: Props) {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E5E7EB]">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4">
-                <MapPin className="text-[#BC002D] w-6 h-6" />
+                <MapPin className="text-[#8A1538] w-6 h-6" />
               </div>
-              <h3 className="font-bold text-[#17202A] mb-2">City Atmosphere</h3>
+              <h3 className="font-bold text-[#1F2937] mb-2">City Atmosphere</h3>
               <p className="text-sm text-[#4B5563] leading-relaxed">
-                {universityMapped.city} is a major urban hub in Japan,
-                offering a blend of modern lifestyle and traditional Japan
+                {universityMapped.city} is a major urban hub in Qatar,
+                offering a blend of modern lifestyle and traditional Qatar
                 culture. It is extremely safe for international students with
                 24/7 security in university zones.
               </p>
@@ -385,7 +385,7 @@ export default async function UniversityDetailPage({ params }: Props) {
               <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-4">
                 <Users className="text-orange-600 w-6 h-6" />
               </div>
-              <h3 className="font-bold text-[#17202A] mb-2">Indian Community</h3>
+              <h3 className="font-bold text-[#1F2937] mb-2">Indian Community</h3>
               <p className="text-sm text-[#4B5563] leading-relaxed">
                 With over {universityMapped.students || "1200+"} Indian students
                 currently enrolled, you will find a strong support network.
@@ -394,10 +394,10 @@ export default async function UniversityDetailPage({ params }: Props) {
               </p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E5E7EB]">
-              <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
-                <Clock className="text-[#8F0023] w-6 h-6" />
+              <div className="w-12 h-12 bg-[#F7E9EE] rounded-xl flex items-center justify-center mb-4">
+                <Clock className="text-[#5B0F26] w-6 h-6" />
               </div>
-              <h3 className="font-bold text-[#17202A] mb-2">Cost of Living</h3>
+              <h3 className="font-bold text-[#1F2937] mb-2">Cost of Living</h3>
               <p className="text-sm text-[#4B5563] leading-relaxed">
                 {replaceCurrencySymbol(
                   "Most students spend between $150–$250 per month on personal expenses, food, and local travel. This makes",
@@ -469,10 +469,10 @@ export default async function UniversityDetailPage({ params }: Props) {
                     key={stat.label}
                     className="text-center group hover:scale-105 transition-transform duration-300"
                   >
-                    <div className="bg-[#102A43] p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:shadow-xl transition-shadow">
+                    <div className="bg-[#5B0F26] p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:shadow-xl transition-shadow">
                       <stat.icon className="h-9 w-9 text-white" />
                     </div>
-                    <h3 className="text-3xl font-bold text-[#17202A] mb-1">
+                    <h3 className="text-3xl font-bold text-[#1F2937] mb-1">
                       {stat.value}
                     </h3>
                     <p className="text-[#6B7280] text-sm">{stat.label}</p>
@@ -517,10 +517,10 @@ export default async function UniversityDetailPage({ params }: Props) {
         <section className="py-10 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <span className="inline-block bg-[#F9FAFB] text-[#102A43] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-2">
+              <span className="inline-block bg-[#F9FAFB] text-[#5B0F26] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-2">
                 Financial Aid
               </span>
-              <h2 className="text-4xl font-bold text-[#17202A] mb-2">
+              <h2 className="text-4xl font-bold text-[#1F2937] mb-2">
                 Scholarships Available
               </h2>
             </div>
@@ -529,13 +529,13 @@ export default async function UniversityDetailPage({ params }: Props) {
                 <Link
                   key={s.id}
                   href={`/scholarships/${s.slug}`}
-                  className="group bg-white border border-[#E5E7EB] border-l-4 border-l-[#102A43] rounded-xl p-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  className="group bg-white border border-[#E5E7EB] border-l-4 border-l-[#5B0F26] rounded-xl p-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <h3 className="font-bold text-[#17202A] text-sm leading-snug mb-1.5 group-hover:text-[#102A43] transition-colors">
+                  <h3 className="font-bold text-[#1F2937] text-sm leading-snug mb-1.5 group-hover:text-[#5B0F26] transition-colors">
                     {s.title}
                   </h3>
                   {s.amount && (
-                    <span className="inline-block bg-white text-[#102A43] text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E7EB]">
+                    <span className="inline-block bg-white text-[#5B0F26] text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E7EB]">
                       {s.amount}
                     </span>
                   )}
@@ -545,7 +545,7 @@ export default async function UniversityDetailPage({ params }: Props) {
                     </p>
                   )}
                   <div className="mt-3 pt-3 border-t border-[#E5E7EB] flex items-center justify-end">
-                    <span className="text-xs font-semibold text-[#BC002D] flex items-center gap-1">
+                    <span className="text-xs font-semibold text-[#8A1538] flex items-center gap-1">
                       Learn More <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>
@@ -572,10 +572,10 @@ export default async function UniversityDetailPage({ params }: Props) {
       )}
 
       {/* Inline Apply Form */}
-      <section id="apply" className="py-10 bg-[#FFFDF9]">
+      <section id="apply" className="py-10 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Apply Directly to the University
             </h2>
             <p className="text-xl text-[#4B5563]">
@@ -594,10 +594,10 @@ export default async function UniversityDetailPage({ params }: Props) {
       </section>
 
       {/* Application Procedure */}
-      <section className="py-10 bg-[#FFFDF9]">
+      <section className="py-10 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Application Procedure
             </h2>
             <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
@@ -606,7 +606,7 @@ export default async function UniversityDetailPage({ params }: Props) {
             </p>
           </div>
           <div className="relative">
-            <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-blue-200" />
+            <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-[#2F8F83]" />
             <div>
               {applicationSteps.map((step, index) => (
                 <div
@@ -625,7 +625,7 @@ export default async function UniversityDetailPage({ params }: Props) {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
-                            <h3 className="text-lg font-bold text-[#17202A]">
+                            <h3 className="text-lg font-bold text-[#1F2937]">
                               {step.title}
                             </h3>
                             <span className="bg-[#F9FAFB] text-[#4B5563] px-3 py-0.5 rounded-full text-xs font-medium">
@@ -640,7 +640,7 @@ export default async function UniversityDetailPage({ params }: Props) {
                     </div>
                   </div>
                   <div className="hidden lg:flex w-16 h-16 bg-[#F9FAFB] rounded-full items-center justify-center shadow-lg shrink-0 z-10">
-                    <span className="text-[#17202A] font-bold text-xl">
+                    <span className="text-[#1F2937] font-bold text-xl">
                       {index + 1}
                     </span>
                   </div>
@@ -649,7 +649,7 @@ export default async function UniversityDetailPage({ params }: Props) {
               ))}
             </div>
           </div>
-          <div className="mt-14 bg-[#102A43] rounded-2xl p-8 text-white text-center">
+          <div className="mt-14 bg-[#5B0F26] rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-3">Need Assistance?</h3>
             <p className="text-white mb-6">
               Our dedicated admissions team is here to help you throughout the
@@ -657,22 +657,22 @@ export default async function UniversityDetailPage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href="mailto:info@mbbsinjapan.com"
+                href="mailto:info@mbbsinqatar.com"
                 className="flex items-center gap-3"
               >
                 <div className="bg-white p-2 rounded-full">
-                  <Mail className="h-5 w-5 text-[#BC002D]" />
+                  <Mail className="h-5 w-5 text-[#8A1538]" />
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-white">Email Support</p>
                   <p className="text-white text-sm">
-                    info@mbbsinjapan.com
+                    info@mbbsinqatar.com
                   </p>
                 </div>
               </Link>
               <Link href="/contact-us" className="flex items-center gap-3">
                 <div className="bg-white p-2 rounded-full">
-                  <Phone className="h-5 w-5 text-[#BC002D]" />
+                  <Phone className="h-5 w-5 text-[#8A1538]" />
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-white">Get Free Counselling</p>
@@ -685,7 +685,7 @@ export default async function UniversityDetailPage({ params }: Props) {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-12 bg-gradient-to-br from-[#102A43] to-[#17202A] text-white relative overflow-hidden">
+      <section className="py-12 bg-gradient-to-br from-[#5B0F26] to-[#1F2937] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
         
@@ -704,7 +704,7 @@ export default async function UniversityDetailPage({ params }: Props) {
               rel={
                 universityMapped.applyNowUrl ? "noopener noreferrer" : undefined
               }
-              className="bg-[#BC002D] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#8F0023] transition-all hover:scale-105 shadow-lg"
+              className="bg-[#8A1538] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#5B0F26] transition-all hover:scale-105 shadow-lg"
             >
               Apply Now <ArrowRight className="w-5 h-5" />
             </Link>

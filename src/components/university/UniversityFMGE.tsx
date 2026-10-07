@@ -16,10 +16,10 @@ interface Props {
 
 export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
   return (
-    <section className="py-10 bg-[#FFFDF9]">
+    <section className="py-10 bg-[#FAF8F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-7">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
             FMGE Success Rate
           </h2>
           <p className="text-base text-[#6B7280]">
@@ -31,7 +31,7 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <table className="w-full text-base">
               <thead>
-                <tr className="bg-[#BC002D] text-white">
+                <tr className="bg-[#8A1538] text-white">
                   <th className="text-left p-5 font-semibold">Year</th>
                   <th className="text-right p-5 font-semibold">Appeared</th>
                   <th className="text-right p-5 font-semibold">Passed</th>
@@ -41,7 +41,7 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {fmgeRates.map((r) => (
-                  <tr key={r.id} className="hover:bg-[#FFFDF9]">
+                  <tr key={r.id} className="hover:bg-[#FAF8F7]">
                     <td className="p-5 font-bold text-base">{r.year}</td>
                     <td className="p-5 text-right text-[#4B5563]">
                       {r.appeared ?? "—"}
@@ -51,11 +51,11 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
                     </td>
                     <td className="p-5 text-right">
                       {r.acceptance_rate ? (
-                        <span className="text-[#8F0023] font-bold text-lg">
+                        <span className="text-[#5B0F26] font-bold text-lg">
                           {r.acceptance_rate}%
                         </span>
                       ) : r.passPercentage != null ? (
-                        <span className="text-[#8F0023] font-bold text-lg">
+                        <span className="text-[#5B0F26] font-bold text-lg">
                           {String(Number(r.passPercentage))}%
                         </span>
                       ) : (
@@ -65,7 +65,7 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
                     <td className="p-5 text-right">
                       {r.yoy_change ? (
                         <span
-                          className={`font-semibold text-base ${r.yoy_change.startsWith("-") ? "text-red-500" : "text-[#BC002D]"}`}
+                          className={`font-semibold text-base ${r.yoy_change.startsWith("-") ? "text-[#8A1538]" : "text-[#8A1538]"}`}
                         >
                           {r.yoy_change.startsWith("-") ? "" : "+"}
                           {r.yoy_change}%
@@ -81,11 +81,11 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
           </div>
         )}
         {fmgePassRate != null && (
-          <div className="mt-8 bg-red-50 border border-red-200 rounded-2xl p-6 text-center">
-            <p className="text-5xl font-black text-[#8F0023] mb-2">
+          <div className="mt-8 bg-[#F7E9EE] border border-[#F7E9EE] rounded-2xl p-6 text-center">
+            <p className="text-5xl font-black text-[#5B0F26] mb-2">
               {Number(fmgePassRate)}%
             </p>
-            <p className="text-lg font-semibold text-[#17202A]">
+            <p className="text-lg font-semibold text-[#1F2937]">
               Average FMGE Success Rate
             </p>
             <p className="text-[#4B5563] text-sm mt-1">

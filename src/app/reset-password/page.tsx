@@ -58,10 +58,10 @@ export default function ResetPasswordPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-[#BC002D] rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#8A1538] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Reset Password</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Reset Password</h1>
           <p className="text-[#6B7280] text-sm mt-1">
             Enter the OTP sent to your email
           </p>
@@ -69,10 +69,10 @@ export default function ResetPasswordPage() {
 
         {success ? (
           <div className="text-center">
-            <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="w-9 h-9 text-[#BC002D]" />
+            <div className="w-16 h-16 bg-[#F7E9EE] rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="w-9 h-9 text-[#8A1538]" />
             </div>
-            <h2 className="text-xl font-bold text-[#17202A] mb-2">
+            <h2 className="text-xl font-bold text-[#1F2937] mb-2">
               Password Reset!
             </h2>
             <p className="text-[#4B5563] mb-4">
@@ -80,7 +80,7 @@ export default function ResetPasswordPage() {
             </p>
             <Link
               href="/login"
-              className="text-[#BC002D] hover:underline font-medium"
+              className="text-[#8A1538] hover:underline font-medium"
             >
               Go to Login →
             </Link>
@@ -88,7 +88,7 @@ export default function ResetPasswordPage() {
         ) : (
           <>
             {error && (
-              <div className="bg-white border border-[#E5E7EB] text-[#102A43] px-4 py-3 rounded-lg mb-5 text-sm">
+              <div className="bg-white border border-[#E5E7EB] text-[#5B0F26] px-4 py-3 rounded-lg mb-5 text-sm">
                 {error}
               </div>
             )}
@@ -103,7 +103,7 @@ export default function ResetPasswordPage() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="your@email.com"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -122,7 +122,7 @@ export default function ResetPasswordPage() {
                   }
                   placeholder="6-digit OTP"
                   maxLength={6}
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#17202A] font-mono text-lg tracking-widest focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#1F2937] font-mono text-lg tracking-widest focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -138,7 +138,7 @@ export default function ResetPasswordPage() {
                       setForm({ ...form, password: e.target.value })
                     }
                     placeholder="Min 8 characters"
-                    className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
                   />
                   <button
                     type="button"
@@ -165,13 +165,13 @@ export default function ResetPasswordPage() {
                     setForm({ ...form, confirm: e.target.value })
                   }
                   placeholder="Repeat new password"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#17202A] focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 focus:border-transparent"
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#BC002D] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8F0023] disabled:opacity-60 transition-colors flex items-center justify-center gap-2 mt-2"
+                className="w-full bg-[#8A1538] text-white py-3.5 rounded-xl font-semibold hover:bg-[#5B0F26] disabled:opacity-60 transition-colors flex items-center justify-center gap-2 mt-2"
               >
                 {loading ? (
                   <>
@@ -189,7 +189,7 @@ export default function ResetPasswordPage() {
         <div className="mt-6 text-center text-sm text-[#4B5563]">
           <Link
             href="/forgot-password"
-            className="text-[#BC002D] hover:text-[#102A43] font-medium"
+            className="text-[#8A1538] hover:text-[#5B0F26] font-medium"
           >
             ← Request New OTP
           </Link>

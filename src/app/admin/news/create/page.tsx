@@ -107,14 +107,14 @@ export default function CreateNewsPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">New Article</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">New Article</h1>
           <p className="text-sm text-[#6B7280]">Write a news article</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Article Details
           </h2>
           <div className="space-y-1.5">
@@ -201,7 +201,7 @@ export default function CreateNewsPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">Media</h2>
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">Media</h2>
           <div className="grid grid-cols-2 gap-4">
             <ImageUpload
               label="Thumbnail"
@@ -219,7 +219,7 @@ export default function CreateNewsPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3 mb-4">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3 mb-4">
             SEO
           </h2>
           <SeoFields
@@ -240,7 +240,7 @@ export default function CreateNewsPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             disabled={loading}
           >
             {loading ? (

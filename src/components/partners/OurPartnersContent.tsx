@@ -261,9 +261,9 @@ export default function OurPartnersContent({
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]" suppressHydrationWarning>
+    <div className="min-h-screen bg-[#FAF8F7]" suppressHydrationWarning>
       {/* -- HEMD -- */}
-      <section className="relative overflow-hidden text-white bg-gradient-to-br from-[#102A43] to-[#17202A]">
+      <section className="relative overflow-hidden text-white bg-gradient-to-br from-[#5B0F26] to-[#1F2937]">
         {/* decorative blobs */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full hidden z-0" />
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-white/5 rounded-full hidden z-0" />
@@ -274,7 +274,7 @@ export default function OurPartnersContent({
             India Network
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 mt-2">
-            Our <span className="text-[#F3A6B8]">Partners</span> in India
+            Our <span className="text-[#C9A227]">Partners</span> in India
           </h1>
           <p className="text-gray-200 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mb-6">
             Meet our trusted network of education consultants and partners
@@ -288,7 +288,7 @@ export default function OurPartnersContent({
             <button
               type="button"
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-[#BC002D] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#8F0023] transition-colors shadow-lg cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#8A1538] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#5B0F26] transition-colors shadow-lg cursor-pointer"
             >
               <Handshake className="w-5 h-5" />
               Become a Partner
@@ -306,7 +306,7 @@ export default function OurPartnersContent({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto py-2 pb-6">
             {stats.map((s, idx) => (
               <div key={idx} className="text-center">
-                <p className="text-4xl lg:text-5xl font-extrabold text-[#F3A6B8] mb-1">
+                <p className="text-4xl lg:text-5xl font-extrabold text-[#C9A227] mb-1">
                   {s.value}
                 </p>
                 <p className="text-gray-200 text-sm md:text-base font-medium tracking-wide">
@@ -335,7 +335,7 @@ export default function OurPartnersContent({
                   placeholder="Search by name, company, city..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent border-none outline-none text-sm text-[#17202A] placeholder:text-[#6B7280] w-full"
+                  className="bg-transparent border-none outline-none text-sm text-[#1F2937] placeholder:text-[#6B7280] w-full"
                 />
               </div>
             </div>
@@ -349,7 +349,7 @@ export default function OurPartnersContent({
                 <select
                   value={selectedCountry}
                   onChange={(e) => setSelectedCountry(e.target.value)}
-                  className="w-full appearance-none bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#4B5563] outline-none focus:ring-2 focus:ring-[#102A43]/500/20 focus:border-[#E5E7EB] transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#4B5563] outline-none focus:ring-2 focus:ring-[#5B0F26]/500/20 focus:border-[#E5E7EB] transition-all cursor-pointer"
                 >
                   <option value="All">All Countries</option>
                   <option value="India">India</option>
@@ -370,7 +370,7 @@ export default function OurPartnersContent({
                     setSelectedState(e.target.value);
                     setSelectedCity("All");
                   }}
-                  className="w-full appearance-none bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#4B5563] outline-none focus:ring-2 focus:ring-[#102A43]/500/20 focus:border-[#E5E7EB] transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#4B5563] outline-none focus:ring-2 focus:ring-[#5B0F26]/500/20 focus:border-[#E5E7EB] transition-all cursor-pointer"
                 >
                   <option value="All">All States</option>
                   {availableStates.map((st) => (
@@ -395,7 +395,7 @@ export default function OurPartnersContent({
                   disabled={
                     selectedState === "All" || availableCities.length === 0
                   }
-                  className="w-full appearance-none bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#4B5563] outline-none disabled:opacity-50 disabled:bg-[#FFFDF9] disabled:cursor-not-allowed focus:ring-2 focus:ring-[#102A43]/500/20 focus:border-[#E5E7EB] transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#4B5563] outline-none disabled:opacity-50 disabled:bg-[#FAF8F7] disabled:cursor-not-allowed focus:ring-2 focus:ring-[#5B0F26]/500/20 focus:border-[#E5E7EB] transition-all cursor-pointer"
                 >
                   <option value="All">All Cities</option>
                   {availableCities.map((c, i) => (
@@ -413,7 +413,7 @@ export default function OurPartnersContent({
           <div className="flex items-center justify-between pt-6 border-t border-[#E5E7EB]">
             <p className="text-sm text-[#4B5563]">
               Showing{" "}
-              <span className="font-semibold text-[#BC002D]">
+              <span className="font-semibold text-[#8A1538]">
                 {totalPartners}
               </span>{" "}
               partners
@@ -421,13 +421,13 @@ export default function OurPartnersContent({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setViewMode("grid")}
-                className={`p-2 rounded-lg transition-colors ${viewMode === "grid" ? "bg-[#BC002D] text-white" : "bg-[#F9FAFB] text-[#6B7280] hover:bg-gray-200"}`}
+                className={`p-2 rounded-lg transition-colors ${viewMode === "grid" ? "bg-[#8A1538] text-white" : "bg-[#F9FAFB] text-[#6B7280] hover:bg-gray-200"}`}
               >
                 <LayoutGrid className="w-5 h-5" />
               </button>
               <button
                 onClick={() => setViewMode("list")}
-                className={`p-2 rounded-lg transition-colors ${viewMode === "list" ? "bg-[#BC002D] text-white" : "bg-[#F9FAFB] text-[#6B7280] hover:bg-gray-200"}`}
+                className={`p-2 rounded-lg transition-colors ${viewMode === "list" ? "bg-[#8A1538] text-white" : "bg-[#F9FAFB] text-[#6B7280] hover:bg-gray-200"}`}
               >
                 <List className="w-5 h-5" />
               </button>
@@ -442,13 +442,13 @@ export default function OurPartnersContent({
           <div key={group.region} className="mb-14">
             {/* region header */}
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-2 bg-white text-[#BC002D] rounded-lg">
+              <div className="p-2 bg-white text-[#8A1538] rounded-lg">
                 <MapPin className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-[#17202A]">
+              <h2 className="text-2xl font-bold text-[#1F2937]">
                 {group.region}
               </h2>
-              <span className="px-3 py-1 bg-[#F9FAFB] text-[#102A43] text-sm font-semibold rounded-full">
+              <span className="px-3 py-1 bg-[#F9FAFB] text-[#5B0F26] text-sm font-semibold rounded-full">
                 {group.partners.length} Partners
               </span>
             </div>
@@ -479,10 +479,10 @@ export default function OurPartnersContent({
                         />
                         <div className="absolute top-3 inset-x-3 flex justify-between items-start pointer-events-none">
                           <div className="flex flex-col gap-2 pointer-events-auto">
-                            <span className="bg-red-500/90 text-[#17202A] px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
+                            <span className="bg-red-500/90 text-[#1F2937] px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
                               <CheckCircle className="w-3 h-3" /> Verified
                             </span>
-                            <span className="bg-[#BC002D]/90 text-[#17202A] px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
+                            <span className="bg-[#8A1538]/90 text-[#1F2937] px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
                               <Star className="w-3 h-3 fill-current" />{" "}
                               {p.rating}
                             </span>
@@ -493,10 +493,10 @@ export default function OurPartnersContent({
                       {/* Content Area */}
                       <div className="p-6 flex-1 flex flex-col justify-between">
                         <div>
-                          <h3 className="text-xl font-bold text-[#17202A] mb-0.5 truncate">
+                          <h3 className="text-xl font-bold text-[#1F2937] mb-0.5 truncate">
                             {p.name}
                           </h3>
-                          <p className="text-base font-medium text-[#BC002D] mb-0.5 truncate">
+                          <p className="text-base font-medium text-[#8A1538] mb-0.5 truncate">
                             {p.designation}
                           </p>
                           <p className="text-sm font-medium text-[#6B7280] mb-6 truncate">
@@ -537,7 +537,7 @@ export default function OurPartnersContent({
                                   });
                                   setLeadModalOpen(true);
                                 }}
-                                className="w-full bg-white text-[#BC002D] py-2 rounded-xl text-sm font-bold hover:bg-[#F9FAFB] transition-colors border border-[#E5E7EB]"
+                                className="w-full bg-white text-[#8A1538] py-2 rounded-xl text-sm font-bold hover:bg-[#F9FAFB] transition-colors border border-[#E5E7EB]"
                               >
                                 Show Contact Details
                               </button>
@@ -545,7 +545,7 @@ export default function OurPartnersContent({
 
                             <div className="grid grid-cols-2 gap-4 pt-6">
                               <div className="bg-white/80 rounded-2xl p-4 text-center">
-                                <p className="text-2xl font-bold text-[#BC002D]">
+                                <p className="text-2xl font-bold text-[#8A1538]">
                                   {p.studentsPlaced}+
                                 </p>
                                 <p className="text-[11px] font-medium text-[#6B7280]">
@@ -564,7 +564,7 @@ export default function OurPartnersContent({
 
                             <Link
                               href="/contact-us"
-                              className="block text-center w-full mt-6 bg-[#BC002D] text-white py-3 rounded-xl font-bold hover:bg-[#8F0023] transition-colors"
+                              className="block text-center w-full mt-6 bg-[#8A1538] text-white py-3 rounded-xl font-bold hover:bg-[#5B0F26] transition-colors"
                             >
                               University Admission Inquiry
                             </Link>
@@ -573,7 +573,7 @@ export default function OurPartnersContent({
                       </div>
                     </>
                   ) : (
-                    <div className="flex flex-col md:flex-row items-start md:items-center w-full p-4 lg:p-5 gap-4 lg:gap-8 hover:bg-[#FFFDF9]/50 transition-colors">
+                    <div className="flex flex-col md:flex-row items-start md:items-center w-full p-4 lg:p-5 gap-4 lg:gap-8 hover:bg-[#FAF8F7]/50 transition-colors">
                       {/* Image */}
                       <div className="w-20 lg:w-24 h-20 lg:h-24 shrink-0 rounded-2xl overflow-hidden bg-[#F9FAFB]">
                         <img
@@ -585,10 +585,10 @@ export default function OurPartnersContent({
 
                       {/* Info Column */}
                       <div className="flex-1 min-w-[200px]">
-                        <h3 className="text-lg font-bold text-[#17202A] mb-0.5">
+                        <h3 className="text-lg font-bold text-[#1F2937] mb-0.5">
                           {p.name}
                         </h3>
-                        <p className="text-sm font-medium text-[#BC002D] mb-0.5">
+                        <p className="text-sm font-medium text-[#8A1538] mb-0.5">
                           {p.designation}
                         </p>
                         <p className="text-sm text-[#6B7280]">{p.company}</p>
@@ -620,14 +620,14 @@ export default function OurPartnersContent({
 
                       {/* Stats Column */}
                       <div className="flex-1 min-w-[120px] flex flex-col items-center md:items-center text-center">
-                        <p className="text-xl font-bold text-[#BC002D]">
+                        <p className="text-xl font-bold text-[#8A1538]">
                           {p.studentsPlaced}
                         </p>
                         <p className="text-[11px] text-[#6B7280] mt-0.5 mb-1">
                           Students Placed
                         </p>
-                        <p className="text-sm font-semibold text-[#17202A] flex items-center justify-center gap-1">
-                          <Star className="w-4 h-4 text-[#BC002D] fill-current" />{" "}
+                        <p className="text-sm font-semibold text-[#1F2937] flex items-center justify-center gap-1">
+                          <Star className="w-4 h-4 text-[#8A1538] fill-current" />{" "}
                           {p.rating}
                         </p>
                       </div>
@@ -643,21 +643,21 @@ export default function OurPartnersContent({
                               });
                               setLeadModalOpen(true);
                             }}
-                            className="bg-white hover:bg-[#F9FAFB] text-[#BC002D] text-sm font-bold px-6 py-2.5 rounded-lg border border-[#E5E7EB] shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
+                            className="bg-white hover:bg-[#F9FAFB] text-[#8A1538] text-sm font-bold px-6 py-2.5 rounded-lg border border-[#E5E7EB] shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
                           >
                             Show Number
                           </button>
                         ) : (
                           <Link
                             href="/contact-us"
-                            className="bg-[#BC002D] hover:bg-[#8F0023] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
+                            className="bg-[#8A1538] hover:bg-[#5B0F26] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
                           >
                             Admission Inquiry
                           </Link>
                         )}
                         <Link
                           href="/contact-us"
-                          className="bg-[#BC002D] hover:bg-[#8F0023] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
+                          className="bg-[#8A1538] hover:bg-[#5B0F26] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
                         >
                           Contact Now
                         </Link>
@@ -674,10 +674,10 @@ export default function OurPartnersContent({
       {/* -- WHY PARTNER / BENEFITS -- */}
       <section className="bg-white/70 py-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#BC002D] bg-[#F9FAFB] px-3 py-1 rounded-full mb-4">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#8A1538] bg-[#F9FAFB] px-3 py-1 rounded-full mb-4">
             Core Benefits
           </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#17202A] mb-4">
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1F2937] mb-4">
             Why Partner With Us?
           </h2>
           <p className="text-[#4B5563] max-w-2xl mx-auto mb-14">
@@ -704,9 +704,9 @@ export default function OurPartnersContent({
                   <div
                     className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colorMap[b.color] || colorMap.red} shadow-md flex items-center justify-center mb-4`}
                   >
-                    <b.icon className="w-6 h-6 text-[#17202A]" />
+                    <b.icon className="w-6 h-6 text-[#1F2937]" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#17202A] mb-2 text-left">
+                  <h3 className="text-lg font-bold text-[#1F2937] mb-2 text-left">
                     {b.title}
                   </h3>
                   <p className="text-[#4B5563] text-sm leading-relaxed text-left">
@@ -720,23 +720,23 @@ export default function OurPartnersContent({
       </section>
 
       {/* -- BOTTOM CTA -- */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#102A43] to-[#17202A] text-white py-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#5B0F26] to-[#1F2937] text-white py-16">
         <div className="absolute -top-20 right-0 w-72 h-72 bg-white/5 rounded-full hidden" />
         <div className="absolute bottom-0 left-10 w-60 h-60 bg-white/5 rounded-full hidden" />
 
         <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <Star className="w-10 h-10 text-[#F3A6B8] mx-auto mb-5" />
+          <Star className="w-10 h-10 text-[#C9A227] mx-auto mb-5" />
           <h2 className="text-3xl lg:text-4xl font-extrabold mb-4">
             Ready to Join Our Network?
           </h2>
           <p className="text-gray-200 mb-10 text-lg">
             Partner with us and be part of a trusted ecosystem that connects
-            aspiring medical students with world-class universities in Japan.
+            aspiring medical students with world-class universities in Qatar.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-[#BC002D] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#8F0023] transition-colors shadow-lg cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#8A1538] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#5B0F26] transition-colors shadow-lg cursor-pointer"
             >
               <Handshake className="w-5 h-5" />
               Become a Partner

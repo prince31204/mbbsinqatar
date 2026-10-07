@@ -113,9 +113,9 @@ export default function GovernmentLinksPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link2 size={22} className="text-[#BC002D]" />
+          <Link2 size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Government Links
             </h1>
             <p className="text-sm text-[#6B7280]">
@@ -129,7 +129,7 @@ export default function GovernmentLinksPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           {showForm ? (
             <>
@@ -147,7 +147,7 @@ export default function GovernmentLinksPage() {
 
       {showForm && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A]">
+          <h2 className="font-semibold text-[#1F2937]">
             {editId ? "Edit Link" : "New Government Link"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -206,7 +206,7 @@ export default function GovernmentLinksPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <>
@@ -237,7 +237,7 @@ export default function GovernmentLinksPage() {
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+              <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">Category</th>
                 <th className="px-4 py-3 font-medium">URL</th>
@@ -249,9 +249,9 @@ export default function GovernmentLinksPage() {
               {items.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                  className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                 >
-                  <td className="px-4 py-3 font-medium text-[#17202A]">
+                  <td className="px-4 py-3 font-medium text-[#1F2937]">
                     {item.name}
                   </td>
                   <td className="px-4 py-3 text-[#6B7280] text-xs">
@@ -262,7 +262,7 @@ export default function GovernmentLinksPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#BC002D] hover:underline flex items-center gap-1 text-xs"
+                      className="text-[#8A1538] hover:underline flex items-center gap-1 text-xs"
                     >
                       <ExternalLink size={11} />
                       {item.url.replace(/^https?:\/\//, "").slice(0, 40)}
@@ -294,7 +294,7 @@ export default function GovernmentLinksPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                        className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={14} />

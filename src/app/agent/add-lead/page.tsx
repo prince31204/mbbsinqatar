@@ -54,7 +54,7 @@ export default function AgentAddLeadPage() {
     <div className="space-y-6 max-w-2xl">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Add New Lead</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Add New Lead</h1>
           <p className="text-[#6B7280] text-sm mt-1">
             Refer a student and track their application
           </p>
@@ -70,7 +70,7 @@ export default function AgentAddLeadPage() {
       </div>
 
       {/* Info box */}
-      <div className="bg-white border border-[#E5E7EB] rounded-xl p-4 text-sm text-[#102A43]">
+      <div className="bg-white border border-[#E5E7EB] rounded-xl p-4 text-sm text-[#5B0F26]">
         <strong className="block mb-1">💡 Pro Tip</strong>
         Copy the application link and share it with your student — they can fill
         out the form themselves. Or fill the details below to add them directly.
@@ -79,9 +79,9 @@ export default function AgentAddLeadPage() {
       <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 bg-[#F9FAFB] rounded-xl flex items-center justify-center">
-            <UserPlus size={18} className="text-[#BC002D]" />
+            <UserPlus size={18} className="text-[#8A1538]" />
           </div>
-          <h2 className="font-semibold text-[#17202A]">Student Information</h2>
+          <h2 className="font-semibold text-[#1F2937]">Student Information</h2>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -117,7 +117,7 @@ export default function AgentAddLeadPage() {
               <select
                 value={form.program}
                 onChange={(e) => set("program", e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               >
                 {PROGRAMS.map((p) => (
                   <option key={p}>{p}</option>
@@ -141,7 +141,7 @@ export default function AgentAddLeadPage() {
                 onChange={(e) => set("message", e.target.value)}
                 rows={3}
                 placeholder="Any additional context about this student…"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               />
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function AgentAddLeadPage() {
             <Button
               type="submit"
               disabled={saving}
-              className="bg-[#BC002D] hover:bg-[#8F0023]"
+              className="bg-[#8A1538] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <>

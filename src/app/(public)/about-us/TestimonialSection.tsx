@@ -23,15 +23,15 @@ export default function TestimonialSection({
     <section className="bg-white py-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-[#BC002D] font-bold text-sm uppercase tracking-widest bg-white px-4 py-1.5 rounded-full mb-4 inline-block">
+          <span className="text-[#8A1538] font-bold text-sm uppercase tracking-widest bg-white px-4 py-1.5 rounded-full mb-4 inline-block">
             Student Success Stories
           </span>
-          <h2 className="text-4xl lg:text-5xl font-black text-[#17202A] mt-4 leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-black text-[#1F2937] mt-4 leading-tight">
             What Our Students Say
           </h2>
           <p className="text-[#6B7280] mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
             Discover the experiences of students who have embarked on their
-            medical journey in Japan with our guidance.
+            medical journey in Qatar with our guidance.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function TestimonialSection({
               key={testimonial.id}
               className="group relative bg-white rounded-[2.5rem] p-8 border border-[#E5E7EB] shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#E5E7EB]"
             >
-              <div className="absolute top-8 right-8 text-red-50 group-hover:text-[#4B5563] transition-colors duration-500">
+              <div className="absolute top-8 right-8 text-[#F7E9EE] group-hover:text-[#4B5563] transition-colors duration-500">
                 <Quote className="w-12 h-12 rotate-180" />
               </div>
 
@@ -56,7 +56,7 @@ export default function TestimonialSection({
                       key={i}
                       className={`w-5 h-5 ${
                         i < (Number(testimonial.rating) || 5)
-                          ? "text-[#BC002D] fill-yellow-400"
+                          ? "text-[#8A1538] fill-yellow-400"
                           : "text-[#4B5563]"
                       }`}
                     />
@@ -77,17 +77,17 @@ export default function TestimonialSection({
                         className="object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-[#BC002D] font-bold text-xl">
+                      <div className="w-full h-full flex items-center justify-center text-[#8A1538] font-bold text-xl">
                         {testimonial.name.charAt(0)}
                       </div>
                     )}
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#17202A] text-lg group-hover:text-[#102A43] transition-colors duration-300">
+                    <h4 className="font-bold text-[#1F2937] text-lg group-hover:text-[#5B0F26] transition-colors duration-300">
                       {testimonial.name}
                     </h4>
                     {testimonial.designation && (
-                      <p className="text-[#BC002D] text-sm font-medium">
+                      <p className="text-[#8A1538] text-sm font-medium">
                         {testimonial.designation}
                       </p>
                     )}

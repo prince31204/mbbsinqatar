@@ -154,22 +154,22 @@ export default async function BlogDetailPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-white border-b border-[#E5E7EB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-1.5 text-sm text-[#6B7280] flex-wrap">
-          <Link href="/" className="hover:text-[#102A43] transition-colors">
+          <Link href="/" className="hover:text-[#5B0F26] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#4B5563]" />
-          <Link href="/blog" className="hover:text-[#102A43] transition-colors">
+          <Link href="/blog" className="hover:text-[#5B0F26] transition-colors">
             Blog
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#4B5563]" />
           <Link
             href={`/blog/${categorySlug}`}
-            className="hover:text-[#102A43] transition-colors"
+            className="hover:text-[#5B0F26] transition-colors"
           >
             {blog.category.name}
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#4B5563]" />
-          <span className="text-[#17202A] font-medium line-clamp-1">
+          <span className="text-[#1F2937] font-medium line-clamp-1">
             {blog.title}
           </span>
         </div>
@@ -184,11 +184,11 @@ export default async function BlogDetailPage({ params }: Props) {
               <div className="flex flex-wrap gap-2 mb-4">
                 <Link
                   href={`/blog/${categorySlug}`}
-                  className="inline-flex items-center bg-white text-[#BC002D] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full hover:bg-[#F9FAFB] transition-colors"
+                  className="inline-flex items-center bg-white text-[#8A1538] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full hover:bg-[#F9FAFB] transition-colors"
                 >
                   {blog.category.name}
                 </Link>
-                <span className="inline-flex items-center bg-red-50 text-[#8F0023] border border-red-200 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="inline-flex items-center bg-[#F7E9EE] text-[#5B0F26] border border-[#F7E9EE] text-xs font-semibold px-3 py-1 rounded-full">
                   Published
                 </span>
                 {blog.trending && (
@@ -197,20 +197,20 @@ export default async function BlogDetailPage({ params }: Props) {
                   </span>
                 )}
                 {blog.homeView && (
-                  <span className="inline-flex items-center bg-white text-[#BC002D] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="inline-flex items-center bg-white text-[#8A1538] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
                     Home Featured
                   </span>
                 )}
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl lg:text-4xl font-bold text-[#17202A] leading-snug mb-5">
+              <h1 className="text-3xl lg:text-4xl font-bold text-[#1F2937] leading-snug mb-5">
                 {blog.title}
               </h1>
               {/* Author + date + reading time */}
               <div className="flex flex-wrap items-center gap-4 text-sm font-medium mb-6 pb-6 border-b border-[#E5E7EB]">
                 {blog.author && (
-                  <span className="flex items-center gap-1.5 text-[#BC002D]">
+                  <span className="flex items-center gap-1.5 text-[#8A1538]">
                     <User className="w-4 h-4" /> {blog.author.name}
                   </span>
                 )}
@@ -254,7 +254,7 @@ export default async function BlogDetailPage({ params }: Props) {
               {/* Main description */}
               {blog.description && (
                 <div
-                  className="prose max-w-none prose-headings:font-bold prose-headings:text-[#17202A] prose-a:text-[#BC002D] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-gray-300 text-[#4B5563] mb-10"
+                  className="prose max-w-none prose-headings:font-bold prose-headings:text-[#1F2937] prose-a:text-[#8A1538] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-gray-300 text-[#4B5563] mb-10"
                   dangerouslySetInnerHTML={{ __html: blog.description }}
                 />
               )}
@@ -265,14 +265,14 @@ export default async function BlogDetailPage({ params }: Props) {
                   {topLevel.map((section) => (
                     <div key={section.id}>
                       {section.title && (
-                        <h2 className="text-2xl font-bold text-[#17202A] mb-4 flex items-center gap-2">
-                          <span className="w-1 h-6 bg-[#102A43] rounded-full inline-block shrink-0" />
+                        <h2 className="text-2xl font-bold text-[#1F2937] mb-4 flex items-center gap-2">
+                          <span className="w-1 h-6 bg-[#5B0F26] rounded-full inline-block shrink-0" />
                           {section.title}
                         </h2>
                       )}
                       {section.description && (
                         <div
-                          className="prose max-w-none text-[#4B5563] prose-headings:text-[#17202A] prose-a:text-[#BC002D]"
+                          className="prose max-w-none text-[#4B5563] prose-headings:text-[#1F2937] prose-a:text-[#8A1538]"
                           dangerouslySetInnerHTML={{
                             __html: section.description,
                           }}
@@ -296,7 +296,7 @@ export default async function BlogDetailPage({ params }: Props) {
                           {childrenOf(section.id).map((child) => (
                             <div key={child.id}>
                               {child.title && (
-                                <h3 className="text-lg font-semibold text-[#17202A] mb-2">
+                                <h3 className="text-lg font-semibold text-[#1F2937] mb-2">
                                   {child.title}
                                 </h3>
                               )}
@@ -319,8 +319,8 @@ export default async function BlogDetailPage({ params }: Props) {
 
               {/* FAQs */}
               {blog.faqs.length > 0 && (
-                <div className="bg-[#FFFDF9] rounded-2xl p-8 mt-12 border border-[#E5E7EB]">
-                  <h2 className="text-2xl font-bold text-[#17202A] mb-6">
+                <div className="bg-[#FAF8F7] rounded-2xl p-8 mt-12 border border-[#E5E7EB]">
+                  <h2 className="text-2xl font-bold text-[#1F2937] mb-6">
                     Frequently Asked Questions
                   </h2>
                   <div className="space-y-4">
@@ -329,7 +329,7 @@ export default async function BlogDetailPage({ params }: Props) {
                         key={faq.id}
                         className="group bg-white border border-[#E5E7EB] rounded-xl overflow-hidden"
                       >
-                        <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#17202A] list-none select-none hover:text-[#102A43] transition-colors">
+                        <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#1F2937] list-none select-none hover:text-[#5B0F26] transition-colors">
                           {faq.question}
                           <span className="ml-4 shrink-0 text-[#6B7280] group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
                             +
@@ -353,7 +353,7 @@ export default async function BlogDetailPage({ params }: Props) {
               <div className="mt-10 pt-6 border-t border-[#E5E7EB] flex items-center justify-between">
                 <Link
                   href="/blog"
-                  className="inline-flex items-center gap-2 text-[#BC002D] hover:text-[#102A43] font-medium text-sm transition-colors group"
+                  className="inline-flex items-center gap-2 text-[#8A1538] hover:text-[#5B0F26] font-medium text-sm transition-colors group"
                 >
                   <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
                   Back to Blog Index
@@ -373,7 +373,7 @@ export default async function BlogDetailPage({ params }: Props) {
             {/* Related articles */}
             {relatedBlogs.length > 0 && (
               <div className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm p-6">
-                <h3 className="font-bold text-[#17202A] mb-5 text-base">
+                <h3 className="font-bold text-[#1F2937] mb-5 text-base">
                   Related Articles
                 </h3>
                 <div className="space-y-4">
@@ -396,7 +396,7 @@ export default async function BlogDetailPage({ params }: Props) {
                         />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-medium text-[#17202A] group-hover:text-[#102A43] transition-colors line-clamp-2 leading-snug">
+                        <p className="text-sm font-medium text-[#1F2937] group-hover:text-[#5B0F26] transition-colors line-clamp-2 leading-snug">
                           {rel.title}
                         </p>
                         <p className="text-xs text-[#6B7280] mt-1">
@@ -411,7 +411,7 @@ export default async function BlogDetailPage({ params }: Props) {
                 </div>
                 <Link
                   href={`/blog/${categorySlug}`}
-                  className="flex items-center gap-1 text-[#BC002D] text-sm font-medium mt-5 hover:text-[#102A43] transition-colors"
+                  className="flex items-center gap-1 text-[#8A1538] text-sm font-medium mt-5 hover:text-[#5B0F26] transition-colors"
                 >
                   See all in {blog.category.name}{" "}
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -420,16 +420,16 @@ export default async function BlogDetailPage({ params }: Props) {
             )}
 
             {/* CTA */}
-            <div className="bg-[#BC002D] text-white rounded-2xl p-6 shadow-md">
+            <div className="bg-[#8A1538] text-white rounded-2xl p-6 shadow-md">
               <h3 className="font-bold text-lg mb-2">
-                Interested in MBBS Japan?
+                Interested in MBBS Qatar?
               </h3>
               <p className="text-[#4B5563] text-sm mb-5">
                 Get free counselling from our experts today.
               </p>
               <Link
                 href="/contact-us"
-                className="block bg-white text-[#BC002D] py-2.5 rounded-xl font-semibold text-center text-sm hover:bg-white transition-colors"
+                className="block bg-white text-[#8A1538] py-2.5 rounded-xl font-semibold text-center text-sm hover:bg-white transition-colors"
               >
                 Talk to Counsellor
               </Link>

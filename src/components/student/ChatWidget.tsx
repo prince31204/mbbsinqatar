@@ -28,15 +28,15 @@ const getAutoResponse = (userMessage: string): string => {
     return "Ensure all documents are in PDF format and clearly legible. Required documents typically include 10+2 marksheet, NEET scorecard, and passport. Need help with a specific document?";
   }
   if (msg.includes("visa")) {
-    return "Once you get an admission offer, our team will guide you through the Japan student visa process. It typically takes 4–6 weeks. Want to know more?";
+    return "Once you get an admission offer, our team will guide you through the Qatar student visa process. It typically takes 4–6 weeks. Want to know more?";
   }
   if (msg.includes("fee") || msg.includes("cost") || msg.includes("tuition")) {
     return replaceCurrencySymbol(
-      "Tuition fees in Japan are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?",
+      "Tuition fees in Qatar are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?",
     );
   }
   if (msg.includes("neet") || msg.includes("eligibility")) {
-    return "For MBBS in Japan, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
+    return "For MBBS in Qatar, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
   }
   if (
     msg.includes("contact") ||
@@ -48,7 +48,7 @@ const getAutoResponse = (userMessage: string): string => {
   if (msg.includes("status")) {
     return "Check your inquiry status anytime in the 'Applied Colleges' section of your dashboard. Our team typically responds within 24 hours.";
   }
-  return "Thanks for your message! I'm here to help with questions about MBBS in Japan — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
+  return "Thanks for your message! I'm here to help with questions about MBBS in Qatar — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
 };
 
 export default function StudentChatWidget() {
@@ -58,7 +58,7 @@ export default function StudentChatWidget() {
     {
       id: "1",
       message:
-        "Hello! 👋 I'm here to help with your MBBS Japan journey. Ask me anything about fees, eligibility, universities, or the admission process!",
+        "Hello! 👋 I'm here to help with your MBBS Qatar journey. Ask me anything about fees, eligibility, universities, or the admission process!",
       isFromSupport: true,
       timestamp: new Date().toISOString(),
     },
@@ -108,7 +108,7 @@ export default function StudentChatWidget() {
           setIsOpen(true);
           setIsMinimized(false);
         }}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-[#BC002D] hover:bg-[#8F0023] text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 z-40"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#8A1538] hover:bg-[#5B0F26] text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 z-40"
         aria-label="Open support chat"
       >
         <MessageCircle className="w-6 h-6" />
@@ -121,7 +121,7 @@ export default function StudentChatWidget() {
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-6 right-6 bg-[#BC002D] text-white rounded-2xl px-5 py-3 shadow-xl flex items-center gap-2 z-40 hover:bg-[#8F0023] transition-colors"
+        className="fixed bottom-6 right-6 bg-[#8A1538] text-white rounded-2xl px-5 py-3 shadow-xl flex items-center gap-2 z-40 hover:bg-[#5B0F26] transition-colors"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="text-sm font-medium">Support Chat</span>
@@ -132,14 +132,14 @@ export default function StudentChatWidget() {
   return (
     <div className="fixed bottom-6 right-6 w-80 sm:w-96 h-[480px] bg-white rounded-2xl shadow-2xl border border-[#E5E7EB] flex flex-col z-40 overflow-hidden">
       {/* Header */}
-      <div className="bg-[#BC002D] text-white px-4 py-3 flex items-center justify-between">
+      <div className="bg-[#8A1538] text-white px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#102A43] rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-[#5B0F26] rounded-full flex items-center justify-center">
             <Bot className="w-4 h-4" />
           </div>
           <div>
             <p className="font-semibold text-sm leading-none">
-              MBBS Japan Support
+              MBBS Qatar Support
             </p>
             <p className="text-xs text-[#4B5563] mt-0.5">
               Typically replies instantly
@@ -149,14 +149,14 @@ export default function StudentChatWidget() {
         <div className="flex items-center gap-1">
           <button
             onClick={() => setIsMinimized(true)}
-            className="p-1 hover:bg-[#102A43] rounded transition-colors"
+            className="p-1 hover:bg-[#5B0F26] rounded transition-colors"
             aria-label="minimize"
           >
             <Minimize2 className="w-4 h-4" />
           </button>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-1 hover:bg-[#102A43] rounded transition-colors"
+            className="p-1 hover:bg-[#5B0F26] rounded transition-colors"
             aria-label="close"
           >
             <X className="w-4 h-4" />
@@ -170,7 +170,7 @@ export default function StudentChatWidget() {
           <button
             key={q}
             onClick={() => setInput(q)}
-            className="shrink-0 text-xs bg-[#F9FAFB] hover:bg-white hover:text-[#102A43] text-[#4B5563] rounded-full px-3 py-1 transition-colors"
+            className="shrink-0 text-xs bg-[#F9FAFB] hover:bg-white hover:text-[#5B0F26] text-[#4B5563] rounded-full px-3 py-1 transition-colors"
           >
             {q}
           </button>
@@ -186,12 +186,12 @@ export default function StudentChatWidget() {
           >
             {msg.isFromSupport && (
               <div className="w-7 h-7 bg-[#F9FAFB] rounded-full flex items-center justify-center shrink-0">
-                <Bot className="w-3.5 h-3.5 text-[#BC002D]" />
+                <Bot className="w-3.5 h-3.5 text-[#8A1538]" />
               </div>
             )}
             <div className={`max-w-[78%]`}>
               <div
-                className={`px-3 py-2 rounded-2xl text-sm leading-relaxed ${msg.isFromSupport ? "bg-[#F9FAFB] text-[#17202A] rounded-tl-none" : "bg-[#BC002D] text-white rounded-tr-none"}`}
+                className={`px-3 py-2 rounded-2xl text-sm leading-relaxed ${msg.isFromSupport ? "bg-[#F9FAFB] text-[#1F2937] rounded-tl-none" : "bg-[#8A1538] text-white rounded-tr-none"}`}
               >
                 {msg.message}
               </div>
@@ -209,7 +209,7 @@ export default function StudentChatWidget() {
         {isTyping && (
           <div className="flex gap-2 justify-start">
             <div className="w-7 h-7 bg-[#F9FAFB] rounded-full flex items-center justify-center shrink-0">
-              <Bot className="w-3.5 h-3.5 text-[#BC002D]" />
+              <Bot className="w-3.5 h-3.5 text-[#8A1538]" />
             </div>
             <div className="bg-[#F9FAFB] px-4 py-3 rounded-2xl rounded-tl-none">
               <div className="flex gap-1">
@@ -241,7 +241,7 @@ export default function StudentChatWidget() {
           <button
             onClick={sendMessage}
             disabled={!input.trim()}
-            className="w-9 h-9 bg-[#BC002D] hover:bg-[#8F0023] disabled:opacity-40 text-[#17202A] rounded-xl flex items-center justify-center transition-colors shrink-0"
+            className="w-9 h-9 bg-[#8A1538] hover:bg-[#5B0F26] disabled:opacity-40 text-[#1F2937] rounded-xl flex items-center justify-center transition-colors shrink-0"
           >
             <Send className="w-4 h-4" />
           </button>

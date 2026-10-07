@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { getAboutCountryContent } from "@/lib/public-page-content";
 
-export default async function AboutJapan() {
+export default async function AboutQatar() {
   const content = await getAboutCountryContent();
 
   const quickFacts = [
@@ -80,11 +80,11 @@ export default async function AboutJapan() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <span className="inline-flex rounded-full bg-[#F9FAFB] px-4 py-2 text-sm font-semibold text-[#102A43]">
+            <span className="inline-flex rounded-full bg-[#F9FAFB] px-4 py-2 text-sm font-semibold text-[#5B0F26]">
               Why {content.countryName} for MBBS?
             </span>
 
-            <h2 className="mt-5 text-4xl font-bold text-[#17202A]">
+            <h2 className="mt-5 text-4xl font-bold text-[#1F2937]">
               {content.heroTitle}
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-[#4B5563]">
@@ -96,7 +96,7 @@ export default async function AboutJapan() {
                 {
                   title: "Safe & Student-Friendly Country",
                   description:
-                    "Japan offers a peaceful, secure environment with a high quality of life—ideal for international MBBS students.",
+                    "Qatar offers a peaceful, secure environment with a high quality of life—ideal for international MBBS students.",
                 },
                 {
                   title: "Globally Aligned Medical Curriculum",
@@ -139,10 +139,10 @@ export default async function AboutJapan() {
                   className="group flex gap-3 rounded-xl border border-transparent p-2 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#E5E7EB] hover:bg-white/60"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 transition-all duration-300 group-hover:bg-emerald-600">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 transition-colors duration-300 group-hover:text-[#17202A]" />
+                    <CheckCircle className="h-5 w-5 text-emerald-600 transition-colors duration-300 group-hover:text-[#1F2937]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#17202A] text-sm transition-colors duration-300 group-hover:text-[#102A43]">
+                    <h3 className="font-semibold text-[#1F2937] text-sm transition-colors duration-300 group-hover:text-[#5B0F26]">
                       {item.title}
                     </h3>
                     <p className="mt-1 text-xs leading-relaxed text-[#4B5563] transition-colors duration-300 group-hover:text-[#4B5563]">
@@ -155,8 +155,8 @@ export default async function AboutJapan() {
 
             <div className="mt-8">
               <Link
-                href="/about-japan"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#BC002D] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#8F0023]"
+                href="/about-qatar"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#8A1538] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#5B0F26]"
               >
                 Learn More About {content.countryName}
               </Link>
@@ -164,10 +164,10 @@ export default async function AboutJapan() {
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-[2rem] border border-[#E5E7EB] bg-[#FFFDF9] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-xl">
+            <div className="rounded-[2rem] border border-[#E5E7EB] bg-[#FAF8F7] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-xl">
               <div className="flex items-center gap-3">
-                <Globe className="h-7 w-7 text-[#BC002D]" />
-                <h3 className="text-2xl font-bold text-[#17202A]">
+                <Globe className="h-7 w-7 text-[#8A1538]" />
+                <h3 className="text-2xl font-bold text-[#1F2937]">
                   Quick facts
                 </h3>
               </div>
@@ -180,13 +180,13 @@ export default async function AboutJapan() {
                     <div className="pointer-events-none absolute inset-0 bg-[#F9FAFB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <div className="relative flex items-center gap-4">
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white/50 transition-colors duration-300 group-hover:bg-[#F9FAFB]/50">
-                        <fact.icon className="h-5 w-5 text-[#BC002D] transition-transform duration-300 group-hover:scale-110" />
+                        <fact.icon className="h-5 w-5 text-[#8A1538] transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       <div>
-                        <div className="text-[11px] font-bold uppercase tracking-wider text-[#6B7280] transition-colors duration-300 group-hover:text-[#102A43]">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-[#6B7280] transition-colors duration-300 group-hover:text-[#5B0F26]">
                           {fact.label}
                         </div>
-                        <div className="mt-0.5 text-sm font-semibold text-[#17202A] transition-colors duration-300 group-hover:text-slate-950">
+                        <div className="mt-0.5 text-sm font-semibold text-[#1F2937] transition-colors duration-300 group-hover:text-slate-950">
                           {fact.value}
                         </div>
                       </div>

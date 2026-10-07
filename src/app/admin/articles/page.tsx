@@ -70,15 +70,15 @@ export default function ArticlesListPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <FileText size={22} className="text-[#BC002D]" />
+          <FileText size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">Articles</h1>
+            <h1 className="text-2xl font-bold text-[#1F2937]">Articles</h1>
             <p className="text-sm text-[#6B7280]">
               {total} article{total !== 1 ? "s" : ""}
             </p>
           </div>
         </div>
-        <Button asChild className="bg-[#102A43] hover:bg-[#102A43]">
+        <Button asChild className="bg-[#5B0F26] hover:bg-[#5B0F26]">
           <Link href="/admin/articles/create">
             <Plus size={16} className="mr-2" />
             Write Article
@@ -118,7 +118,7 @@ export default function ArticlesListPage() {
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#E5E7EB] bg-[#FFFDF9] text-left text-[#6B7280]">
+              <tr className="border-b border-[#E5E7EB] bg-[#FAF8F7] text-left text-[#6B7280]">
                 <th className="px-4 py-3 font-medium">Title</th>
                 <th className="px-4 py-3 font-medium">Category</th>
                 <th className="px-4 py-3 font-medium">Date</th>
@@ -130,10 +130,10 @@ export default function ArticlesListPage() {
               {items.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-[#FFFDF9]"
+                  className="border-b border-gray-50 hover:bg-[#FAF8F7]"
                 >
                   <td className="px-4 py-3">
-                    <div className="font-medium text-[#17202A] line-clamp-1">
+                    <div className="font-medium text-[#1F2937] line-clamp-1">
                       {item.title}
                     </div>
                     <div className="text-xs text-[#6B7280] font-mono">
@@ -182,7 +182,7 @@ export default function ArticlesListPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                        className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={14} />

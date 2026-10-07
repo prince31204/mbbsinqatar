@@ -19,8 +19,8 @@ const pages = [
     ],
   },
   {
-    title: "About Japan",
-    route: "/about-japan",
+    title: "About Qatar",
+    route: "/about-qatar",
     icon: "🇻🇳",
     desc: "Country info, lifestyle, cuisine, tourist spots",
     managedBy: "About Country module",
@@ -59,9 +59,9 @@ export default function PageContentsPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <BookOpen size={22} className="text-[#BC002D]" />
+        <BookOpen size={22} className="text-[#8A1538]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Page Contents</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Page Contents</h1>
           <p className="text-sm text-[#6B7280]">
             Manage public-facing static pages
           </p>
@@ -79,11 +79,11 @@ export default function PageContentsPage() {
                 <span className="text-2xl">{p.icon}</span>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="font-semibold text-[#17202A]">{p.title}</h2>
+                    <h2 className="font-semibold text-[#1F2937]">{p.title}</h2>
                     <Link
                       href={p.route}
                       target="_blank"
-                      className="text-[#6B7280] hover:text-[#102A43] transition-colors"
+                      className="text-[#6B7280] hover:text-[#5B0F26] transition-colors"
                     >
                       <ExternalLink size={14} />
                     </Link>
@@ -99,7 +99,7 @@ export default function PageContentsPage() {
                   <Link
                     key={l.href}
                     href={l.href}
-                    className="text-xs border border-[#E5E7EB] rounded-lg px-3 py-1.5 text-[#4B5563] hover:bg-[#FFFDF9] hover:text-[#102A43] transition-colors"
+                    className="text-xs border border-[#E5E7EB] rounded-lg px-3 py-1.5 text-[#4B5563] hover:bg-[#FAF8F7] hover:text-[#5B0F26] transition-colors"
                   >
                     {l.label} →
                   </Link>

@@ -82,14 +82,14 @@ export default function EditNewsPage() {
         </Button>
         <div className="flex-1">
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Edit News Article
             </h1>
             <a
               href={`/news/${categories.find((c) => String(c.id) === String(form.categoryId))?.slug}/${form.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#102A43] transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#5B0F26] transition-all shadow-sm"
             >
               Live <Eye size={14} />
             </a>
@@ -106,7 +106,7 @@ export default function EditNewsPage() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-[#17202A]" : "text-[#6B7280] hover:text-[#4B5563]"}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-[#1F2937]" : "text-[#6B7280] hover:text-[#4B5563]"}`}
           >
             {tab}
           </button>
@@ -116,7 +116,7 @@ export default function EditNewsPage() {
       {activeTab === "Details" && (
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-            <h2 className="font-semibold text-[#17202A] border-b pb-3">
+            <h2 className="font-semibold text-[#1F2937] border-b pb-3">
               Article Details
             </h2>
             <div className="space-y-1.5">
@@ -192,7 +192,7 @@ export default function EditNewsPage() {
           </div>
 
           <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-            <h2 className="font-semibold text-[#17202A] border-b pb-3">Media</h2>
+            <h2 className="font-semibold text-[#1F2937] border-b pb-3">Media</h2>
             <div className="grid grid-cols-2 gap-4">
               <ImageUpload
                 label="Thumbnail"
@@ -210,7 +210,7 @@ export default function EditNewsPage() {
           </div>
 
           <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
-            <h2 className="font-semibold text-[#17202A] border-b pb-3 mb-4">
+            <h2 className="font-semibold text-[#1F2937] border-b pb-3 mb-4">
               SEO
             </h2>
             <SeoFields
@@ -232,7 +232,7 @@ export default function EditNewsPage() {
             </Button>
             <Button
               type="submit"
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
               disabled={loading}
             >
               {loading ? (

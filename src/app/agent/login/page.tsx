@@ -33,17 +33,17 @@ export default function AgentLoginPage() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#BC002D] rounded-2xl mb-4 shadow-lg">
-            <GraduationCap className="w-9 h-9 text-[#17202A]" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#8A1538] rounded-2xl mb-4 shadow-lg">
+            <GraduationCap className="w-9 h-9 text-[#1F2937]" />
           </div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Agent Portal</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Agent Portal</h1>
           <p className="text-[#6B7280] mt-1 text-sm">
-            MBBS Japan — Partner Access
+            MBBS Qatar — Partner Access
           </p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-2xl p-8">
-          <h2 className="text-xl font-bold text-[#17202A] mb-6">
+          <h2 className="text-xl font-bold text-[#1F2937] mb-6">
             Sign in to your account
           </h2>
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -62,7 +62,7 @@ export default function AgentLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="agent@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 outline-none text-sm"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 outline-none text-sm"
                 />
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function AgentLoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
-                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#102A43]/500 outline-none text-sm"
+                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5B0F26]/500 outline-none text-sm"
                 />
                 <button
                   type="button"
@@ -93,14 +93,14 @@ export default function AgentLoginPage() {
               </div>
             </div>
             {error && (
-              <div className="bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#102A43]">
+              <div className="bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm text-[#5B0F26]">
                 {error}
               </div>
             )}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#BC002D] hover:bg-[#8F0023] text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition disabled:opacity-60"
+              className="w-full bg-[#8A1538] hover:bg-[#5B0F26] text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition disabled:opacity-60"
             >
               {loading ? (
                 <>

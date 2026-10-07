@@ -109,22 +109,22 @@ export default function PartnerInquiryEditPage() {
       </div>
     );
   if (!inquiry)
-    return <div className="p-6 text-[#BC002D]">Inquiry not found</div>;
+    return <div className="p-6 text-[#8A1538]">Inquiry not found</div>;
 
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-[#17202A]">
+        <h1 className="text-2xl font-bold text-[#1F2937]">
           Review Partner Inquiry
         </h1>
         <Badge
           className={
             inquiry.status === "pending"
-              ? "bg-red-400 text-[#BC002D] hover:bg-red-400"
+              ? "bg-[#8A1538] text-[#8A1538] hover:bg-red-400"
               : inquiry.status === "contacted"
-                ? "bg-[#F9FAFB] text-[#102A43] hover:bg-[#F9FAFB]"
+                ? "bg-[#F9FAFB] text-[#5B0F26] hover:bg-[#F9FAFB]"
                 : inquiry.status === "converted"
-                  ? "bg-red-100 text-[#8F0023] hover:bg-red-100"
+                  ? "bg-[#F7E9EE] text-[#5B0F26] hover:bg-red-100"
                   : "bg-[#F9FAFB] text-[#4B5563] hover:bg-[#F9FAFB]"
           }
         >
@@ -192,7 +192,7 @@ export default function PartnerInquiryEditPage() {
                 </span>
               </div>
               <div className="flex items-center gap-2 text-[#4B5563]">
-                <Star size={14} className="text-[#BC002D] fill-yellow-500" />
+                <Star size={14} className="text-[#8A1538] fill-yellow-500" />
                 <span>
                   Rating: <strong>{inquiry.rating || "N/A"}</strong>
                 </span>
@@ -326,7 +326,7 @@ export default function PartnerInquiryEditPage() {
               </div>
 
               <div className="space-y-1.5 pt-4 border-t">
-                <Label className="text-[#17202A] font-semibold mb-2 block">
+                <Label className="text-[#1F2937] font-semibold mb-2 block">
                   Resolution Status
                 </Label>
                 <Select
@@ -356,7 +356,7 @@ export default function PartnerInquiryEditPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-[#102A43] hover:bg-[#102A43]"
+                className="flex-1 bg-[#5B0F26] hover:bg-[#5B0F26]"
               >
                 {loading ? "Saving…" : "Save Changes"}
               </Button>

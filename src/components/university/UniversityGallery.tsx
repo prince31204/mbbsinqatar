@@ -59,10 +59,10 @@ export default function UniversityGallery({ universityName, photos }: Props) {
   if (photos.length === 0) return null;
 
   return (
-    <section className="py-16 bg-[#FFFDF9] border-t border-[#E5E7EB]">
+    <section className="py-16 bg-[#FAF8F7] border-t border-[#E5E7EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#17202A] mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1F2937] mb-3">
             Campus Gallery
           </h2>
           <p className="text-lg text-[#4B5563]">
@@ -87,20 +87,20 @@ export default function UniversityGallery({ universityName, photos }: Props) {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300 flex items-center justify-center">
-                    <div className="bg-white text-[#17202A] p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300 shadow-md">
+                    <div className="bg-white text-[#1F2937] p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300 shadow-md">
                       <Maximize2 className="w-5 h-5" />
                     </div>
                   </div>
                 </>
               ) : (
-                <div className="flex flex-col items-center justify-center h-full text-[#6B7280] text-sm bg-[#FFFDF9]">
+                <div className="flex flex-col items-center justify-center h-full text-[#6B7280] text-sm bg-[#FAF8F7]">
                   <Maximize2 className="w-8 h-8 opacity-20 mb-2" />
                   <span>No image</span>
                 </div>
               )}
               {photo.title && (
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
-                  <p className="text-[#17202A] text-sm font-medium p-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-[#1F2937] text-sm font-medium p-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     {photo.title}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function UniversityGallery({ universityName, photos }: Props) {
             {/* Top Bar inside the popup */}
             <div className="flex justify-between items-center p-4 border-b border-[#E5E7EB]">
               <div>
-                <h3 className="text-lg font-bold text-[#17202A]">
+                <h3 className="text-lg font-bold text-[#1F2937]">
                   {photos[lightboxIndex].title || universityName}
                 </h3>
                 <p className="text-xs text-[#6B7280]">
@@ -133,7 +133,7 @@ export default function UniversityGallery({ universityName, photos }: Props) {
               </div>
               <button
                 onClick={closeLightbox}
-                className="text-[#6B7280] hover:text-[#17202A] bg-[#FFFDF9] hover:bg-[#F9FAFB] p-2 rounded-full transition-colors"
+                className="text-[#6B7280] hover:text-[#1F2937] bg-[#FAF8F7] hover:bg-[#F9FAFB] p-2 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -155,13 +155,13 @@ export default function UniversityGallery({ universityName, photos }: Props) {
                 <>
                   <button
                     onClick={goPrev}
-                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#4B5563] hover:text-[#17202A] shadow-md p-2 rounded-full transition-all group border border-[#E5E7EB]"
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#4B5563] hover:text-[#1F2937] shadow-md p-2 rounded-full transition-all group border border-[#E5E7EB]"
                   >
                     <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
                   </button>
                   <button
                     onClick={goNext}
-                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#4B5563] hover:text-[#17202A] shadow-md p-2 rounded-full transition-all group border border-[#E5E7EB]"
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#4B5563] hover:text-[#1F2937] shadow-md p-2 rounded-full transition-all group border border-[#E5E7EB]"
                   >
                     <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
                   </button>

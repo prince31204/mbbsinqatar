@@ -23,11 +23,11 @@ type MinistryCard = {
 };
 
 const EMBASSY_INFO = {
-  name: "Embassy of Japan in India",
+  name: "Embassy of Qatar in India",
   address: "Plot No. 4 & 5, 50-G Shantipath, Chanakyapuri, New Delhi – 110021, India",
   phone: "+91-11-4610-4610",
   email: "jpembjic@nd.mofa.go.jp",
-  website: "https://www.in.emb-japan.go.jp/itprtop_en/index.html",
+  website: "https://www.in.emb-qatar.go.jp/itprtop_en/index.html",
   consular:
     "Consular appointments are handled through official mission channels",
   hours: "Monday to Friday: 9:00 AM - 4:00 PM",
@@ -57,10 +57,10 @@ function normalizeWebsite(url: string): string {
 const FALLBACK_MINISTRIES: MinistryCard[] = [
   {
     id: 1,
-    name: "Ministry of Health and Wellness Japan",
+    name: "Ministry of Health and Wellness Qatar",
     subtitle: "National Regulator",
     description:
-      "Primary public authority overseeing healthcare services, medical education standards, and national health policies in Japan.",
+      "Primary public authority overseeing healthcare services, medical education standards, and national health policies in Qatar.",
     website: "https://health.govmu.org",
     services: [
       "Medical education oversight",
@@ -181,7 +181,7 @@ export default async function MinistryLinks() {
     <section className="py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
             Official Government Links
           </h2>
           <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
@@ -190,26 +190,26 @@ export default async function MinistryLinks() {
           </p>
         </div>
 
-        <div className="bg-[#102A43] rounded-3xl p-8 mb-8 text-white">
+        <div className="bg-[#5B0F26] rounded-3xl p-8 mb-8 text-white">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-4">{EMBASSY_INFO.name}</h3>
-              <p className="text-[#FCE8ED] mb-6">
+              <p className="text-[#F7E9EE] mb-6">
                 Contact the embassy for official visa, documentation, and
                 consular guidance before your travel.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Building2 className="w-5 h-5 mt-1 flex-shrink-0" />
-                  <span className="text-[#FCE8ED]">{EMBASSY_INFO.address}</span>
+                  <span className="text-[#F7E9EE]">{EMBASSY_INFO.address}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 flex-shrink-0" />
-                  <span className="text-[#FCE8ED]">{EMBASSY_INFO.phone}</span>
+                  <span className="text-[#F7E9EE]">{EMBASSY_INFO.phone}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span className="text-[#FCE8ED]">{EMBASSY_INFO.email}</span>
+                  <span className="text-[#F7E9EE]">{EMBASSY_INFO.email}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Globe className="w-5 h-5 flex-shrink-0" />
@@ -217,7 +217,7 @@ export default async function MinistryLinks() {
                     href={EMBASSY_INFO.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#FCE8ED] transition-colors"
+                    className="text-white hover:text-[#F7E9EE] transition-colors"
                   >
                     {EMBASSY_INFO.website}
                   </a>
@@ -226,15 +226,15 @@ export default async function MinistryLinks() {
             </div>
 
             <div className="bg-[#F9FAFB] rounded-2xl p-6">
-              <h4 className="text-xl font-semibold mb-4 text-[#17202A]">Office Hours</h4>
+              <h4 className="text-xl font-semibold mb-4 text-[#1F2937]">Office Hours</h4>
               <p className="text-[#4B5563] mb-4">{EMBASSY_INFO.hours}</p>
-              <h4 className="text-xl font-semibold mb-2 text-[#17202A]">Consular Services</h4>
+              <h4 className="text-xl font-semibold mb-2 text-[#1F2937]">Consular Services</h4>
               <p className="text-[#4B5563] mb-4">{EMBASSY_INFO.consular}</p>
               <a
                 href={EMBASSY_INFO.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white text-[#BC002D] px-6 py-3 rounded-lg font-semibold hover:bg-white transition-colors text-center"
+                className="block bg-white text-[#8A1538] px-6 py-3 rounded-lg font-semibold hover:bg-white transition-colors text-center"
               >
                 Contact Embassy
               </a>
@@ -248,13 +248,13 @@ export default async function MinistryLinks() {
               key={ministry.id}
               className="group flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-2xl"
             >
-              <div className="border-b bg-[#FFFDF9] p-6 transition-colors duration-300">
+              <div className="border-b bg-[#FAF8F7] p-6 transition-colors duration-300">
                 <div className="flex items-start space-x-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F9FAFB] text-[#BC002D] transition-all duration-300 group-hover:bg-[#BC002D] group-hover:text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F9FAFB] text-[#8A1538] transition-all duration-300 group-hover:bg-[#8A1538] group-hover:text-white">
                     <Building2 className="w-8 h-8" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-1 text-xl font-bold text-[#17202A] transition-colors duration-300 group-hover:text-[#102A43]">
+                    <h3 className="mb-1 text-xl font-bold text-[#1F2937] transition-colors duration-300 group-hover:text-[#5B0F26]">
                       {ministry.name}
                     </h3>
                     <p className="text-sm text-[#6B7280] mb-2">
@@ -267,17 +267,17 @@ export default async function MinistryLinks() {
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-6">
-                  <h4 className="font-semibold text-[#17202A] mb-3">
+                  <h4 className="font-semibold text-[#1F2937] mb-3">
                     Contact Information
                   </h4>
                   <div className="space-y-2">
                     <div className="flex items-center space-x-3">
-                      <Globe className="w-4 h-4 text-[#BC002D] flex-shrink-0" />
+                      <Globe className="w-4 h-4 text-[#8A1538] flex-shrink-0" />
                       <a
                         href={ministry.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#BC002D] hover:text-[#102A43] transition-colors text-sm"
+                        className="text-[#8A1538] hover:text-[#5B0F26] transition-colors text-sm"
                       >
                         {ministry.website}
                       </a>
@@ -285,7 +285,7 @@ export default async function MinistryLinks() {
                     </div>
                     {ministry.phone ? (
                       <div className="flex items-center space-x-3">
-                        <Phone className="w-4 h-4 text-[#BC002D] flex-shrink-0" />
+                        <Phone className="w-4 h-4 text-[#8A1538] flex-shrink-0" />
                         <span className="text-[#4B5563] text-sm">
                           {ministry.phone}
                         </span>
@@ -293,7 +293,7 @@ export default async function MinistryLinks() {
                     ) : null}
                     {ministry.email ? (
                       <div className="flex items-center space-x-3">
-                        <Mail className="w-4 h-4 text-[#BC002D] flex-shrink-0" />
+                        <Mail className="w-4 h-4 text-[#8A1538] flex-shrink-0" />
                         <span className="text-[#4B5563] text-sm">
                           {ministry.email}
                         </span>
@@ -303,7 +303,7 @@ export default async function MinistryLinks() {
                 </div>
 
                 <div className="mb-6 flex-grow">
-                  <h4 className="font-semibold text-[#17202A] mb-3">
+                  <h4 className="font-semibold text-[#1F2937] mb-3">
                     Key Services
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
@@ -312,7 +312,7 @@ export default async function MinistryLinks() {
                         key={service}
                         className="flex items-center space-x-2"
                       >
-                        <div className="w-2 h-2 bg-[#BC002D] rounded-full flex-shrink-0" />
+                        <div className="w-2 h-2 bg-[#8A1538] rounded-full flex-shrink-0" />
                         <span className="text-[#4B5563] text-sm">{service}</span>
                       </div>
                     ))}
@@ -324,7 +324,7 @@ export default async function MinistryLinks() {
                     href={ministry.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#BC002D] py-3 font-medium text-white transition-all duration-300"
+                    className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#8A1538] py-3 font-medium text-white transition-all duration-300"
                   >
                     <span>Visit Official Website</span>
                     <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -338,10 +338,10 @@ export default async function MinistryLinks() {
         <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl p-8">
           <div className="flex items-start space-x-4">
             <div className="w-10 h-10 bg-white border border-[#E5E7EB] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-              <FileText className="w-5 h-5 text-[#BC002D]" />
+              <FileText className="w-5 h-5 text-[#8A1538]" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#17202A] mb-3">
+              <h3 className="text-xl font-bold text-[#1F2937] mb-3">
                 Important Notice
               </h3>
               <p className="text-[#4B5563] mb-4">
@@ -352,7 +352,7 @@ export default async function MinistryLinks() {
               <ul className="space-y-2">
                 {IMPORTANT_NOTES.map((item) => (
                   <li key={item} className="flex items-start space-x-2">
-                    <div className="w-1.5 h-1.5 bg-[#BC002D] rounded-full mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 bg-[#8A1538] rounded-full mt-2 flex-shrink-0" />
                     <span className="text-[#4B5563]">{item}</span>
                   </li>
                 ))}

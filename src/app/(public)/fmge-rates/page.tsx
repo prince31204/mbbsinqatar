@@ -5,12 +5,12 @@ import { prisma } from "@/lib/prisma";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "FMGE / NExT Pass Rates — Japan MBBS Universities 2024",
+  title: "FMGE / NExT Pass Rates — Qatar MBBS Universities 2024",
   description:
-    "Compare FMGE and NExT pass rates for Japan MBBS graduates by university and year. Real data from NMC-approved Japan medical universities.",
+    "Compare FMGE and NExT pass rates for Qatar MBBS graduates by university and year. Real data from NMC-approved Qatar medical universities.",
   entitySeo: {
     metaKeyword:
-      "FMGE pass rate Japan, NExT exam Japan MBBS, FMGE percentage Japan, Japan medical university pass rate",
+      "FMGE pass rate Qatar, NExT exam Qatar MBBS, FMGE percentage Qatar, Qatar medical university pass rate",
   },
   path: "/fmge-rates",
   pageKey: "fmge-rates",
@@ -73,13 +73,13 @@ export default async function FmgeRatesPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-[#FFFDF9]">
+    <div className="min-h-screen bg-[#FAF8F7]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero */}
-      <div className="bg-white text-[#17202A] py-16">
+      <div className="bg-white text-[#1F2937] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <BarChart3 className="w-10 h-10 text-black" />
@@ -88,7 +88,7 @@ export default async function FmgeRatesPage() {
             </h1>
           </div>
           <p className="text-xl text-black max-w-3xl mx-auto mt-3">
-            Compare pass rates for Japan MBBS graduates by university and
+            Compare pass rates for Qatar MBBS graduates by university and
             year. Make an informed decision based on real performance data.
           </p>
           {/* Summary stats */}
@@ -106,7 +106,7 @@ export default async function FmgeRatesPage() {
               { label: "Top Pass Rate", value: topRate ? `${topRate}%` : "—" },
             ].map((s) => (
               <div key={s.label} className="bg-[#F9FAFB] rounded-2xl py-4 px-3">
-                <div className="text-2xl font-bold text-[#8F0023]">{s.value}</div>
+                <div className="text-2xl font-bold text-[#5B0F26]">{s.value}</div>
                 <div className="text-black text-sm mt-1">{s.label}</div>
               </div>
             ))}
@@ -122,7 +122,7 @@ export default async function FmgeRatesPage() {
               FMGE Data Coming Soon
             </h2>
             <p className="text-[#6B7280]">
-              We are compiling FMGE pass rate data for Japan universities.
+              We are compiling FMGE pass rate data for Qatar universities.
               Check back soon.
             </p>
           </div>
@@ -131,8 +131,8 @@ export default async function FmgeRatesPage() {
             {/* University Cards */}
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
-                <Award className="w-5 h-5 text-[#8F0023]" />
-                <h2 className="text-2xl font-bold text-[#17202A]">
+                <Award className="w-5 h-5 text-[#5B0F26]" />
+                <h2 className="text-2xl font-bold text-[#1F2937]">
                   By University
                 </h2>
               </div>
@@ -145,13 +145,13 @@ export default async function FmgeRatesPage() {
                     <div className="flex items-start justify-between gap-3 mb-4">
                       <Link
                         href={`/universities/${uni.slug}`}
-                        className="font-bold text-[#17202A] hover:text-[#8F0023] transition-colors leading-tight"
+                        className="font-bold text-[#1F2937] hover:text-[#5B0F26] transition-colors leading-tight"
                       >
                         {uni.name}
                       </Link>
                       {uni.avgPass !== null && (
                         <div className="shrink-0 text-right">
-                          <div className="text-2xl font-bold text-[#8F0023]">
+                          <div className="text-2xl font-bold text-[#5B0F26]">
                             {uni.avgPass.toFixed(1)}%
                           </div>
                           <div className="text-xs text-[#6B7280]">
@@ -179,7 +179,7 @@ export default async function FmgeRatesPage() {
                         <tbody className="divide-y divide-gray-50">
                           {uni.rates.map((r) => (
                             <tr key={r.id}>
-                              <td className="py-2 font-medium text-[#17202A]">
+                              <td className="py-2 font-medium text-[#1F2937]">
                                 {r.year}
                               </td>
                               <td className="py-2 text-right text-[#6B7280]">
@@ -188,7 +188,7 @@ export default async function FmgeRatesPage() {
                               <td className="py-2 text-right text-[#6B7280]">
                                 {r.passed ?? "—"}
                               </td>
-                              <td className="py-2 text-right font-bold text-[#8F0023]">
+                              <td className="py-2 text-right font-bold text-[#5B0F26]">
                                 {r.passPercentage
                                   ? `${parseFloat(r.passPercentage.toString()).toFixed(1)}%`
                                   : "—"}
@@ -207,14 +207,14 @@ export default async function FmgeRatesPage() {
             <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6">
               <div className="flex items-center gap-2 mb-5">
                 <Filter className="w-5 h-5 text-[#6B7280]" />
-                <h2 className="text-xl font-bold text-[#17202A]">
+                <h2 className="text-xl font-bold text-[#1F2937]">
                   Complete FMGE Data
                 </h2>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="bg-[#FFFDF9] text-[#4B5563]">
+                    <tr className="bg-[#FAF8F7] text-[#4B5563]">
                       <th className="text-left p-3 rounded-l-lg font-medium">
                         University
                       </th>
@@ -231,12 +231,12 @@ export default async function FmgeRatesPage() {
                     {rates.map((r) => (
                       <tr
                         key={r.id}
-                        className="hover:bg-[#FFFDF9] transition-colors"
+                        className="hover:bg-[#FAF8F7] transition-colors"
                       >
                         <td className="p-3">
                           <Link
                             href={`/universities/${r.university.slug}`}
-                            className="font-medium text-[#17202A] hover:text-[#8F0023]"
+                            className="font-medium text-[#1F2937] hover:text-[#5B0F26]"
                           >
                             {r.university.name}
                           </Link>
@@ -253,7 +253,7 @@ export default async function FmgeRatesPage() {
                         <td className="p-3 text-right">
                           {r.passPercentage ? (
                             <span
-                              className={`font-bold ${parseFloat(r.passPercentage.toString()) >= 40 ? "text-[#8F0023]" : parseFloat(r.passPercentage.toString()) >= 25 ? "text-[#BC002D]" : "text-[#BC002D]"}`}
+                              className={`font-bold ${parseFloat(r.passPercentage.toString()) >= 40 ? "text-[#5B0F26]" : parseFloat(r.passPercentage.toString()) >= 25 ? "text-[#8A1538]" : "text-[#8A1538]"}`}
                             >
                               {parseFloat(r.passPercentage.toString()).toFixed(
                                 1,
@@ -277,10 +277,10 @@ export default async function FmgeRatesPage() {
             </div>
 
             {/* CTA */}
-            <div className="mt-10 bg-[#8F0023] rounded-2xl p-8 text-[#17202A] text-center">
+            <div className="mt-10 bg-[#5B0F26] rounded-2xl p-8 text-[#1F2937] text-center">
               <TrendingUp className="w-10 h-10 mx-auto mb-3 text-green-200" />
               <h3 className="text-2xl font-bold mb-2">
-                Ready to Study MBBS in Japan?
+                Ready to Study MBBS in Qatar?
               </h3>
               <p className="text-green-100 mb-6 max-w-xl mx-auto">
                 Join universities with strong FMGE track records. Get free
@@ -288,7 +288,7 @@ export default async function FmgeRatesPage() {
               </p>
               <Link
                 href="/contact-us"
-                className="inline-block bg-white text-[#8F0023] font-bold px-8 py-3 rounded-xl hover:bg-red-50 transition-colors"
+                className="inline-block bg-white text-[#5B0F26] font-bold px-8 py-3 rounded-xl hover:bg-red-50 transition-colors"
               >
                 Get Free Counselling →
               </Link>

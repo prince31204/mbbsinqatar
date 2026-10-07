@@ -29,7 +29,7 @@ export default function UniversityTestimonials({
     <section className="py-10 bg-[#F9FAFB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-2">
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-2">
             What Parents Say About Us
           </h2>
           <p className="text-base text-[#6B7280]">
@@ -55,16 +55,16 @@ export default function UniversityTestimonials({
                       className="rounded-full object-cover w-10 h-10 border-2 border-[#E5E7EB] shadow"
                     />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-[#F9FAFB] flex items-center justify-center text-[#BC002D] font-bold text-base border-2 border-[#E5E7EB] shadow">
+                    <div className="w-10 h-10 rounded-full bg-[#F9FAFB] flex items-center justify-center text-[#8A1538] font-bold text-base border-2 border-[#E5E7EB] shadow">
                       {(t.name || "P")[0]}
                     </div>
                   )}
                   <div>
-                    <p className="font-semibold text-[#17202A] text-sm">
+                    <p className="font-semibold text-[#1F2937] text-sm">
                       {t.name || "Anonymous"}
                     </p>
                     {t.designation && (
-                      <p className="text-xs text-[#BC002D] font-medium">
+                      <p className="text-xs text-[#8A1538] font-medium">
                         {t.designation}
                       </p>
                     )}
@@ -73,7 +73,7 @@ export default function UniversityTestimonials({
                     )}
                   </div>
                 </div>
-                <Quote className="w-5 h-5 text-red-300 mb-2" />
+                <Quote className="w-5 h-5 text-[#8A1538] mb-2" />
                 <p className="text-[#4B5563] leading-relaxed italic text-sm">
                   &ldquo;{t.description}&rdquo;
                 </p>
@@ -82,7 +82,7 @@ export default function UniversityTestimonials({
                     {[...Array(Math.round(Number(t.rating)))].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-3.5 h-3.5 text-[#BC002D] fill-current"
+                        className="w-3.5 h-3.5 text-[#8A1538] fill-current"
                       />
                     ))}
                   </div>
@@ -93,7 +93,7 @@ export default function UniversityTestimonials({
         )}
 
         {(parentSatisfaction || rating) && (
-          <div className="mt-12 bg-[#102A43] rounded-2xl p-8 text-white text-center">
+          <div className="mt-12 bg-[#5B0F26] rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">
               Join Our Family of Satisfied Parents
             </h3>
@@ -101,10 +101,10 @@ export default function UniversityTestimonials({
               {parentSatisfaction && (
                 <div className="flex items-center space-x-3">
                   <div className="bg-white p-2 rounded-full">
-                    <Users className="h-5 w-5 text-[#BC002D]" />
+                    <Users className="h-5 w-5 text-[#8A1538]" />
                   </div>
                   <div className="text-left">
-                    <p className="font-semibold text-[#17202A]">Parent Satisfaction</p>
+                    <p className="font-semibold text-[#1F2937]">Parent Satisfaction</p>
                     <p className="text-[#4B5563]">
                       {Number(parentSatisfaction)}% Positive Feedback
                     </p>
@@ -114,10 +114,10 @@ export default function UniversityTestimonials({
               {rating && (
                 <div className="flex items-center space-x-3">
                   <div className="bg-white p-2 rounded-full">
-                    <Star className="h-5 w-5 text-[#BC002D]" />
+                    <Star className="h-5 w-5 text-[#8A1538]" />
                   </div>
                   <div className="text-left">
-                    <p className="font-semibold text-[#17202A]">Average Rating</p>
+                    <p className="font-semibold text-[#1F2937]">Average Rating</p>
                     <p className="text-[#4B5563]">{Number(rating)}/5 Stars</p>
                   </div>
                 </div>

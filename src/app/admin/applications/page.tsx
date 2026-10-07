@@ -67,10 +67,10 @@ export default function AdminApplicationsPage() {
 
   const badge = (status: string | null) => {
     const map: Record<string, string> = {
-      new: "bg-[#F9FAFB] text-[#102A43]",
-      reviewed: "bg-red-400 text-[#BC002D]",
-      approved: "bg-red-100 text-green-800",
-      rejected: "bg-[#102A43] text-[#BC002D]",
+      new: "bg-[#F9FAFB] text-[#5B0F26]",
+      reviewed: "bg-[#8A1538] text-[#8A1538]",
+      approved: "bg-[#F7E9EE] text-green-800",
+      rejected: "bg-[#5B0F26] text-[#8A1538]",
     };
     return (
       <span
@@ -86,11 +86,11 @@ export default function AdminApplicationsPage() {
       {/* Header */}
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div className="flex items-center gap-3">
-          <div className="bg-[#102A43] p-2 rounded-lg">
-            <ClipboardList size={20} className="text-[#BC002D]" />
+          <div className="bg-[#5B0F26] p-2 rounded-lg">
+            <ClipboardList size={20} className="text-[#8A1538]" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-[#17202A]">Applications</h1>
+            <h1 className="text-xl font-bold text-[#1F2937]">Applications</h1>
             <p className="text-sm text-[#6B7280]">
               {total} total submissions from /apply page
             </p>
@@ -98,7 +98,7 @@ export default function AdminApplicationsPage() {
         </div>
         <button
           onClick={load}
-          className="flex items-center gap-2 text-sm text-[#4B5563] hover:text-[#17202A] border border-[#E5E7EB] px-3 py-2 rounded-lg hover:bg-[#FFFDF9] transition"
+          className="flex items-center gap-2 text-sm text-[#4B5563] hover:text-[#1F2937] border border-[#E5E7EB] px-3 py-2 rounded-lg hover:bg-[#FAF8F7] transition"
         >
           <RefreshCw size={14} /> Refresh
         </button>
@@ -118,7 +118,7 @@ export default function AdminApplicationsPage() {
             setSearch(e.target.value);
             setPage(1);
           }}
-          className="w-full pl-9 pr-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#102A43]/500 outline-none"
+          className="w-full pl-9 pr-4 py-2.5 border border-[#E5E7EB] rounded-xl text-sm focus:ring-2 focus:ring-[#5B0F26]/500 outline-none"
         />
       </div>
 
@@ -126,7 +126,7 @@ export default function AdminApplicationsPage() {
       <div className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            <thead className="bg-[#FFFDF9] border-b border-[#E5E7EB]">
+            <thead className="bg-[#FAF8F7] border-b border-[#E5E7EB]">
               <tr>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-[#6B7280] uppercase tracking-wide">
                   #
@@ -177,13 +177,13 @@ export default function AdminApplicationsPage() {
                 apps.map((app, i) => (
                   <tr
                     key={app.id}
-                    className="hover:bg-[#FFFDF9] transition-colors"
+                    className="hover:bg-[#FAF8F7] transition-colors"
                   >
                     <td className="px-4 py-3 text-[#6B7280] text-xs">
                       {(page - 1) * pageSize + i + 1}
                     </td>
                     <td className="px-4 py-3">
-                      <p className="font-semibold text-[#17202A]">{app.name}</p>
+                      <p className="font-semibold text-[#1F2937]">{app.name}</p>
                       <p className="text-xs text-[#6B7280]">
                         {app.gender} {app.country ? `· ${app.country}` : ""}
                       </p>
@@ -205,7 +205,7 @@ export default function AdminApplicationsPage() {
                     <td className="px-4 py-3">
                       <button
                         onClick={() => setSelected(app)}
-                        className="flex items-center gap-1 text-xs text-[#BC002D] hover:text-[#102A43] font-medium"
+                        className="flex items-center gap-1 text-xs text-[#8A1538] hover:text-[#5B0F26] font-medium"
                       >
                         <Eye size={13} /> View
                       </button>
@@ -227,14 +227,14 @@ export default function AdminApplicationsPage() {
               <button
                 disabled={page === 1}
                 onClick={() => setPage((p) => p - 1)}
-                className="px-3 py-1.5 border border-[#E5E7EB] rounded-lg disabled:opacity-40 hover:bg-[#FFFDF9] transition text-xs"
+                className="px-3 py-1.5 border border-[#E5E7EB] rounded-lg disabled:opacity-40 hover:bg-[#FAF8F7] transition text-xs"
               >
                 ← Prev
               </button>
               <button
                 disabled={page === totalPages}
                 onClick={() => setPage((p) => p + 1)}
-                className="px-3 py-1.5 border border-[#E5E7EB] rounded-lg disabled:opacity-40 hover:bg-[#FFFDF9] transition text-xs"
+                className="px-3 py-1.5 border border-[#E5E7EB] rounded-lg disabled:opacity-40 hover:bg-[#FAF8F7] transition text-xs"
               >
                 Next →
               </button>
@@ -248,7 +248,7 @@ export default function AdminApplicationsPage() {
         <div className="fixed inset-0 bg-white/50 z-50 flex items-start justify-end p-4 overflow-y-auto">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg mt-10">
             <div className="flex items-center justify-between p-5 border-b border-[#E5E7EB]">
-              <h2 className="font-bold text-[#17202A]">Application Detail</h2>
+              <h2 className="font-bold text-[#1F2937]">Application Detail</h2>
               <button
                 onClick={() => setSelected(null)}
                 className="text-[#6B7280] hover:text-[#4B5563]"
@@ -315,7 +315,7 @@ function Section({
       <p className="text-xs font-bold text-[#6B7280] uppercase tracking-wide mb-2">
         {title}
       </p>
-      <div className="bg-[#FFFDF9] rounded-xl p-3 space-y-2">{children}</div>
+      <div className="bg-[#FAF8F7] rounded-xl p-3 space-y-2">{children}</div>
     </div>
   );
 }
@@ -331,7 +331,7 @@ function Row({
   return (
     <div className="flex justify-between gap-4">
       <span className="text-[#6B7280] shrink-0">{label}</span>
-      <span className="text-[#17202A] font-medium text-right">{value}</span>
+      <span className="text-[#1F2937] font-medium text-right">{value}</span>
     </div>
   );
 }

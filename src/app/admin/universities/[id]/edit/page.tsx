@@ -144,14 +144,14 @@ export default function EditUniversityPage() {
         </Button>
         <div className="flex-1">
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-[#17202A]">
+            <h1 className="text-2xl font-bold text-[#1F2937]">
               Edit University
             </h1>
             <a
               href={`/universities/${form.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#102A43] transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-[#4B5563] border-[#E5E7EB] hover:border-[#E5E7EB] hover:text-[#5B0F26] transition-all shadow-sm"
             >
               Live <Eye size={14} />
             </a>
@@ -170,7 +170,7 @@ export default function EditUniversityPage() {
             <Link
               key={s.href}
               href={s.href}
-              className="px-3 py-1.5 bg-[#F9FAFB] hover:bg-[#102A43] hover:text-[#102A43] text-xs rounded-lg text-[#4B5563] transition-colors"
+              className="px-3 py-1.5 bg-[#F9FAFB] hover:bg-[#5B0F26] hover:text-[#5B0F26] text-xs rounded-lg text-[#4B5563] transition-colors"
             >
               {s.label}
             </Link>
@@ -181,7 +181,7 @@ export default function EditUniversityPage() {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Basic Info */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Basic Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -209,7 +209,7 @@ export default function EditUniversityPage() {
             <div className="space-y-1.5">
               <Label>
                 Unique ID (for internal/bulk sync){" "}
-                <span className="text-[#BC002D]">*</span>
+                <span className="text-[#8A1538]">*</span>
               </Label>
               <Input
                 value={String(form.uniqueId ?? "")}
@@ -300,7 +300,7 @@ export default function EditUniversityPage() {
 
         {/* Academic */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Academic & Financial
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -365,7 +365,7 @@ export default function EditUniversityPage() {
 
         {/* Approvals */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Approvals & Recognitions
           </h2>
           <div className="flex flex-wrap gap-6">
@@ -410,7 +410,7 @@ export default function EditUniversityPage() {
 
         {/* About */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             About &amp; Why Choose Us
           </h2>
           <div className="space-y-1.5">
@@ -490,7 +490,7 @@ export default function EditUniversityPage() {
 
         {/* Stats */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Stats &amp; Rankings
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -527,7 +527,7 @@ export default function EditUniversityPage() {
 
         {/* Campus Details */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Campus Details
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -588,7 +588,7 @@ export default function EditUniversityPage() {
 
         {/* Ratings Metadata */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">
             Ratings Metadata
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -677,7 +677,7 @@ export default function EditUniversityPage() {
 
         {/* Media */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3">Media</h2>
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3">Media</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ImageUpload
               label="Thumbnail"
@@ -720,7 +720,7 @@ export default function EditUniversityPage() {
 
         {/* SEO */}
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
-          <h2 className="font-semibold text-[#17202A] border-b pb-3 mb-4">
+          <h2 className="font-semibold text-[#1F2937] border-b pb-3 mb-4">
             SEO
           </h2>
           <SeoFields
@@ -743,7 +743,7 @@ export default function EditUniversityPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#102A43] hover:bg-[#102A43]"
+            className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             disabled={saving}
           >
             {saving ? (

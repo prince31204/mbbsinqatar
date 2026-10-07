@@ -121,9 +121,9 @@ export default function ExpertTeamPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Users size={22} className="text-[#BC002D]" />
+          <Users size={22} className="text-[#8A1538]" />
           <div>
-            <h1 className="text-2xl font-bold text-[#17202A]">Expert Team</h1>
+            <h1 className="text-2xl font-bold text-[#1F2937]">Expert Team</h1>
             <p className="text-sm text-[#6B7280]">
               Manage counsellors and team members shown on the website
             </p>
@@ -135,7 +135,7 @@ export default function ExpertTeamPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#102A43] hover:bg-[#102A43]"
+          className="bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           {showForm ? (
             <>
@@ -153,7 +153,7 @@ export default function ExpertTeamPage() {
 
       {showForm && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A]">
+          <h2 className="font-semibold text-[#1F2937]">
             {editId ? "Edit Member" : "New Team Member"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -196,7 +196,7 @@ export default function ExpertTeamPage() {
                 onChange={(e) => set("description", e.target.value)}
                 rows={3}
                 placeholder="Brief bio or introduction..."
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
               />
             </div>
             <div className="md:col-span-2">
@@ -228,7 +228,7 @@ export default function ExpertTeamPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#102A43] hover:bg-[#102A43]"
+              className="bg-[#5B0F26] hover:bg-[#5B0F26]"
             >
               {saving ? (
                 <>
@@ -268,25 +268,25 @@ export default function ExpertTeamPage() {
                     className="w-12 h-12 rounded-full object-cover border border-[#E5E7EB] shrink-0"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-[#102A43] flex items-center justify-center text-[#BC002D] font-semibold text-lg shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#5B0F26] flex items-center justify-center text-[#8A1538] font-semibold text-lg shrink-0">
                     {item.name.charAt(0)}
                   </div>
                 )}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <p className="font-semibold text-[#17202A]">{item.name}</p>
+                    <p className="font-semibold text-[#1F2937]">{item.name}</p>
                     {item.linkedinUrl && (
                       <a
                         href={item.linkedinUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-red-500 hover:text-[#102A43]"
+                        className="text-[#8A1538] hover:text-[#5B0F26]"
                       >
                         <Linkedin size={14} />
                       </a>
                     )}
                     <span
-                      className={`text-xs px-1.5 py-0.5 rounded-full ${item.status ? "bg-red-100 text-[#8F0023]" : "bg-[#F9FAFB] text-[#6B7280]"}`}
+                      className={`text-xs px-1.5 py-0.5 rounded-full ${item.status ? "bg-[#F7E9EE] text-[#5B0F26]" : "bg-[#F9FAFB] text-[#6B7280]"}`}
                     >
                       {item.status ? "Active" : "Hidden"}
                     </span>
@@ -316,7 +316,7 @@ export default function ExpertTeamPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-[#BC002D] hover:bg-[#102A43]"
+                    className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

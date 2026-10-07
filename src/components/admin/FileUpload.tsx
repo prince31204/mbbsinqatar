@@ -77,19 +77,19 @@ export function FileUpload({
       <Label className="text-sm font-medium text-[#4B5563]">{label}</Label>
 
       {value ? (
-        <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl">
-          <div className="p-2 bg-red-100 rounded-lg">
-            <FileText size={20} className="text-[#8F0023]" />
+        <div className="flex items-center gap-3 p-4 bg-[#F7E9EE] border border-[#F7E9EE] rounded-xl">
+          <div className="p-2 bg-[#F7E9EE] rounded-lg">
+            <FileText size={20} className="text-[#5B0F26]" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-[#17202A] truncate">
+            <p className="text-sm font-medium text-[#1F2937] truncate">
               {displayName || "Uploaded file"}
             </p>
             <a
               href={cdn(value)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-[#8F0023] hover:underline mt-0.5"
+              className="inline-flex items-center gap-1 text-xs text-[#5B0F26] hover:underline mt-0.5"
             >
               <Download size={11} /> View / Download
             </a>

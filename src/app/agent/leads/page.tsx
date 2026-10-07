@@ -20,10 +20,10 @@ type Inquiry = {
 };
 
 const statusColors: Record<string, string> = {
-  pending: "bg-red-400 text-[#BC002D]",
-  contacted: "bg-[#F9FAFB] text-[#102A43]",
-  enrolled: "bg-red-100 text-[#8F0023]",
-  rejected: "bg-[#F9FAFB] text-[#102A43]",
+  pending: "bg-[#8A1538] text-[#8A1538]",
+  contacted: "bg-[#F9FAFB] text-[#5B0F26]",
+  enrolled: "bg-[#F7E9EE] text-[#5B0F26]",
+  rejected: "bg-[#F9FAFB] text-[#5B0F26]",
 };
 
 export default function AgentLeadsPage() {
@@ -62,7 +62,7 @@ export default function AgentLeadsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">My Leads</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">My Leads</h1>
           <p className="text-[#6B7280] mt-1 text-sm">{total} total referrals</p>
         </div>
         <div className="relative">
@@ -71,7 +71,7 @@ export default function AgentLeadsPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Filter by name or email…"
-            className="pl-9 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500 w-64"
+            className="pl-9 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500 w-64"
           />
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function AgentLeadsPage() {
           </div>
         ) : (
           <table className="w-full text-sm">
-            <thead className="bg-[#FFFDF9] text-[#4B5563] text-xs uppercase tracking-wide">
+            <thead className="bg-[#FAF8F7] text-[#4B5563] text-xs uppercase tracking-wide">
               <tr>
                 <th className="px-4 py-3 text-left">Student</th>
                 <th className="px-4 py-3 text-left">Phone</th>
@@ -100,9 +100,9 @@ export default function AgentLeadsPage() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {filtered.map((inq) => (
-                <tr key={inq.id} className="hover:bg-[#FFFDF9]">
+                <tr key={inq.id} className="hover:bg-[#FAF8F7]">
                   <td className="px-4 py-3">
-                    <p className="font-medium text-[#17202A]">{inq.lead.name}</p>
+                    <p className="font-medium text-[#1F2937]">{inq.lead.name}</p>
                     <p className="text-xs text-[#6B7280]">{inq.lead.email}</p>
                   </td>
                   <td className="px-4 py-3 text-[#4B5563]">

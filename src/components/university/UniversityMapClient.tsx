@@ -11,7 +11,7 @@ const UniversityMap = dynamic(
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#FFFDF9",
+          background: "#FAF8F7",
           borderRadius: "16px",
         }}
       >

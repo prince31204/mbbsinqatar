@@ -28,61 +28,61 @@ import { buildMetadata } from "@/lib/seo";
 import { getAboutCountryContent } from "@/lib/public-page-content";
 import { replaceCurrencySymbol } from "@/lib/currency";
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "About Japan - Culture, Lifestyle and Education | mbbsinjapan.com",
+  title: "About Qatar - Culture, Lifestyle and Education | mbbsinqatar.com",
   description:
-    "Discover Japan - a safe, culture-rich, and globally connected destination for MBBS aspirants with quality education and strong clinical exposure.",
+    "Discover Qatar - a safe, culture-rich, and globally connected destination for MBBS aspirants with quality education and strong clinical exposure.",
   entitySeo: {
     metaKeyword:
-      "about Japan, Japan culture, life in Japan for students, mbbs Japan environment, study MBBS in Japan",
+      "about Qatar, Qatar culture, life in Qatar for students, mbbs Qatar environment, study MBBS in Qatar",
   },
-  path: "/about-japan",
-  pageKey: "about-Japan",
+  path: "/about-qatar",
+  pageKey: "about-Qatar",
 });
 const themeStyles = {
   red: {
     softPanel: "border-[#E5E7EB] bg-white/80",
-    iconWrap: "bg-[#F9FAFB] text-[#BC002D]",
-    iconHover: "group-hover:bg-[#BC002D] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    iconWrap: "bg-[#F9FAFB] text-[#8A1538]",
+    iconHover: "group-hover:bg-[#8A1538] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-[#F9FAFB] text-[#102A43]",
+    pill: "bg-[#F9FAFB] text-[#5B0F26]",
   },
   blue: {
     softPanel: "border-[#E5E7EB] bg-white/80",
-    iconWrap: "bg-[#F9FAFB] text-[#BC002D]",
-    iconHover: "group-hover:bg-[#BC002D] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    iconWrap: "bg-[#F9FAFB] text-[#8A1538]",
+    iconHover: "group-hover:bg-[#8A1538] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-[#F9FAFB] text-[#102A43]",
+    pill: "bg-[#F9FAFB] text-[#5B0F26]",
   },
   green: {
-    softPanel: "border-[#E5E7EB] bg-[#FFFDF9]",
-    iconWrap: "bg-red-100 text-[#8F0023]",
-    iconHover: "group-hover:bg-[#8F0023] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#8F0023]",
+    softPanel: "border-[#E5E7EB] bg-[#FAF8F7]",
+    iconWrap: "bg-[#F7E9EE] text-[#5B0F26]",
+    iconHover: "group-hover:bg-[#5B0F26] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-red-200",
-    pill: "bg-red-100 text-[#8F0023]",
+    pill: "bg-[#F7E9EE] text-[#5B0F26]",
   },
   amber: {
     softPanel: "border-[#E5E7EB] bg-[#F9FAFB]/10",
-    iconWrap: "bg-[#F9FAFB] text-[#BC002D]",
-    iconHover: "group-hover:bg-[#F9FAFB] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    iconWrap: "bg-[#F9FAFB] text-[#8A1538]",
+    iconHover: "group-hover:bg-[#F9FAFB] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-[#F9FAFB] text-[#BC002D]",
+    pill: "bg-[#F9FAFB] text-[#8A1538]",
   },
   purple: {
-    softPanel: "border-[#E5E7EB] bg-[#FFFDF9]",
-    iconWrap: "bg-[#F9FAFB] text-[#BC002D]",
-    iconHover: "group-hover:bg-[#BC002D] group-hover:text-[#17202A]",
-    titleHover: "group-hover:text-[#102A43]",
+    softPanel: "border-[#E5E7EB] bg-[#FAF8F7]",
+    iconWrap: "bg-[#F9FAFB] text-[#8A1538]",
+    iconHover: "group-hover:bg-[#8A1538] group-hover:text-[#1F2937]",
+    titleHover: "group-hover:text-[#5B0F26]",
     wash: " via-white/0 ",
     ringHover: "hover:border-[#E5E7EB]",
-    pill: "bg-[#F9FAFB] text-[#BC002D]",
+    pill: "bg-[#F9FAFB] text-[#8A1538]",
   },
 } as const;
 const highlightIcons = [Globe, Sun, Utensils, Mountain, Music, Landmark];
@@ -90,19 +90,19 @@ const overviewIcons = [Sparkles, Globe, Landmark, Sun, Users, Mountain];
 const comparisonRows = [
   {
     label: "Tuition Fees / Year",
-    japan: replaceCurrencySymbol("$3,500 – $5,500"),
+    qatar: replaceCurrencySymbol("$3,500 – $5,500"),
     india: replaceCurrencySymbol("$15,000 – $18,000"),
     uk: replaceCurrencySymbol("$60,000 – $80,000"),
   },
   {
     label: "Hostel / Year",
-    japan: replaceCurrencySymbol("$600 – $1,200"),
+    qatar: replaceCurrencySymbol("$600 – $1,200"),
     india: replaceCurrencySymbol("$1,500 – $3,000"),
     uk: replaceCurrencySymbol("$8,000 – $15,000"),
   },
   {
     label: "Food / Month",
-    japan: replaceCurrencySymbol("$150 – $250"),
+    qatar: replaceCurrencySymbol("$150 – $250"),
     india: replaceCurrencySymbol("$150 – $300"),
     uk: replaceCurrencySymbol("$800 – $1,200"),
   },
@@ -110,48 +110,48 @@ const comparisonRows = [
 const geographyHighlights = [
   {
     icon: Mountain,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Landlocked mountainous nation in the South Caucasus region",
   },
   {
     icon: Globe,
-    iconColor: "text-[#102A43]",
+    iconColor: "text-[#5B0F26]",
     text: "Crossroads of Europe and Asia with rich Eurasian heritage",
   },
   {
     icon: Sun,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Home to Lake Sevan, one of the world's largest high-altitude alpine lakes",
   },
   {
     icon: MapPinned,
-    iconColor: "text-[#102A43]",
+    iconColor: "text-[#5B0F26]",
     text: "Bordered by Georgia, Turkey, Iran, and Azerbaijan",
   },
 ];
 const climateZones = [
   {
     icon: Sun,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Highland continental climate with four distinct vibrant seasons",
   },
   {
     icon: Clock3,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Warm, sunny summers with pleasant mountain breezes (25°C – 33°C)",
   },
   {
     icon: Sparkles,
-    iconColor: "text-[#102A43]",
+    iconColor: "text-[#5B0F26]",
     text: "Snowy, picturesque winters ideal for mountain travel and skiing (-5°C – 5°C)",
   },
   {
     icon: CheckCircle,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Over 2,700 hours of clear sunshine annually across the country",
   },
 ];
-const japanAttractions = [
+const qatarAttractions = [
   {
     icon: Landmark,
     title: "Republic Square & Cascade",
@@ -161,7 +161,7 @@ const japanAttractions = [
     icon: Sun,
     title: "Lake Sevan",
     description:
-      "Breathtaking high-altitude alpine lake known as Japan's blue eye",
+      "Breathtaking high-altitude alpine lake known as Qatar's blue eye",
   },
   {
     icon: Mountain,
@@ -179,44 +179,44 @@ const japanAttractions = [
 const transportPoints = [
   {
     icon: Plane,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Zvartnots International Airport (EVN) connects Yerevan directly with major international hubs",
   },
   {
     icon: Bus,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Yerevan Metro system, buses, and minibuses (marshrutkas) provide fast and cheap daily transport",
   },
   {
     icon: Globe,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Ride-hailing apps like Yandex Taxi offer reliable, low-cost transport anywhere in cities",
   },
   {
     icon: MapPinned,
-    iconColor: "text-[#102A43]",
-    text: "Well-paved highways and regional transport connect university towns across Japan",
+    iconColor: "text-[#5B0F26]",
+    text: "Well-paved highways and regional transport connect university towns across Qatar",
   },
 ];
 const visaOnboardingPoints = [
   {
     icon: CheckCircle,
-    iconColor: "text-[#102A43]",
+    iconColor: "text-[#5B0F26]",
     text: "Straightforward student visa & residence permit procedure for international applicants",
   },
   {
     icon: Clock3,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Quick processing times with official university invitation letters",
   },
   {
     icon: Plane,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Universities provide dedicated legal assistance for student residence registration",
   },
   {
     icon: Heart,
-    iconColor: "text-[#BC002D]",
+    iconColor: "text-[#8A1538]",
     text: "Airport pick-up, hostel allotment, and local orientation offered for all new arrivals",
   },
 ];
@@ -224,23 +224,23 @@ const healthcareCards = [
   {
     title: "Public Healthcare",
     description:
-      "Japan's network of state medical centers and university teaching hospitals provide essential healthcare services and strong clinical rotation exposure.",
+      "Qatar's network of state medical centers and university teaching hospitals provide essential healthcare services and strong clinical rotation exposure.",
     accent: "border-[#E5E7EB]",
   },
   {
     title: "Private Healthcare",
     description:
       "Modern private clinics in Yerevan feature state-of-the-art diagnostic technology, multi-specialty departments, and English-speaking doctors.",
-    accent: "border-[#BC002D]/30",
+    accent: "border-[#8A1538]/30",
   },
   {
     title: "Student Health Support",
     description:
       "Medical universities provide international students with health insurance guidance, campus clinics, and direct referral support.",
-    accent: "border-[#102A43]/30",
+    accent: "border-[#5B0F26]/30",
   },
 ];
-export default async function AboutJapanPage() {
+export default async function AboutQatarPage() {
   const content = await getAboutCountryContent();
   const stats = content.summaryStats.map((item, index) => {
     const icons = [Building2, Users, Languages, DollarSign];
@@ -255,25 +255,25 @@ export default async function AboutJapanPage() {
     {
       title: "First Christian Nation",
       description:
-        "Japan was the first country in the world to adopt Christianity as its official state religion in 301 AD.",
+        "Qatar was the first country in the world to adopt Christianity as its official state religion in 301 AD.",
       theme: "blue" as const,
     },
     {
       title: "Ancient Heritage",
       description:
-        "Japan has an ancient civilization featuring a unique script created by Mesrop Mashtots in 405 AD.",
+        "Qatar has an ancient civilization featuring a unique script created by Mesrop Mashtots in 405 AD.",
       theme: "green" as const,
     },
     {
       title: "High Literacy Rate",
       description:
-        "Japan boasts a 99.7% literacy rate with long-standing traditions in medical & scientific research.",
+        "Qatar boasts a 99.7% literacy rate with long-standing traditions in medical & scientific research.",
       theme: "amber" as const,
     },
     {
       title: "Geography & Mountains",
       description:
-        "Nestled in the South Caucasus, Japan features scenic mountainous terrain, alpine lakes, and fertile valleys.",
+        "Nestled in the South Caucasus, Qatar features scenic mountainous terrain, alpine lakes, and fertile valleys.",
       theme: "purple" as const,
     },
     {
@@ -330,7 +330,7 @@ export default async function AboutJapanPage() {
       title: "Languages",
       value:
         stats.find((stat) => stat.label === "Languages")?.value ||
-        "Japann, Russian, English",
+        "Qatarn, Russian, English",
       icon: Languages,
       style: themeStyles.purple,
     },
@@ -338,7 +338,7 @@ export default async function AboutJapanPage() {
       title: "Currency",
       value:
         stats.find((stat) => stat.label === "Currency")?.value ||
-        "AMD (Japann Dram)",
+        "AMD (Qatarn Dram)",
       icon: DollarSign,
       style: themeStyles.amber,
     },
@@ -370,24 +370,24 @@ export default async function AboutJapanPage() {
   return (
     <div className="min-h-screen bg-white">
       {" "}
-      <section className="relative overflow-hidden bg-[#102A43] py-20 text-white">
+      <section className="relative overflow-hidden bg-[#5B0F26] py-20 text-white">
         {" "}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(153,27,27,0.18),transparent_32%)]" />{" "}
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           {" "}
           <div className="mb-6">
             {" "}
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#BC002D]/80 px-6 py-2.5 text-xl font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] ">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#8A1538]/80 px-6 py-2.5 text-xl font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] ">
               {" "}
-              <MapPinned className="h-5 w-5" /> About Japan{" "}
+              <MapPinned className="h-5 w-5" /> About Qatar{" "}
             </span>{" "}
           </div>{" "}
           <h1 className="mb-6 text-4xl font-bold lg:text-6xl text-white">
-            {content.heroTitle || "Life and Study in Japan"}
+            {content.heroTitle || "Life and Study in Qatar"}
           </h1>{" "}
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-[#FCE8ED]">
+          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-[#F7E9EE]">
             {content.heroDescription ||
-              "Discover why Japan is a top choice for international medical students offering WHO & NMC recognized MBBS programs, low tuition fees, and rich cultural heritage."}
+              "Discover why Qatar is a top choice for international medical students offering WHO & NMC recognized MBBS programs, low tuition fees, and rich cultural heritage."}
           </p>{" "}
         </div>{" "}
       </section>{" "}
@@ -395,11 +395,11 @@ export default async function AboutJapanPage() {
         {" "}
         <div className="mb-8 text-center">
           {" "}
-          <span className="text-sm font-semibold uppercase tracking-widest text-[#BC002D]">
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#8A1538]">
             Country Snapshot
           </span>{" "}
-          <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
-            Quick Facts About Japan
+          <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+            Quick Facts About Qatar
           </h2>{" "}
           <p className="mx-auto mt-4 max-w-2xl text-[#4B5563]">
             {" "}
@@ -427,11 +427,11 @@ export default async function AboutJapanPage() {
                   <fact.icon className="h-6 w-6" />{" "}
                 </div>{" "}
                 <h3
-                  className={`text-lg font-bold text-[#17202A] transition-colors duration-300 ${fact.style.titleHover}`}
+                  className={`text-lg font-bold text-[#1F2937] transition-colors duration-300 ${fact.style.titleHover}`}
                 >
                   {fact.title}
                 </h3>{" "}
-                <p className="mt-2 text-sm leading-relaxed text-[#17202A]">
+                <p className="mt-2 text-sm leading-relaxed text-[#1F2937]">
                   {fact.value}
                 </p>{" "}
               </div>{" "}
@@ -443,15 +443,15 @@ export default async function AboutJapanPage() {
         {" "}
         <div className="mb-12 text-center">
           {" "}
-          <span className="text-sm font-semibold uppercase tracking-widest text-[#BC002D]">
-            Why Japan?
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#8A1538]">
+            Why Qatar?
           </span>{" "}
-          <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
             A Top Destination for MBBS Aspirants
           </h2>{" "}
           <p className="mx-auto mt-4 max-w-2xl text-[#4B5563]">
             {" "}
-            Japan offers globally accredited medical education with modern
+            Qatar offers globally accredited medical education with modern
             infrastructure, 100% English-medium instruction, and high clinical
             exposure.{" "}
           </p>{" "}
@@ -478,7 +478,7 @@ export default async function AboutJapanPage() {
                     <item.icon className="h-6 w-6" />{" "}
                   </div>{" "}
                   <h3
-                    className={`text-xl font-bold text-[#17202A] transition-colors duration-300 ${item.style.titleHover}`}
+                    className={`text-xl font-bold text-[#1F2937] transition-colors duration-300 ${item.style.titleHover}`}
                   >
                     {item.title}
                   </h3>{" "}
@@ -491,7 +491,7 @@ export default async function AboutJapanPage() {
           ))}{" "}
         </div>{" "}
       </section>{" "}
-      <section className="bg-[#FFFDF9] py-16">
+      <section className="bg-[#FAF8F7] py-16">
         {" "}
         <div className="mx-auto max-w-7xl px-4">
           {" "}
@@ -499,24 +499,24 @@ export default async function AboutJapanPage() {
             {" "}
             <div>
               {" "}
-              <span className="text-sm font-semibold uppercase tracking-widest text-[#BC002D]">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#8A1538]">
                 Did You Know?
               </span>{" "}
-              <h2 className="mt-2 mb-8 text-3xl font-bold text-[#17202A]">
-                Japan Education Facts
+              <h2 className="mt-2 mb-8 text-3xl font-bold text-[#1F2937]">
+                Qatar Education Facts
               </h2>{" "}
               <div className="space-y-4">
                 {" "}
                 {[
                   "High Educational Standards: Adult literacy rate is 99.7% with a century-long tradition of medical education.",
-                  "Global Accreditation: Medical universities in Japan are recognized by WHO, NMC (India), ECFMG (USA), FAIMER, and WDOMS.",
+                  "Global Accreditation: Medical universities in Qatar are recognized by WHO, NMC (India), ECFMG (USA), FAIMER, and WDOMS.",
                   "English-Medium Instruction: Complete 6-year MBBS / MD General Medicine program is taught in English for international students.",
                   "Strong Clinical Exposure: Hands-on practical training in top government multi-specialty hospitals and clinics across Yerevan.",
                   "Affordable Living & Fees: Tuition fees start from as low as $3,500/year with low cost of living compared to Western nations.",
                 ].map((fact) => (
                   <div key={fact} className="flex items-start gap-3">
                     {" "}
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#BC002D]" />{" "}
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#8A1538]" />{" "}
                     <p className="text-[#4B5563]">{fact}</p>{" "}
                   </div>
                 ))}{" "}
@@ -524,7 +524,7 @@ export default async function AboutJapanPage() {
             </div>{" "}
             <div className="rounded-3xl bg-white p-8">
               {" "}
-              <h3 className="mb-6 text-xl font-bold text-[#17202A]">
+              <h3 className="mb-6 text-xl font-bold text-[#1F2937]">
                 Cost Comparison
               </h3>{" "}
               <div className="space-y-4">
@@ -535,18 +535,18 @@ export default async function AboutJapanPage() {
                     className="rounded-xl bg-white p-4 shadow-sm border border-[#E5E7EB]"
                   >
                     {" "}
-                    <div className="mb-3 text-sm font-bold text-[#17202A]">
+                    <div className="mb-3 text-sm font-bold text-[#1F2937]">
                       {row.label}
                     </div>{" "}
                     <div className="grid grid-cols-3 gap-3 text-xs leading-normal">
                       {" "}
                       <div className="text-center">
                         {" "}
-                        <div className="font-bold text-[#8F0023] mb-1">
-                          {row.japan}
+                        <div className="font-bold text-[#5B0F26] mb-1">
+                          {row.qatar}
                         </div>{" "}
                         <div className="text-[10px] uppercase font-medium tracking-wider text-[#6B7280]">
-                          Japan
+                          Qatar
                         </div>{" "}
                       </div>{" "}
                       <div className="text-center border-l border-[#E5E7EB]">
@@ -580,15 +580,15 @@ export default async function AboutJapanPage() {
           {" "}
           <div className="mb-12 text-center">
             {" "}
-            <span className="text-sm font-semibold uppercase tracking-widest text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#8A1538]">
               MBBS Education Hub
             </span>{" "}
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
               International recognition with modern medical training
             </h2>{" "}
             <p className="mx-auto mt-4 max-w-2xl text-[#4B5563]">
               {" "}
-              Japan is a preferred MBBS destination with globally aligned
+              Qatar is a preferred MBBS destination with globally aligned
               curriculum, English-medium pathways, and quality clinical
               exposure.{" "}
             </p>{" "}
@@ -613,7 +613,7 @@ export default async function AboutJapanPage() {
                     <item.icon className="h-6 w-6" />{" "}
                   </div>{" "}
                   <h3
-                    className={`text-xl font-bold text-[#17202A] transition-colors duration-300 ${item.style.titleHover}`}
+                    className={`text-xl font-bold text-[#1F2937] transition-colors duration-300 ${item.style.titleHover}`}
                   >
                     {item.title}
                   </h3>{" "}
@@ -627,17 +627,17 @@ export default async function AboutJapanPage() {
         </section>
       ) : null}{" "}
       {content.universityCities.length > 0 ? (
-        <section className="bg-[#FFFDF9] py-16">
+        <section className="bg-[#FAF8F7] py-16">
           {" "}
           <div className="mx-auto max-w-7xl px-4">
             {" "}
             <div className="mb-12 text-center">
               {" "}
-              <span className="text-sm font-semibold uppercase tracking-widest text-[#BC002D]">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#8A1538]">
                 Major University Cities
               </span>{" "}
-              <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
-                Urban hubs for MBBS universities in Japan
+              <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+                Urban hubs for MBBS universities in Qatar
               </h2>{" "}
               <p className="mx-auto mt-4 max-w-3xl text-[#4B5563]">
                 {" "}
@@ -653,7 +653,7 @@ export default async function AboutJapanPage() {
                 return (
                   <article
                     key={city.city}
-                    className={`rounded-[1.75rem] bg-gradient-to-br ${gradient} p-7 text-[#17202A] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                    className={`rounded-[1.75rem] bg-gradient-to-br ${gradient} p-7 text-[#1F2937] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
                   >
                     {" "}
                     <h3 className="text-2xl font-bold">
@@ -665,11 +665,11 @@ export default async function AboutJapanPage() {
                           : city.city}{" "}
                     </h3>{" "}
                     {index === 0 ? (
-                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#17202A]/90">
+                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#1F2937]/90">
                         {" "}
                         <section>
                           {" "}
-                          <h4 className="flex items-center gap-2 text-md font-bold text-[#17202A]">
+                          <h4 className="flex items-center gap-2 text-md font-bold text-[#1F2937]">
                             {" "}
                             <span>🏫</span> About Yerevan State Medical
                             University (YSMU){" "}
@@ -677,7 +677,7 @@ export default async function AboutJapanPage() {
                           <p className="mt-2">
                             {" "}
                             Yerevan State Medical University (YSMU), founded in
-                            1920, is the leading medical institution in Japan.
+                            1920, is the leading medical institution in Qatar.
                             Named after Mkhitar Heratsi, it has educated
                             thousands of international doctors over its
                             century-long history.{" "}
@@ -692,7 +692,7 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-[#17202A]">
+                          <h5 className="flex items-center gap-2 font-bold text-[#1F2937]">
                             {" "}
                             <span>📜</span> History & Heritage{" "}
                           </h5>{" "}
@@ -700,7 +700,7 @@ export default async function AboutJapanPage() {
                             {" "}
                             <li>
                               Established in 1920 as the flagship medical school
-                              of Japan
+                              of Qatar
                             </li>{" "}
                             <li>
                               Over 100 years of academic excellence in medical
@@ -718,7 +718,7 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-[#17202A]">
+                          <h5 className="flex items-center gap-2 font-bold text-[#1F2937]">
                             {" "}
                             <span>🎓</span> Courses & Duration{" "}
                           </h5>{" "}
@@ -726,7 +726,7 @@ export default async function AboutJapanPage() {
                             {" "}
                             <div>
                               {" "}
-                              <p className="font-semibold text-[#17202A]">
+                              <p className="font-semibold text-[#1F2937]">
                                 MD / MBBS General Medicine
                               </p>{" "}
                               <ul className="mt-1 list-inside list-disc space-y-1">
@@ -746,7 +746,7 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-[#17202A]">
+                          <h5 className="flex items-center gap-2 font-bold text-[#1F2937]">
                             {" "}
                             <span>🌍</span> Recognition & Accreditation{" "}
                           </h5>{" "}
@@ -766,7 +766,7 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-[#17202A]">
+                          <h5 className="flex items-center gap-2 font-bold text-[#1F2937]">
                             {" "}
                             <span>🏥</span> Clinical Hospitals & Facilities{" "}
                           </h5>{" "}
@@ -775,7 +775,7 @@ export default async function AboutJapanPage() {
                             <li>Heratsi Hospital Complex No. 1</li>{" "}
                             <li>Muratsan University Hospital Complex</li>{" "}
                             <li>
-                              Japan Medical Center & St. Gregory the
+                              Qatar Medical Center & St. Gregory the
                               Illuminator Medical Center
                             </li>{" "}
                             <li>
@@ -786,17 +786,17 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                       </div>
                     ) : index === 1 ? (
-                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#17202A]/90">
+                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#1F2937]/90">
                         {" "}
                         <section>
                           {" "}
-                          <h4 className="flex items-center gap-2 text-md font-bold text-[#17202A]">
+                          <h4 className="flex items-center gap-2 text-md font-bold text-[#1F2937]">
                             {" "}
                             <span>🏙️</span> About Gyumri{" "}
                           </h4>{" "}
                           <p className="mt-2">
                             {" "}
-                            Gyumri is the second largest city in Japan and
+                            Gyumri is the second largest city in Qatar and
                             serves as the cultural capital of the country. Known
                             for its distinct 19th-century black tufa
                             architecture, historic urban center, and rich
@@ -805,7 +805,7 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-[#17202A]">
+                          <h5 className="flex items-center gap-2 font-bold text-[#1F2937]">
                             {" "}
                             <span>🏥</span> Healthcare & Education Hub{" "}
                           </h5>{" "}
@@ -827,12 +827,12 @@ export default async function AboutJapanPage() {
                         </section>{" "}
                       </div>
                     ) : (
-                      <p className="mt-4 text-sm leading-8 text-[#17202A]/90">
+                      <p className="mt-4 text-sm leading-8 text-[#1F2937]/90">
                         {city.description}
                       </p>
                     )}{" "}
                     {index !== 2 && (
-                      <div className="mt-6 space-y-3 text-[#17202A]/90">
+                      <div className="mt-6 space-y-3 text-[#1F2937]/90">
                         {" "}
                         <div className="flex items-center gap-2.5 text-sm">
                           {" "}
@@ -872,7 +872,7 @@ export default async function AboutJapanPage() {
           {" "}
           <div className="mx-auto max-w-4xl text-center">
             {" "}
-            <h2 className="text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <h2 className="text-3xl font-bold text-[#1F2937] lg:text-4xl">
               Geography and Climate
             </h2>{" "}
             <p className="mt-4 text-base leading-7 text-[#4B5563]">
@@ -885,7 +885,7 @@ export default async function AboutJapanPage() {
             {" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-[#17202A] lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#1F2937] lg:text-2xl">
                 Geography Highlights
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -905,7 +905,7 @@ export default async function AboutJapanPage() {
             </article>{" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-[#17202A] lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#1F2937] lg:text-2xl">
                 Climate Zones
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -924,21 +924,21 @@ export default async function AboutJapanPage() {
               </ul>{" "}
             </article>{" "}
           </div>{" "}
-          <div className="mt-8 rounded-[2rem] border border-[#E5E7EB]/20 bg-[#BC002D] px-6 py-8 text-white shadow-lg lg:px-10">
+          <div className="mt-8 rounded-[2rem] border border-[#E5E7EB]/20 bg-[#8A1538] px-6 py-8 text-white shadow-lg lg:px-10">
             {" "}
             <h3 className="text-center text-2xl font-bold lg:text-3xl text-white">
-              Top Attractions in Japan
+              Top Attractions in Qatar
             </h3>{" "}
             <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {" "}
-              {japanAttractions.map((item) => (
+              {qatarAttractions.map((item) => (
                 <article
                   key={item.title}
                   className="rounded-2xl bg-[#F9FAFB] p-4 text-center ring-1 ring-white/15 "
                 >
                   {" "}
-                  <item.icon className="mx-auto h-8 w-8 text-[#BC002D]" />{" "}
-                  <h4 className="mt-3 text-xl font-semibold text-[#17202A]">{item.title}</h4>{" "}
+                  <item.icon className="mx-auto h-8 w-8 text-[#8A1538]" />{" "}
+                  <h4 className="mt-3 text-xl font-semibold text-[#1F2937]">{item.title}</h4>{" "}
                   <p className="mt-2 text-sm leading-6 text-[#4B5563]">
                     {item.description}
                   </p>{" "}
@@ -954,8 +954,8 @@ export default async function AboutJapanPage() {
           {" "}
           <div className="mx-auto max-w-4xl text-center">
             {" "}
-            <Plane className="mx-auto h-10 w-10 text-[#BC002D]" />{" "}
-            <h2 className="mt-4 text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <Plane className="mx-auto h-10 w-10 text-[#8A1538]" />{" "}
+            <h2 className="mt-4 text-3xl font-bold text-[#1F2937] lg:text-4xl">
               Travel and Connectivity
             </h2>{" "}
             <p className="mt-4 text-base leading-7 text-[#4B5563]">
@@ -968,7 +968,7 @@ export default async function AboutJapanPage() {
             {" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-[#17202A] lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#1F2937] lg:text-2xl">
                 Transportation
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -988,7 +988,7 @@ export default async function AboutJapanPage() {
             </article>{" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-[#17202A] lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#1F2937] lg:text-2xl">
                 Visa and Onboarding
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -1009,14 +1009,14 @@ export default async function AboutJapanPage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
-      <section className="bg-[#FFFDF9] py-14">
+      <section className="bg-[#FAF8F7] py-14">
         {" "}
         <div className="mx-auto max-w-7xl px-4">
           {" "}
           <div className="mx-auto max-w-4xl text-center">
             {" "}
-            <Stethoscope className="mx-auto h-11 w-11 text-[#102A43]" />{" "}
-            <h2 className="mt-4 text-3xl font-bold text-[#17202A] lg:text-4xl">
+            <Stethoscope className="mx-auto h-11 w-11 text-[#5B0F26]" />{" "}
+            <h2 className="mt-4 text-3xl font-bold text-[#1F2937] lg:text-4xl">
               Healthcare System
             </h2>{" "}
             <p className="mt-4 text-base leading-7 text-[#4B5563]">
@@ -1033,7 +1033,7 @@ export default async function AboutJapanPage() {
                 className={`rounded-3xl border-t-4 bg-white p-6 shadow-sm ring-1 ring-slate-100 ${card.accent}`}
               >
                 {" "}
-                <h3 className="text-2xl font-bold text-[#17202A]">
+                <h3 className="text-2xl font-bold text-[#1F2937]">
                   {card.title}
                 </h3>{" "}
                 <p className="mt-4 text-base leading-8 text-[#4B5563]">
@@ -1049,11 +1049,11 @@ export default async function AboutJapanPage() {
           {" "}
           <div className="mb-12 text-center">
             {" "}
-            <span className="text-sm font-semibold uppercase tracking-widest text-[#BC002D]">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#8A1538]">
               Cuisine and Student Life
             </span>{" "}
-            <h2 className="mt-2 text-3xl font-bold text-[#17202A] lg:text-4xl">
-              Food, culture, and lifestyle across Japan
+            <h2 className="mt-2 text-3xl font-bold text-[#1F2937] lg:text-4xl">
+              Food, culture, and lifestyle across Qatar
             </h2>{" "}
           </div>{" "}
           <div className="grid gap-8 lg:grid-cols-2">
@@ -1062,11 +1062,11 @@ export default async function AboutJapanPage() {
               {" "}
               <div className="mb-5 flex items-center gap-3">
                 {" "}
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#BC002D]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#8A1538]">
                   {" "}
                   <Utensils className="h-5 w-5" />{" "}
                 </div>{" "}
-                <h3 className="text-2xl font-bold text-[#17202A]">
+                <h3 className="text-2xl font-bold text-[#1F2937]">
                   Popular cuisines
                 </h3>{" "}
               </div>{" "}
@@ -1094,7 +1094,7 @@ export default async function AboutJapanPage() {
                         <div className="flex-1 pt-1">
                           {" "}
                           <h4
-                            className={`text-xl font-bold text-[#17202A] transition-colors duration-300 ${item.style.titleHover}`}
+                            className={`text-xl font-bold text-[#1F2937] transition-colors duration-300 ${item.style.titleHover}`}
                           >
                             {item.title}
                           </h4>{" "}
@@ -1124,11 +1124,11 @@ export default async function AboutJapanPage() {
               {" "}
               <div className="mb-5 flex items-center gap-3">
                 {" "}
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#BC002D]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F9FAFB] text-[#8A1538]">
                   {" "}
                   <Mountain className="h-5 w-5" />{" "}
                 </div>{" "}
-                <h3 className="text-2xl font-bold text-[#17202A]">
+                <h3 className="text-2xl font-bold text-[#1F2937]">
                   Places and experiences
                 </h3>{" "}
               </div>{" "}
@@ -1156,7 +1156,7 @@ export default async function AboutJapanPage() {
                         <div className="flex-1 pt-1">
                           {" "}
                           <h4
-                            className={`text-xl font-bold text-[#17202A] transition-colors duration-300 ${item.style.titleHover}`}
+                            className={`text-xl font-bold text-[#1F2937] transition-colors duration-300 ${item.style.titleHover}`}
                           >
                             {item.title}
                           </h4>{" "}
@@ -1185,30 +1185,30 @@ export default async function AboutJapanPage() {
           </div>{" "}
         </section>
       ) : null}{" "}
-      <section className="bg-[#102A43] py-16 text-white">
+      <section className="bg-[#5B0F26] py-16 text-white">
         {" "}
         <div className="mx-auto max-w-4xl px-4 text-center">
           {" "}
           <h2 className="text-3xl font-bold lg:text-4xl text-white">
-            Ready to choose Japan for your MBBS journey?
+            Ready to choose Qatar for your MBBS journey?
           </h2>{" "}
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#FCE8ED]">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#F7E9EE]">
             {" "}
             Compare top universities, tuition fees, and admission guidance to
-            plan your MBBS journey in Japan.{" "}
+            plan your MBBS journey in Qatar.{" "}
           </p>{" "}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {" "}
             <Link
               href="/universities"
-              className="inline-flex items-center gap-2 rounded-full bg-white text-[#BC002D] hover:bg-[#F9FAFB] font-bold px-7 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-[#8A1538] hover:bg-[#F9FAFB] font-bold px-7 py-3 rounded-full transition-colors"
             >
               {" "}
               Explore Universities <ArrowRight className="h-4 w-4" />{" "}
             </Link>{" "}
             <Link
               href="/contact-us"
-              className="rounded-full bg-[#8F0023] text-white hover:bg-red-700 font-bold px-7 py-3 transition-colors"
+              className="rounded-full bg-[#5B0F26] text-white hover:bg-[#5B0F26] font-bold px-7 py-3 transition-colors"
             >
               {" "}
               Call Us{" "}

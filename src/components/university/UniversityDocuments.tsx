@@ -31,16 +31,16 @@ export default function UniversityDocuments({ university }: Props) {
   if (!hasDocuments) return null;
 
   return (
-    <section className="py-14 bg-[#FFFDF9] border-y border-[#E5E7EB] relative overflow-hidden">
+    <section className="py-14 bg-[#FAF8F7] border-y border-[#E5E7EB] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-72 h-72 bg-[#F9FAFB] rounded-full -translate-y-1/2 translate-x-1/2 hidden md:block" />
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#F9FAFB] rounded-full translate-y-1/2 -translate-x-1/2 hidden md:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <span className="inline-block bg-[#F9FAFB] text-[#BC002D] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3 border border-[#E5E7EB]">
+          <span className="inline-block bg-[#F9FAFB] text-[#8A1538] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3 border border-[#E5E7EB]">
             Official Documents
           </span>
-          <h2 className="text-3xl font-extrabold text-[#17202A] mb-1">
+          <h2 className="text-3xl font-extrabold text-[#1F2937] mb-1">
             Download Resources
           </h2>
           <p className="text-[#4B5563] text-sm">
@@ -51,11 +51,11 @@ export default function UniversityDocuments({ university }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {university.brochurePath && (
             <div className="group flex items-center gap-4 bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
-              <div className="bg-[#FFFDF9] group-hover:bg-[#102A43] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#102A43]">
-                <FileText className="w-6 h-6 text-[#BC002D] group-hover:text-white transition-colors" />
+              <div className="bg-[#FAF8F7] group-hover:bg-[#5B0F26] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#5B0F26]">
+                <FileText className="w-6 h-6 text-[#8A1538] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-[#17202A] text-sm">
+                <p className="font-bold text-[#1F2937] text-sm">
                   University Brochure
                 </p>
                 <p className="text-[#4B5563] text-xs mt-0.5">
@@ -72,11 +72,11 @@ export default function UniversityDocuments({ university }: Props) {
 
           {university.nmcGuidelinesPath && (
             <div className="group flex items-center gap-4 bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
-              <div className="bg-[#FFFDF9] group-hover:bg-[#102A43] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#102A43]">
-                <Award className="w-6 h-6 text-[#BC002D] group-hover:text-white transition-colors" />
+              <div className="bg-[#FAF8F7] group-hover:bg-[#5B0F26] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#5B0F26]">
+                <Award className="w-6 h-6 text-[#8A1538] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-[#17202A] text-sm">
+                <p className="font-bold text-[#1F2937] text-sm">
                   NMC Guidelines
                 </p>
                 <p className="text-[#4B5563] text-xs mt-0.5">
@@ -97,11 +97,11 @@ export default function UniversityDocuments({ university }: Props) {
 
           {university.embassyLetterPath && (
             <div className="group flex items-center gap-4 bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
-              <div className="bg-[#FFFDF9] group-hover:bg-[#102A43] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#102A43]">
-                <Globe className="w-6 h-6 text-[#BC002D] group-hover:text-white transition-colors" />
+              <div className="bg-[#FAF8F7] group-hover:bg-[#5B0F26] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#5B0F26]">
+                <Globe className="w-6 h-6 text-[#8A1538] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-[#17202A] text-sm">
+                <p className="font-bold text-[#1F2937] text-sm">
                   Embassy Letter
                 </p>
                 <p className="text-[#4B5563] text-xs mt-0.5">
@@ -112,7 +112,7 @@ export default function UniversityDocuments({ university }: Props) {
                 href={cdn(university.embassyLetterPath) ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#E5E7EB] text-[#BC002D] hover:bg-[#8F0023] hover:text-[#17202A] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-[#1F2937] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download
@@ -122,11 +122,11 @@ export default function UniversityDocuments({ university }: Props) {
 
           {university.universityLicensePath && (
             <div className="group flex items-center gap-4 bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
-              <div className="bg-[#FFFDF9] group-hover:bg-[#102A43] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#102A43]">
-                <Shield className="w-6 h-6 text-[#BC002D] group-hover:text-white transition-colors" />
+              <div className="bg-[#FAF8F7] group-hover:bg-[#5B0F26] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#5B0F26]">
+                <Shield className="w-6 h-6 text-[#8A1538] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-[#17202A] text-sm">
+                <p className="font-bold text-[#1F2937] text-sm">
                   University License
                 </p>
                 <p className="text-[#4B5563] text-xs mt-0.5">
@@ -137,7 +137,7 @@ export default function UniversityDocuments({ university }: Props) {
                 href={cdn(university.universityLicensePath) ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#E5E7EB] text-[#BC002D] hover:bg-[#8F0023] hover:text-[#17202A] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-[#1F2937] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download
@@ -147,11 +147,11 @@ export default function UniversityDocuments({ university }: Props) {
 
           {university.aggregationLetterPath && (
             <div className="group flex items-center gap-4 bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
-              <div className="bg-[#FFFDF9] group-hover:bg-[#102A43] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#102A43]">
-                <CheckCircle className="w-6 h-6 text-[#BC002D] group-hover:text-white transition-colors" />
+              <div className="bg-[#FAF8F7] group-hover:bg-[#5B0F26] transition-colors p-3 rounded-xl shrink-0 border border-[#E5E7EB] group-hover:border-[#5B0F26]">
+                <CheckCircle className="w-6 h-6 text-[#8A1538] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-[#17202A] text-sm">
+                <p className="font-bold text-[#1F2937] text-sm">
                   Aggregation Letter
                 </p>
                 <p className="text-[#4B5563] text-xs mt-0.5">
@@ -162,7 +162,7 @@ export default function UniversityDocuments({ university }: Props) {
                 href={cdn(university.aggregationLetterPath) ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#E5E7EB] text-[#BC002D] hover:bg-[#8F0023] hover:text-[#17202A] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-[#1F2937] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download

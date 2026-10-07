@@ -141,10 +141,10 @@ export default function CompareUniversitiesClient({
   };
 
   return (
-    <section id="compare" className="py-16 bg-[#FFFDF9]">
+    <section id="compare" className="py-16 bg-[#FAF8F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+          <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
             Compare Universities
           </h2>
           <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
@@ -163,7 +163,7 @@ export default function CompareUniversitiesClient({
               <select
                 value={selectedIds[slot] ?? ""}
                 onChange={(e) => handleSelect(slot, Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
                 suppressHydrationWarning={true}
               >
                 {allUniversities.map((u) => (
@@ -180,7 +180,7 @@ export default function CompareUniversitiesClient({
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px]">
               <thead>
-                <tr className="bg-[#BC002D] text-white">
+                <tr className="bg-[#8A1538] text-white">
                   <th className="text-left p-4 font-semibold w-40">Features</th>
                   {universities.map((u, idx) => (
                     <th
@@ -198,7 +198,7 @@ export default function CompareUniversitiesClient({
                               className="object-cover w-full h-full"
                             />
                           ) : (
-                            <div className="w-full h-full bg-blue-200 flex items-center justify-center text-[#102A43] font-bold text-lg">
+                            <div className="w-full h-full bg-[#2F8F83] flex items-center justify-center text-[#5B0F26] font-bold text-lg">
                               {u.name[0]}
                             </div>
                           )}
@@ -215,9 +215,9 @@ export default function CompareUniversitiesClient({
                 {visibleFeatures.map((feature, idx) => (
                   <tr
                     key={feature.key}
-                    className={idx % 2 === 0 ? "bg-white" : "bg-[#FFFDF9]"}
+                    className={idx % 2 === 0 ? "bg-white" : "bg-[#FAF8F7]"}
                   >
-                    <td className="p-3 font-medium text-[#17202A] text-sm whitespace-nowrap">
+                    <td className="p-3 font-medium text-[#1F2937] text-sm whitespace-nowrap">
                       {feature.label}
                     </td>
                     {universities.map((u, idx) => {
@@ -234,7 +234,7 @@ export default function CompareUniversitiesClient({
                               {val.split(", ").map((r) => (
                                 <span
                                   key={r}
-                                  className="text-xs bg-red-100 text-green-800 px-2 py-0.5 rounded-full"
+                                  className="text-xs bg-[#F7E9EE] text-green-800 px-2 py-0.5 rounded-full"
                                 >
                                   {r}
                                 </span>
@@ -246,7 +246,7 @@ export default function CompareUniversitiesClient({
                                 !isGood
                                   ? "text-[#6B7280]"
                                   : feature.key === "fee"
-                                    ? "text-[#8F0023] font-semibold"
+                                    ? "text-[#5B0F26] font-semibold"
                                     : ""
                               }
                             >
@@ -260,14 +260,14 @@ export default function CompareUniversitiesClient({
                 ))}
                 {/* CTA row */}
                 <tr className="bg-[#F9FAFB]">
-                  <td className="p-3 font-medium text-[#17202A] text-sm">
+                  <td className="p-3 font-medium text-[#1F2937] text-sm">
                     View Details
                   </td>
                   {universities.map((u, idx) => (
                     <td key={`${u.id}-${idx}`} className="p-3 text-center">
                       <Link
                         href={`/universities/${u.slug}`}
-                        className="inline-block bg-[#BC002D] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#8F0023] transition-colors font-medium"
+                        className="inline-block bg-[#8A1538] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#5B0F26] transition-colors font-medium"
                       >
                         View →
                       </Link>
@@ -282,7 +282,7 @@ export default function CompareUniversitiesClient({
         <div className="text-center">
           <Link
             href="/compare"
-            className="inline-block bg-white text-[#BC002D] border-2 border-[#E5E7EB] px-8 py-3 rounded-lg font-semibold hover:bg-[#BC002D] hover:text-[#17202A] transition-colors"
+            className="inline-block bg-white text-[#8A1538] border-2 border-[#E5E7EB] px-8 py-3 rounded-lg font-semibold hover:bg-[#8A1538] hover:text-[#1F2937] transition-colors"
           >
             Compare All Universities →
           </Link>

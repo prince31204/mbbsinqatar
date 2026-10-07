@@ -91,14 +91,14 @@ export default function CuisineAdminPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">
+          <h1 className="text-2xl font-bold text-[#1F2937]">
             🍜 Cuisine & Food
           </h1>
           <p className="text-sm text-[#6B7280]">{items.length} dishes listed</p>
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#102A43] hover:bg-[#102A43]"
+          className="ml-auto bg-[#5B0F26] hover:bg-[#5B0F26]"
         >
           <Plus size={14} className="mr-1" /> Add Dish
         </Button>
@@ -106,7 +106,7 @@ export default function CuisineAdminPage() {
 
       {showAdd && (
         <div className="bg-white rounded-xl border border-[#E5E7EB] p-6 space-y-4">
-          <h2 className="font-semibold text-[#17202A]">Add Dish</h2>
+          <h2 className="font-semibold text-[#1F2937]">Add Dish</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <Label>Dish Name *</Label>
@@ -251,7 +251,7 @@ export default function CuisineAdminPage() {
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-[#17202A]">
+                    <p className="font-semibold text-[#1F2937]">
                       {item.iconClass} {item.dishName}
                     </p>
                     {item.dishDescription && (
@@ -280,7 +280,7 @@ export default function CuisineAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-[#BC002D] hover:text-[#102A43]"
+                      className="text-[#8A1538] hover:text-[#5B0F26]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

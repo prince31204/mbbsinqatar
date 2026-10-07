@@ -28,9 +28,9 @@ import {
   healthcare,
   mbbsWhyStats,
   studentLifeCards,
-} from "@/data/Japan-facts";
+} from "@/data/Qatar-facts";
 
-export default async function QuickFactsJapan() {
+export default async function QuickFactsQatar() {
   let cuisines: {
     id: number;
     dishName: string | null;
@@ -57,8 +57,8 @@ export default async function QuickFactsJapan() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
-              Quick Facts About Japan
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
+              Quick Facts About Qatar
             </h2>
             <p className="text-lg text-[#4B5563]">
               Key information every MBBS aspirant should know
@@ -73,7 +73,7 @@ export default async function QuickFactsJapan() {
                 <f.icon
                   className={`h-12 w-12 text-${f.color}-600 mx-auto mb-4`}
                 />
-                <h3 className="text-lg font-bold text-[#17202A]">{f.label}</h3>
+                <h3 className="text-lg font-bold text-[#1F2937]">{f.label}</h3>
                 <p className="text-[#4B5563] text-sm mt-1">{f.value}</p>
               </div>
             ))}
@@ -84,8 +84,8 @@ export default async function QuickFactsJapan() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Mountain className="h-16 w-16 text-[#BC002D] mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <Mountain className="h-16 w-16 text-[#8A1538] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Geography and Climate
             </h2>
             <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
@@ -95,7 +95,7 @@ export default async function QuickFactsJapan() {
           </div>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#17202A] mb-6">
+              <h3 className="text-2xl font-bold text-[#1F2937] mb-6">
                 Geography Highlights
               </h3>
               <div className="space-y-4">
@@ -108,7 +108,7 @@ export default async function QuickFactsJapan() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#17202A] mb-6">
+              <h3 className="text-2xl font-bold text-[#1F2937] mb-6">
                 Climate Zones
               </h3>
               <div className="space-y-4">
@@ -139,13 +139,13 @@ export default async function QuickFactsJapan() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#BC002D] text-white">
+      <section className="py-16 bg-[#8A1538] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <GraduationCap className="h-16 w-16 text-[#BC002D] mx-auto mb-4" />
+            <GraduationCap className="h-16 w-16 text-[#8A1538] mx-auto mb-4" />
             <h2 className="text-4xl font-bold mb-4">MBBS Education Hub</h2>
             <p className="text-xl text-[#4B5563] max-w-3xl mx-auto">
-              Japan is a growing destination for medical students seeking
+              Qatar is a growing destination for medical students seeking
               affordable, high-quality, English-medium medical education in a
               safe environment.
             </p>
@@ -157,7 +157,7 @@ export default async function QuickFactsJapan() {
                 key={item.label}
                 className="bg-[#F9FAFB] p-8 rounded-xl hover:bg-white/20 transition-all"
               >
-                <item.icon className="h-12 w-12 text-[#BC002D] mb-4" />
+                <item.icon className="h-12 w-12 text-[#8A1538] mb-4" />
                 <h3 className="text-xl font-bold mb-3">{item.label}</h3>
                 <p className="text-[#4B5563]">{item.desc}</p>
               </div>
@@ -166,13 +166,13 @@ export default async function QuickFactsJapan() {
 
           <div className="bg-[#F9FAFB] p-8 rounded-xl text-center">
             <h3 className="text-2xl font-bold mb-6">
-              Why Choose Japan for MBBS?
+              Why Choose Qatar for MBBS?
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {mbbsWhyStats.map((s) => (
                 <div key={s.label} className="bg-[#F9FAFB] rounded-xl py-4 px-3">
                   <div className="text-2xl font-bold">{s.val}</div>
-                  <div className="text-[#BC002D] text-sm mt-1">{s.label}</div>
+                  <div className="text-[#8A1538] text-sm mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -183,8 +183,8 @@ export default async function QuickFactsJapan() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Building className="h-16 w-16 text-[#BC002D] mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <Building className="h-16 w-16 text-[#8A1538] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Major University Cities
             </h2>
             <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
@@ -196,7 +196,7 @@ export default async function QuickFactsJapan() {
             {majorCities.map((city) => (
               <div
                 key={city.name}
-                className={`bg-gradient-to-br ${city.gradient} text-[#17202A] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300`}
+                className={`bg-gradient-to-br ${city.gradient} text-[#1F2937] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300`}
               >
                 <h3 className="text-2xl font-bold mb-3">{city.name}</h3>
                 <p className={`${city.textMain} mb-4`}>{city.desc}</p>
@@ -216,11 +216,11 @@ export default async function QuickFactsJapan() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#FFFDF9]">
+      <section className="py-16 bg-[#FAF8F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <TrendingUp className="h-16 w-16 text-[#8F0023] mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <TrendingUp className="h-16 w-16 text-[#5B0F26] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Growing Economy
             </h2>
             <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
@@ -231,7 +231,7 @@ export default async function QuickFactsJapan() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="bg-yellow-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-[#17202A] mb-3">
+                <h3 className="text-xl font-semibold text-[#1F2937] mb-3">
                   Key Sectors
                 </h3>
                 <p className="text-[#4B5563]">
@@ -239,8 +239,8 @@ export default async function QuickFactsJapan() {
                   major contributors.
                 </p>
               </div>
-              <div className="bg-red-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-[#17202A] mb-3">
+              <div className="bg-[#F7E9EE] p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-semibold text-[#1F2937] mb-3">
                   Student Budget
                 </h3>
                 <p className="text-[#4B5563]">
@@ -249,16 +249,16 @@ export default async function QuickFactsJapan() {
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-[#17202A] mb-3">
+                <h3 className="text-xl font-semibold text-[#1F2937] mb-3">
                   Medical Education Demand
                 </h3>
                 <p className="text-[#4B5563]">
-                  International interest in Japan MBBS programs continues to
+                  International interest in Qatar MBBS programs continues to
                   grow each admission cycle.
                 </p>
               </div>
             </div>
-            <div className="bg-[#8F0023] p-8 rounded-2xl text-[#17202A]">
+            <div className="bg-[#5B0F26] p-8 rounded-2xl text-[#1F2937]">
               <h3 className="text-2xl font-bold mb-6">Economic Indicators</h3>
               <div className="space-y-4">
                 {economyStats.map((s) => (
@@ -280,7 +280,7 @@ export default async function QuickFactsJapan() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Utensils className="h-16 w-16 text-orange-600 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Cuisine and Student Life
             </h2>
             <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
@@ -306,12 +306,12 @@ export default async function QuickFactsJapan() {
                     />
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center h-20 bg-red-400">
+                  <div className="flex items-center justify-center h-20 bg-[#8A1538]">
                     <span className="text-5xl">{c.iconClass}</span>
                   </div>
                 )}
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-[#17202A] mb-2">
+                  <h3 className="text-lg font-bold text-[#1F2937] mb-2">
                     {c.dishName}
                   </h3>
                   <p className="text-[#4B5563] text-sm">{c.dishDescription}</p>
@@ -340,8 +340,8 @@ export default async function QuickFactsJapan() {
       <section className="py-16 bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Plane className="h-16 w-16 text-[#BC002D] mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <Plane className="h-16 w-16 text-[#8A1538] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Travel and Connectivity
             </h2>
             <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
@@ -351,7 +351,7 @@ export default async function QuickFactsJapan() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#17202A] mb-6">
+              <h3 className="text-2xl font-bold text-[#1F2937] mb-6">
                 Transportation
               </h3>
               <div className="space-y-4">
@@ -364,7 +364,7 @@ export default async function QuickFactsJapan() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-[#17202A] mb-6">
+              <h3 className="text-2xl font-bold text-[#1F2937] mb-6">
                 Visa and Onboarding
               </h3>
               <div className="space-y-4">
@@ -380,11 +380,11 @@ export default async function QuickFactsJapan() {
         </div>
       </section>
 
-      <section className="py-16 bg-red-50">
+      <section className="py-16 bg-[#F7E9EE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Stethoscope className="h-16 w-16 text-[#8F0023] mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-[#17202A] mb-4">
+            <Stethoscope className="h-16 w-16 text-[#5B0F26] mx-auto mb-4" />
+            <h2 className="text-4xl font-bold text-[#1F2937] mb-4">
               Healthcare System
             </h2>
             <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
@@ -398,7 +398,7 @@ export default async function QuickFactsJapan() {
                 key={h.title}
                 className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 ${h.color}`}
               >
-                <h3 className="text-xl font-bold text-[#17202A] mb-4">
+                <h3 className="text-xl font-bold text-[#1F2937] mb-4">
                   {h.title}
                 </h3>
                 <p className="text-[#4B5563]">{h.desc}</p>
@@ -408,13 +408,13 @@ export default async function QuickFactsJapan() {
         </div>
       </section>
 
-      <section className="py-16 bg-red-700 text-white">
+      <section className="py-16 bg-[#5B0F26] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Star className="h-16 w-16 text-[#BC002D] mx-auto mb-4" />
+            <Star className="h-16 w-16 text-[#8A1538] mx-auto mb-4" />
             <h2 className="text-4xl font-bold mb-4">Did You Know?</h2>
             <p className="text-xl text-[#4B5563]">
-              Interesting facts about Japan
+              Interesting facts about Qatar
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -432,10 +432,10 @@ export default async function QuickFactsJapan() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#BC002D] text-white">
+      <section className="py-16 bg-[#8A1538] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Start Your MBBS Journey in Japan
+            Start Your MBBS Journey in Qatar
           </h2>
           <p className="text-xl text-[#4B5563] mb-8">
             Discover top-tier medical education in one of the Indian
@@ -444,13 +444,13 @@ export default async function QuickFactsJapan() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/universities"
-              className="bg-white text-[#102A43] px-8 py-3 rounded-full font-semibold hover:bg-white transition-colors"
+              className="bg-white text-[#5B0F26] px-8 py-3 rounded-full font-semibold hover:bg-white transition-colors"
             >
               Explore MBBS Programs
             </Link>
             <Link
               href="/contact-us"
-              className="border-2 border-[#E5E7EB] text-[#17202A] px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#102A43] transition-colors"
+              className="border-2 border-[#E5E7EB] text-[#1F2937] px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#5B0F26] transition-colors"
             >
               Contact Universities
             </Link>

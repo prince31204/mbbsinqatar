@@ -65,9 +65,9 @@ export default function UploadsPage() {
   return (
     <div className="max-w-xl space-y-6">
       <div className="flex items-center gap-3">
-        <Upload size={22} className="text-[#BC002D]" />
+        <Upload size={22} className="text-[#8A1538]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#17202A]">Upload Files</h1>
+          <h1 className="text-2xl font-bold text-[#1F2937]">Upload Files</h1>
           <p className="text-sm text-[#6B7280]">
             Upload images and get CDN paths for use in content
           </p>
@@ -83,7 +83,7 @@ export default function UploadsPage() {
           <select
             value={folder}
             onChange={(e) => setFolder(e.target.value)}
-            className="w-full border border-[#E5E7EB] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#102A43]/500"
+            className="w-full border border-[#E5E7EB] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#5B0F26]/500"
           >
             <option value="general">General</option>
             <option value="universities">Universities</option>
@@ -103,7 +103,7 @@ export default function UploadsPage() {
             Select Image
           </label>
           <div
-            className={`border-2 border-dashed rounded-xl p-6 text-center transition-colors ${file ? "border-[#E5E7EB] bg-[#102A43]" : "border-[#E5E7EB] hover:border-gray-300"}`}
+            className={`border-2 border-dashed rounded-xl p-6 text-center transition-colors ${file ? "border-[#E5E7EB] bg-[#5B0F26]" : "border-[#E5E7EB] hover:border-gray-300"}`}
           >
             {preview ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -117,7 +117,7 @@ export default function UploadsPage() {
             )}
             <label
               htmlFor="file-upload"
-              className="cursor-pointer text-sm text-[#BC002D] font-medium hover:text-[#102A43]"
+              className="cursor-pointer text-sm text-[#8A1538] font-medium hover:text-[#5B0F26]"
             >
               {file ? file.name : "Click to choose file"}
               <input
@@ -137,7 +137,7 @@ export default function UploadsPage() {
         </div>
 
         {error && (
-          <p className="text-sm text-[#BC002D] bg-[#102A43] border border-[#E5E7EB] px-3 py-2 rounded-lg">
+          <p className="text-sm text-[#8A1538] bg-[#5B0F26] border border-[#E5E7EB] px-3 py-2 rounded-lg">
             {error}
           </p>
         )}
@@ -145,7 +145,7 @@ export default function UploadsPage() {
         <button
           onClick={handleUpload}
           disabled={!file || uploading}
-          className="w-full bg-[#102A43] hover:bg-[#102A43] text-white py-3 rounded-xl font-semibold text-sm disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-[#5B0F26] hover:bg-[#5B0F26] text-white py-3 rounded-xl font-semibold text-sm disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
         >
           {uploading ? (
             <>
@@ -162,8 +162,8 @@ export default function UploadsPage() {
       </div>
 
       {result && (
-        <div className="bg-red-50 border border-red-200 rounded-xl p-5 space-y-3">
-          <div className="flex items-center gap-2 text-[#8F0023] font-semibold text-sm">
+        <div className="bg-[#F7E9EE] border border-[#F7E9EE] rounded-xl p-5 space-y-3">
+          <div className="flex items-center gap-2 text-[#5B0F26] font-semibold text-sm">
             <CheckCircle size={16} />
             Upload successful!
           </div>
@@ -178,10 +178,10 @@ export default function UploadsPage() {
                 </code>
                 <button
                   onClick={() => copy(result.path)}
-                  className="text-[#6B7280] hover:text-[#102A43] shrink-0"
+                  className="text-[#6B7280] hover:text-[#5B0F26] shrink-0"
                 >
                   {copied ? (
-                    <CheckCircle size={14} className="text-[#BC002D]" />
+                    <CheckCircle size={14} className="text-[#8A1538]" />
                   ) : (
                     <ClipboardCopy size={14} />
                   )}
@@ -196,10 +196,10 @@ export default function UploadsPage() {
                 </code>
                 <button
                   onClick={() => copy(result.url)}
-                  className="text-[#6B7280] hover:text-[#102A43] shrink-0"
+                  className="text-[#6B7280] hover:text-[#5B0F26] shrink-0"
                 >
                   {copied ? (
-                    <CheckCircle size={14} className="text-[#BC002D]" />
+                    <CheckCircle size={14} className="text-[#8A1538]" />
                   ) : (
                     <ClipboardCopy size={14} />
                   )}
