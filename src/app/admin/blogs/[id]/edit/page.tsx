@@ -461,7 +461,7 @@ export default function BlogEditPage() {
           <article className="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm overflow-hidden p-8">
             {/* Category pill + badges */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="inline-flex items-center bg-[#5B0F26] text-[#8A1538] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center bg-[#F7E9EE] text-[#8A1538] border border-[#E5E7EB] text-xs font-semibold px-3 py-1 rounded-full">
                 {currentCategory?.name || "Uncategorized"}
               </span>
               {form.status && (

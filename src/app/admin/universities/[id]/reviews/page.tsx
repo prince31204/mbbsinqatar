@@ -367,7 +367,7 @@ export default function UniversityReviewsPage() {
                   </p>
                 )}
                 {!r.status && (
-                  <span className="text-xs bg-[#5B0F26] text-[#8A1538] px-2 py-0.5 rounded-full">
+                  <span className="text-xs bg-[#F7E9EE] text-[#8A1538] px-2 py-0.5 rounded-full">
                     Inactive
                   </span>
                 )}

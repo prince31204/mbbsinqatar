@@ -268,7 +268,7 @@ export default function ExpertTeamPage() {
                     className="w-12 h-12 rounded-full object-cover border border-[#E5E7EB] shrink-0"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-[#5B0F26] flex items-center justify-center text-[#8A1538] font-semibold text-lg shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#F7E9EE] flex items-center justify-center text-[#8A1538] font-semibold text-lg shrink-0">
                     {item.name.charAt(0)}
                   </div>
                 )}
@@ -316,7 +316,7 @@ export default function ExpertTeamPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
+                    className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26] hover:text-white"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

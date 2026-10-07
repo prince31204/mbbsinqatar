@@ -236,7 +236,7 @@ export default function AdminFmgeRatesPage() {
               size="sm"
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="h-8 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-[#1F2937] transition-all text-xs font-bold"
+              className="h-8 border-[#E5E7EB] text-[#8A1538] hover:bg-[#5B0F26] hover:text-white hover:text-[#1F2937] transition-all text-xs font-bold"
             >
               {isUploading ? (
                 <Loader2 size={14} className="mr-1.5 animate-spin" />
@@ -475,7 +475,7 @@ export default function AdminFmgeRatesPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
+                          className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26] hover:text-white"
                           onClick={() => handleDelete(r.id)}
                         >
                           <Trash2 size={14} />

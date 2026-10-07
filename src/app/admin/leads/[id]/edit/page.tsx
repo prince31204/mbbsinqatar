@@ -204,7 +204,7 @@ export default function LeadEditPage() {
                   </p>
                   <Badge
                     variant="outline"
-                    className="text-xs font-medium bg-[#5B0F26] text-[#8A1538] border-[#E5E7EB] whitespace-normal text-left h-auto py-1 px-3"
+                    className="text-xs font-medium bg-[#F7E9EE] text-[#8A1538] border-[#E5E7EB] whitespace-normal text-left h-auto py-1 px-3"
                   >
                     {formatSource(lead.source)}
                   </Badge>

@@ -137,7 +137,7 @@ export default function UploadsPage() {
         </div>
 
         {error && (
-          <p className="text-sm text-[#8A1538] bg-[#5B0F26] border border-[#E5E7EB] px-3 py-2 rounded-lg">
+          <p className="text-sm text-[#8A1538] bg-[#F7E9EE] border border-[#E5E7EB] px-3 py-2 rounded-lg">
             {error}
           </p>
         )}

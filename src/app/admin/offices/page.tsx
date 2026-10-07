@@ -315,7 +315,7 @@ export default function OfficesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
+                    className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26] hover:text-white"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

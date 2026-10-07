@@ -63,7 +63,7 @@ export default function PartnerInquiryCreatePage() {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-[#5B0F26] flex items-center justify-center text-[#8A1538]">
+        <div className="w-10 h-10 rounded-lg bg-[#F7E9EE] flex items-center justify-center text-[#8A1538]">
           <Building2 size={20} />
         </div>
         <div>

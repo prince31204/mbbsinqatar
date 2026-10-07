@@ -346,7 +346,7 @@ export default function StaticSeoPage() {
                   <div className="flex items-start gap-4">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-sm font-semibold text-[#8A1538] bg-[#5B0F26] px-2 py-0.5 rounded">
+                        <span className="font-mono text-sm font-semibold text-[#8A1538] bg-[#F7E9EE] px-2 py-0.5 rounded">
                           {entry.page}
                         </span>
                         <span
@@ -396,7 +396,7 @@ export default function StaticSeoPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
+                        className="h-8 w-8 p-0 text-[#8A1538] hover:bg-[#5B0F26] hover:text-white"
                         onClick={() => handleDelete(entry.id)}
                       >
                         <Trash2 size={14} />

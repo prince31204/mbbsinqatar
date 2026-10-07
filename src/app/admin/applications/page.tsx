@@ -70,7 +70,7 @@ export default function AdminApplicationsPage() {
       new: "bg-[#F9FAFB] text-[#5B0F26]",
       reviewed: "bg-[#8A1538] text-[#8A1538]",
       approved: "bg-[#F7E9EE] text-green-800",
-      rejected: "bg-[#5B0F26] text-[#8A1538]",
+      rejected: "bg-[#F7E9EE] text-[#8A1538]",
     };
     return (
       <span

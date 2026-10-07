@@ -181,7 +181,7 @@ export default function NewsCategoriesPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26]"
+                        className="h-7 w-7 p-0 text-[#8A1538] hover:bg-[#5B0F26] hover:text-white"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />

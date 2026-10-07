@@ -191,7 +191,7 @@ export default function UniversityHospitalsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 text-[#8A1538] hover:bg-[#5B0F26] text-xs"
+                        className="h-7 text-[#8A1538] hover:bg-[#5B0F26] hover:text-white text-xs"
                         onClick={() => handleUnlink(l.hospitalId)}
                       >
                         <Trash2 size={12} className="mr-1" /> Unlink

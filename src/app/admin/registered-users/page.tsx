@@ -152,7 +152,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                       className={`text-xs font-medium px-2.5 py-1 rounded-full ${
                         u.status === "active"
                           ? "bg-[#F7E9EE] text-[#5B0F26]"
-                          : "bg-[#5B0F26] text-[#8A1538]"
+                          : "bg-[#F7E9EE] text-[#8A1538]"
                       }`}
                     >
                       {u.status}
